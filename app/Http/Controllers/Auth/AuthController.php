@@ -1,10 +1,10 @@
 <?php
 
-namespace Excel\Http\Controllers\Auth;
+namespace BuscaSorocaba\Http\Controllers\Auth;
 
-use Excel\Models\User;
+use BuscaSorocaba\Models\User;
 use Validator;
-use Excel\Http\Controllers\Controller;
+use BuscaSorocaba\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
 
 class AuthController extends Controller

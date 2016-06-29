@@ -1,8 +1,8 @@
 <?php
 
-namespace Excel\Http\Controllers\Auth;
+namespace BuscaSorocaba\Http\Controllers\Auth;
 
-use Excel\Http\Controllers\Controller;
+use BuscaSorocaba\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ResetsPasswords;
 
 class PasswordController extends Controller

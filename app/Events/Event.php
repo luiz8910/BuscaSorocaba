@@ -1,6 +1,6 @@
 <?php
 
-namespace Excel\Events;
+namespace BuscaSorocaba\Events;
 
 abstract class Event
 {

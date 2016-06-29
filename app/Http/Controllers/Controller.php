@@ -1,6 +1,6 @@
 <?php
 
-namespace Excel\Http\Controllers;
+namespace BuscaSorocaba\Http\Controllers;
 
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Routing\Controller as BaseController;

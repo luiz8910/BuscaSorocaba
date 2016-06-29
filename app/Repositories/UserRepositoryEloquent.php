@@ -1,16 +1,16 @@
 <?php
 
-namespace Excel\Repositories;
+namespace BuscaSorocaba\Repositories;
 
 use Prettus\Repository\Eloquent\BaseRepository;
 use Prettus\Repository\Criteria\RequestCriteria;
-use Excel\Repositories\UserRepository;
-use Excel\Models\User;
-use Excel\Validators\UserValidator;
+use BuscaSorocaba\Repositories\UserRepository;
+use BuscaSorocaba\Models\User;
+use BuscaSorocaba\Validators\UserValidator;
 
 /**
  * Class UserRepositoryEloquent
- * @package namespace Excel\Repositories;
+ * @package namespace BuscaSorocaba\Repositories;
  */
 class UserRepositoryEloquent extends BaseRepository implements UserRepository
 {

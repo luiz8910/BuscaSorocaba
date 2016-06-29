@@ -1,5 +1,5 @@
 suites:
     main:
-        namespace: Excel
-        psr4_prefix: Excel
+        namespace: BuscaSorocaba
+        psr4_prefix: BuscaSorocaba
         src_path: app

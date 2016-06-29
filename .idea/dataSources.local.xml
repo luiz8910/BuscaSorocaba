@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="MySQL - buscaSorocaba@localhost" uuid="84674fdb-ad42-4b4e-9ed2-f08c8dc880a1">
+      <secret-storage>master_key</secret-storage>
+      <user-name>root</user-name>
+      <schema-pattern>buscaSorocaba.*</schema-pattern>
+      <default-schemas>buscaSorocaba.*</default-schemas>
+    </data-source>
+  </component>
+</project>

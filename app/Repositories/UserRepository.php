@@ -1,12 +1,12 @@
 <?php
 
-namespace Excel\Repositories;
+namespace BuscaSorocaba\Repositories;
 
 use Prettus\Repository\Contracts\RepositoryInterface;
 
 /**
  * Interface UserRepository
- * @package namespace Excel\Repositories;
+ * @package namespace BuscaSorocaba\Repositories;
  */
 interface UserRepository extends RepositoryInterface
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Excel\Providers;
+namespace BuscaSorocaba\Providers;
 
 use Illuminate\Support\ServiceProvider;
 

@@ -146,10 +146,10 @@ return [
         /*
          * Application Service Providers...
          */
-        Excel\Providers\AppServiceProvider::class,
-        Excel\Providers\EventServiceProvider::class,
-        Excel\Providers\RouteServiceProvider::class,
-        Excel\Providers\RepositoryServiceProvider::class
+        BuscaSorocaba\Providers\AppServiceProvider::class,
+        BuscaSorocaba\Providers\EventServiceProvider::class,
+        BuscaSorocaba\Providers\RouteServiceProvider::class,
+        BuscaSorocaba\Providers\RepositoryServiceProvider::class
 
     ],
 

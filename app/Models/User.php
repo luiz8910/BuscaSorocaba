@@ -1,6 +1,6 @@
 <?php
 
-namespace Excel\Models;
+namespace BuscaSorocaba\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Auth\Authenticatable;

@@ -1,6 +1,6 @@
 <?php
 
-namespace Excel\Jobs;
+namespace BuscaSorocaba\Jobs;
 
 use Illuminate\Bus\Queueable;
 

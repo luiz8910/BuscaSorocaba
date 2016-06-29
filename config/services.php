@@ -30,7 +30,7 @@ return [
     ],
 
     'stripe' => [
-        'model'  => Excel\User::class,
+        'model'  => BuscaSorocaba\User::class,
         'key' => '',
         'secret' => '',
     ],

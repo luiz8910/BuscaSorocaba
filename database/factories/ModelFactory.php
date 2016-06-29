@@ -11,11 +11,18 @@
 |
 */
 
-$factory->define(Excel\User::class, function ($faker) {
+$factory->define(BuscaSorocaba\Models\User::class, function ($faker) {
     return [
         'name' => $faker->name,
         'email' => $faker->email,
         'password' => str_random(10),
         'remember_token' => str_random(10),
+    ];
+});
+
+
+$factory->define(\BuscaSorocaba\Models\Categoria::class, function($faker){
+    return [
+        'nome' => $faker->name
     ];
 });
