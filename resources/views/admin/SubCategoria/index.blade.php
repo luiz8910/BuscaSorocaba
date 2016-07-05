@@ -3,6 +3,7 @@
 @section('content')
 
     <h3>Sub Categorias</h3>
+
     <a href="{{ route('admin.subcategoria.create') }}" class="btn btn-default">Nova Categoria</a>
 
     @if(!$sub) {{ 'Não há dados para exibir' }}

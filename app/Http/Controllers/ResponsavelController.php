@@ -2,22 +2,30 @@
 
 namespace BuscaSorocaba\Http\Controllers;
 
-use BuscaSorocaba\Repositories\CategoriaRepository;
+use BuscaSorocaba\Models\Estabelecimentos;
+use BuscaSorocaba\Models\Responsavel;
+use BuscaSorocaba\Repositories\EstabelecimentosRepository;
+use BuscaSorocaba\Repositories\ResponsavelRepository;
 use Illuminate\Http\Request;
 
 use BuscaSorocaba\Http\Requests;
 use BuscaSorocaba\Http\Controllers\Controller;
 
-class CategoriaController extends Controller
+class ResponsavelController extends Controller
 {
     /**
-     * @var CategoriaRepository
+     * @var ResponsavelRepository
      */
     private $repository;
+    /**
+     * @var EstabelecimentosRepository
+     */
+    private $estabelecimentosRepository;
 
-    public function __construct(CategoriaRepository $repository)
+    public function __construct(ResponsavelRepository $repository, EstabelecimentosRepository $estabelecimentosRepository)
     {
         $this->repository = $repository;
+        $this->estabelecimentosRepository = $estabelecimentosRepository;
     }
 
     /**
@@ -27,9 +35,15 @@ class CategoriaController extends Controller
      */
     public function index()
     {
-        $categoria = $this->repository->paginate();
+        $resp = $this->repository->paginate();
 
-        return view('admin.categoria.index', compact('categoria'));
+        if(!$resp->items())
+        {
+            $resp = null;
+        }
+
+        return view('admin.responsavel.index', compact('resp'));
+
     }
 
     /**
@@ -39,8 +53,9 @@ class CategoriaController extends Controller
      */
     public function create()
     {
+        $estab = $this->estabelecimentosRepository->all();
 
-        return view('admin.categoria.create');
+        return view('admin.responsavel.create', compact('estab'));
     }
 
     /**
@@ -49,13 +64,17 @@ class CategoriaController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Requests\CategoriaRequest $request)
+    public function store(Request $request)
     {
         $data = $request->all();
 
+        $estab = new Estabelecimentos([
+            'estabelecimentos_id' => $data['estabelecimentos_id']
+        ]);
+
         $this->repository->create($data);
 
-        return redirect()->route('admin.categoria.index');
+        return redirect()->route('admin.responsavel.index');
     }
 
     /**
@@ -77,9 +96,11 @@ class CategoriaController extends Controller
      */
     public function edit($id)
     {
-        $categoria = $this->repository->find($id);
+        $resp = $this->repository->find($id);
 
-        return view('admin.categoria.edit', compact('categoria'));
+        $estab = $this->estabelecimentosRepository->all();
+
+        return view('admin.responsavel.edit', compact('resp', 'estab'));
     }
 
     /**
@@ -93,40 +114,9 @@ class CategoriaController extends Controller
     {
         $data = $request->all();
 
-        session(['nome' => $data['nome']]);
+        $this->repository->update($data, $id);
 
-        $cat = $this->repository->find($id);
-
-        if ($cat->nome == $data['nome'])
-        {
-            $this->repository->update($data, $id);
-        }
-
-        else
-        {
-            $nome = $this->repository->all();
-            $var = true;
-
-            foreach($nome as $n)
-            {
-                if($data['nome'] == $n->nome)
-                {
-                    $var = false;
-                }
-            }
-
-            if($var)
-            {
-                $this->repository->update($data, $id);
-            }
-            else{
-                return $this->edit($id);
-            }
-        }
-
-
-
-        return redirect()->route('admin.categoria.index');
+        return redirect()->route('admin.responsavel.index');
     }
 
     /**
@@ -139,6 +129,6 @@ class CategoriaController extends Controller
     {
         $this->repository->delete($id);
 
-        return redirect()->route('admin.categoria.index');
+        return redirect()->route('admin.responsavel.index');
     }
 }

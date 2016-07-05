@@ -3,13 +3,92 @@
 @section('content')
 
     <div class="container">
+
+        @if(session('nome') != null)
+            <div class="alert alert-danger">
+                <h5>Esta Subcategoria já existe</h5>
+            </div>
+            {{ session()->forget('nome') }}
+        @endif
+
         <h3>Categoria Nome: {{ $estab->nome }}</h3>
+
+        @if($errors->any())
+            <ul class="alert alert-danger">
+                @foreach($errors->all() as $e)
+                    <li>{{ $e }}</li>
+                @endforeach
+            </ul>
+        @endif
 
         {!! Form::model($estab, ['route' => ['admin.estabelecimentos.update', $estab->id], 'class' => 'form']) !!}
 
         <div class="form-group">
-            {!! Form::label('Categoria', 'Categoria:') !!}
-            {!! Form::Select('idCatSub', $sub, null, ['class' => 'form-control']) !!}
+            {!! Form::label('Categoria', 'Categoria 1:') !!}
+            <select name="subcategorias_id" id="subcategorias_id" class="form-control" required>
+                <option value="{{ $id[0] or ''}}">{{ $nome[0]}}</option>
+                @foreach($sub as $s)
+                    @if($s->nome != $nome[0])
+                        <option value="{{ $s->id }}">{{ $s->nome }}</option>
+                    @endif
+                @endforeach
+            </select>
+        </div>
+
+        <div class="form-group" id="subcategorias_id_2_div">
+            {!! Form::label('Categoria', 'Categoria 2:') !!}
+            <select name="subcategorias_id_2" id="subcategorias_id_2" class="form-control">
+                <option value="{{ $id[1] or $id[1] = ''}}">{{ $nome[1] or $nome[1] = 'Selecione'}}</option>
+                @foreach($sub as $s)
+                    @if($s->nome != $nome[1])
+                        <option value="{{ $s->id }}">{{ $s->nome }}</option>
+                    @endif
+                @endforeach
+
+                @if($id[1])<option value="">Selecione</option> @endif
+            </select>
+        </div>
+
+        <div class="form-group" id="subcategorias_id_3_div">
+            {!! Form::label('Categoria', 'Categoria 3:') !!}
+            <select name="subcategorias_id_3" id="subcategorias_id_3" class="form-control">
+                <option value="{{ $id[2] or $id[2] = ''}}">{{ $nome[2] or $nome[2] = 'Selecione'}}</option>
+                @foreach($sub as $s)
+                    @if($s->nome != $nome[2])
+                        <option value="{{ $s->id }}">{{ $s->nome }}</option>
+                    @endif
+                @endforeach
+
+                @if($id[2])<option value="">Selecione</option> @endif
+            </select>
+        </div>
+
+        <div class="form-group" id="subcategorias_id_4_div">
+            {!! Form::label('Categoria', 'Categoria 4:') !!}
+            <select name="subcategorias_id_4" id="subcategorias_id_4" class="form-control">
+                <option value="{{ $id[3] or $id[3] = ''}}">{{ $nome[3] or $nome[3] = 'Selecione'}}</option>
+                @foreach($sub as $s)
+                    @if($s->nome != $nome[3])
+                        <option value="{{ $s->id }}">{{ $s->nome }}</option>
+                    @endif
+                @endforeach
+
+                @if(is_null($id[3]))<option value="">Selecione</option> @endif
+            </select>
+        </div>
+
+        <div class="form-group" id="subcategorias_id_5_div">
+            {!! Form::label('Categoria', 'Categoria 5:') !!}
+            <select name="subcategorias_id_5" id="subcategorias_id_5" class="form-control">
+                <option value="{{ $id[4] or $id[4] = ''}}">{{ $nome[4] or $nome[4] = 'Selecione'}}</option>
+                @foreach($sub as $s)
+                    @if($s->nome != $nome[4])
+                        <option value="{{ $s->id }}">{{ $s->nome }}</option>
+                    @endif
+                @endforeach
+
+                @if($id[4])<option value="">Selecione</option> @endif
+            </select>
         </div>
 
         <div class="form-group">
@@ -23,7 +102,7 @@
         </div>
 
         <div class="form-group">
-            {!! Form::label("Telefone", "Telefone:") !!}
+            {!! Form::label("Telefone", "Telefone 2:") !!}
             {!! Form::text("telefone2", null, ["class" => "form-control"]) !!}
         </div>
 
@@ -65,12 +144,11 @@
         <div class="form-group">
             {!! Form::label("site", "Site:") !!}
             <input type="url" name="site" class="form-control">
-
         </div>
 
         <div class="form-group">
-            {!! Form::label("24h", "24h:") !!}
-            <input type="checkbox" name="24h">
+            {!! Form::label("24h", "24h") !!}
+            <input type="checkbox" name="_24h">
         </div>
 
         <div class="form-group">
@@ -79,9 +157,34 @@
         </div>
 
         <div class="form-group">
-            {!! Form::submit("Salvar", ['class' => 'btn btn-primary']) !!}
+            {!! Form::submit("Alterar", ['class' => 'btn btn-primary']) !!}
         </div>
 
         {!! Form::close() !!}
     </div>
+@endsection
+
+@section('script')
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#subcategorias_id').change(function () {
+                $('#subcategorias_id_2_div').show();
+            });
+
+            $('#subcategorias_id_2').change(function () {
+                $('#subcategorias_id_3_div').show();
+            });
+
+            $('#subcategorias_id_3').change(function () {
+                $('#subcategorias_id_4_div').show();
+            });
+
+            $('#subcategorias_id_4').change(function () {
+                $('#subcategorias_id_5_div').show();
+            });
+        });
+
+    </script>
+
 @endsection

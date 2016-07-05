@@ -3,7 +3,15 @@
 @section('content')
 
     <div class="container">
-        <h3>Nova Categoria</h3>
+
+        @if(session('nome') != null)
+            <div class="alert alert-danger">
+                <h5>Esta Responsável já existe</h5>
+            </div>
+            {{ session()->forget('nome') }}
+        @endif
+
+        <h3>Categoria Nome: {{ $resp->nome }}</h3>
 
         @if($errors->any())
             <ul class="alert alert-danger">
@@ -13,62 +21,23 @@
             </ul>
         @endif
 
-        {!! Form::open(['route' => 'admin.estabelecimentos.store', 'class' => 'form']) !!}
+        {!! Form::model($resp, ['route' => ['admin.responsavel.update', $resp->id], 'class' => 'form']) !!}
 
         <div class="form-group">
-            {!! Form::label('Categoria', 'Categoria 1:') !!}
-            <select name="subcategorias_id" id="subcategorias_id" class="form-control" required>
-                <option value="">Selecione</option>
+            {!! Form::label('Estabelecimento', 'Estabelecimento:') !!}
+            <select name="estabelecimentos_id" id="estabelecimentos_id" class="form-control" required>
+                <option value="{{ $id[0] or ''}}">{{ $nome[0]}}</option>
                 @foreach($sub as $s)
-                    <option value="{{ $s->id }}">{{ $s->nome }}</option>
-                @endforeach
-            </select>
-        </div>
-
-        <div class="form-group" hidden id="subcategorias_id_2_div">
-            {!! Form::label('Categoria', 'Categoria 2:') !!}
-            <select name="subcategorias_id_2" id="subcategorias_id_2" class="form-control">
-                <option value="">Selecione</option>
-                @foreach($sub as $s)
-                    <option value="{{ $s->id }}">{{ $s->nome }}</option>
-                @endforeach
-            </select>
-        </div>
-
-        <div class="form-group" hidden id="subcategorias_id_3_div">
-            {!! Form::label('Categoria', 'Categoria 3:') !!}
-            <select name="subcategorias_id_3" id="subcategorias_id_3" class="form-control">
-                <option value="">Selecione</option>
-                @foreach($sub as $s)
-                    <option value="{{ $s->id }}">{{ $s->nome }}</option>
-                @endforeach
-            </select>
-        </div>
-
-        <div class="form-group" hidden id="subcategorias_id_4_div">
-            {!! Form::label('Categoria', 'Categoria 4:') !!}
-            <select name="subcategorias_id_4" id="subcategorias_id_4" class="form-control">
-                <option value="">Selecione</option>
-                @foreach($sub as $s)
-                    <option value="{{ $s->id }}">{{ $s->nome }}</option>
-                @endforeach
-            </select>
-        </div>
-
-        <div class="form-group" hidden id="subcategorias_id_5_div">
-            {!! Form::label('Categoria', 'Categoria 5:') !!}
-            <select name="subcategorias_id_5" id="subcategorias_id_5"class="form-control">
-                <option value="">Selecione</option>
-                @foreach($sub as $s)
-                    <option value="{{ $s->id }}">{{ $s->nome }}</option>
+                    @if($s->nome != $nome[0])
+                        <option value="{{ $s->id }}">{{ $s->nome }}</option>
+                    @endif
                 @endforeach
             </select>
         </div>
 
         <div class="form-group">
             {!! Form::label("Nome", "Nome:") !!}
-            {!! Form::text("nome", null, ["class" => "form-control", "id" => "nome"]) !!}
-            <h6 hidden>Teste</h6>
+            {!! Form::text("nome", null, ["class" => "form-control"]) !!}
         </div>
 
         <div class="form-group">
@@ -119,11 +88,10 @@
         <div class="form-group">
             {!! Form::label("site", "Site:") !!}
             <input type="url" name="site" class="form-control">
-
         </div>
 
         <div class="form-group">
-            {!! Form::label("_24h", "24h") !!}
+            {!! Form::label("24h", "24h") !!}
             <input type="checkbox" name="_24h">
         </div>
 
@@ -133,7 +101,7 @@
         </div>
 
         <div class="form-group">
-            {!! Form::submit("Salvar", ['class' => 'btn btn-primary']) !!}
+            {!! Form::submit("Alterar", ['class' => 'btn btn-primary']) !!}
         </div>
 
         {!! Form::close() !!}

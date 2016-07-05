@@ -10,6 +10,9 @@ use Illuminate\Http\Request;
 use BuscaSorocaba\Http\Requests;
 use BuscaSorocaba\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Mail;
+use Mockery\CountValidator\Exception;
+use Symfony\Component\HttpFoundation\Response;
 
 class EstabelecimentosController extends Controller
 {
@@ -35,15 +38,19 @@ class EstabelecimentosController extends Controller
      */
     public function index()
     {
-        $estab = $this->repository->paginate();
+        $estab = $this->repository->paginate(5);
 
-        if (!$estab->items()) {
+        if (!$estab->items())
+        {
             $estab = false;
         }
 
-        return view('admin.estabelecimentos.index', compact('estab'));
+        $i = 0;
+
+        return view('admin.estabelecimentos.index', compact('estab', 'i'));
 
     }
+
 
     /**
      * Show the form for creating a new resource.
@@ -52,7 +59,7 @@ class EstabelecimentosController extends Controller
      */
     public function create()
     {
-        $sub = $this->subCategoriaRepository->lists('nome', 'id');
+        $sub = $this->subCategoriaRepository->all();
 
         return view('admin.estabelecimentos.create', compact('sub'));
     }
@@ -63,29 +70,90 @@ class EstabelecimentosController extends Controller
      * @param  \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Requests\EstabelecimentosRequest $request)
     {
-        $data = $request->all();
+
+        $data = $request->all();//dd($data);
 
         $sub = $this->subCategoriaRepository->find($data['subcategorias_id']);
-        $sub2 = $this->subCategoriaRepository->find($data['subcategorias_id_2']);
 
-        $s = array($sub, $sub2);
+        $s = array($sub);
 
-        $this->repository->create($data)->subCategoria()->saveMany($s);
+        if($data['subcategorias_id_2'])
+        {
+            $sub2 = $this->subCategoriaRepository->find($data['subcategorias_id_2']);
+            array_push($s, $sub2);
+        }
+
+        if($data['subcategorias_id_3'])
+        {
+            $sub3 = $this->subCategoriaRepository->find($data['subcategorias_id_3']);
+            array_push($s, $sub3);
+        }
+
+        if($data['subcategorias_id_4'])
+        {
+            $sub4 = $this->subCategoriaRepository->find($data['subcategorias_id_4']);
+            array_push($s, $sub4);
+        }
+
+        if($data['subcategorias_id_5'])
+        {
+            $sub5 = $this->subCategoriaRepository->find($data['subcategorias_id_5']);
+            array_push($s, $sub5);
+        }
+
+        $s = array_unique($s);
+
+        $this->repository->create($request->all())->subCategoria()->saveMany($s);
+
 
         return redirect()->route('admin.estabelecimentos.index');
     }
 
     /**
-     * Display the specified resource.
+     * Realiza as respectivas atualizações com relacionamentos.
+     * Continuação do update
      *
-     * @param  int $id
+     * @param  int $i
+     * @param Request $data
      * @return \Illuminate\Http\Response
      */
-    public function show()
+    public function show($id, $data)
     {
+        $sub = $this->subCategoriaRepository->find($data['subcategorias_id']);
 
+        $s = array($sub);
+
+        if($data['subcategorias_id_2'])
+        {
+            $sub2 = $this->subCategoriaRepository->find($data['subcategorias_id_2']);
+            array_push($s, $sub2);
+        }
+
+        if($data['subcategorias_id_3'])
+        {
+            $sub3 = $this->subCategoriaRepository->find($data['subcategorias_id_3']);
+            array_push($s, $sub3);
+        }
+
+        if($data['subcategorias_id_4'])
+        {
+            $sub4 = $this->subCategoriaRepository->find($data['subcategorias_id_4']);
+            array_push($s, $sub4);
+        }
+
+        if($data['subcategorias_id_5'])
+        {
+            $sub5 = $this->subCategoriaRepository->find($data['subcategorias_id_5']);
+            array_push($s, $sub5);
+        }
+
+        $s = array_unique($s);
+
+        $this->repository->update($data, $id)->subCategoria()->detach();
+
+        $this->repository->update($data, $id)->subCategoria()->saveMany($s);
     }
 
     /**
@@ -96,10 +164,31 @@ class EstabelecimentosController extends Controller
      */
     public function edit($id)
     {
-        $sub = $this->subCategoriaRepository->lists('nome', 'id');
+        $sub = $this->subCategoriaRepository->all();
+
         $estab = $this->repository->find($id);
 
-        return view('admin.estabelecimentos.edit', compact('sub', 'estab'));
+        $subcat = $estab->subCategoria->all();
+
+        $id = array();
+        $nome = array();
+
+        foreach($subcat as $s)
+        {
+            array_push($id, $s->id);
+            array_push($nome, $s->nome);
+        }
+
+        $_24h = 0;
+
+        if($estab->_24h == 1)
+        {
+            $_24h = 1;
+        }
+
+        //dd($_24h);
+
+        return view('admin.estabelecimentos.edit', compact('sub', 'estab', 'id', 'nome'));
     }
 
     /**
@@ -113,11 +202,36 @@ class EstabelecimentosController extends Controller
     {
         $data = $request->all();
 
-        $this->repository->update($data, $id);
+        session(['nome' => $data['nome']]);
 
-        $estab = $this->repository->find($id);
+        $nomeEstab = $this->repository->find($id);
 
-        $estab->subCategoria()->attach([1, 2]);
+        if ($nomeEstab->nome == $data['nome'])
+        {
+            $this->show($id, $data);
+        }
+
+        else
+        {
+            $nome = $this->repository->all();
+            $var = true;
+
+            foreach($nome as $n)
+            {
+                if($data['nome'] == $n->nome)
+                {
+                    $var = false;
+                }
+            }
+
+            if($var)
+            {
+                $this->show($id, $data);
+            }
+            else{
+                return $this->edit($id);
+            }
+        }
 
         return redirect()->route('admin.estabelecimentos.index');
     }
@@ -130,8 +244,40 @@ class EstabelecimentosController extends Controller
      */
     public function destroy($id)
     {
+        $estab = $this->repository->find($id);
+
+        $estab->subCategoria()->detach();
+
         $this->repository->delete($id);
 
         return redirect()->route('admin.estabelecimentos.index');
+    }
+
+    public function ajaxEstabelecimento($nome)
+    {
+        try{
+            $estab = $this->repository->findByField('nome', $nome)->count();
+
+            if($estab > 0)
+            {
+                $var = $estab->getQuery()->get('nome');
+                return Response::json($var);
+            }
+
+            return 'nao encontrado';
+        }catch(\Exception $e){
+            return $e->getMessage();
+        }
+
+    }
+
+    public function email()
+    {
+        $data = ['teste'];
+
+        Mail::send('welcome', $data, function($message){
+            $message->from('luiz.sanches8910@gmail.com', 'Teste');
+            $message->to('')->subject('Welcome to the Laravel 5 App!');
+        });
     }
 }

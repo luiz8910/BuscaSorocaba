@@ -13,22 +13,31 @@
             <thead>
                 <th>ID</th>
                 <th>Estabelecimento</th>
+                <th>Sub-Categorias</th>
                 <th>Categoria</th>
                 <th>Ação</th>
             </thead>
         </tr>
 
         <tbody>
-            @foreach($estab as $e)
+            @foreach($estab as $e) <!-- Popula toda a table -->
                 <tr>
                     <td>{{ $e->id }}</td>
                     <td>{{ $e->nome }}</td>
                     <td>
-                        <ul>
+                        <ul> <!-- Exibe a lista de subcategorias -->
                             @foreach($e->subCategoria as $est)
                                 <li>{{ $est->nome }}</li>
                             @endforeach
                         </ul>
+                    </td>
+                    <td> <!-- Exibe a lista de Categorias -->
+                        @foreach($e->subCategoria as $est) <!-- Varíavel $i passado pelo controller -->
+                            @if($i == 0) <!-- If utilizado para imprimir a categoria apenas uma vez -->
+                                {{ $est->categoria->nome }}
+                                <?php $i++; ?> <!-- Incrementando i garante que a categoria será impressa apenas uma vez -->
+                            @endif
+                        @endforeach <?php $i = 0; ?> <!-- Isso garante que os próximos estabelecimentos tambem terão suas categorias impressas -->
                     </td>
                     <td>
                         <a href="{{ route('admin.estabelecimentos.edit', [$e->id]) }}"><span class="glyphicon glyphicon-edit"></span> </a>
@@ -41,6 +50,6 @@
 
     </table>
 
-    {!! $estab->render() !!}
+    {!! $estab->render() !!} <!-- Esta linha garante a paginação -->
     @endif
 @endsection

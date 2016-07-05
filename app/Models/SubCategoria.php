@@ -10,7 +10,7 @@ class SubCategoria extends Model implements Transformable
 {
     use TransformableTrait;
 
-    protected $fillable = ['categoria_id', 'nome', '24h', 'emergencia'];
+    protected $fillable = ['categoria_id', 'nome', '_24h', 'emergencia'];
     protected $table = 'subcategorias';
 
     public function categoria()

@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateEstabelecimentosTable extends Migration
+class CreateResponsavelsTable extends Migration
 {
 
 	/**
@@ -13,24 +13,21 @@ class CreateEstabelecimentosTable extends Migration
 	 */
 	public function up()
 	{
-		Schema::create('estabelecimentos', function(Blueprint $table) {
+		Schema::create('responsaveis', function(Blueprint $table) {
             $table->increments('id');
-//			$table->integer('sub_categorias_id')->unsigned();
-//			$table->foreign('sub_categorias_id')->references('id')->on('subcategorias');
+			$table->integer('estabelecimentos_id')->unsigned();
+			$table->foreign('estabelecimentos_id')->references('id')->on('estabelecimentos')->onDelete('cascade');
 			$table->string('nome');
 			$table->string('telefone');
-			$table->string('telefone2')->nullable();
 			$table->string('email');
-			$table->string('cep')->nullable();
+			$table->string('cep');
 			$table->string('logradouro');
 			$table->string('numero');
 			$table->string('bairro');
 			$table->string('cidade')->default('Sorocaba');
-			$table->string('quemSomos')->nullable();
-			$table->string('servicos')->nullable();
-			$table->string('site')->nullable();
-			$table->integer('_24h')->default(0);
-			$table->integer('emergencia')->default(0);
+			$table->string('cpf');
+			$table->string('rg');
+			$table->string('cargo');
 			$table->softDeletes();
             $table->timestamps();
 		});
@@ -43,7 +40,7 @@ class CreateEstabelecimentosTable extends Migration
 	 */
 	public function down()
 	{
-		Schema::drop('estabelecimentos');
+		Schema::drop('responsaveis');
 	}
 
 }

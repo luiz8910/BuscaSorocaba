@@ -71,7 +71,7 @@ return [
         'array'   => 'The :attribute must contain :size items.',
     ],
     'timezone'             => 'The :attribute must be a valid zone.',
-    'unique'               => 'The :attribute has already been taken.',
+    'unique'               => 'O campo :attribute já está cadastrado. Tente Novamente.',
     'url'                  => 'The :attribute format is invalid.',
 
     /*

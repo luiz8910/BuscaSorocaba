@@ -36,6 +36,7 @@
 					<li><a href="{{ route('admin.categoria.index') }}">Categorias</a></li>
 					<li><a href="{{ route('admin.subcategoria.index') }}">SubCategorias</a></li>
 					<li><a href="{{ route('admin.estabelecimentos.index') }}">Estabelecimentos</a></li>
+					<li><a href="{{ route('admin.responsavel.index') }}">Responsáveis</a></li>
 				</ul>
 
 				<ul class="nav navbar-nav navbar-right">
@@ -64,5 +65,7 @@
 	<!-- Scripts -->
 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+	@yield('script')
 </body>
 </html>

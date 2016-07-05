@@ -29,6 +29,8 @@ Route::post('/categoria/salvar', ['as' => 'admin.categoria.store', 'uses' => 'Ca
 
 Route::get('/categoria/excluir/{id}', ['as' => 'admin.categoria.destroy', 'uses' => 'CategoriaController@destroy']);
 
+//Fim Categorias
+
 //Sub Categorias
 
 Route::get('/subCategoria', ['as' => 'admin.subcategoria.index', 'uses' => 'SubCategoriaController@index']);
@@ -43,6 +45,8 @@ Route::post('/subCategoria/salvar', ['as' => 'admin.subcategoria.store', 'uses' 
 
 Route::get('/subCategoria/excluir/{id}', ['as' => 'admin.subcategoria.destroy', 'uses' => 'SubCategoriaController@destroy']);
 
+//Fim Sub Categorias
+
 //Estabelecimentos
 
 Route::get('/estabelecimentos', ['as' => 'admin.estabelecimentos.index', 'uses' => 'EstabelecimentosController@index']);
@@ -56,3 +60,27 @@ Route::post('/estabelecimentos/alterar/{id}', ['as' => 'admin.estabelecimentos.u
 Route::post('/estabelecimentos/salvar', ['as' => 'admin.estabelecimentos.store', 'uses' => 'EstabelecimentosController@store']);
 
 Route::get('/estabelecimentos/excluir/{id}', ['as' => 'admin.estabelecimentos.destroy', 'uses' => 'EstabelecimentosController@destroy']);
+
+Route::get('/estabelecimentos/email', ['as' => 'admin.estabelecimentos.email', 'uses' => 'EstabelecimentosController@email']);
+
+//Ajax
+
+Route::get('get-nome-estabelecimento/{nome}', 'EstabelecimentosController@ajaxEstabelecimento');
+
+//Fim Estabelecimentos
+
+//Responsaveis
+
+Route::get('/responsaveis', ['as' => 'admin.responsavel.index', 'uses' => 'ResponsavelController@index']);
+
+Route::get('/responsaveis/novo', ['as' => 'admin.responsavel.create', 'uses' => 'ResponsavelController@create']);
+
+Route::get('/responsaveis/editar/{id}', ['as' => 'admin.responsavel.edit', 'uses' => 'ResponsavelController@edit']);
+
+Route::post('/responsaveis/alterar/{id}', ['as' => 'admin.responsavel.update', 'uses' => 'ResponsavelController@update']);
+
+Route::post('/responsaveis/salvar', ['as' => 'admin.responsavel.store', 'uses' => 'ResponsavelController@store']);
+
+Route::get('/responsaveis/excluir/{id}', ['as' => 'admin.responsavel.destroy', 'uses' => 'ResponsavelController@destroy']);
+
+//Fim Responsaveis

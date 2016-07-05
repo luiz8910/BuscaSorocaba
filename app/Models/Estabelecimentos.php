@@ -22,4 +22,10 @@ class Estabelecimentos extends Model implements Transformable
     {
         return $this->belongsToMany(SubCategoria::class);
     }
+
+    public function responsavel()
+    {
+        return $this->hasMany(Responsavel::class);
+    }
+
 }

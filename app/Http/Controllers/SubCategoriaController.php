@@ -60,19 +60,9 @@ class SubCategoriaController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Requests\SubCategoriaRequest $request)
     {
         $data = $request->all();
-
-        if(isset($data['24h']))
-        {
-            $data['24h'] = 1;
-        }
-
-        if(isset($data['emergencia']))
-        {
-            $data['emergencia'] = 1;
-        }
 
         $sub = new SubCategoria([
             'categoria_id' => $data['categoria_id']
@@ -119,7 +109,41 @@ class SubCategoriaController extends Controller
     {
         $data = $request->all();
 
-        $this->repository->update($data, $id);
+        session(['nome' => $data['nome']]);
+
+        $sub = new SubCategoria([
+            'categoria_id' => $data['categoria_id']
+        ]);
+
+        $nomeSub = $this->repository->find($id);
+
+        if ($nomeSub->nome == $data['nome'])
+        {
+            $this->repository->update($data, $id);
+        }
+
+        else
+        {
+            $nome = $this->repository->all();
+            $var = true;
+
+            foreach($nome as $n)
+            {
+                if($data['nome'] == $n->nome)
+                {
+                    $var = false;
+                }
+            }
+
+            if($var)
+            {
+                $this->repository->update($data, $id);
+            }
+            else{
+
+                return $this->edit($id);
+            }
+        }
 
         return redirect()->route('admin.subcategoria.index');
     }
@@ -132,6 +156,8 @@ class SubCategoriaController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $this->repository->delete($id);
+
+        return redirect()->route('admin.subcategoria.index');
     }
 }
