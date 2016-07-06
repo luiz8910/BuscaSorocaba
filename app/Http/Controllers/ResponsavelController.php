@@ -100,7 +100,13 @@ class ResponsavelController extends Controller
 
         $estab = $this->estabelecimentosRepository->all();
 
-        return view('admin.responsavel.edit', compact('resp', 'estab'));
+        $nomeEstab = $resp->estabelecimentos->first();
+
+        $id = $nomeEstab->id;
+
+        $nome = $nomeEstab->nome;
+
+        return view('admin.responsavel.edit', compact('resp', 'estab', 'id', 'nome'));
     }
 
     /**

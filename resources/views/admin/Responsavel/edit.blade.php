@@ -6,7 +6,7 @@
 
         @if(session('nome') != null)
             <div class="alert alert-danger">
-                <h5>Esta Responsável já existe</h5>
+                <h5>Este Responsável já existe</h5>
             </div>
             {{ session()->forget('nome') }}
         @endif
@@ -26,10 +26,10 @@
         <div class="form-group">
             {!! Form::label('Estabelecimento', 'Estabelecimento:') !!}
             <select name="estabelecimentos_id" id="estabelecimentos_id" class="form-control" required>
-                <option value="{{ $id[0] or ''}}">{{ $nome[0]}}</option>
-                @foreach($sub as $s)
-                    @if($s->nome != $nome[0])
-                        <option value="{{ $s->id }}">{{ $s->nome }}</option>
+                <option value="{{ $id or ''}}">{{ $nome or 'Selecione'}}</option>
+                @foreach($estab as $e)
+                    @if($e->nome != $nome)
+                        <option value="{{ $e->id }}">{{ $e->nome }}</option>
                     @endif
                 @endforeach
             </select>
@@ -46,13 +46,8 @@
         </div>
 
         <div class="form-group">
-            {!! Form::label("Telefone", "Telefone 2:") !!}
-            {!! Form::text("telefone2", null, ["class" => "form-control"]) !!}
-        </div>
-
-        <div class="form-group">
             {!! Form::label("email", "Email:") !!}
-            <input type="email" name="email" class="form-control">
+            {!! Form::email('email', null, ['class' => 'form-control']) !!}
         </div>
 
         <div class="form-group">
@@ -76,28 +71,18 @@
         </div>
 
         <div class="form-group">
-            {!! Form::label("quem", "Quem Somos:") !!}
-            {!! Form::textarea("quemSomos", null, ["class" => "form-control"]) !!}
+            {!! Form::label("cpf", "CPF:") !!}
+            {!! Form::text("cpf", null, ["class" => "form-control"]) !!}
         </div>
 
         <div class="form-group">
-            {!! Form::label("servicos", "Serviços:") !!}
-            {!! Form::textarea("servicos", null, ["class" => "form-control"]) !!}
+            {!! Form::label("rg", "RG:") !!}
+            {!! Form::text("rg", null, ["class" => "form-control"]) !!}
         </div>
 
         <div class="form-group">
-            {!! Form::label("site", "Site:") !!}
-            <input type="url" name="site" class="form-control">
-        </div>
-
-        <div class="form-group">
-            {!! Form::label("24h", "24h") !!}
-            <input type="checkbox" name="_24h">
-        </div>
-
-        <div class="form-group">
-            {!! Form::label("Emergencia", "Emergencia:") !!}
-            <input type="checkbox" name="emergencia">
+            {!! Form::label("cargo", "Cargo:") !!}
+            {!! Form::text("cargo", null, ["class" => "form-control"]) !!}
         </div>
 
         <div class="form-group">
