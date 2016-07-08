@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateResponsavelsTable extends Migration
+class CreateAvaliacaosTable extends Migration
 {
 
 	/**
@@ -13,22 +13,15 @@ class CreateResponsavelsTable extends Migration
 	 */
 	public function up()
 	{
-		Schema::create('responsaveis', function(Blueprint $table) {
+		Schema::create('avaliacoes', function(Blueprint $table) {
             $table->increments('id');
 			$table->integer('estabelecimentos_id')->unsigned();
 			$table->foreign('estabelecimentos_id')->references('id')->on('estabelecimentos')->onDelete('cascade');
-			$table->string('nome');
-			$table->string('telefone');
-			$table->string('email');
-			$table->string('cep');
-			$table->string('logradouro');
-			$table->string('numero');
-			$table->string('bairro');
-			$table->string('cidade')->default('Sorocaba');
-			$table->string('cpf');
-			$table->string('rg');
-			$table->string('cargo');
-			$table->softDeletes();
+			$table->integer('estrela_1');
+			$table->integer('estrela_2');
+			$table->integer('estrela_3');
+			$table->integer('estrela_4');
+			$table->integer('estrela_5');
             $table->timestamps();
 		});
 	}
@@ -40,7 +33,7 @@ class CreateResponsavelsTable extends Migration
 	 */
 	public function down()
 	{
-		Schema::drop('responsaveis');
+		Schema::drop('avaliacoes');
 	}
 
 }

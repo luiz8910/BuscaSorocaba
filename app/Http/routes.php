@@ -84,3 +84,11 @@ Route::post('/responsaveis/salvar', ['as' => 'admin.responsavel.store', 'uses' =
 Route::get('/responsaveis/excluir/{id}', ['as' => 'admin.responsavel.destroy', 'uses' => 'ResponsavelController@destroy']);
 
 //Fim Responsaveis
+
+Route::get('/ajax', function(){
+    return view('admin.ajax.index');
+});
+
+Route::get('/post', function(){
+    return view('admin.ajax.post');
+});

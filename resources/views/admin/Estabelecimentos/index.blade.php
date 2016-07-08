@@ -15,6 +15,7 @@
                 <th>Estabelecimento</th>
                 <th>Sub-Categorias</th>
                 <th>Categoria</th>
+                <th>Responsável</th>
                 <th>Ação</th>
             </thead>
         </tr>
@@ -39,6 +40,7 @@
                             @endif
                         @endforeach <?php $i = 0; ?> <!-- Isso garante que os próximos estabelecimentos tambem terão suas categorias impressas -->
                     </td>
+                    <td>{{ $e->responsavel->first()->nome }}</td>
                     <td>
                         <a href="{{ route('admin.estabelecimentos.edit', [$e->id]) }}"><span class="glyphicon glyphicon-edit"></span> </a>
                         |

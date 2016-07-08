@@ -164,9 +164,11 @@ class EstabelecimentosController extends Controller
      */
     public function edit($id)
     {
-        $sub = $this->subCategoriaRepository->all();
-
         $estab = $this->repository->find($id);
+
+        $idCat = $estab->subCategoria->first()->categoria_id;
+
+        $sub = $this->subCategoriaRepository->findWhere(['categoria_id' => $idCat]);
 
         $subcat = $estab->subCategoria->all();
 

@@ -28,4 +28,9 @@ class Estabelecimentos extends Model implements Transformable
         return $this->hasMany(Responsavel::class);
     }
 
+    public function avaliacao()
+    {
+       return $this->hasMany(Avaliacao::class);
+    }
+
 }
