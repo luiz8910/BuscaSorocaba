@@ -255,22 +255,43 @@ class EstabelecimentosController extends Controller
         return redirect()->route('admin.estabelecimentos.index');
     }
 
-    public function ajaxEstabelecimento($nome)
+    public function ajax(Request $request)
     {
-        try{
-            $estab = $this->repository->findByField('nome', $nome)->count();
 
-            if($estab > 0)
-            {
-                $var = $estab->getQuery()->get('nome');
-                return Response::json($var);
-            }
+        $data = $request->all();
 
-            return 'nao encontrado';
-        }catch(\Exception $e){
-            return $e->getMessage();
+        if($data['name'] == '')
+        {
+            echo json_encode(['status' => false, 'msg' => 'Fill in a name']);exit;
         }
 
+        if($data['email'] == '')
+        {
+            echo json_encode(['status' => false, 'msg' => 'Fill in a email']);exit;
+        }
+
+        if($data['tel'] == '')
+        {
+            echo json_encode(['status' => false, 'msg' => 'Fill in a telephone']);exit;
+        }
+
+        $id = DB::table('ajax')->insertGetId(
+            ['name' => $data['name'], 'email' => $data['email'], 'tel' => $data['tel']]
+        );
+
+        $data['id'] = $id;
+
+        echo json_encode(['status' => true, 'msg' => 'Success id = ' . $id, 'contacts' => $data]);exit;
+
+
+    }
+
+    public function ajaxSelect()
+    {
+        $ajax = DB::table('ajax')
+            ->orderBy('id', 'desc')
+            ->get();
+        echo json_encode($ajax);
     }
 
     public function email()

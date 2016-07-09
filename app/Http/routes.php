@@ -89,6 +89,6 @@ Route::get('/ajax', function(){
     return view('admin.ajax.index');
 });
 
-Route::get('/post', function(){
-    return view('admin.ajax.post');
-});
+Route::get('/post', 'EstabelecimentosController@ajax');
+
+Route::get('/get', 'EstabelecimentosController@ajaxSelect');
