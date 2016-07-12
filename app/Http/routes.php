@@ -65,7 +65,13 @@ Route::get('/estabelecimentos/email', ['as' => 'admin.estabelecimentos.email', '
 
 //Ajax
 
-Route::get('get-nome-estabelecimento/{nome}', 'EstabelecimentosController@ajaxEstabelecimento');
+Route::get('/ajax', function(){
+    return view('admin.ajax.index');
+});
+
+Route::get('/post', 'EstabelecimentosController@ajax');
+
+Route::get('/get', 'EstabelecimentosController@ajaxSelect');
 
 //Fim Estabelecimentos
 
@@ -85,10 +91,68 @@ Route::get('/responsaveis/excluir/{id}', ['as' => 'admin.responsavel.destroy', '
 
 //Fim Responsaveis
 
-Route::get('/ajax', function(){
-    return view('admin.ajax.index');
-});
 
-Route::get('/post', 'EstabelecimentosController@ajax');
+// Shoppings
 
-Route::get('/get', 'EstabelecimentosController@ajaxSelect');
+Route::get('/shoppings', ['as' => 'admin.shoppings.index', 'uses' => 'ShoppingController@index']);
+
+Route::get('/shoppings/novo', ['as' => 'admin.shoppings.create', 'uses' => 'ShoppingController@create']);
+
+Route::get('/shoppings/editar/{id}', ['as' => 'admin.shoppings.edit', 'uses' => 'ShoppingController@edit']);
+
+Route::post('/shoppings/alterar/{id}', ['as' => 'admin.shoppings.update', 'uses' => 'ShoppingController@update']);
+
+Route::post('/shoppings/salvar', ['as' => 'admin.shoppings.store', 'uses' => 'ShoppingController@store']);
+
+Route::get('/shoppings/excluir/{id}', ['as' => 'admin.shoppings.destroy', 'uses' => 'ShoppingController@destroy']);
+
+// Fim Shoppings
+
+// Filme
+
+Route::get('/filme', ['as' => 'admin.filme.index', 'uses' => 'FilmeController@index']);
+
+Route::get('/filme/novo', ['as' => 'admin.filme.create', 'uses' => 'FilmeController@create']);
+
+Route::get('/filme/editar/{id}', ['as' => 'admin.filme.edit', 'uses' => 'FilmeController@edit']);
+
+Route::post('/filme/alterar/{id}', ['as' => 'admin.filme.update', 'uses' => 'FilmeController@update']);
+
+Route::post('/filme/salvar', ['as' => 'admin.filme.store', 'uses' => 'FilmeController@store']);
+
+Route::get('/filme/excluir/{id}', ['as' => 'admin.filme.destroy', 'uses' => 'FilmeController@destroy']);
+
+// Fim Filme
+
+// Sala
+
+Route::get('/sala', ['as' => 'admin.sala.index', 'uses' => 'SalaController@index']);
+
+Route::get('/sala/novo', ['as' => 'admin.sala.create', 'uses' => 'SalaController@create']);
+
+Route::get('/sala/editar/{id}', ['as' => 'admin.sala.edit', 'uses' => 'SalaController@edit']);
+
+Route::post('/sala/alterar/{id}', ['as' => 'admin.sala.update', 'uses' => 'SalaController@update']);
+
+Route::post('/sala/salvar', ['as' => 'admin.sala.store', 'uses' => 'SalaController@store']);
+
+Route::get('/sala/excluir/{id}', ['as' => 'admin.sala.destroy', 'uses' => 'SalaController@destroy']);
+
+// Fim Sala
+
+// Sessões
+
+Route::get('/sessao', ['as' => 'admin.sessao.index', 'uses' => 'SalaController@indexSessao']);
+
+Route::get('/sessao/novo', ['as' => 'admin.sessao.create', 'uses' => 'SalaController@createSessao']);
+
+Route::get('/sessao/editar/{id}', ['as' => 'admin.sessao.edit', 'uses' => 'SalaController@editSessao']);
+
+Route::post('/sessao/alterar/{id}', ['as' => 'admin.sessao.update', 'uses' => 'SalaController@updateSessao']);
+
+Route::post('/sessao/salvar', ['as' => 'admin.sessao.store', 'uses' => 'SalaController@storeSessao']);
+
+Route::get('/sessao/excluir/{id}', ['as' => 'admin.sessao.destroy', 'uses' => 'SalaController@destroySessao']);
+
+Route::get('/ajaxSalas/{id}', 'SalaController@exibirSalasShoppings');
+// Fim Sessões
