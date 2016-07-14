@@ -21,8 +21,13 @@
         </div>
 
         <div class="form-group">
-            {!! Form::label("Nome", "Qualidade:") !!}
-            {!! Form::text("qualidade", null, ["class" => "form-control", 'required' => 'required', 'placeholder' => 'Ex: 3D, VIP, Macro XE']) !!}
+            {!! Form::label("Nome", "Tipo:") !!}
+            <select required name="tipo" class="form-control">
+                <option value="">Selecione</option>
+                <option value="VIP">VIP</option>
+                <option value="Macro XE">Macro XE</option>
+                <option value="Convencional">Convencional</option>
+            </select>
         </div>
 
         <div class="form-group">

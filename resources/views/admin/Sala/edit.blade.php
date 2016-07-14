@@ -11,7 +11,7 @@
             {{ session()->forget('nome') }}
         @endif
 
-        <h3>Nome: {{ $sala->nome }}</h3>
+        <h3>Sala numero: {{ $sala->numero }}</h3>
 
         {!! Form::model($sala, ['route' => ['admin.sala.update', $sala->id], 'class' => 'form']) !!}
 
@@ -21,8 +21,12 @@
             </div>
 
             <div class="form-group">
-                {!! Form::label("Nome", "Qualidade:") !!}
-                {!! Form::text("qualidade", null, ["class" => "form-control", 'required' => 'required', 'placeholder' => 'Ex: 3D, Macro XE']) !!}
+                {!! Form::label("Nome", "Tipo:") !!}
+                <select required name="tipo" class="form-control">
+                    <option value="VIP">VIP</option>
+                    <option value="Macro XE">Macro XE</option>
+                    <option value="Convencional">Convencional</option>
+                </select>
             </div>
 
             <div class="form-group">

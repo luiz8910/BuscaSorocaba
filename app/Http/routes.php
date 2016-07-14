@@ -142,17 +142,18 @@ Route::get('/sala/excluir/{id}', ['as' => 'admin.sala.destroy', 'uses' => 'SalaC
 
 // Sessões
 
-Route::get('/sessao', ['as' => 'admin.sessao.index', 'uses' => 'SalaController@indexSessao']);
+Route::get('/sessao', ['as' => 'admin.sessao.index', 'uses' => 'SessaoController@index']);
 
-Route::get('/sessao/novo', ['as' => 'admin.sessao.create', 'uses' => 'SalaController@createSessao']);
+Route::get('/sessao/novo', ['as' => 'admin.sessao.create', 'uses' => 'SessaoController@create']);
 
-Route::get('/sessao/editar/{id}', ['as' => 'admin.sessao.edit', 'uses' => 'SalaController@editSessao']);
+Route::get('/sessao/editar/{id}', ['as' => 'admin.sessao.edit', 'uses' => 'SessaoController@edit']);
 
-Route::post('/sessao/alterar/{id}', ['as' => 'admin.sessao.update', 'uses' => 'SalaController@updateSessao']);
+Route::post('/sessao/alterar/{id}', ['as' => 'admin.sessao.update', 'uses' => 'SessaoController@update']);
 
-Route::post('/sessao/salvar', ['as' => 'admin.sessao.store', 'uses' => 'SalaController@storeSessao']);
+Route::post('/sessao/salvar', ['as' => 'admin.sessao.store', 'uses' => 'SessaoController@store']);
 
-Route::get('/sessao/excluir/{id}', ['as' => 'admin.sessao.destroy', 'uses' => 'SalaController@destroySessao']);
+Route::get('/sessao/excluir/{id}', ['as' => 'admin.sessao.destroy', 'uses' => 'SessaoController@destroy']);
 
-Route::get('/ajaxSalas/{id}', 'SalaController@exibirSalasShoppings');
+Route::get('/ajaxSalas/{id}', 'SessaoController@exibirSalasShoppings');
+
 // Fim Sessões

@@ -7,28 +7,31 @@ use Prettus\Repository\Contracts\Transformable;
 use Prettus\Repository\Traits\TransformableTrait;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Sala extends Model implements Transformable
+class Sessao extends Model implements Transformable
 {
     use TransformableTrait, SoftDeletes;
 
     protected $fillable = [
-        'shopping_id', 'numero', 'tipo'
+        'filme_id', 'salas_id', 'horario', 'audio', 'qualidade'
     ];
 
+    protected $table = 'filme_sala';
+
     protected $dates = ['deleted_at'];
+
+    public function filme()
+    {
+        return $this->belongsTo(Filme::class);
+    }
+
+    public function salas()
+    {
+        return $this->belongsTo(Sala::class);
+    }
 
     public function shopping()
     {
         return $this->belongsTo(Shopping::class);
     }
 
-    public function filme()
-    {
-        return $this->belongsToMany(Filme::class);
-    }
-
-    public function sessao()
-    {
-        return $this->hasMany(Sessao::class, 'salas_id');
-    }
 }

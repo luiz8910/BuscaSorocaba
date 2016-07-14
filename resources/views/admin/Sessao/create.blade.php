@@ -37,11 +37,9 @@
 
         <div class="form-group" id="AjaxSalas">
             {!! Form::label("Nome", "Salas:") !!}
-            <select required class="form-control" name="sala_id" id="sala" disabled="true">
+            <select required class="form-control" name="salas_id" id="sala" disabled="true">
                 <option value="">Selecione</option>
-                {{--@foreach($shopping as $s)--}}
-                    {{--<option value="{{ $s->id }}">{{ $s->nome }}</option>--}}
-                {{--@endforeach--}}
+                <!-- O resto das informações será inserido por ajax -->
             </select>
         </div>
 
@@ -56,6 +54,17 @@
                 <option value="">Selecione</option>
                 <option value="Dublado">Dublado</option>
                 <option value="Legendado">Legendado</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            {!! Form::label("Nome", "Qualidade:") !!}
+            <select required name="qualidade" id="" class="form-control">
+                <option value="">Selecione</option>
+                <option value="3D">3D</option>
+                <option value="Macro XE">Macro XE</option>
+                <option value="IMAX">IMAX</option>
+                <option value="Digital">Digital</option>
             </select>
         </div>
 

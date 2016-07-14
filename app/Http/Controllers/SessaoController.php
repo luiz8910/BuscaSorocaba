@@ -2,19 +2,22 @@
 
 namespace BuscaSorocaba\Http\Controllers;
 
+use BuscaSorocaba\Models\Filme;
+use BuscaSorocaba\Models\Sala;
 use BuscaSorocaba\Models\Shopping;
 use BuscaSorocaba\Repositories\FilmeRepository;
 use BuscaSorocaba\Repositories\SalaRepository;
+use BuscaSorocaba\Repositories\SessaoRepository;
 use BuscaSorocaba\Repositories\ShoppingRepository;
 use Illuminate\Http\Request;
 
 use BuscaSorocaba\Http\Requests;
 use BuscaSorocaba\Http\Controllers\Controller;
 
-class SalaController extends Controller
+class SessaoController extends Controller
 {
     /**
-     * @var SalaRepository
+     * @var SessaoRepository
      */
     private $repository;
     /**
@@ -22,15 +25,19 @@ class SalaController extends Controller
      */
     private $shoppingRepository;
     /**
+     * @var SalaRepository
+     */
+    private $salaRepository;
+    /**
      * @var FilmeRepository
      */
     private $filmeRepository;
 
-    public function __construct(SalaRepository $repository, ShoppingRepository $shoppingRepository, FilmeRepository $filmeRepository)
+    public function __construct(SessaoRepository $repository, ShoppingRepository $shoppingRepository, SalaRepository $salaRepository, FilmeRepository $filmeRepository)
     {
-
         $this->repository = $repository;
         $this->shoppingRepository = $shoppingRepository;
+        $this->salaRepository = $salaRepository;
         $this->filmeRepository = $filmeRepository;
     }
 
@@ -41,14 +48,12 @@ class SalaController extends Controller
      */
     public function index()
     {
-        $sala = $this->repository->paginate();
+        $sessao = $this->repository->paginate();
 
-        if(!$sala->items())
-        {
-            $sala = null;
-        }
+        if(!$sessao->items())
+            $sessao = null;
 
-        return view('admin.sala.index', compact('sala'));
+        return view('admin.sessao.index', compact('sessao'));
     }
 
     /**
@@ -58,9 +63,10 @@ class SalaController extends Controller
      */
     public function create()
     {
+        $filme = $this->filmeRepository->all();
         $shopping = $this->shoppingRepository->all();
 
-        return view('admin.sala.create', compact('shopping'));
+        return view('admin.sessao.create', compact('filme', 'shopping'));
     }
 
     /**
@@ -73,13 +79,17 @@ class SalaController extends Controller
     {
         $data = $request->all();
 
-        $shopping = new Shopping([
-            'shopping_id' => $data['shopping_id']
+        $filme = new Filme([
+           'filme_id' => $data['filme_id']
+        ]);
+
+        $sala = new Sala([
+           'salas_id' => $data['salas_id']
         ]);
 
         $this->repository->create($data);
 
-        return redirect()->route('admin.sala.index');
+        return redirect()->route('admin.sessao.index');
     }
 
     /**
@@ -101,11 +111,13 @@ class SalaController extends Controller
      */
     public function edit($id)
     {
+        $sessao = $this->repository->find($id);
+
+        $filme = $this->filmeRepository->all();
         $shopping = $this->shoppingRepository->all();
+        $salas = $this->salaRepository->findWhere(['shopping_id' => $sessao->salas->shopping->id]);
 
-        $sala = $this->repository->find($id);
-
-        return view('admin.sala.edit', compact('sala', 'shopping'));
+        return view('admin.sessao.edit', compact('sessao', 'filme', 'shopping', 'salas'));
     }
 
     /**
@@ -119,13 +131,17 @@ class SalaController extends Controller
     {
         $data = $request->all();
 
-        $shopping = new Shopping([
-            'shopping_id' => $data['shopping_id']
+        $filme = new Filme([
+            'filme_id' => $data['filme_id']
+        ]);
+
+        $sala = new Sala([
+            'salas_id' => $data['salas_id']
         ]);
 
         $this->repository->update($data, $id);
 
-        return redirect()->route('admin.sala.index');
+        return redirect()->route('admin.sessao.index');
     }
 
     /**
@@ -138,8 +154,18 @@ class SalaController extends Controller
     {
         $this->repository->delete($id);
 
-        return redirect()->route('admin.sala.index');
+        return redirect()->route('admin.sessao.index');
     }
 
+    /**
+     * @param $id -- Id do Shopping
+     */
+    public function exibirSalasShoppings($id)
+    {
+        $shopping = $this->shoppingRepository->find($id);
 
+        $salas = $shopping->salas->all();
+
+        echo json_encode($salas);
+    }
 }

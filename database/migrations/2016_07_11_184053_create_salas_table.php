@@ -18,7 +18,7 @@ class CreateSalasTable extends Migration
 			$table->integer('shopping_id')->unsigned();
 			$table->foreign('shopping_id')->references('id')->on('shoppings')->onDelete('cascade');
 			$table->string('numero');
-			$table->string('qualidade');
+			$table->string('tipo');
 			$table->softDeletes();
             $table->timestamps();
 		});

@@ -5,7 +5,7 @@
     <h3>Sessões</h3>
     <a href="{{ route('admin.sessao.create') }}" class="btn btn-default">Nova Sessão</a>
 
-    @if(!$sala)
+    @if(!$sessao)
         {{ 'Não há dados a serem exibidos' }}
 
     @else
@@ -14,7 +14,8 @@
         <tr>
             <thead>
                 <th>ID</th>
-                <th>Número</th>
+                <th>Filme</th>
+                <th>Num Sala</th>
                 <th>Horário</th>
                 <th>Qualidade</th>
                 <th>Shopping</th>
@@ -24,13 +25,14 @@
         </tr>
 
         <tbody>
-            @foreach($sala as $s)
+            @foreach($sessao as $s)
                 <tr>
                     <td>{{ $s->id }}</td>
-                    <td>{{ $s->numero }}</td>
+                    <td>{{ $s->filme->nome }}</td>
+                    <td>{{ $s->salas->numero }}</td>
                     <td>{{ $s->horario }}</td>
                     <td>{{ $s->qualidade }}</td>
-                    <td>{{ $s->shopping->nome }}</td>
+                    <td>{{ $s->salas->shopping->nome }}</td>
                     <td>{{ $s->audio }}</td>
                     <td>
                         <a href="{{ route('admin.sessao.edit', [$s->id]) }}"><span class="glyphicon glyphicon-edit"></span> </a>
@@ -43,7 +45,7 @@
 
     </table>
 
-    {!! $sala->render() !!}
+    {!! $sessao->render() !!}
 
     @endif
 @endsection

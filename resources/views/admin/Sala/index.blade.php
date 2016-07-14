@@ -16,7 +16,7 @@
             <thead>
                 <th>ID</th>
                 <th>Número</th>
-                <th>Qualidade</th>
+                <th>Tipo</th>
                 <th>Shopping</th>
                 <th>Ação</th>
             </thead>
@@ -27,7 +27,7 @@
                 <tr>
                     <td>{{ $s->id }}</td>
                     <td>{{ $s->numero }}</td>
-                    <td>{{ $s->qualidade }}</td>
+                    <td>{{ $s->tipo }}</td>
                     <td>{{ $s->shopping->nome }}</td>
                     <td>
                         <a href="{{ route('admin.sala.edit', [$s->id]) }}"><span class="glyphicon glyphicon-edit"></span> </a>

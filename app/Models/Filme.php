@@ -21,4 +21,9 @@ class Filme extends Model implements Transformable
     {
         return $this->belongsToMany(Sala::class);
     }
+
+    public function sessao()
+    {
+        return $this->hasMany(Sessao::class, 'filme_id');
+    }
 }

@@ -19,4 +19,5 @@ class Shopping extends Model implements Transformable
        return $this->hasMany(Sala::class);
     }
 
+
 }
