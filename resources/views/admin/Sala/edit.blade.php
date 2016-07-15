@@ -16,8 +16,20 @@
         {!! Form::model($sala, ['route' => ['admin.sala.update', $sala->id], 'class' => 'form']) !!}
 
             <div class="form-group">
+                {!! Form::label("Nome", "Shopping:") !!}
+                <select required class="form-control" name="shopping_id" id="shoppingSala">
+                    @foreach($shopping as $s)
+                        @if($sala->shopping->id == $s->id)
+                            <option selected value="{{ $s->id }}">{{ $s->nome }}</option>
+                        @endif
+                    @endforeach
+                </select>
+            </div>
+
+            <div class="form-group">
                 {!! Form::label("Nome", "Numero:") !!}
-                {!! Form::text("numero", null, ["class" => "form-control", 'required' => 'required', 'placeholder' => 'Ex:14, 18, 01']) !!}
+                {!! Form::text("numero", null, ["class" => "form-control", 'required' => 'required', 'placeholder' => 'Ex:14, 18, 01', 'id' => 'numSala']) !!}
+                <h6 hidden id="erroSala">Está sala já existe</h6>
             </div>
 
             <div class="form-group">
@@ -29,17 +41,8 @@
                 </select>
             </div>
 
-            <div class="form-group">
-                {!! Form::label("Nome", "Shopping:") !!}
-                <select required class="form-control" name="shopping_id">
-                    @foreach($shopping as $s)
-                        <option value="{{ $s->id }}">{{ $s->nome }}</option>
-                    @endforeach
-                </select>
-            </div>
-
         <div class="form-group">
-            {!! Form::submit("Alterar", ['class' => 'btn btn-primary']) !!}
+            {!! Form::submit("Alterar", ['class' => 'btn btn-primary', 'disabled' => 'true', 'id' => 'botaoSala']) !!}
         </div>
 
         {!! Form::close() !!}

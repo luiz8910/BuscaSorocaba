@@ -3,7 +3,7 @@
 namespace BuscaSorocaba\Http\Controllers;
 
 use BuscaSorocaba\Repositories\EstabelecimentosRepository;
-use Excel\Repositories\AvaliacaoRepository;
+use BuscaSorocaba\Repositories\AvaliacaoRepository;
 use Illuminate\Http\Request;
 
 use BuscaSorocaba\Http\Requests;

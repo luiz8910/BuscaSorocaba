@@ -142,4 +142,12 @@ class SalaController extends Controller
     }
 
 
+    public function ajaxSala($id)
+    {
+        $shopping = $this->shoppingRepository->find($id);
+
+        $salas = $shopping->salas;
+
+        echo json_encode($salas);
+    }
 }

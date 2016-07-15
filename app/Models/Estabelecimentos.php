@@ -13,7 +13,7 @@ class Estabelecimentos extends Model implements Transformable
 
     protected $fillable = [
         'nome', 'telefone', 'telefone2', 'logradouro', 'numero',
-        'email', 'cep', 'bairro', 'cidade', 'quemSomos', 'servicos', 'site'
+        'email', 'cep', 'bairro', 'cidade', 'quemSomos', 'servicos', 'site', '_24h', 'emergencia'
     ];
 
     protected $dates = ['deleted_at'];

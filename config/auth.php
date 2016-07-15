@@ -28,7 +28,7 @@ return [
     |
     */
 
-    'model' => Excel\Models\User::class,
+    'model' => BuscaSorocaba\Models\User::class,
 
     /*
     |--------------------------------------------------------------------------

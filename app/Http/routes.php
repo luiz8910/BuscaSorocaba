@@ -138,6 +138,8 @@ Route::post('/sala/salvar', ['as' => 'admin.sala.store', 'uses' => 'SalaControll
 
 Route::get('/sala/excluir/{id}', ['as' => 'admin.sala.destroy', 'uses' => 'SalaController@destroy']);
 
+Route::get('/salaAjax/{id}', 'SalaController@ajaxSala');
+
 // Fim Sala
 
 // Sessões
@@ -157,3 +159,7 @@ Route::get('/sessao/excluir/{id}', ['as' => 'admin.sessao.destroy', 'uses' => 'S
 Route::get('/ajaxSalas/{id}', 'SessaoController@exibirSalasShoppings');
 
 // Fim Sessões
+
+Route::post('oauth/access_token', function () {
+    return Response::json(Authorizer::issueAccessToken());
+});

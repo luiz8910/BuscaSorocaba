@@ -48,7 +48,6 @@ class EstabelecimentosController extends Controller
         $i = 0;
 
         return view('admin.estabelecimentos.index', compact('estab', 'i'));
-
     }
 
 

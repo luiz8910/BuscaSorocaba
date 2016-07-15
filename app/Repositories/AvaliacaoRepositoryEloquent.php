@@ -1,12 +1,12 @@
 <?php
 
-namespace Excel\Repositories;
+namespace BuscaSorocaba\Repositories;
 
 use Prettus\Repository\Eloquent\BaseRepository;
 use Prettus\Repository\Criteria\RequestCriteria;
-use Excel\Repositories\AvaliacaoRepository;
-use Excel\Models\Avaliacao;
-use Excel\Validators\AvaliacaoValidator;
+use BuscaSorocaba\Repositories\AvaliacaoRepository;
+use BuscaSorocaba\Models\Avaliacao;
+use BuscaSorocaba\Validators\AvaliacaoValidator;
 
 /**
  * Class AvaliacaoRepositoryEloquent

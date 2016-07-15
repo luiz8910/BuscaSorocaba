@@ -13,7 +13,7 @@ class CreateResponsaveisTable extends Migration
 	 */
 	public function up()
 	{
-		/*Schema::create('responsaveis', function(Blueprint $table) {
+		Schema::create('responsaveis', function(Blueprint $table) {
             $table->increments('id');
 			$table->integer('estabelecimentos_id')->unsigned();
 			$table->foreign('estabelecimentos_id')->references('id')->on('estabelecimentos')->onDelete('cascade');
@@ -30,7 +30,7 @@ class CreateResponsaveisTable extends Migration
 			$table->string('cargo');
 			$table->softDeletes();
             $table->timestamps();
-		});*/
+		});
 	}
 
 	/**
@@ -40,7 +40,7 @@ class CreateResponsaveisTable extends Migration
 	 */
 	public function down()
 	{
-		//Schema::drop('responsaveis');
+		Schema::drop('responsaveis');
 	}
 
 }

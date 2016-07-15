@@ -1,6 +1,6 @@
 <?php
 
-namespace Excel\Repositories;
+namespace BuscaSorocaba\Repositories;
 
 use Prettus\Repository\Contracts\RepositoryInterface;
 

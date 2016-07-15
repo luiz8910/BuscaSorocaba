@@ -220,7 +220,7 @@ return [
     */
     'generator'  => [
         'basePath'      => app_path(),
-        'rootNamespace' => 'Excel\\',
+        'rootNamespace' => 'BuscaSorocaba\\',
         'paths'         => [
             'models'       => 'Models',
             'repositories' => 'Repositories',

@@ -148,7 +148,12 @@
 
         <div class="form-group">
             {!! Form::label("24h", "24h") !!}
-            <input type="checkbox" name="_24h">
+            @if($estab->_24h == 'on')
+                <input type="checkbox" checked name="_24h">
+            @else
+                <input type="checkbox" name="_24h">
+            @endif
+
         </div>
 
         <div class="form-group">

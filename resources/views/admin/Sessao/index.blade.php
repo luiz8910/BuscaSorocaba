@@ -10,42 +10,46 @@
 
     @else
 
-    <table class="table table-bordered table-responsive">
-        <tr>
-            <thead>
-                <th>ID</th>
-                <th>Filme</th>
-                <th>Num Sala</th>
-                <th>Horário</th>
-                <th>Qualidade</th>
-                <th>Shopping</th>
-                <th>Audio</th>
-                <th>Ação</th>
-            </thead>
-        </tr>
+        <div class="container">
+            <div class="row">
+                <table class="table table-bordered table-responsive">
+                    <tr>
+                        <thead>
+                        <th>ID</th>
+                        <th>Filme</th>
+                        <th>Num Sala</th>
+                        <th>Horário</th>
+                        <th>Qualidade</th>
+                        <th>Shopping</th>
+                        <th>Audio</th>
+                        <th>Ação</th>
+                        </thead>
+                    </tr>
 
-        <tbody>
-            @foreach($sessao as $s)
-                <tr>
-                    <td>{{ $s->id }}</td>
-                    <td>{{ $s->filme->nome }}</td>
-                    <td>{{ $s->salas->numero }}</td>
-                    <td>{{ $s->horario }}</td>
-                    <td>{{ $s->qualidade }}</td>
-                    <td>{{ $s->salas->shopping->nome }}</td>
-                    <td>{{ $s->audio }}</td>
-                    <td>
-                        <a href="{{ route('admin.sessao.edit', [$s->id]) }}"><span class="glyphicon glyphicon-edit"></span> </a>
-                        |
-                        <a href="{{ route('admin.sessao.destroy', [$s->id]) }}"><span class="glyphicon glyphicon-trash"></span> </a>
-                    </td>
-                </tr>
-            @endforeach
-        </tbody>
+                    <tbody>
+                    @foreach($sessao as $s)
+                        <tr>
+                            <td>{{ $s->id }}</td>
+                            <td>{{ $s->filme->nome }}</td>
+                            <td>{{ $s->salas->numero }}</td>
+                            <td>{{ $s->horario }}</td>
+                            <td>{{ $s->qualidade }}</td>
+                            <td>{{ $s->salas->shopping->nome }}</td>
+                            <td>{{ $s->audio }}</td>
+                            <td>
+                                <a href="{{ route('admin.sessao.edit', [$s->id]) }}"><span class="glyphicon glyphicon-edit"></span> </a>
+                                |
+                                <a href="{{ route('admin.sessao.destroy', [$s->id]) }}"><span class="glyphicon glyphicon-trash"></span> </a>
+                            </td>
+                        </tr>
+                    @endforeach
+                    </tbody>
 
-    </table>
+                </table>
 
-    {!! $sessao->render() !!}
+                {!! $sessao->render() !!}
 
+            </div>
+        </div>
     @endif
 @endsection

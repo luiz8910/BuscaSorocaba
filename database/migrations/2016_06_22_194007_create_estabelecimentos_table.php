@@ -15,8 +15,6 @@ class CreateEstabelecimentosTable extends Migration
 	{
 		Schema::create('estabelecimentos', function(Blueprint $table) {
             $table->increments('id');
-//			$table->integer('sub_categorias_id')->unsigned();
-//			$table->foreign('sub_categorias_id')->references('id')->on('subcategorias');
 			$table->string('nome');
 			$table->string('telefone');
 			$table->string('telefone2')->nullable();
@@ -29,8 +27,8 @@ class CreateEstabelecimentosTable extends Migration
 			$table->string('quemSomos')->nullable();
 			$table->string('servicos')->nullable();
 			$table->string('site')->nullable();
-			$table->integer('_24h')->default(0);
-			$table->integer('emergencia')->default(0);
+			$table->string('_24h')->default(0);
+			$table->string('emergencia')->default(0);
 			$table->softDeletes();
             $table->timestamps();
 		});
