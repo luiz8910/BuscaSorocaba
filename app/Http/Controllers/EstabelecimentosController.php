@@ -165,31 +165,45 @@ class EstabelecimentosController extends Controller
     {
         $estab = $this->repository->find($id);
 
-        $idCat = $estab->subCategoria->first()->categoria_id;
-
-        $sub = $this->subCategoriaRepository->findWhere(['categoria_id' => $idCat]);
-
-        $subcat = $estab->subCategoria->all();
-
-        $id = array();
-        $nome = array();
-
-        foreach($subcat as $s)
+        if(count($estab->subCategoria) > 0)
         {
-            array_push($id, $s->id);
-            array_push($nome, $s->nome);
+            $idCat = $estab->subCategoria->first()->categoria_id;
+
+            $sub = $this->subCategoriaRepository->findWhere(['categoria_id' => $idCat]);
+
+            $subcat = $estab->subCategoria->all();
+
+            $id = array();
+            $nome = array();
+
+            foreach($subcat as $s)
+            {
+                array_push($id, $s->id);
+                array_push($nome, $s->nome);
+            }
+
+            $_24h = 0;
+
+            if($estab->_24h == 1)
+            {
+                $_24h = 1;
+            }
+
+            //dd($_24h);
+
+            return view('admin.Estabelecimentos.edit', compact('sub', 'estab', 'id', 'nome'));
         }
 
-        $_24h = 0;
-
-        if($estab->_24h == 1)
+        else
         {
-            $_24h = 1;
+            $id = null;
+            $nome = null;
+            $sub = $this->subCategoriaRepository->all();
+
+            return view('admin.Estabelecimentos.edit', compact('sub', 'estab', 'id', 'nome'));
         }
 
-        //dd($_24h);
 
-        return view('admin.estabelecimentos.edit', compact('sub', 'estab', 'id', 'nome'));
     }
 
     /**

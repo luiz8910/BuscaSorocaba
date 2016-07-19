@@ -23,9 +23,9 @@ Route::get('/categoria/novo', ['as' => 'admin.categoria.create', 'uses' => 'Cate
 
 Route::get('/categoria/editar/{id}', ['as' => 'admin.categoria.edit', 'uses' => 'CategoriaController@edit']);
 
-Route::post('/categoria/alterar/{id}', ['as' => 'admin.categoria.update', 'uses' => 'CategoriaController@update']);
+Route::get('/categoria/alterar/{id}',  'CategoriaController@update');
 
-Route::post('/categoria/salvar', ['as' => 'admin.categoria.store', 'uses' => 'CategoriaController@store']);
+Route::get('/categoria/salvar', ['as' => 'admin.categoria.store', 'uses' => 'CategoriaController@store']);
 
 Route::get('/categoria/excluir/{id}', ['as' => 'admin.categoria.destroy', 'uses' => 'CategoriaController@destroy']);
 
@@ -39,9 +39,9 @@ Route::get('/subCategoria/novo', ['as' => 'admin.subcategoria.create', 'uses' =>
 
 Route::get('/subCategoria/editar/{id}', ['as' => 'admin.subcategoria.edit', 'uses' => 'SubCategoriaController@edit']);
 
-Route::post('/subCategoria/alterar/{id}', ['as' => 'admin.subcategoria.update', 'uses' => 'SubCategoriaController@update']);
+Route::get('/subCategoria/alterar/{id}', ['as' => 'admin.subcategoria.update', 'uses' => 'SubCategoriaController@update']);
 
-Route::post('/subCategoria/salvar', ['as' => 'admin.subcategoria.store', 'uses' => 'SubCategoriaController@store']);
+Route::get('/subCategoria/salvar', ['as' => 'admin.subcategoria.store', 'uses' => 'SubCategoriaController@store']);
 
 Route::get('/subCategoria/excluir/{id}', ['as' => 'admin.subcategoria.destroy', 'uses' => 'SubCategoriaController@destroy']);
 

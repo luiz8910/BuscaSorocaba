@@ -21,8 +21,8 @@
                     <td>{{ $c->nome }}</td>
                     <td>
                         <a href="{{ route('admin.categoria.edit', [$c->id]) }}"><span class="glyphicon glyphicon-edit"></span> </a>
-                        |
-                        <a href="{{ route('admin.categoria.destroy', [$c->id]) }}"><span class="glyphicon glyphicon-trash"></span> </a>
+
+                        {{--<a href="{{ route('admin.categoria.destroy', [$c->id]) }}"><span class="glyphicon glyphicon-trash"></span> </a>--}}
                     </td>
                 </tr>
             @endforeach

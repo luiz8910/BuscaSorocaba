@@ -60,7 +60,7 @@ class SubCategoriaController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Requests\SubCategoriaRequest $request)
+    public function store(Request $request)
     {
         $data = $request->all();
 
@@ -68,9 +68,16 @@ class SubCategoriaController extends Controller
             'categoria_id' => $data['categoria_id']
         ]);
 
-        $this->repository->create($data);
+        $cat = $this->verifExistencia($data);
 
-        return redirect()->route('admin.subcategoria.index');
+        if (!$cat)
+        {
+            $this->repository->create($data);
+            echo json_encode(['status' => true]);
+
+        } else {
+            echo json_encode(['status' => false]);
+        }
     }
 
     /**
@@ -109,43 +116,20 @@ class SubCategoriaController extends Controller
     {
         $data = $request->all();
 
-        session(['nome' => $data['nome']]);
-
         $sub = new SubCategoria([
             'categoria_id' => $data['categoria_id']
         ]);
 
-        $nomeSub = $this->repository->find($id);
+        $cat = $this->verifExistenciaUpdate($data, $id);
 
-        if ($nomeSub->nome == $data['nome'])
+        if (!$cat)
         {
             $this->repository->update($data, $id);
+            echo json_encode(['status' => true]);
+
+        } else {
+            echo json_encode(['status' => false]);
         }
-
-        else
-        {
-            $nome = $this->repository->all();
-            $var = true;
-
-            foreach($nome as $n)
-            {
-                if($data['nome'] == $n->nome)
-                {
-                    $var = false;
-                }
-            }
-
-            if($var)
-            {
-                $this->repository->update($data, $id);
-            }
-            else{
-
-                return $this->edit($id);
-            }
-        }
-
-        return redirect()->route('admin.subcategoria.index');
     }
 
     /**
@@ -158,6 +142,53 @@ class SubCategoriaController extends Controller
     {
         $this->repository->delete($id);
 
-        return redirect()->route('admin.subcategoria.index');
+        echo json_encode(['status' => 'false']);
+
+        //return redirect()->route('admin.subcategoria.index');
+    }
+
+    public function verifExistencia($data)
+    {
+        $nome = $this->repository->all();
+        $var = true;
+
+        foreach ($nome as $n) {
+            if ($data['nome'] == $n->nome) {
+                $var = false;
+            }
+        }
+
+        if (!$var) {
+            return true;
+        }
+
+        return false;
+    }
+
+    public function verifExistenciaUpdate($data, $id)
+    {
+        $up = $this->repository->find($id);
+
+        $nome = $this->repository->all();
+        $var = true;
+
+        if($up->nome == $data['nome'])
+        {
+            return false;
+        }
+        else
+        {
+            foreach ($nome as $n) {
+                if ($data['nome'] == $n->nome) {
+                    $var = false;
+                }
+            }
+
+            if (!$var) {
+                return true;
+            }
+        }
+
+        return false;
     }
 }
