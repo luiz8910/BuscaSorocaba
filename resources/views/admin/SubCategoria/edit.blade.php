@@ -22,7 +22,7 @@
             </div>
 
             <div class="form-group">
-                <button type="submit" class="btn btn-primary" href="#">Alterar</button>
+                <button type="submit" id="btnAlterar" class="btn btn-primary" href="#" value = ''>Alterar</button>
                 <a class="btn btn-default" href="{{ route('admin.subcategoria.index') }}">Voltar</a>
             </div>
 
@@ -45,6 +45,7 @@
 
         $(function () {
             $('#alterarCat').submit(function () {
+                $('#btnAlterar').val('Enviando...');
                 var id = $('#id').val();
                 var data = $(this).serialize();
 
@@ -65,6 +66,7 @@
                             modal: true,
                             buttons: {
                                 Ok: function () {
+                                    $('#btnAlterar').val('Alterar');
                                     $(this).dialog("close");
                                 }
                             }

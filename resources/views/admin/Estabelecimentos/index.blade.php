@@ -50,7 +50,7 @@
                                     <span title="Editar Estabelecimento" class="glyphicon glyphicon-edit"></span>
                                 </a>
                                 |
-                                <a href="{{ route('admin.estabelecimentos.destroy', [$e->id]) }}">
+                                <a href="{{ route('admin.estabelecimentos.destroy', [$e->id]) }}" class="excluir" id="{{ $e->id }}">
                                     <span title="Excluir Estabelecimento" class="glyphicon glyphicon-trash"></span>
                                 </a>
                             </td>
@@ -61,8 +61,67 @@
                 </table>
 
                 {!! $estab->render() !!} <!-- Esta linha garante a paginação -->
+
+                <div hidden id="dialog-confirm" title="Você está certo disto?">
+                    <p><span class="ui-icon ui-icon-alert" style="float:left; margin:12px 12px 20px 0;"></span>
+                        Deseja Excluir este Estabelecimento?
+                    </p>
+                </div>
             </div>
         </div>
 
     @endif
+@endsection
+
+@section('script')
+    <script>
+        $(function () {
+            $('.excluir').click(function () {
+                var id = $(this).attr('id');
+
+                $( "#dialog-confirm" ).dialog({
+                    resizable: false,
+                    height: "auto",
+                    width: 400,
+                    modal: true,
+                    buttons: {
+                        "Excluir": function() {
+                            excluir(id);
+                            $( this ).dialog( "close" );
+                        },
+                        Cancelar: function() {
+                            $( this ).dialog( "close" );
+                        }
+                    }
+                });
+
+                return false;
+            });
+
+            function excluir(id)
+            {
+                var request = $.ajax({
+                    method: 'GET',
+                    url: '/estabelecimentos/excluir/'+id,
+                    data: id,
+                    dataType: 'json'
+                });
+
+                request.done(function (e) {
+                    console.log('done');
+                    console.log(e);
+
+                    if (e.status == false) {
+                        console.log(e.status);
+
+                    }
+                    else {
+
+                        window.location = '/estabelecimentos';
+                    }
+                });
+            }
+
+        });
+    </script>
 @endsection

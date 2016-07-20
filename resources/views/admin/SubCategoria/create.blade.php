@@ -18,7 +18,7 @@
         </div>
 
         <div class="form-group">
-            <button type="submit" class="btn btn-primary" href="#">Salvar</button>
+            <button type="submit" class="btn btn-primary" href="#" data-loading-text = 'Enviando ......'>Salvar</button>
             <a class="btn btn-default" href="{{ route('admin.subcategoria.index') }}">Voltar</a>
         </div>
 

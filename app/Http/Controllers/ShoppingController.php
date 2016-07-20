@@ -57,9 +57,18 @@ class ShoppingController extends Controller
     {
         $data = $request->all();
 
-        $this->repository->create($data);
+        $shop = $this->verifExistencia($data);
 
-        return redirect()->route('admin.shoppings.index');
+        if(!$shop)
+        {
+            $this->repository->create($data);
+
+            echo json_encode(['status' => true]);
+        }
+        else{
+            echo json_encode(['status' => false]);
+        }
+
     }
 
     /**
@@ -97,9 +106,20 @@ class ShoppingController extends Controller
     {
         $data = $request->all();
 
-        $this->repository->update($data, $id);
+        $shop = $this->verifExistenciaUpdate($data, $id);
 
-        return redirect()->route('admin.shoppings.index');
+        if(!$shop)
+        {
+            $this->repository->update($data, $id);
+
+            echo json_encode(['status' => true]);
+        }
+        else
+        {
+            echo json_encode(['status' => false]);
+        }
+
+
     }
 
     /**
@@ -110,6 +130,53 @@ class ShoppingController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $this->repository->delete($id);
+
+        echo json_encode(['status' => true]);
+    }
+
+    public function verifExistencia($data)
+    {
+        $nome = $this->repository->all();
+        $var = true;
+
+        foreach ($nome as $n) {
+            if ($data['nome'] == $n->nome) {
+                $var = false;
+            }
+        }
+
+        if (!$var) {
+            return true;
+        }
+
+        return false;
+    }
+
+    public function verifExistenciaUpdate($data, $id)
+    {
+        $up = $this->repository->find($id);
+
+        $nome = $this->repository->all();
+        $var = true;
+
+        if($up->nome == $data['nome'])
+        {
+            return false;
+        }
+        else
+        {
+            foreach ($nome as $n) {
+                if ($data['nome'] == $n->nome) {
+                    $var = false;
+                }
+            }
+
+            if (!$var) {
+                return true;
+            }
+        }
+
+        return false;
     }
 }

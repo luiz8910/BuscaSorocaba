@@ -100,11 +100,19 @@ class ResponsavelController extends Controller
 
         $estab = $this->estabelecimentosRepository->all();
 
-        $nomeEstab = $resp->estabelecimentos->first();
+        if($resp->estabelecimentos)
+        {
+            $nomeEstab = $resp->estabelecimentos->first();
 
-        $id = $nomeEstab->id;
+            $id = $nomeEstab->id;
 
-        $nome = $nomeEstab->nome;
+            $nome = $nomeEstab->nome;
+
+            return view('admin.responsavel.edit', compact('resp', 'estab', 'id', 'nome'));
+        }
+
+        $id = null;
+        $nome = null;
 
         return view('admin.responsavel.edit', compact('resp', 'estab', 'id', 'nome'));
     }
@@ -135,6 +143,6 @@ class ResponsavelController extends Controller
     {
         $this->repository->delete($id);
 
-        return redirect()->route('admin.responsavel.index');
+        echo json_encode(['status' => true]);
     }
 }

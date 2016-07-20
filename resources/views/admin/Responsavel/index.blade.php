@@ -24,12 +24,16 @@
                 <tr>
                     <td>{{ $r->id }}</td>
                     <td>{{ $r->nome }}</td>
-                    <td>{{ $r->estabelecimentos->nome }}</td>
+                    <td>{{ $r->estabelecimentos->nome or '' }}</td>
                     <td>{{ $r->cargo }}</td>
                     <td>
-                        <a href="{{ route('admin.responsavel.edit', [$r->id]) }}"><span class="glyphicon glyphicon-edit"></span> </a>
+                        <a href="{{ route('admin.responsavel.edit', [$r->id]) }}" title="Editar Responsável">
+                            <span class="glyphicon glyphicon-edit"></span>
+                        </a>
                         |
-                        <a href="{{ route('admin.responsavel.destroy', [$r->id]) }}"><span class="glyphicon glyphicon-trash"></span> </a>
+                        <a class="excluir" id="{{ $r->id }}" href="{{ route('admin.responsavel.destroy', [$r->id]) }}" title="Excluir Responsável">
+                            <span class="glyphicon glyphicon-trash"></span>
+                        </a>
                     </td>
                 </tr>
             @endforeach
@@ -38,5 +42,64 @@
     </table>
 
     {!! $resp->render() !!} <!-- Esta linha garante a paginação -->
+
+    <div hidden id="dialog-confirm" title="Você está certo disto?">
+        <p><span class="ui-icon ui-icon-alert" style="float:left; margin:12px 12px 20px 0;"></span>
+            Deseja Excluir este Responsável?
+        </p>
+    </div>
     @endif
+@endsection
+
+@section('script')
+    <script>
+        $(function () {
+            $('.excluir').click(function () {
+                var id = $(this).attr('id');
+
+                $( "#dialog-confirm" ).dialog({
+                    resizable: false,
+                    height: "auto",
+                    width: 400,
+                    modal: true,
+                    buttons: {
+                        "Excluir": function() {
+                            excluir(id);
+                            $( this ).dialog( "close" );
+                        },
+                        Cancelar: function() {
+                            $( this ).dialog( "close" );
+                        }
+                    }
+                });
+
+                return false;
+            });
+
+            function excluir(id)
+            {
+                var request = $.ajax({
+                    method: 'GET',
+                    url: '/responsaveis/excluir/'+id,
+                    data: id,
+                    dataType: 'json'
+                });
+
+                request.done(function (e) {
+                    console.log('done');
+                    console.log(e);
+
+                    if (e.status == false) {
+                        console.log(e.status);
+
+                    }
+                    else {
+
+                        window.location = '/responsaveis';
+                    }
+                });
+            }
+
+        });
+    </script>
 @endsection

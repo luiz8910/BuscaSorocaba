@@ -57,9 +57,17 @@ class FilmeController extends Controller
     {
         $data = $request->all();
 
-        $this->repository->create($data);
+        $filme = $this->verifExistencia($data);
 
-        return redirect()->route('admin.filme.index');
+        if(!$filme)
+        {
+            $this->repository->create($data);
+
+            echo json_encode(['status' => true]);
+        }
+        else{
+            echo json_encode(['status' => false]);
+        }
     }
 
     /**
@@ -98,9 +106,18 @@ class FilmeController extends Controller
     {
         $data = $request->all();
 
-        $this->repository->update($data, $id);
+        $filme = $this->verifExistenciaUpdate($data, $id);
 
-        return redirect()->route('admin.filme.index');
+        if(!$filme)
+        {
+            $this->repository->update($data, $id);
+
+            echo json_encode(['status' => true]);
+        }
+        else
+        {
+            echo json_encode(['status' => false]);
+        }
     }
 
     /**
@@ -113,6 +130,51 @@ class FilmeController extends Controller
     {
         $this->repository->delete($id);
 
-        return redirect()->route('admin.filme.index');
+        echo json_encode(['status' => true]);
+    }
+
+    public function verifExistencia($data)
+    {
+        $nome = $this->repository->all();
+        $var = true;
+
+        foreach ($nome as $n) {
+            if ($data['nome'] == $n->nome) {
+                $var = false;
+            }
+        }
+
+        if (!$var) {
+            return true;
+        }
+
+        return false;
+    }
+
+    public function verifExistenciaUpdate($data, $id)
+    {
+        $up = $this->repository->find($id);
+
+        $nome = $this->repository->all();
+        $var = true;
+
+        if($up->nome == $data['nome'])
+        {
+            return false;
+        }
+        else
+        {
+            foreach ($nome as $n) {
+                if ($data['nome'] == $n->nome) {
+                    $var = false;
+                }
+            }
+
+            if (!$var) {
+                return true;
+            }
+        }
+
+        return false;
     }
 }

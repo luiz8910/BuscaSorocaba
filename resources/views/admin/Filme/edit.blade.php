@@ -4,16 +4,12 @@
 
     <div class="container">
 
-        @if(session('nome') != null)
-            <div class="alert alert-danger">
-                <h5>Esta Subcategoria já existe</h5>
-            </div>
-            {{ session()->forget('nome') }}
-        @endif
+        <div class="row">
+            <h3>Nome: {{ $filme->nome }}</h3>
 
-        <h3>Nome: {{ $filme->nome }}</h3>
+            {!! Form::model($filme, ['id' => 'alterarFilme', 'class' => 'form']) !!}
 
-        {!! Form::model($filme, ['route' => ['admin.filme.update', $filme->id], 'class' => 'form']) !!}
+            <input type="text" hidden id="id" value="{{ $filme->id }}">
 
             <div class="form-group">
                 {!! Form::label("Nome", "Nome:") !!}
@@ -34,10 +30,78 @@
                 </select>
             </div>
 
-        <div class="form-group">
-            {!! Form::submit("Alterar", ['class' => 'btn btn-primary']) !!}
+            <div class="form-group">
+                <button type="submit" id="btnAlterar" class="btn btn-primary" href="#">Alterar</button>
+                <a class="btn btn-default" href="{{ route('admin.filme.index') }}">Voltar</a>
+            </div>
+
+            {!! Form::close() !!}
+
+            <div hidden id="dialog-message" title="Erro">
+                <p>
+                    <span class="ui-icon ui-icon-circle-check" style="float:left; margin:0 7px 50px 0;"></span>
+                    Este Filme já está Cadastrado, Tente Novamente.
+                </p>
+            </div>
         </div>
 
-        {!! Form::close() !!}
     </div>
+@endsection
+
+@section('script')
+    <script>
+        $(function () {
+            $('#alterarFilme').submit(function () {
+                $('#btnAlterar').val('Enviando...');
+                var id = $('#id').val();
+                var data = $(this).serialize();
+
+                var request = $.ajax({
+                    method: 'GET',
+                    url: '/filme/alterar/' + id,
+                    data: data,
+                    dataType: 'json'
+                });
+
+                request.done(function (e) {
+                    console.log('done');
+                    console.log(e);
+
+                    if (e.status == false) {
+                        console.log(e.status);
+                        $("#dialog-message").dialog({
+                            modal: true,
+                            buttons: {
+                                Ok: function () {
+                                    $('#btnAlterar').val('Alterar');
+                                    $(this).dialog("close");
+                                }
+                            }
+                        });
+                    }
+                    else {
+                        window.location = '/filme';
+                    }
+                });
+
+                request.fail(function (e) {
+                    console.log('fail');
+                    console.log(e);
+                });
+
+                return false;
+            });
+
+            $('.numero').bind('keypress', function (event) {
+                var regex = new RegExp("^[0-9]+$");
+                var key = String.fromCharCode(!event.charCode ? event.which : event.charCode);
+                if (!regex.test(key)) {
+                    event.preventDefault();
+                    return false;
+                }
+            });
+        });
+
+
+    </script>
 @endsection

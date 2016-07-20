@@ -55,9 +55,9 @@ Route::get('/estabelecimentos/novo', ['as' => 'admin.estabelecimentos.create', '
 
 Route::get('/estabelecimentos/editar/{id}', ['as' => 'admin.estabelecimentos.edit', 'uses' => 'EstabelecimentosController@edit']);
 
-Route::post('/estabelecimentos/alterar/{id}', ['as' => 'admin.estabelecimentos.update', 'uses' => 'EstabelecimentosController@update']);
+Route::get('/estabelecimentos/alterar/{id}', ['as' => 'admin.estabelecimentos.update', 'uses' => 'EstabelecimentosController@update']);
 
-Route::post('/estabelecimentos/salvar', ['as' => 'admin.estabelecimentos.store', 'uses' => 'EstabelecimentosController@store']);
+Route::get('/estabelecimentos/salvar', ['as' => 'admin.estabelecimentos.store', 'uses' => 'EstabelecimentosController@store']);
 
 Route::get('/estabelecimentos/excluir/{id}', ['as' => 'admin.estabelecimentos.destroy', 'uses' => 'EstabelecimentosController@destroy']);
 
@@ -100,9 +100,9 @@ Route::get('/shoppings/novo', ['as' => 'admin.shoppings.create', 'uses' => 'Shop
 
 Route::get('/shoppings/editar/{id}', ['as' => 'admin.shoppings.edit', 'uses' => 'ShoppingController@edit']);
 
-Route::post('/shoppings/alterar/{id}', ['as' => 'admin.shoppings.update', 'uses' => 'ShoppingController@update']);
+Route::get('/shoppings/alterar/{id}', ['as' => 'admin.shoppings.update', 'uses' => 'ShoppingController@update']);
 
-Route::post('/shoppings/salvar', ['as' => 'admin.shoppings.store', 'uses' => 'ShoppingController@store']);
+Route::get('/shoppings/salvar', ['as' => 'admin.shoppings.store', 'uses' => 'ShoppingController@store']);
 
 Route::get('/shoppings/excluir/{id}', ['as' => 'admin.shoppings.destroy', 'uses' => 'ShoppingController@destroy']);
 
@@ -116,9 +116,9 @@ Route::get('/filme/novo', ['as' => 'admin.filme.create', 'uses' => 'FilmeControl
 
 Route::get('/filme/editar/{id}', ['as' => 'admin.filme.edit', 'uses' => 'FilmeController@edit']);
 
-Route::post('/filme/alterar/{id}', ['as' => 'admin.filme.update', 'uses' => 'FilmeController@update']);
+Route::get('/filme/alterar/{id}', ['as' => 'admin.filme.update', 'uses' => 'FilmeController@update']);
 
-Route::post('/filme/salvar', ['as' => 'admin.filme.store', 'uses' => 'FilmeController@store']);
+Route::get('/filme/salvar', ['as' => 'admin.filme.store', 'uses' => 'FilmeController@store']);
 
 Route::get('/filme/excluir/{id}', ['as' => 'admin.filme.destroy', 'uses' => 'FilmeController@destroy']);
 
@@ -132,9 +132,9 @@ Route::get('/sala/novo', ['as' => 'admin.sala.create', 'uses' => 'SalaController
 
 Route::get('/sala/editar/{id}', ['as' => 'admin.sala.edit', 'uses' => 'SalaController@edit']);
 
-Route::post('/sala/alterar/{id}', ['as' => 'admin.sala.update', 'uses' => 'SalaController@update']);
+Route::get('/sala/alterar/{id}', ['as' => 'admin.sala.update', 'uses' => 'SalaController@update']);
 
-Route::post('/sala/salvar', ['as' => 'admin.sala.store', 'uses' => 'SalaController@store']);
+Route::get('/sala/salvar', ['as' => 'admin.sala.store', 'uses' => 'SalaController@store']);
 
 Route::get('/sala/excluir/{id}', ['as' => 'admin.sala.destroy', 'uses' => 'SalaController@destroy']);
 
@@ -150,9 +150,9 @@ Route::get('/sessao/novo', ['as' => 'admin.sessao.create', 'uses' => 'SessaoCont
 
 Route::get('/sessao/editar/{id}', ['as' => 'admin.sessao.edit', 'uses' => 'SessaoController@edit']);
 
-Route::post('/sessao/alterar/{id}', ['as' => 'admin.sessao.update', 'uses' => 'SessaoController@update']);
+Route::get('/sessao/alterar/{id}', ['as' => 'admin.sessao.update', 'uses' => 'SessaoController@update']);
 
-Route::post('/sessao/salvar', ['as' => 'admin.sessao.store', 'uses' => 'SessaoController@store']);
+Route::get('/sessao/salvar', ['as' => 'admin.sessao.store', 'uses' => 'SessaoController@store']);
 
 Route::get('/sessao/excluir/{id}', ['as' => 'admin.sessao.destroy', 'uses' => 'SessaoController@destroy']);
 

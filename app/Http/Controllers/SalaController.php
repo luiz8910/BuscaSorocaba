@@ -77,9 +77,17 @@ class SalaController extends Controller
             'shopping_id' => $data['shopping_id']
         ]);
 
-        $this->repository->create($data);
+        $sala = $this->verifExistencia($data);
 
-        return redirect()->route('admin.sala.index');
+        if(!$sala)
+        {
+            $this->repository->create($data);
+
+            echo json_encode(['status' => true]);
+        }
+        else{
+            echo json_encode(['status' => false]);
+        }
     }
 
     /**
@@ -123,9 +131,18 @@ class SalaController extends Controller
             'shopping_id' => $data['shopping_id']
         ]);
 
-        $this->repository->update($data, $id);
+        $sala = $this->verifExistenciaUpdate($data, $id);
 
-        return redirect()->route('admin.sala.index');
+        if(!$sala)
+        {
+            $this->repository->update($data, $id);
+
+            echo json_encode(['status' => true]);
+        }
+        else
+        {
+            echo json_encode(['status' => false]);
+        }
     }
 
     /**
@@ -138,7 +155,7 @@ class SalaController extends Controller
     {
         $this->repository->delete($id);
 
-        return redirect()->route('admin.sala.index');
+        echo json_encode(['status' => true]);
     }
 
 
@@ -149,5 +166,58 @@ class SalaController extends Controller
         $salas = $shopping->salas;
 
         echo json_encode($salas);
+    }
+
+    public function verifExistencia($data)
+    {
+        $shop = $this->shoppingRepository->all();
+
+        $numero = $this->repository->findByField('shopping_id', $data['shopping_id']);
+
+        $var = true;
+
+        foreach ($numero as $n) {
+            if ($data['numero'] == $n->numero) {
+                $var = false;
+            }
+        }
+
+        if (!$var) {
+            return true;
+        }
+
+        return false;
+    }
+
+    public function verifExistenciaUpdate($data, $id)
+    {
+        $up = $this->repository->find($id);
+
+        $numero = $this->repository->findByField('shopping_id', $data['shopping_id']);
+
+        $var = true;
+
+        if($up->numero == $data['numero'] && $up->shopping_id == $data['shopping_id'])
+        {
+            return false;
+        }
+        elseif($up->numero == $data['numero'] && $up->shopping_id != $data['shopping_id'])
+        {
+            return true;
+        }
+        else
+        {
+            foreach ($numero as $n) {
+                if ($data['numero'] == $n->numero) {
+                    $var = false;
+                }
+            }
+
+            if (!$var) {
+                return true;
+            }
+        }
+
+        return false;
     }
 }

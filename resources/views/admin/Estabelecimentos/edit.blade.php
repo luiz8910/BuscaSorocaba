@@ -6,7 +6,9 @@
 
         <h3>Categoria Nome: {{ $estab->nome }}</h3>
 
-        {!! Form::model($estab, ['route' => ['admin.estabelecimentos.update', $estab->id], 'class' => 'form']) !!}
+        {!! Form::model($estab, ['id' => 'alterarEstab', 'class' => 'form']) !!}
+
+        <input value="{{ $estab->id }}" id="id" hidden>
 
         <div class="form-group">
             {!! Form::label('Categoria', 'Categoria 1:') !!}
@@ -93,12 +95,12 @@
 
         <div class="form-group">
             {!! Form::label("Telefone", "Telefone:") !!}
-            {!! Form::text("telefone", null, ["class" => "form-control"]) !!}
+            {!! Form::text("telefone", null, ["class" => "form-control numero"]) !!}
         </div>
 
         <div class="form-group">
             {!! Form::label("Telefone", "Telefone 2:") !!}
-            {!! Form::text("telefone2", null, ["class" => "form-control"]) !!}
+            {!! Form::text("telefone2", null, ["class" => "form-control numero"]) !!}
         </div>
 
         <div class="form-group">
@@ -108,7 +110,7 @@
 
         <div class="form-group">
             {!! Form::label("cep", "CEP:") !!}
-            {!! Form::text("cep", null, ["class" => "form-control"]) !!}
+            {!! Form::text("cep", null, ["class" => "form-control numero"]) !!}
         </div>
 
         <div class="form-group">
@@ -118,7 +120,7 @@
 
         <div class="form-group">
             {!! Form::label("num", "Numero:") !!}
-            {!! Form::text("numero", null, ["class" => "form-control"]) !!}
+            {!! Form::text("numero", null, ["class" => "form-control numero"]) !!}
         </div>
 
         <div class="form-group">
@@ -138,7 +140,7 @@
 
         <div class="form-group">
             {!! Form::label("site", "Site:") !!}
-            <input type="url" name="site" class="form-control">
+            <input type="url" value="{{ $estab->site }}" name="site" class="form-control">
         </div>
 
         <div class="form-group">
@@ -153,7 +155,7 @@
 
         <div class="form-group">
             {!! Form::label("Emergencia", "Emergencia:") !!}
-            @if($estab->_24h == 'on')
+            @if($estab->emergencia == 'on')
                 <input type="checkbox" checked name="emergencia">
             @else
                 <input type="checkbox" name="emergencia">
@@ -161,10 +163,19 @@
         </div>
 
         <div class="form-group">
-            {!! Form::submit("Alterar", ['class' => 'btn btn-primary']) !!}
+            <button type="submit" class="btn btn-primary" href="#" data-loading-text = 'Enviando ......'>Alterar</button>
+            <a class="btn btn-default" href="{{ route('admin.estabelecimentos.index') }}">Voltar</a>
         </div>
 
         {!! Form::close() !!}
+
+        <div hidden id="dialog-message" title="Erro">
+            <p>
+                <span class="ui-icon ui-icon-circle-check" style="float:left; margin:0 7px 50px 0;"></span>
+                Este Estabelecimento já está Cadastrado, Tente Novamente.
+            </p>
+        </div>
+
     </div>
 @endsection
 
@@ -186,6 +197,54 @@
 
             $('#subcategorias_id_4').change(function () {
                 $('#subcategorias_id_5_div').show();
+            });
+
+            $('.numero').bind('keypress', function (event) {
+                var regex = new RegExp("^[0-9]+$");
+                var key = String.fromCharCode(!event.charCode ? event.which : event.charCode);
+                if (!regex.test(key)) {
+                    event.preventDefault();
+                    return false;
+                }
+            });
+
+            $('#alterarEstab').submit(function () {
+                var id = $('#id').val();
+                var data = $(this).serialize();
+
+                var request = $.ajax({
+                    method: 'GET',
+                    url: '/estabelecimentos/alterar/' + id,
+                    data: data,
+                    dataType: 'json'
+                });
+
+                request.done(function (e) {
+                    console.log('done');
+                    console.log(e);
+
+                    if (e.status == false) {
+                        console.log(e.status);
+                        $("#dialog-message").dialog({
+                            modal: true,
+                            buttons: {
+                                Ok: function () {
+                                    $(this).dialog("close");
+                                }
+                            }
+                        });
+                    }
+                    else {
+                        window.location = '/estabelecimentos';
+                    }
+                });
+
+                request.fail(function (e) {
+                    console.log('fail');
+                    console.log(e);
+                });
+
+                return false;
             });
         });
 

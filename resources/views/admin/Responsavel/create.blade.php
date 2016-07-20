@@ -32,7 +32,7 @@
 
         <div class="form-group">
             {!! Form::label("Telefone", "Telefone:") !!}
-            {!! Form::text("telefone", null, ["class" => "form-control"]) !!}
+            {!! Form::text("telefone", null, ["class" => "form-control numero"]) !!}
         </div>
 
         <div class="form-group">
@@ -42,7 +42,7 @@
 
         <div class="form-group">
             {!! Form::label("cep", "CEP:") !!}
-            {!! Form::text("cep", null, ["class" => "form-control"]) !!}
+            {!! Form::text("cep", null, ["class" => "form-control numero"]) !!}
         </div>
 
         <div class="form-group">
@@ -52,7 +52,7 @@
 
         <div class="form-group">
             {!! Form::label("num", "Numero:") !!}
-            {!! Form::text("numero", null, ["class" => "form-control"]) !!}
+            {!! Form::text("numero", null, ["class" => "form-control numero"]) !!}
         </div>
 
         <div class="form-group">
@@ -62,7 +62,7 @@
 
         <div class="form-group">
             {!! Form::label("cpf", "CPF::") !!}
-            {!! Form::text("cpf", null, ["class" => "form-control"]) !!}
+            {!! Form::text("cpf", null, ["class" => "form-control numero"]) !!}
         </div>
 
         <div class="form-group">
@@ -77,8 +77,26 @@
 
         <div class="form-group">
             {!! Form::submit("Salvar", ['class' => 'btn btn-primary']) !!}
+            <a href="{{ route('admin.responsavel.index') }}" class="btn btn-default">Voltar</a>
         </div>
 
         {!! Form::close() !!}
     </div>
+@endsection
+
+@section('script')
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            $('.numero').bind('keypress', function (event) {
+                var regex = new RegExp("^[0-9]+$");
+                var key = String.fromCharCode(!event.charCode ? event.which : event.charCode);
+                if (!regex.test(key)) {
+                    event.preventDefault();
+                    return false;
+                }
+            });
+        });
+
+    </script>
 @endsection
