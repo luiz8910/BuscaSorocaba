@@ -41,14 +41,16 @@ class SalaController extends Controller
      */
     public function index()
     {
-        $sala = $this->repository->paginate();
+        $sala = $this->repository
+            ->orderBy('shopping_id')
+            ->paginate();
 
         if(!$sala->items())
         {
             $sala = null;
         }
 
-        return view('admin.sala.index', compact('sala'));
+        return view('admin.Sala.index', compact('sala'));
     }
 
     /**
@@ -60,7 +62,7 @@ class SalaController extends Controller
     {
         $shopping = $this->shoppingRepository->all();
 
-        return view('admin.sala.create', compact('shopping'));
+        return view('admin.Sala.create', compact('shopping'));
     }
 
     /**
@@ -113,7 +115,7 @@ class SalaController extends Controller
 
         $sala = $this->repository->find($id);
 
-        return view('admin.sala.edit', compact('sala', 'shopping'));
+        return view('admin.Sala.edit', compact('sala', 'shopping'));
     }
 
     /**

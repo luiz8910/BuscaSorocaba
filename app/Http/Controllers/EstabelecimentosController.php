@@ -47,7 +47,7 @@ class EstabelecimentosController extends Controller
 
         $i = 0;
 
-        return view('admin.estabelecimentos.index', compact('estab', 'i'));
+        return view('admin.Estabelecimentos.index', compact('estab', 'i'));
     }
 
 
@@ -60,7 +60,7 @@ class EstabelecimentosController extends Controller
     {
         $sub = $this->subCategoriaRepository->all();
 
-        return view('admin.estabelecimentos.create', compact('sub'));
+        return view('admin.Estabelecimentos.create', compact('sub'));
     }
 
     /**

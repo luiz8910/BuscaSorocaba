@@ -42,7 +42,7 @@ class ResponsavelController extends Controller
             $resp = null;
         }
 
-        return view('admin.responsavel.index', compact('resp'));
+        return view('admin.Responsavel.index', compact('resp'));
 
     }
 
@@ -55,7 +55,7 @@ class ResponsavelController extends Controller
     {
         $estab = $this->estabelecimentosRepository->all();
 
-        return view('admin.responsavel.create', compact('estab'));
+        return view('admin.Responsavel.create', compact('estab'));
     }
 
     /**
@@ -108,13 +108,13 @@ class ResponsavelController extends Controller
 
             $nome = $nomeEstab->nome;
 
-            return view('admin.responsavel.edit', compact('resp', 'estab', 'id', 'nome'));
+            return view('admin.Responsavel.edit', compact('resp', 'estab', 'id', 'nome'));
         }
 
         $id = null;
         $nome = null;
 
-        return view('admin.responsavel.edit', compact('resp', 'estab', 'id', 'nome'));
+        return view('admin.Responsavel.edit', compact('resp', 'estab', 'id', 'nome'));
     }
 
     /**

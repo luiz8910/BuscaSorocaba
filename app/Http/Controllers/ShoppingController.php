@@ -34,7 +34,7 @@ class ShoppingController extends Controller
             $shopping = null;
         }
 
-        return view('admin.shopping.index', compact('shopping'));
+        return view('admin.Shopping.index', compact('shopping'));
     }
 
     /**
@@ -44,7 +44,7 @@ class ShoppingController extends Controller
      */
     public function create()
     {
-        return view('admin.shopping.create');
+        return view('admin.Shopping.create');
     }
 
     /**
@@ -92,7 +92,7 @@ class ShoppingController extends Controller
     {
         $shopping = $this->repository->find($id);
 
-        return view('admin.shopping.edit', compact('shopping'));
+        return view('admin.Shopping.edit', compact('shopping'));
     }
 
     /**

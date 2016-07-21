@@ -39,7 +39,7 @@ class SubCategoriaController extends Controller
         if(!$sub->items())
             $sub = false;
 
-        return view('admin.subcategoria.index', compact('sub'));
+        return view('admin.SubCategoria.index', compact('sub'));
     }
 
     /**
@@ -51,7 +51,7 @@ class SubCategoriaController extends Controller
     {
         $categoria = $this->categoriaRepository->lists('nome', 'id');
 
-        return view('admin.subcategoria.create', compact('categoria'));
+        return view('admin.SubCategoria.create', compact('categoria'));
     }
 
     /**
@@ -102,7 +102,7 @@ class SubCategoriaController extends Controller
         $sub = $this->repository->find($id);
         $categoria = $this->categoriaRepository->lists('nome', 'id');
 
-        return view('admin.subcategoria.edit', compact('sub', 'categoria'));
+        return view('admin.SubCategoria.edit', compact('sub', 'categoria'));
     }
 
     /**

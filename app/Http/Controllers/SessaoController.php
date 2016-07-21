@@ -53,7 +53,7 @@ class SessaoController extends Controller
         if(!$sessao->items())
             $sessao = null;
 
-        return view('admin.sessao.index', compact('sessao'));
+        return view('admin.Sessao.index', compact('sessao'));
     }
 
     /**
@@ -66,7 +66,7 @@ class SessaoController extends Controller
         $filme = $this->filmeRepository->all();
         $shopping = $this->shoppingRepository->all();
 
-        return view('admin.sessao.create', compact('filme', 'shopping'));
+        return view('admin.Sessao.create', compact('filme', 'shopping'));
     }
 
     /**
@@ -117,7 +117,7 @@ class SessaoController extends Controller
         $shopping = $this->shoppingRepository->all();
         $salas = $this->salaRepository->findWhere(['shopping_id' => $sessao->salas->shopping->id]);
 
-        return view('admin.sessao.edit', compact('sessao', 'filme', 'shopping', 'salas'));
+        return view('admin.Sessao.edit', compact('sessao', 'filme', 'shopping', 'salas'));
     }
 
     /**
