@@ -6,7 +6,7 @@
         <div class="row">
             <h3>Novo Filme</h3>
 
-            {!! Form::open(['id' => 'cadastrarFilme', 'class' => 'form']) !!}
+            {!! Form::open(['id' => 'cadastrarFilme', 'class' => 'form', 'method' => 'get']) !!}
 
             <div class="form-group">
                 {!! Form::label("Nome", "Nome:") !!}
@@ -15,7 +15,9 @@
 
             <div class="form-group">
                 {!! Form::label("Nome", "Duração:") !!}
-                {!! Form::text("duracao", null, ["class" => "form-control", 'required' => 'required', 'placeholder' => 'Ex: 02:35']) !!}
+                {!! Form::text("duracao", null,
+                    ["class" => "form-control", 'required' => 'required', 'placeholder' => 'Ex: 02:35', 'id' => 'duracao'])
+                !!}
             </div>
 
             <div class="form-group">
@@ -25,6 +27,10 @@
                     <option value="18+">18+</option>
                     <option value="Livre">Livre</option>
                     <option value="10 Anos">10 Anos</option>
+                    <option value="12 Anos">12 Anos</option>
+                    <option value="12 Anos">12 Anos</option>
+                    <option value="14 Anos">14 Anos</option>
+                    <option value="16 Anos">16 Anos</option>
                 </select>
             </div>
 
@@ -48,8 +54,17 @@
 
 @section('script')
     <script>
-        $('.numero').bind('keypress', function (event) {
+        $('#duracao').bind('keypress', function (event) {
             var regex = new RegExp("^[0-9:]+$");
+            var key = String.fromCharCode(!event.charCode ? event.which : event.charCode);
+            if (!regex.test(key)) {
+                event.preventDefault();
+                return false;
+            }
+        });
+
+        $('.numero').bind('keypress', function (event) {
+            var regex = new RegExp("^[0-9]+$");
             var key = String.fromCharCode(!event.charCode ? event.which : event.charCode);
             if (!regex.test(key)) {
                 event.preventDefault();

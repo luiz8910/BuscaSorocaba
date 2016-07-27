@@ -6,7 +6,7 @@
 
         <h3>Categoria Nome: {{ $estab->nome }}</h3>
 
-        {!! Form::model($estab, ['id' => 'alterarEstab', 'class' => 'form']) !!}
+        {!! Form::model($estab, ['id' => 'alterarEstab', 'class' => 'form', 'method' => 'get']) !!}
 
         <input value="{{ $estab->id }}" id="id" hidden>
 
@@ -90,7 +90,7 @@
 
         <div class="form-group">
             {!! Form::label("Nome", "Nome:") !!}
-            {!! Form::text("nome", null, ["class" => "form-control"]) !!}
+            {!! Form::text("nome", null, ["class" => "form-control", 'required' => 'required']) !!}
         </div>
 
         <div class="form-group">
@@ -124,6 +124,11 @@
         </div>
 
         <div class="form-group">
+            {!! Form::label("complemento", "Complemento:") !!}
+            {!! Form::text("complemento", null, ["class" => "form-control"]) !!}
+        </div>
+
+        <div class="form-group">
             {!! Form::label("bairro", "Bairro:") !!}
             {!! Form::text("bairro", null, ["class" => "form-control"]) !!}
         </div>
@@ -140,7 +145,7 @@
 
         <div class="form-group">
             {!! Form::label("site", "Site:") !!}
-            <input type="url" value="{{ $estab->site }}" name="site" class="form-control">
+            {!! Form::text("site", null, ["class" => "form-control", 'id' => 'site']) !!}
         </div>
 
         <div class="form-group">
@@ -176,6 +181,13 @@
             </p>
         </div>
 
+        <div hidden id="siteDialog" title="Erro">
+            <p>
+                <span class="ui-icon ui-icon-circle-check" style="float:left; margin:0 7px 50px 0;"></span>
+                Site Incorreto, use Http ou Https
+            </p>
+        </div>
+
     </div>
 @endsection
 
@@ -203,6 +215,26 @@
                 var regex = new RegExp("^[0-9]+$");
                 var key = String.fromCharCode(!event.charCode ? event.which : event.charCode);
                 if (!regex.test(key)) {
+                    event.preventDefault();
+                    return false;
+                }
+            });
+
+            $('#site').bind('blur', function (event) {
+                var urlPattern = /^(http|https)?:\/\/[a-zA-Z0-9-\.]+\.[a-z]{2,4}/;
+
+                var input = $('#site').val();
+
+                if(!urlPattern.test(input))
+                {
+                    $("#siteDialog").dialog({
+                        modal: true,
+                        buttons: {
+                            Ok: function () {
+                                $(this).dialog("close");
+                            }
+                        }
+                    });
                     event.preventDefault();
                     return false;
                 }

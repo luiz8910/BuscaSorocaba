@@ -15,14 +15,16 @@
                 <table class="table table-bordered table-responsive">
                     <tr>
                         <thead>
-                        <th>ID</th>
-                        <th>Filme</th>
-                        <th>Num Sala</th>
-                        <th>Horário</th>
-                        <th>Qualidade</th>
-                        <th>Shopping</th>
-                        <th>Audio</th>
-                        <th>Ação</th>
+                            <th>ID</th>
+                            <th>Filme</th>
+                            <th>Num Sala</th>
+                            <th>Horário</th>
+                            <th>Tipo</th>
+                            <th>Qualidade</th>
+                            <th>Shopping</th>
+                            <th>Audio</th>
+                            <th>Preço</th>
+                            <th>Ação</th>
                         </thead>
                     </tr>
 
@@ -33,9 +35,11 @@
                             <td>{{ $s->filme->nome }}</td>
                             <td>{{ $s->salas->numero }}</td>
                             <td>{{ $s->horario }}</td>
+                            <td>{{ $s->salas->tipo }}</td>
                             <td>{{ $s->qualidade }}</td>
                             <td>{{ $s->salas->shopping->nome }}</td>
                             <td>{{ $s->audio }}</td>
+                            <td>R$ {{ $s->preco }}</td>
                             <td>
                                 <a href="{{ route('admin.sessao.edit', [$s->id]) }}"><span class="glyphicon glyphicon-edit"></span> </a>
                                 |

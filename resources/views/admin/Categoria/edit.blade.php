@@ -8,7 +8,7 @@
             <h3>Categoria Nome: {{ $categoria->nome }}</h3>
 
             {{--{!! Form::model($categoria, ['route' => ['admin.categoria.update', $categoria->id]]) !!}--}}
-            {!! Form::model($categoria, ['id' => 'alterarCat']) !!}
+            {!! Form::model($categoria, ['id' => 'alterarCat', 'method' => 'get']) !!}
 
             <input type="text" hidden id="id" value="{{ $categoria->id }}">
 

@@ -15,8 +15,11 @@ Route::get('/', function () {
     return redirect('categoria');
 });
 
-//Categorias
+
 Route::group(['middleware' => 'auth.checkrole:admin'], function(){
+
+    //Categorias
+
     Route::get('/categoria', ['as' => 'admin.categoria.index', 'uses' => 'CategoriaController@index']);
 
     Route::get('/categoria/novo', ['as' => 'admin.categoria.create', 'uses' => 'CategoriaController@create']);
@@ -162,21 +165,23 @@ Route::group(['middleware' => 'auth.checkrole:admin'], function(){
 });
 
 
-
-
 Route::post('oauth/access_token', function () {
     return Response::json(Authorizer::issueAccessToken());
 });
 
 Route::group(['prefix' => 'api', 'middleware' => 'oauth', 'as' => 'api'], function(){
 
-    Route::group(['prefix' => 'api', 'middleware' => 'oauth.checkrole:client', 'as' => 'pedidos'], function(){
+    Route::group(['prefix' => 'estabelecimentos', 'middleware' => 'oauth.checkrole:client', 'as' => 'pedidos'], function(){
         Route::get('pedidos', function(){
             return [
                 'id' => 1,
                 'nome' => 'Luluzão'
             ];
         });
+
+        //Route::resource('comercio/{nome}', 'Api\Estabelecimentos\EstabelecimentosController@show');
+
+        Route::resource('sessaoApi', 'Api\Sessao\SessaoController@index');
     });
 
 });

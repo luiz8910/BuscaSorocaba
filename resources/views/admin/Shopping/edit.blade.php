@@ -6,7 +6,7 @@
         <div class="row">
             <h3>Categoria Nome: {{ $shopping->nome }}</h3>
 
-            {!! Form::model($shopping, ['id' => 'alterarShopping', 'class' => 'form']) !!}
+            {!! Form::model($shopping, ['id' => 'alterarShopping', 'class' => 'form', 'method' => 'get']) !!}
 
             <input type="text" hidden id="id" value="{{ $shopping->id }}">
 

@@ -17,7 +17,7 @@
 
         <div class="form-group">
             {!! Form::label('Estabelecimento', 'Estabelecimento:') !!}
-            <select name="estabelecimentos_id" id="estabelecimentos_id" class="form-control" required>
+            <select name="estabelecimentos_id" id="estabelecimentos_id" class="form-control">
                 <option value="">Selecione</option>
                     @foreach($estab as $e)
                         <option value="{{ $e->id }}">{{ $e->nome }}</option>

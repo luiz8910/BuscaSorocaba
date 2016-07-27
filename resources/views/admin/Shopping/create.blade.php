@@ -7,7 +7,7 @@
             <h3>Novo Shopping</h3>
 
 
-            {!! Form::open(['id' => 'cadastrarShopping', 'class' => 'form']) !!}
+            {!! Form::open(['id' => 'cadastrarShopping', 'class' => 'form', 'method' => 'get']) !!}
 
             <div class="form-group">
                 {!! Form::label("Nome", "Nome:") !!}

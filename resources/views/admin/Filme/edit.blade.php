@@ -7,7 +7,7 @@
         <div class="row">
             <h3>Nome: {{ $filme->nome }}</h3>
 
-            {!! Form::model($filme, ['id' => 'alterarFilme', 'class' => 'form']) !!}
+            {!! Form::model($filme, ['id' => 'alterarFilme', 'class' => 'form', 'method' => 'get']) !!}
 
             <input type="text" hidden id="id" value="{{ $filme->id }}">
 
@@ -18,7 +18,9 @@
 
             <div class="form-group">
                 {!! Form::label("Nome", "Duração:") !!}
-                {!! Form::text("duracao", null, ["class" => "form-control", 'required' => 'required', 'placeholder' => 'Ex: 02:35']) !!}
+                {!! Form::text("duracao", null,
+                ["class" => "form-control", 'required' => 'required', 'placeholder' => 'Ex: 02:35', 'id' => 'duracao'])
+                !!}
             </div>
 
             <div class="form-group">
@@ -51,6 +53,15 @@
 @section('script')
     <script>
         $(function () {
+            $('#duracao').bind('keypress', function (event) {
+                var regex = new RegExp("[0-9:]+$");
+                var key = String.fromCharCode(!event.charCode ? event.which : event.charCode);
+                if (!regex.test(key)) {
+                    event.preventDefault();
+                    return false;
+                }
+            });
+
             $('#alterarFilme').submit(function () {
                 $('#btnAlterar').val('Enviando...');
                 var id = $('#id').val();

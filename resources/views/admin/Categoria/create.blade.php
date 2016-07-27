@@ -6,7 +6,7 @@
         <div class="row">
             <h3>Nova Categoria</h3>
 
-            {!! Form::open(['id' => 'cadastrarCat']) !!}
+            {!! Form::open(['id' => 'cadastrarCat', 'method' => 'get']) !!}
 
             <div class="form-group">
                 {!! Form::label("Nome", "Nome:") !!}

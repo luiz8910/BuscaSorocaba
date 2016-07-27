@@ -22,6 +22,7 @@ class CreateEstabelecimentosTable extends Migration
 			$table->string('cep')->nullable();
 			$table->string('logradouro');
 			$table->string('numero');
+			$table->string('complemento');
 			$table->string('bairro');
 			$table->string('cidade')->default('Sorocaba');
 			$table->string('quemSomos')->nullable();

@@ -6,7 +6,7 @@
         <div class="row">
             <h3>Sala numero: {{ $sala->numero }}</h3>
 
-            {!! Form::model($sala, ['id' => 'alterarSala', 'class' => 'form']) !!}
+            {!! Form::model($sala, ['id' => 'alterarSala', 'class' => 'form', 'method' => 'get']) !!}
 
             <input hidden value="{{ $sala->id }}" id="id">
 

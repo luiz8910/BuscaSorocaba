@@ -12,7 +12,7 @@ class Sessao extends Model implements Transformable
     use TransformableTrait, SoftDeletes;
 
     protected $fillable = [
-        'filme_id', 'salas_id', 'horario', 'audio', 'qualidade'
+        'filme_id', 'salas_id', 'shopping_id', 'horario', 'audio', 'qualidade', 'preco'
     ];
 
     protected $table = 'filme_sala';

@@ -7,7 +7,7 @@ use Closure;
 use Illuminate\Support\Facades\Auth;
 use LucaDegasperi\OAuth2Server\Facades\Authorizer;
 
-class CheckRole
+class OAuthCheckRole
 {
     /**
      * @var UserRepository

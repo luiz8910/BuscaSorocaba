@@ -6,7 +6,7 @@
         <div class="row">
             <h3>Nova Categoria</h3>
 
-            {!! Form::open(['id' => 'cadastrarEstab', 'class' => 'form']) !!}
+            {!! Form::open(['id' => 'cadastrarEstab', 'class' => 'form', 'method' => 'get']) !!}
 
             <div class="form-group">
                 {!! Form::label('Categoria', 'Categoria 1:') !!}
@@ -60,7 +60,7 @@
 
             <div class="form-group">
                 {!! Form::label("Nome", "Nome:") !!}
-                {!! Form::text("nome", null, ["class" => "form-control", "id" => "nome"]) !!}
+                {!! Form::text("nome", null, ["class" => "form-control", "id" => "nome", 'required' => 'required']) !!}
                 <h6 hidden>Teste</h6>
             </div>
 
@@ -95,6 +95,11 @@
             </div>
 
             <div class="form-group">
+                {!! Form::label("complemento", "Complemento:") !!}
+                {!! Form::text("complemento", null, ["class" => "form-control"]) !!}
+            </div>
+
+            <div class="form-group">
                 {!! Form::label("bairro", "Bairro:") !!}
                 {!! Form::text("bairro", null, ["class" => "form-control"]) !!}
             </div>
@@ -111,8 +116,7 @@
 
             <div class="form-group">
                 {!! Form::label("site", "Site:") !!}
-                <input type="url" name="site" class="form-control">
-
+                {!! Form::text("site", null, ["class" => "form-control", 'id' => 'site']) !!}
             </div>
 
             <div class="form-group">
@@ -138,6 +142,14 @@
                     Este Estabelecimento já está Cadastrado, Tente Novamente.
                 </p>
             </div>
+
+            <div hidden id="siteDialog" title="Erro">
+                <p>
+                    <span class="ui-icon ui-icon-circle-check" style="float:left; margin:0 7px 50px 0;"></span>
+                    Site Incorreto, use Http ou Https
+                </p>
+            </div>
+
         </div> <!-- Fim div Row -->
 
     </div> <!-- Fim div Container -->
@@ -171,6 +183,27 @@
                     return false;
                 }
             });
+
+            $('#site').bind('blur', function (event) {
+                var urlPattern = /^(http|https)?:\/\/[a-zA-Z0-9-\.]+\.[a-z]{2,4}/;
+
+                var input = $('#site').val();
+
+                if(!urlPattern.test(input))
+                {
+                    $("#siteDialog").dialog({
+                        modal: true,
+                        buttons: {
+                            Ok: function () {
+                                $(this).dialog("close");
+                            }
+                        }
+                    });
+                    event.preventDefault();
+                    return false;
+                }
+            });
+
 
             $('#cadastrarEstab').submit(function () {
                 $('#btnSalvar').html('Enviando...');

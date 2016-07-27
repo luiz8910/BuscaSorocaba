@@ -1,6 +1,6 @@
 <?php
 
-namespace BuscaSorocaba\Http\Controllers;
+namespace BuscaSorocaba\Http\Controllers\Api\Sessao;
 
 use BuscaSorocaba\Models\Filme;
 use BuscaSorocaba\Models\Sala;
@@ -13,6 +13,7 @@ use Illuminate\Http\Request;
 
 use BuscaSorocaba\Http\Requests;
 use BuscaSorocaba\Http\Controllers\Controller;
+use Illuminate\Support\Facades\DB;
 
 class SessaoController extends Controller
 {
@@ -48,12 +49,11 @@ class SessaoController extends Controller
      */
     public function index()
     {
-        $sessao = $this->repository->paginate();
+        $sessao = DB::table('filme_sala')
+            ->where('filme_id', '=', 1)
+            ->get();
 
-        if(!$sessao->items())
-            $sessao = null;
-
-        return view('admin.Sessao.index', compact('sessao'));
+        return $sessao;
     }
 
     /**
@@ -85,10 +85,6 @@ class SessaoController extends Controller
 
         $sala = new Sala([
            'salas_id' => $data['salas_id']
-        ]);
-
-        $shopping = new Shopping([
-            'shopping_id' => $data['shopping_id']
         ]);
 
         $this->repository->create($data);

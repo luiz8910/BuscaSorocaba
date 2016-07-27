@@ -12,7 +12,7 @@ class Estabelecimentos extends Model implements Transformable
     use TransformableTrait, SoftDeletes;
 
     protected $fillable = [
-        'nome', 'telefone', 'telefone2', 'logradouro', 'numero',
+        'nome', 'telefone', 'telefone2', 'logradouro', 'numero', 'complemento',
         'email', 'cep', 'bairro', 'cidade', 'quemSomos', 'servicos', 'site', '_24h', 'emergencia'
     ];
 

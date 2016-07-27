@@ -5,7 +5,7 @@
     <div class="container">
         <h3>Nova Sala</h3>
 
-        {!! Form::open(['id' => 'cadastrarSala', 'class' => 'form']) !!}
+        {!! Form::open(['id' => 'cadastrarSala', 'class' => 'form', 'method' => 'get']) !!}
 
         <div class="form-group">
             {!! Form::label("Nome", "Shopping:") !!}

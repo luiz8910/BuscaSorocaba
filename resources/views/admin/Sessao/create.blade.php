@@ -69,6 +69,12 @@
         </div>
 
         <div class="form-group">
+            {!! Form::label("Nome", "Preço:") !!}
+            {!! Form::text('preco', null, ['class' => 'form-control', 'placeholder' => 'Ex.: 15,00, 14,00',
+            'required' => 'required', 'id' => 'preco']) !!}
+        </div>
+
+        <div class="form-group">
             {!! Form::submit("Salvar", ['class' => 'btn btn-primary']) !!}
         </div>
 
@@ -76,4 +82,19 @@
     </div>
 
 
+@endsection
+
+@section('script')
+    <script>
+        $(function () {
+            $('#preco').bind('keypress', function (event) {
+                var regex = new RegExp("[0-9,]+$");
+                var key = String.fromCharCode(!event.charCode ? event.which : event.charCode);
+                if (!regex.test(key)) {
+                    event.preventDefault();
+                    return false;
+                }
+            });
+        });
+    </script>
 @endsection

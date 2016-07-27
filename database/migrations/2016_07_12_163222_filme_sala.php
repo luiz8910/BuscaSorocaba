@@ -18,9 +18,12 @@ class FilmeSala extends Migration
             $table->foreign('filme_id')->references('id')->on('filmes')->onDelete('cascade');
             $table->integer('salas_id')->unsigned();
             $table->foreign('salas_id')->references('id')->on('salas')->onDelete('cascade');
+            $table->integer('shopping_id')->unsigned();
+            $table->foreign('shopping_id')->references('id')->on('shoppings')->onDelete('cascade');
             $table->string('horario');
             $table->string('audio');
             $table->string('qualidade');
+            $table->string('preco');
             $table->softDeletes();
             $table->timestamps();
         });
