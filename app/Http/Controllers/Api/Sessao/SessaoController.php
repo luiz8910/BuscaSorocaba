@@ -51,6 +51,7 @@ class SessaoController extends Controller
     {
         $sessao = DB::table('filme_sala')
             ->where('filme_id', '=', 1)
+            ->where('shopping_id', '=', 1)
             ->get();
 
         return $sessao;

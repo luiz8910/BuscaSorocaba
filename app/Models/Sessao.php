@@ -34,4 +34,11 @@ class Sessao extends Model implements Transformable
         return $this->belongsTo(Shopping::class);
     }
 
+    public function transform()
+    {
+        return [
+          'sessao' => $this->id
+        ];
+    }
+
 }
