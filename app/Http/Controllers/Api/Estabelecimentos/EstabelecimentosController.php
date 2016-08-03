@@ -118,13 +118,10 @@ class EstabelecimentosController extends Controller
      * @param Request $data
      * @return \Illuminate\Http\Response
      */
-    public function show($nome)
+    public function show($id)
     {
-        $s = DB::table('subcategorias')
-            ->where('nome', $nome)
-            ->first();
 
-        $sub = $this->subCategoriaRepository->find($s->id);
+        $sub = $this->subCategoriaRepository->find($id);
         $estab = $sub->estabelecimentos->all();
 
         return $estab;

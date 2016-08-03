@@ -58,7 +58,7 @@ class EstabelecimentosController extends Controller
      */
     public function create()
     {
-        $sub = $this->subCategoriaRepository->all();
+        $sub = $this->subCategoriaRepository->orderBy('nome')->all();
 
         return view('admin.Estabelecimentos.create', compact('sub'));
     }

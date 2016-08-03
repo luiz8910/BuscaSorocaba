@@ -19,6 +19,8 @@ class Kernel extends HttpKernel
         \Illuminate\View\Middleware\ShareErrorsFromSession::class,
         \BuscaSorocaba\Http\Middleware\VerifyCsrfToken::class,
         \LucaDegasperi\OAuth2Server\Middleware\OAuthExceptionHandlerMiddleware::class,
+
+        //\ResultSystems\Cors\CorsMiddleware::class,
     ];
 
     /**

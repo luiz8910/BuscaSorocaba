@@ -164,24 +164,28 @@ Route::group(['middleware' => 'auth.checkrole:admin'], function(){
 // Fim Sessões
 });
 
-
-Route::post('oauth/access_token', function () {
-    return Response::json(Authorizer::issueAccessToken());
-});
-
-Route::group(['prefix' => 'api', 'middleware' => 'oauth', 'as' => 'api'], function(){
-
-    Route::group(['prefix' => 'estabelecimentos', 'middleware' => 'oauth.checkrole:client', 'as' => 'pedidos'], function(){
-        Route::get('pedidos', function(){
-            return [
-                'id' => 1,
-                'nome' => 'Luluzão'
-            ];
-        });
-
-        //Route::resource('comercio/{nome}', 'Api\Estabelecimentos\EstabelecimentosController@show');
-
-        Route::resource('sessaoApi', 'Api\Sessao\SessaoController@index');
+Route::group(['middleware' => 'cors'], function(){
+    Route::post('oauth/access_token', function () {
+        return Response::json(Authorizer::issueAccessToken());
     });
 
+    Route::group(['prefix' => 'api', 'middleware' => 'oauth', 'as' => 'api'], function(){
+
+        Route::group(['prefix' => 'estabelecimentos', 'middleware' => 'oauth.checkrole:client', 'as' => 'pedidos'], function(){
+            Route::get('pedidos', function(){
+                return [
+                    'id' => 1,
+                    'nome' => 'Luluzão'
+                ];
+            });
+
+            Route::resource('comercio', 'Api\Estabelecimentos\EstabelecimentosController@show');
+
+            Route::resource('sessaoApi', 'Api\Sessao\SessaoController@index');
+
+            Route::resource('subcategoriaApi', 'Api\Subcategoria\SubCategoriaController@index');
+        });
+
+    });
 });
+

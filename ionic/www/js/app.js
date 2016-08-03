@@ -3,7 +3,19 @@
 // angular.module is a global place for creating, registering and retrieving Angular modules
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
-angular.module('starter', ['ionic'])
+//angular.module("starter.controllers", []);
+angular.module("starter.controllers", []);
+angular.module("starter.services", []);
+
+angular.module('starter',
+    ['ionic', 'starter.controllers', 'starter.services','angular-oauth2', 'ngResource']
+)
+
+    .constant("appConfig", {
+        //baseUrl: 'http://pcdesegunda.com.br',
+        //baseUrl: 'http://192.168.0.16:8000',
+        baseUrl: 'http://localhost:8000'
+    })
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -22,3 +34,68 @@ angular.module('starter', ['ionic'])
     }
   });
 })
+
+.config(function($stateProvider, $urlRouterProvider, OAuthProvider, OAuthTokenProvider, appConfig){
+    OAuthProvider.configure({
+        baseUrl: appConfig.baseUrl,
+        clientId: 'appid01',
+        clientSecret: 'secret', //optional
+        grantPath: '/oauth/access_token'
+    });
+
+    OAuthTokenProvider.configure({
+        name: 'token',
+        options: {
+            secure: false
+        }
+    });
+
+  $stateProvider
+      .state('home', {
+      url: '/home/:nome',
+      templateUrl: 'templates/home.html',
+          controller: 'HomeCtrl'
+      })
+
+      .state('main', {
+        url: '/',
+        templateUrl: 'templates/main.html'
+      })
+
+      .state('login', {
+          url: '/login',
+          templateUrl: 'templates/login.html',
+          controller: 'LoginCtrl'
+      })
+
+      .state('dashboard', {
+          url: '/dashboard',
+          templateUrl: 'templates/dashboard/index.html'
+          //controller: 'DashCtrl'
+      })
+
+      .state('alimentacao',{
+          url: '/alimentacao',
+          templateUrl: 'templates/alimentacao/index.html',
+          controller: 'AlimentacaoCtrl'
+      })
+
+      .state('estabelecimentos',{
+          cache: false,
+          url: '/estabelecimentos',
+          templateUrl: 'templates/estabelecimentos/index.html',
+          controller: 'EstabelecimentosCtrl'
+      })
+
+      .state('24h',{
+          url: '/24h',
+          templateUrl: 'templates/24h/index.html'
+      })
+
+      .state('emergencia',{
+          url: '/emergencia',
+          templateUrl: 'templates/emergencia/index.html'
+      })
+  ;
+    $urlRouterProvider.otherwise('/dashboard');
+});
