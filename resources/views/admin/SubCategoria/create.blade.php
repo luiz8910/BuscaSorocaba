@@ -18,6 +18,16 @@
         </div>
 
         <div class="form-group">
+            {!! Form::label("_24h", "24h") !!}
+            <input type="checkbox" name="_24h">
+        </div>
+
+        <div class="form-group">
+            {!! Form::label("Emergencia", "Emergencia:") !!}
+            <input type="checkbox" name="emergencia">
+        </div>
+
+        <div class="form-group">
             <button type="submit" class="btn btn-primary" href="#" data-loading-text = 'Enviando ......'>Salvar</button>
             <a class="btn btn-default" href="{{ route('admin.subcategoria.index') }}">Voltar</a>
         </div>

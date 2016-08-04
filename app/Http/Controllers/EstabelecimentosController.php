@@ -219,6 +219,16 @@ class EstabelecimentosController extends Controller
                 array_push($s, $sub5);
             }
 
+            if(!isset($data['_24h']))
+            {
+                $data['_24h'] = 0;
+            }
+
+            if(!isset($data['emergencia']))
+            {
+                $data['emergencia'] = 0;
+            }
+
             $s = array_unique($s);
 
             $this->repository->update($data, $id)->subCategoria()->detach();

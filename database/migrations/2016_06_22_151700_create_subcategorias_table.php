@@ -18,6 +18,8 @@ class CreateSubcategoriasTable extends Migration
 			$table->integer('categoria_id')->unsigned();
 			$table->foreign('categoria_id')->references('id')->on('categorias');
 			$table->string('nome');
+			$table->string('_24h')->default(0);
+			$table->string('emergencia')->default(0);
             $table->timestamps();
 		});
 	}

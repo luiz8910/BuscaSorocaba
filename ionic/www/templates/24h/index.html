@@ -54,29 +54,20 @@
                 <div class="decoration"></div>
 
                 <div class="container">
-                    <div class="cate-box">
-                        <a href="list-busca.html" class="button cate-buttom button-green button-xl ">Farmacia</a>
-                        <a href="list-busca.html" class="button cate-buttom button-green button-xl">Lanchonete</a>
-                        <a href="list-busca.html" class="button cate-buttom button-green button-xl">Mecanico</a>
-                        <a href="list-busca.html" class="button cate-buttom button-green button-xl">Posto de gasolina</a>
-                        <a href="list-busca.html" class="button cate-buttom button-green button-xl">Borrachaia</a>
-                        <a href="list-busca.html" class="button cate-buttom button-green button-xl">Chaveiro</a>
-                    </div>
-
-                    <div class="decoration"></div>
-
-                    <div class="cate-box">
-                        <a href="index.html" class="button cate-buttom button-icon button-blue"><i class="fa fa-search"></i>Voltar para pagina de pesquisas</a>
+                    <div class="cate-box" ng-repeat="o in sub">
+                        <a href="#/estab24" ng-click="exibirEstab(o)"
+                           class="button cate-buttom button-green button-xl">
+                            {{ o.nome }}
+                        </a>
                     </div>
 
                     <div class="decoration"></div>
                     <div class="footer">
                         <p class="center-text">Copyright 2015. Todos os direitos reservados.</p>
-                        <div class="footer-icons">
+                        <div class="footer-icons center-text">
                             <a href="#" class="scale-hover facebook-color social-ball"><i class="fa fa-facebook"></i></a>
                             <a href="#" class="scale-hover twitter-color social-ball"><i class="fa fa-twitter"></i></a>
                             <a href="#" class="scale-hover google-color social-ball"><i class="fa fa-google-plus"></i></a>
-                            <a href="#" class="scale-hover back-to-top bg-green-dark social-ball"><i class="fa fa-angle-up"></i></a>
                         </div>
                     </div>
                     <!-- End of entire page content-->
@@ -84,7 +75,6 @@
             </div>
         </div>
     </div>
-    <a href="#" class="back-to-top-badge"><i class="fa fa-caret-up"></i>Voltar o top</a>
 </div>
 
 </body>

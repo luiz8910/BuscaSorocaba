@@ -1,8 +1,7 @@
 angular.module('starter.controllers')
-    .controller('EstabelecimentosCtrl', ['$scope', '$state', '$estab', '$ionicLoading',
-        function ($scope, $state, $estab, $ionicLoading) {
-
-            var id = window.localStorage['key'];
+    .controller('Estab24Ctrl', ['$scope', '$state', '$estab24', '$ionicLoading',
+        function ($scope, $state, $estab24, $ionicLoading) {
+            var id = window.localStorage['id'];
             var nome = window.localStorage['nome'];
 
             $scope.estabelecimentos = [];
@@ -12,7 +11,7 @@ angular.module('starter.controllers')
                 template: "Buscando por " + nome
             });
 
-            $estab.query({id: id}, function (data) {
+            $estab24.query({id: id}, function (data) {
                 $scope.estabelecimentos = data;
                 $ionicLoading.hide();
             });

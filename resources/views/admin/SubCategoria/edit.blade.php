@@ -22,6 +22,25 @@
             </div>
 
             <div class="form-group">
+                {!! Form::label("24h", "24h") !!}
+                @if($sub->_24h == 'on')
+                    <input type="checkbox" checked name="_24h">
+                @else
+                    <input type="checkbox" name="_24h">
+                @endif
+
+            </div>
+
+            <div class="form-group">
+                {!! Form::label("Emergencia", "Emergencia:") !!}
+                @if($sub->emergencia == 'on')
+                    <input type="checkbox" checked name="emergencia">
+                @else
+                    <input type="checkbox" name="emergencia">
+                @endif
+            </div>
+
+            <div class="form-group">
                 <button type="submit" id="btnAlterar" class="btn btn-primary" href="#" value = ''>Alterar</button>
                 <a class="btn btn-default" href="{{ route('admin.subcategoria.index') }}">Voltar</a>
             </div>

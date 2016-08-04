@@ -87,14 +87,30 @@ angular.module('starter',
           controller: 'EstabelecimentosCtrl'
       })
 
+      .state('perfil',{
+          cache: false,
+          url: '/perfil',
+          templateUrl: 'templates/estabelecimentos/perfil.html',
+          controller: 'PerfilCtrl'
+      })
+
       .state('24h',{
           url: '/24h',
-          templateUrl: 'templates/24h/index.html'
+          templateUrl: 'templates/24h/index.html',
+          controller: '_24hCtrl'
       })
 
       .state('emergencia',{
           url: '/emergencia',
-          templateUrl: 'templates/emergencia/index.html'
+          templateUrl: 'templates/emergencia/index.html',
+          controller: 'EmergenciaCtrl'
+      })
+
+      .state('estab24',{
+          cache: false,
+          url: '/estab24',
+          templateUrl: 'templates/24h/estabelecimentos.html',
+          controller: 'Estab24Ctrl'
       })
   ;
     $urlRouterProvider.otherwise('/dashboard');

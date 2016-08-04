@@ -53,6 +53,10 @@
                                 <a href="{{ route('admin.estabelecimentos.destroy', [$e->id]) }}" class="excluir" id="{{ $e->id }}">
                                     <span title="Excluir Estabelecimento" class="glyphicon glyphicon-trash"></span>
                                 </a>
+                                |
+                                <a href="{{ route('admin.estabelecimentos.destroy', [$e->id]) }}" class="excluir" id="{{ $e->id }}">
+                                    <span title="Upload de Logotipo" class="glyphicon glyphicon-open-file"></span>
+                                </a>
                             </td>
                         </tr>
                         @endforeach

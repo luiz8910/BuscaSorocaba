@@ -179,10 +179,27 @@ Route::group(['middleware' => 'cors'], function(){
                 ];
             });
 
-            Route::resource('comercio', 'Api\Estabelecimentos\EstabelecimentosController@show');
+            //Consulta lista de Subcategorias 24 horas
+            Route::resource('24h', 'Api\Subcategoria\SubCategoriaController@vinteQuatro');
+
+            //Consulta lista de Subcategorias de Emergencia
+            Route::resource('emergencia', 'Api\Subcategoria\SubCategoriaController@emergencia');
+
+            //Consulta Perfil do estabelecimento
+            Route::resource('perfil', 'Api\Estabelecimentos\EstabelecimentosController@show');
+
+            //Consulta Lista de Estabelecimentos com base na subcategoria selecionada
+            Route::resource('comercio', 'Api\Estabelecimentos\EstabelecimentosController@index');
+
+            //Consulta lista de Estabelecimentos 24h com base na subcategoria selecionada
+            Route::resource('estab24', 'Api\Estabelecimentos\EstabelecimentosController@vinteQuatro');
+
+            //Consulta lista de Estabelecimentos de emergência com base na subcategoria selecionada
+            Route::resource('estabEmergencia', 'Api\Estabelecimentos\EstabelecimentosController@emergencia');
 
             Route::resource('sessaoApi', 'Api\Sessao\SessaoController@index');
 
+            //Consulta lista de Subcategorias de alimentação
             Route::resource('subcategoriaApi', 'Api\Subcategoria\SubCategoriaController@index');
         });
 
