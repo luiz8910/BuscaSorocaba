@@ -46,7 +46,7 @@ angular.module('starter',
   });
 })
 
-.config(function($stateProvider, $urlRouterProvider, OAuthProvider, OAuthTokenProvider, appConfig){
+.config(function($stateProvider, $urlRouterProvider, OAuthProvider, OAuthTokenProvider, appConfig, $provide){
     OAuthProvider.configure({
         baseUrl: appConfig.baseUrl,
         clientId: 'appid01',
@@ -146,4 +146,38 @@ angular.module('starter',
       })
   ;
     $urlRouterProvider.otherwise('/dashboard');
+
+    $provider.decorator('OAuthToken', ['$localStorage', '$delegate', function ($localStorage, $delegate) {
+        Object.defineProperties($delegate,{
+            setToken:{
+                value: function(data){
+
+                },
+
+                enumerable: true,
+                configurable: true,
+                writable: true
+            },
+
+            getToken:{
+                value: function(data){
+
+                },
+
+                enumerable: true,
+                configurable: true,
+                writable: true
+            },
+
+            removeToken:{
+                value: function(data){
+
+                },
+
+                enumerable: true,
+                configurable: true,
+                writable: true
+            }
+        })
+    }]);
 });
