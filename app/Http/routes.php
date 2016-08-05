@@ -172,12 +172,6 @@ Route::group(['middleware' => 'cors'], function(){
     Route::group(['prefix' => 'api', 'middleware' => 'oauth', 'as' => 'api'], function(){
 
         Route::group(['prefix' => 'estabelecimentos', 'middleware' => 'oauth.checkrole:client', 'as' => 'pedidos'], function(){
-            Route::get('pedidos', function(){
-                return [
-                    'id' => 1,
-                    'nome' => 'Luluzão'
-                ];
-            });
 
             //Consulta lista de Subcategorias 24 horas
             Route::resource('24h', 'Api\Subcategoria\SubCategoriaController@vinteQuatro');

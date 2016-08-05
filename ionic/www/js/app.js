@@ -13,9 +13,20 @@ angular.module('starter',
 
     .constant("appConfig", {
         //baseUrl: 'http://pcdesegunda.com.br',
-        //baseUrl: 'http://192.168.0.16:8000',
-        baseUrl: 'http://localhost:8000'
+        baseUrl: 'http://192.168.0.16:8000',
+        //baseUrl: 'http://localhost:8000'
     })
+
+    //.factory("login", ["OAuth", "$http", function (a, ajax) {
+    //    this.entrar = function () {
+    //        a.getAccessToken({
+    //            username: "joao@bolsafamilia.com.br",
+    //            password: "dilma123"
+    //        });
+    //
+    //        ajax.get();
+    //    }
+    //}])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -70,8 +81,8 @@ angular.module('starter',
 
       .state('dashboard', {
           url: '/dashboard',
-          templateUrl: 'templates/dashboard/index.html'
-          //controller: 'DashCtrl'
+          templateUrl: 'templates/dashboard/index.html',
+          controller: 'LoginCtrl'
       })
 
       .state('alimentacao',{
@@ -111,6 +122,27 @@ angular.module('starter',
           url: '/estab24',
           templateUrl: 'templates/24h/estabelecimentos.html',
           controller: 'Estab24Ctrl'
+      })
+
+      .state('estabEmergencia',{
+          cache: false,
+          url: '/estabEmergencia',
+          templateUrl: 'templates/emergencia/estabelecimentos.html',
+          controller: 'EstabEmergenciaCtrl'
+      })
+
+      .state('perfil24h',{
+          cache: false,
+          url: '/perfil24h',
+          templateUrl: 'templates/estabelecimentos/perfil.html',
+          controller: 'PerfilCtrl'
+      })
+
+      .state('perfilEmergencia',{
+          cache: false,
+          url: '/perfilEmergencia',
+          templateUrl: 'templates/estabelecimentos/perfil.html',
+          controller: 'PerfilCtrl'
       })
   ;
     $urlRouterProvider.otherwise('/dashboard');

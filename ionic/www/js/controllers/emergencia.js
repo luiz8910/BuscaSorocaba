@@ -7,6 +7,11 @@ angular.module('starter.controllers')
                 template: "Carregando..."
             });
 
+            $scope.exibirEstab = function (data) {
+                window.localStorage['id'] = data.id;
+                window.localStorage['nome'] = data.nome;
+            };
+
             $emergencia.query({}, function (data) {
                 $scope.sub = data;
                 $ionicLoading.hide();

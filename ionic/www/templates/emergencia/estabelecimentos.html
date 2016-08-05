@@ -36,6 +36,14 @@
 
 <body class="dual-sidebar">
 
+<div class="gallery-fix"></div> <!-- Important for all pages that have galleries or portfolios -->
+
+<div id="header-fixed">
+    <a class="open-left-sidebar" href="#"><i class="fa fa-navicon"></i></a>
+    <a class="header-logo" href="#"><img src="img/images/logo-light.png" alt="img"></a>
+    <a class="open-right-sidebar" href="#"><i class="fa fa-envelope-o"></i></a>
+</div>
+
 <div class="all-elements">
     <div class="snap-drawers">
 
@@ -45,70 +53,40 @@
                 <!--Page content goes here, fixed elements go above the all elements class-->
 
                 <div class="container heading-style-5">
-                    <h4 class="heading-title">Categoria Emergencia</h4>
-                    <i class="fa fa-medkit heading-icon"></i>
+                    <h4 class="heading-title">Resultado da pesquisa para {{ nome }}</h4>
+                    <i class="fa fa-search heading-icon"></i>
                     <div class="line bg-black"></div>
                     <p class="heading-subtitle">
-                        Carregamos para voce algumas categoria de Emergencia.
+                        O Busca Sorocaba encontrou os seguintes resultados para a sua busca por "{{ nome }}"...
                     </p>
                 </div>
 
                 <div class="decoration"></div>
-
-                <div class="container">
-                    <div class="cate-box" ng-repeat="o in sub">
-                        <a href="#/estabEmergencia"
-                           ng-click="exibirEstab(o)"
-                           class="button cate-buttom button-magenta button-xl">
-                            {{ o.nome }}
-                        </a>
-                    </div>
-
+                <div class="one-third-responsive" ng-repeat="e in estabelecimentos">
+                    <a href="#/perfilEmergencia" ng-click="exibirPerfil(e)" class="user-list-item">
+                        <img src="img/images/pictures/1s.jpg" alt="img">
+                        <strong>{{ e.nome }}<br></strong>
+                        <em>{{ e.telefone }}<br></em>
+                        <em>{{ e.site }}</em>
+                        <i class="fa fa-chevron-right"></i>
+                    </a>
                     <div class="decoration"></div>
-
-                    <div class="footer">
-                        <p class="center-text">Copyright 2015. Todos os direitos reservados.</p>
-                        <div class="footer-icons center-text">
-                            <a href="#" class="scale-hover facebook-color social-ball"><i class="fa fa-facebook"></i></a>
-                            <a href="#" class="scale-hover twitter-color social-ball"><i class="fa fa-twitter"></i></a>
-                            <a href="#" class="scale-hover google-color social-ball"><i class="fa fa-google-plus"></i></a>
-                        </div>
-                    </div>
-                    <!-- End of entire page content-->
                 </div>
+
+
+
+                <div class="footer">
+                    <p class="center-text">Copyright 2015. Todos os direitos reservados.</p>
+                    <div class="footer-icons center-text">
+                        <a href="#" class="scale-hover facebook-color social-ball"><i class="fa fa-facebook"></i></a>
+                        <a href="#" class="scale-hover twitter-color social-ball"><i class="fa fa-twitter"></i></a>
+                        <a href="#" class="scale-hover google-color social-ball"><i class="fa fa-google-plus"></i></a>
+                    </div>
+                </div>
+                <!-- End of entire page content-->
             </div>
         </div>
     </div>
 </div>
 
 </body>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
