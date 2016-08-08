@@ -12,21 +12,10 @@ angular.module('starter',
 )
 
     .constant("appConfig", {
-        //baseUrl: 'http://pcdesegunda.com.br',
-        baseUrl: 'http://192.168.0.16:8000',
+        baseUrl: 'http://buscasorocaba.com.br',
+        //baseUrl: 'http://192.168.0.16:8000',
         //baseUrl: 'http://localhost:8000'
     })
-
-    //.factory("login", ["OAuth", "$http", function (a, ajax) {
-    //    this.entrar = function () {
-    //        a.getAccessToken({
-    //            username: "joao@bolsafamilia.com.br",
-    //            password: "dilma123"
-    //        });
-    //
-    //        ajax.get();
-    //    }
-    //}])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -145,39 +134,42 @@ angular.module('starter',
           controller: 'PerfilCtrl'
       })
   ;
-    $urlRouterProvider.otherwise('/dashboard');
+    $provide.decorator('OAuthToken', ['$localStorage', '$delegate', function ($localStorage, $delegate) {
+            Object.defineProperties($delegate,{
+                setToken:{
+                    value: function(data){
+                        return $localStorage.setObject('token', data);
+                    },
 
-    $provider.decorator('OAuthToken', ['$localStorage', '$delegate', function ($localStorage, $delegate) {
-        Object.defineProperties($delegate,{
-            setToken:{
-                value: function(data){
-
+                    enumerable: true,
+                    configurable: true,
+                    writable: true
                 },
 
-                enumerable: true,
-                configurable: true,
-                writable: true
-            },
+                getToken:{
+                    value: function(){
+                        return $localStorage.getObject('token');
+                    },
 
-            getToken:{
-                value: function(data){
-
+                    enumerable: true,
+                    configurable: true,
+                    writable: true
                 },
 
-                enumerable: true,
-                configurable: true,
-                writable: true
-            },
+                removeToken:{
+                    value: function(){
+                        $localStorage.setObject('token', null);
+                    },
 
-            removeToken:{
-                value: function(data){
+                    enumerable: true,
+                    configurable: true,
+                    writable: true
+                }
+            });
 
-                },
+            return $delegate;
 
-                enumerable: true,
-                configurable: true,
-                writable: true
-            }
-        })
     }]);
+
+    $urlRouterProvider.otherwise('/dashboard');
 });

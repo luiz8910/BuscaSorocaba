@@ -1,5 +1,5 @@
 angular.module('starter.controllers')
-    .controller('LoginCtrl', ['$scope', 'OAuth', '$state', function ($scope, OAuth, $state) {
+    .controller('LoginCtrl', ['$scope', 'OAuth', '$state', '$login', function ($scope, OAuth, $state, $login) {
 
         $scope.user = {
             username: 'joao@bolsafamilia.com.br',
@@ -13,5 +13,7 @@ angular.module('starter.controllers')
             }, function (responseError) {
                 console.log(responseError);
             })
-        }
+        };
+
+        return $login.oauth;
     }]);

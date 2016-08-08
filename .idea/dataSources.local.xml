@@ -7,5 +7,11 @@
       <schema-pattern>buscaSorocaba.*</schema-pattern>
       <default-schemas>buscaSorocaba.*</default-schemas>
     </data-source>
+    <data-source name="Busca Sorocaba - Online" uuid="0333e9c9-f64b-4553-b89e-61b889922f43">
+      <secret-storage>master_key</secret-storage>
+      <user-name>buscasor_root</user-name>
+      <schema-pattern>buscasor_busca.*</schema-pattern>
+      <default-schemas>buscasor_busca.*</default-schemas>
+    </data-source>
   </component>
 </project>

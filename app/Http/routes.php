@@ -174,7 +174,7 @@ Route::group(['middleware' => 'cors'], function(){
         Route::group(['prefix' => 'estabelecimentos', 'middleware' => 'oauth.checkrole:client', 'as' => 'pedidos'], function(){
 
             //Consulta lista de Subcategorias 24 horas
-            Route::resource('24h', 'Api\Subcategoria\SubCategoriaController@vinteQuatro');
+            Route::resource('sub24h', 'Api\Subcategoria\SubCategoriaController@vinteQuatro');
 
             //Consulta lista de Subcategorias de Emergencia
             Route::resource('emergencia', 'Api\Subcategoria\SubCategoriaController@emergencia');
