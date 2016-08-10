@@ -18,6 +18,7 @@ class CreateFilmesTable extends Migration
 			$table->string('nome');
 			$table->string('duracao');
 			$table->string('classificacao');
+			$table->string('img');
 			$table->softDeletes();
             $table->timestamps();
 		});

@@ -7,6 +7,10 @@ use Illuminate\Http\Request;
 
 use BuscaSorocaba\Http\Requests;
 use BuscaSorocaba\Http\Controllers\Controller;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Input;
+use Illuminate\Support\Facades\Storage;
 
 class FilmeController extends Controller
 {
@@ -69,6 +73,7 @@ class FilmeController extends Controller
             echo json_encode(['status' => false]);
         }
     }
+
 
     /**
      * Display the specified resource.
@@ -177,4 +182,33 @@ class FilmeController extends Controller
 
         return false;
     }
+
+    public function createImage($id)
+    {
+        $filme = $this->repository->find($id);
+
+        return view('admin.Filme.createImages', compact('filme'));
+    }
+
+    public function uploadImage(Request $request, $id)
+    {
+        $file = $request->file('img');
+        $nome = $file->getClientOriginalName();
+
+        DB::table('filmes')
+            ->where('id', $id)
+            ->update(['img' => $nome]);
+
+        Storage::disk("public_local")->put($nome, File::get($file));
+
+        return redirect()->route('admin.filme.index');
+    }
+
+    //
+//
+//    $ext = $file->getClientOriginalExtension();
+//
+//    $img = $productImage::create(["product_id" => $id, "extension" => $ext]);
+//
+//
 }

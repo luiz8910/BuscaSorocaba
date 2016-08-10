@@ -12,7 +12,7 @@ class Filme extends Model implements Transformable
     use TransformableTrait, SoftDeletes;
 
     protected $fillable = [
-        'nome', 'duracao', 'classificacao'
+        'nome', 'duracao', 'classificacao', 'img'
     ];
 
     protected $dates = ['deleted_at'];

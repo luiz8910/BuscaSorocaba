@@ -125,6 +125,10 @@ Route::group(['middleware' => 'auth.checkrole:admin'], function(){
 
     Route::get('/filme/excluir/{id}', ['as' => 'admin.filme.destroy', 'uses' => 'FilmeController@destroy']);
 
+    Route::get('/filme/imgNovo/{id}', ['as' => 'admin.filme.createImage', 'uses' => 'FilmeController@createImage']);
+
+    Route::post('/filme/imgSalvar/{id}', ['as' => 'admin.filme.uploadImage', 'uses' => 'FilmeController@uploadImage']);
+
 // Fim Filme
 
 // Sala

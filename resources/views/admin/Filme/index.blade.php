@@ -16,11 +16,12 @@
                 <table class="table table-bordered table-responsive">
                     <tr>
                         <thead>
-                        <th>ID</th>
-                        <th>Nome</th>
-                        <th>Duração</th>
-                        <th>Classificação</th>
-                        <th>Ação</th>
+                            <th>ID</th>
+                            <th>Nome</th>
+                            <th>Duração</th>
+                            <th>Classificação</th>
+                            <th>Imagem</th>
+                            <th>Ação</th>
                         </thead>
                     </tr>
 
@@ -31,6 +32,7 @@
                             <td>{{ $f->nome }}</td>
                             <td>{{ $f->duracao }}
                             <td>{{ $f->classificacao }}</td>
+                            <td>Imagem</td>
                             <td>
                                 <a href="{{ route('admin.filme.edit', [$f->id]) }}" title="Editar Filme">
                                     <span class="glyphicon glyphicon-edit"></span>
@@ -38,6 +40,10 @@
                                 |
                                 <a class="excluir" id="{{ $f->id }}" title="Excluir Filme" href="{{ route('admin.filme.destroy', [$f->id]) }}">
                                     <span class="glyphicon glyphicon-trash"></span>
+                                </a>
+                                |
+                                <a id="{{ $f->id }}" title="Editar Imagem" href="{{ route('admin.filme.createImage', [$f->id]) }}">
+                                    <span class="glyphicon glyphicon-open-file"></span>
                                 </a>
                             </td>
                         </tr>

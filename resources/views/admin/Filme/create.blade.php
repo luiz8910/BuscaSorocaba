@@ -21,7 +21,7 @@
             </div>
 
             <div class="form-group">
-                {!! Form::label("Nome", "Classifição:") !!}
+                {!! Form::label("Nome", "Classificação:") !!}
                 <select required class="form-control" name="classificacao">
                     <option value="">Selecione</option>
                     <option value="18+">18+</option>
@@ -100,14 +100,15 @@
                         }
                     });
                 }
-                else {
-                    window.location = '/filme';
-                }
+//                else {
+//                    window.location = '/filme';
+//                }
             });
 
             request.fail(function (e) {
                 console.log('fail');
                 console.log(e);
+
             });
 
             return false;
