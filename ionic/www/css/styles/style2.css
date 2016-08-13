@@ -1,0 +1,538 @@
+
+
+/*----------------------*/
+/*---Heading Settings---*/
+/*----------------------*/
+
+h1, h2, h3, h4, h5, h6{
+    font-family:'Roboto', sans-serif;
+    color:#1f1f1f;
+    margin-bottom:10px;
+}
+
+.sub-heading{
+    color:#4c4c4c;
+    font-weight:500;
+}
+
+.small-heading{
+    font-size:12px;
+    margin-top:-10px;
+    margin-bottom:10px;
+    display:block;
+}
+
+h1{
+    font-size:24px;
+    line-height:36px;
+    font-weight:700;
+}
+
+h2{
+    font-size:22px;
+    line-height:44px;
+    font-weight:700;
+}
+
+h3{
+    font-size:20px;
+    line-height:22px;
+    font-weight:700;
+}
+
+h4{
+    font-size:18px;
+    line-height:22px;
+    font-weight:700;
+}
+
+h5{
+    font-size:16px;
+    line-height:20px;
+    font-weight:700;
+}
+
+h6{
+    font-size:14px;
+    line-height:30px;
+    font-weight:800;
+}
+
+body{
+    font-size:14px;
+    font-family:'Roboto', sans-serif;
+    line-height:30px;
+    font-weight:400;
+    color:#666666;
+}
+
+.highlighted{padding:4px 10px; margin-bottom:5px;}
+
+/*-------------------------------*/
+/*---Lists and Font Icon Lists---*/
+/*-------------------------------*/
+
+.font-icon-list li{
+	list-style:none;
+	padding-left:0px;
+    margin-left:-20px;
+	color:#666666;
+	line-height:30px;
+}
+
+.font-icon-list li a{
+	color:#666666;	
+}
+
+.icon-list li a{
+	color:#666666;	
+}
+
+.font-icon-list i{
+	margin-right:10px;	
+    width:30px;
+}
+	
+
+.icon-list{
+    list-style: none;
+    padding-left:0px;
+}
+
+.icon-list i{
+    width:20px;
+    text-align:center;
+    margin-left:-5px;
+}
+
+.icon-list ul{
+    padding-left:40px;
+}
+
+ul{
+    padding-left:20px;
+    list-style-type:disc;
+}
+
+ol{
+    padding-left:20px;
+    list-style-type: decimal;
+}
+
+ol ol{
+    list-style-type:lower-alpha;
+}
+
+ol ol ol{
+    list-style-type:disc;
+}
+
+
+
+/*---------------------------*/
+/*---Custom Heading Styles---*/
+/*---------------------------*/
+
+.morphext > .animated {
+    display: inline-block;
+}
+
+/*Heading Style 1*/
+
+.heading-style-1,
+.heading-style-2,
+.heading-style-3,
+.heading-style-4,
+.heading-style-5{
+    cursor:default;
+}
+
+.heading-style-1{
+    margin-top:10px;
+}
+
+.heading-style-1 .heading-decoration{
+    clear:both;
+    display:block;
+    height:4px;
+    margin-top:13px;
+}
+
+
+.heading-style-1 a{
+    color:#FFFFFF;
+    z-index:2;
+}
+
+.heading-style-1 i{
+    font-size:14px;
+    margin-top:-5px;
+    width:40px;
+    height:40px;
+    text-align:center;
+    line-height:40px;
+    z-index:2;
+    position:relative;
+    color:#FFFFFF;
+}
+
+.heading-style-1 *{
+    -webkit-user-select: none;  
+    -moz-user-select: none;     
+    -ms-user-select: none;      
+    user-select: none;             
+}
+
+.heading-style-1 a{
+    position:absolute;
+    right:0px;
+}
+
+.heading-style-1 .heading-block{
+    position:absolute;
+    height:40px;
+    width:40px;
+    right:0px;
+    top:-5px;
+    z-index:1;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+/*Heading Style 2*/
+
+.heading-style-2{
+    width:100%;
+    padding-left:30px;
+    padding-right:30px;
+    padding-top:30px;
+    padding-bottom:30px;
+    background-size:cover;
+}
+
+.heading-style-2 .overlay{
+    opacity:0.8;
+    position:absolute;
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    top:0px;
+    left:0px;
+    right:0px;
+    bottom:0px;
+    z-index:1;
+}
+
+.heading-style-2 .heading-title{
+    z-index:2;
+    position:relative;
+    color:#FFFFFF;
+    margin-bottom:5px;
+}
+
+.heading-style-2 .heading-subtitle{
+    display:block;
+    position:relative;
+    color:#FFFFFF;
+    z-index:2;
+    opacity:0.6;
+    font-style:normal;
+    font-size:13px;
+}
+
+.heading-style-2 .heading-icon{
+    float:right;
+    font-size:35px;
+    color:#FFFFFF;
+    z-index:10;
+    position:relative!important;
+    display:inline-block!important;
+    margin-top:-47px;
+    opacity:0.9;
+}
+
+.heading-style-2{
+    -webkit-user-select: none;  
+    -moz-user-select: none;     
+    -ms-user-select: none;      
+    user-select: none;         
+}
+
+/*Heading Style 3*/
+
+@media(max-width:768px){
+    .heading-style-3{
+        width:100%;
+        padding-left:30px;
+        padding-right:30px;
+        padding-top:25px;
+        padding-bottom:20px;
+        background-size:cover;
+    }    
+}
+
+@media(min-width:768px){
+    .heading-style-3{
+        width:100%;
+        padding-left:30px;
+        padding-right:30px;
+        padding-top:35px;
+        padding-bottom:30px;
+        background-size:cover;
+    }
+}
+
+.heading-style-3 .overlay{
+    opacity:0.7;
+    position:absolute;
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    top:0px;
+    left:0px;
+    right:0px;
+    bottom:0px;
+    z-index:1;
+}
+
+.heading-style-3 .heading-title{
+    z-index:2;
+    position:relative;
+    color:#FFFFFF;
+    margin-bottom:0px;
+    text-align:center;
+    font-weight:500;
+}
+
+.heading-style-3 .heading-subtitle{
+    display:block;
+    position:relative;
+    color:#FFFFFF;
+    z-index:2;
+    opacity:0.6;
+    font-style:normal;
+    font-size:13px;
+    text-align:center;
+}
+
+.heading-style-3{
+    -webkit-user-select: none;  
+    -moz-user-select: none;     
+    -ms-user-select: none;      
+    user-select: none;         
+}
+
+/*Heading Style 4*/
+
+.heading-style-4{
+    padding-left:20px;
+    padding-right:20px;
+    text-align:center;
+}
+
+.heading-style-4 .heading-title{
+    padding-bottom:5px;
+}
+
+.heading-style-4 .heading-subtitle{
+    font-size:13px;
+    line-height:35px;
+}
+
+.heading-style-4 .line{
+    height:4px;
+    width:70px;
+    margin:15px auto;
+    opacity:0.5;
+}
+
+.heading-style-4{
+    -webkit-user-select: none;  
+    -moz-user-select: none;     
+    -ms-user-select: none;      
+    user-select: none;         
+}
+
+/*Heading Style 5*/
+
+.heading-style-5{
+    padding-left:20px;
+    padding-right:20px;
+    text-align:center;
+}
+
+.heading-style-5 .heading-subtitle{
+    font-size:14px;
+    margin-bottom:20px;
+}
+
+.heading-style-5 .heading-icon{
+    display:block;
+    text-align:center;
+    background-color:#FFFFFF;
+    position:relative;
+    z-index:1;
+    width:60px;
+    height:40px;
+    line-height:40px;
+    margin-left:auto;
+    margin-right:auto;
+    font-size:24px;
+    display:block;
+    overflow:hidden;
+}
+
+.heading-style-5 .line{
+    height:1px;
+    background-color:rgba(0,0,0,0.15);
+    width:100%;
+    margin-top:-20px;
+    margin-bottom:30px;
+}
+
+.heading-style-5{
+    -webkit-user-select: none;  
+    -moz-user-select: none;     
+    -ms-user-select: none;      
+    user-select: none;         
+}
+
+/*Heading Style 6*/
+
+.heading-style-6 .heading-title{
+    margin-bottom:5px;
+}
+
+.heading-style-6 .heading-category{
+    font-style:normal;
+    font-size:12px;
+    font-weight:500;
+    padding-bottom:5px;
+}
+
+.heading-style-6 .heading-category a{
+    display:inline;
+    padding-left:5px;
+}
+
+.heading-style-6 .heading-subtitle{
+    display:inline;
+    font-style:normal;
+    font-size:12px;
+    margin-right:-2px;
+}
+
+.heading-style-6 .heading-subtitle a{
+    display:inline;
+    padding-left:5px;
+    border-right:solid 2px #cacaca;
+    padding-right:5px;
+    margin-right:5px;
+}
+
+.heading-style-6 .heading-text{
+    font-size:12px;
+    margin-top:20px;
+    line-height:31px;
+}
+
+
+
+
+
+
+
+
+
+
+/*----------------------*/
+/*----------------------*/
+/*----Page Preloader----*/ 
+/*----------------------*/
+/*----------------------*/
+
+#preloader {
+	position:fixed;
+	z-index:2500;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	background-color:#FFF; 
+	z-index:99999999; 
+}
+
+#status {
+	position:fixed;
+	z-index:99999999;
+	width:250px;
+	height:280px;
+	position:absolute;
+	left:50%; 
+	top:50%; 
+    padding-bottom:40px;
+	background-image:url(../images/framework/page-loader.gif); 
+	background-size:64px 64px;
+	background-repeat:no-repeat;
+	background-position:center bottom;
+	margin:-125px 0 0 -125px; 
+}
+
+.preloader-logo{
+    background-image:url(../images/preload-logo.png);
+    background-size:75px 75px;
+    height:75px;
+    width:75px;
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    margin-bottom:40px;
+}
+
+#preloader h3{
+    margin-bottom:5px;
+}
+
+
+#status em{
+	font-size:10px!important;
+	display:block;
+	font-style:normal;
+}
+
+.decoration{
+    height:1px;
+    width:100%;
+    display:block;
+    background-color:rgba(0,0,0,0.1);
+    margin-bottom:30px;
+    clear:both;
+}
+
+
+/*Footer*/
+
+.footer p{
+    margin-bottom:20px;
+}
+
+.footer-icons{  
+    width:280px;
+    margin-left:auto;
+    margin-right:auto;
+    margin-bottom:30px;
+}
+
+.footer-icons a:last-child{
+    margin-right:0px;
+}
+
+
+
+
+
+
+
+
+
+

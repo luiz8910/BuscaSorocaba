@@ -32,7 +32,12 @@
                             <td>{{ $f->nome }}</td>
                             <td>{{ $f->duracao }}
                             <td>{{ $f->classificacao }}</td>
-                            <td>Imagem</td>
+                            <td>
+                                @if($f->img == null)
+                                    <?php $f->img = 'img.jpg';?>
+                                @endif
+                                <img src="{{ url('uploads/'.$f->img) }}" style="width: 80px;">
+                            </td>
                             <td>
                                 <a href="{{ route('admin.filme.edit', [$f->id]) }}" title="Editar Filme">
                                     <span class="glyphicon glyphicon-edit"></span>

@@ -33,8 +33,7 @@ class FilmeController extends Controller
     {
         $filme = $this->repository->paginate();
 
-        if(!$filme->items())
-        {
+        if (!$filme->items()) {
             $filme = null;
         }
 
@@ -54,7 +53,7 @@ class FilmeController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
@@ -63,13 +62,11 @@ class FilmeController extends Controller
 
         $filme = $this->verifExistencia($data);
 
-        if(!$filme)
-        {
+        if (!$filme) {
             $this->repository->create($data);
 
             echo json_encode(['status' => true]);
-        }
-        else{
+        } else {
             echo json_encode(['status' => false]);
         }
     }
@@ -78,7 +75,7 @@ class FilmeController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function show($id)
@@ -89,7 +86,7 @@ class FilmeController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
@@ -103,8 +100,8 @@ class FilmeController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \Illuminate\Http\Request $request
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
@@ -113,14 +110,11 @@ class FilmeController extends Controller
 
         $filme = $this->verifExistenciaUpdate($data, $id);
 
-        if(!$filme)
-        {
+        if (!$filme) {
             $this->repository->update($data, $id);
 
             echo json_encode(['status' => true]);
-        }
-        else
-        {
+        } else {
             echo json_encode(['status' => false]);
         }
     }
@@ -128,11 +122,17 @@ class FilmeController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
     {
+        $filme = $this->repository->find($id);
+
+        if (file_exists(public_path()."uploads/" . $filme->img)) {
+            unlink('uploads/'.$filme->img);
+        }
+
         $this->repository->delete($id);
 
         echo json_encode(['status' => true]);
@@ -163,12 +163,9 @@ class FilmeController extends Controller
         $nome = $this->repository->all();
         $var = true;
 
-        if($up->nome == $data['nome'])
-        {
+        if ($up->nome == $data['nome']) {
             return false;
-        }
-        else
-        {
+        } else {
             foreach ($nome as $n) {
                 if ($data['nome'] == $n->nome) {
                     $var = false;
@@ -199,16 +196,14 @@ class FilmeController extends Controller
             ->where('id', $id)
             ->update(['img' => $nome]);
 
+
         Storage::disk("public_local")->put($nome, File::get($file));
 
         return redirect()->route('admin.filme.index');
     }
 
-    //
-//
-//    $ext = $file->getClientOriginalExtension();
-//
-//    $img = $productImage::create(["product_id" => $id, "extension" => $ext]);
-//
-//
 }
+
+//$request->file('image')->move(
+//    base_path() . '/public/images/catalog/', $imageName
+//);

@@ -199,6 +199,9 @@ Route::group(['middleware' => 'cors'], function(){
 
             //Consulta lista de Subcategorias de alimentação
             Route::resource('subcategoriaApi', 'Api\Subcategoria\SubCategoriaController@index');
+
+            //Consulta lista de Filmes
+            Route::resource('listFilmes', 'Api\Filmes\FilmeController@index');
         });
 
     });

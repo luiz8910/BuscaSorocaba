@@ -100,9 +100,9 @@
                         }
                     });
                 }
-//                else {
-//                    window.location = '/filme';
-//                }
+                else {
+                    window.location = '/filme';
+                }
             });
 
             request.fail(function (e) {

@@ -6,15 +6,18 @@
 //angular.module("starter.controllers", []);
 angular.module("starter.controllers", []);
 angular.module("starter.services", []);
+angular.module('tabsDemoDynamicTabs', []);
 
 angular.module('starter',
-    ['ionic', 'starter.controllers', 'starter.services','angular-oauth2', 'ngResource']
+    ['ionic', 'starter.controllers', 'starter.services','angular-oauth2',
+        'ngResource', 'tabsDemoDynamicTabs', 'ngMaterial', 'ngAria'
+    ]
 )
 
     .constant("appConfig", {
-        baseUrl: 'http://buscasorocaba.com.br'
+        //baseUrl: 'http://buscasorocaba.com.br'
         //baseUrl: 'http://192.168.0.16:8000'
-        //baseUrl: 'http://localhost:8000'
+        baseUrl: 'http://localhost:8000'
     })
 
 .run(function($ionicPlatform) {
@@ -132,6 +135,12 @@ angular.module('starter',
           url: '/perfilEmergencia',
           templateUrl: 'templates/estabelecimentos/perfil.html',
           controller: 'PerfilCtrl'
+      })
+
+      .state('listFilmes', {
+          url:'/listFilmes',
+          templateUrl: 'templates/cinema/listFilmes.html',
+          controller: 'FilmeCtrl'
       })
   ;
     $provide.decorator('OAuthToken', ['$localStorage', '$delegate', function ($localStorage, $delegate) {
