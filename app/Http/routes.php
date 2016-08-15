@@ -202,6 +202,9 @@ Route::group(['middleware' => 'cors'], function(){
 
             //Consulta lista de Filmes
             Route::resource('listFilmes', 'Api\Filmes\FilmeController@index');
+
+            //Avaliação dos Estabelecimentos
+            Route::resource('avaliacao', 'Api\Estabelecimentos\Avaliacao@update');
         });
 
     });

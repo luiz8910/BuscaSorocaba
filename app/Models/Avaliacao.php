@@ -14,6 +14,8 @@ class Avaliacao extends Model implements Transformable
         'estabelecimentos_id', 'estrela_1', 'estrela_2', 'estrela_3','estrela_4', 'estrela_5'
     ];
 
+    protected $table = 'avaliacaos';
+
     public function estabelecimentos()
     {
         return $this->belongsTo(Estabelecimentos::class);

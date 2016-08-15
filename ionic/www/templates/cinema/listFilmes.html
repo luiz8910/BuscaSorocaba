@@ -25,10 +25,12 @@
     <title>Busca Sorocaba - Listar Busca</title>
 
     <link href="css/styles/style.css"           rel="stylesheet" type="text/css">
+    <link href="css/styles/style2.css"          rel="stylesheet" type="text/css">
+    <link href="css/styles/bootstrap.min.css"   rel="stylesheet" type="text/css">
     <link href="css/styles/framework.css"       rel="stylesheet" type="text/css">
     <link href="css/styles/font-awesome.css"    rel="stylesheet" type="text/css">
     <link href="css/styles/animate.css"         rel="stylesheet" type="text/css">
-    <link href="css/styles/listFilmes.css"      rel="stylesheet" type="text/css">
+
 
     <!--<script type="text/javascript" src="js/scripts/jquery.js"></script>-->
     <!--<script type="text/javascript" src="js/scripts/jqueryui.js"></script>-->
@@ -40,45 +42,25 @@
     <!--<script src="scripts/bootstrap.min.js"></script>-->
 </head>
 
-<body class="dual-sidebar">
+<body>
 
-<div class="gallery-fix"></div> <!-- Important for all pages that have galleries or portfolios -->
+<!--<div class="gallery-fix"></div> &lt;!&ndash; Important for all pages that have galleries or portfolios &ndash;&gt;-->
 
 <div id="header-fixed">
-    <a class="open-left-sidebar" href="#"><i class="fa fa-navicon"></i></a>
-    <a class="header-logo" href="#"><img src="img/images/logo-light.png" alt="img"></a>
-    <a class="open-right-sidebar" href="#"><i class="fa fa-envelope-o"></i></a>
+
 </div>
 
 
-<nav class="navbar navbar-inverse navbar-fixed-top">
-    <div class="container text-center">
-        <div class="navbar-header center-block">
-            <a class="navbar-brand" href="#">Sorocaba</a>
-        </div>
-    </div>
-</nav>
+
+
+
 <div class="container">
     <div class="row text-center">
         <div class="header-clear-large"></div>
         <!--Page content goes here, fixed elements go above the all elements class-->
         <div class="container heading-style-5">
 
-            <ion-tabs class="tabs-positive tabs-icon-top">
 
-                <ion-tab title="Home" icon-on="ion-ios-filing" icon-off="ion-ios-filing-outline">
-                    <!-- Tab 1 content -->
-                </ion-tab>
-
-                <ion-tab title="About" icon-on="ion-ios-clock" icon-off="ion-ios-clock-outline">
-                    <!-- Tab 2 content -->
-                </ion-tab>
-
-                <ion-tab title="Settings" icon-on="ion-ios-gear" icon-off="ion-ios-gear-outline">
-                    <!-- Tab 3 content -->
-                </ion-tab>
-
-            </ion-tabs>
 
             <h4 class="heading-title">Listagem de Filmes</h4>
             <i class="fa fa-ticket heading-icon"></i>
@@ -93,26 +75,99 @@
 
 
 
-<div class="container">
-    <div class="row">
+<div class="container" style="border: 1px  solid red;">
+    <div class="row" style="border: 1px  solid red;">
         <div class="decoration"></div>
 
+        <!-- Tab panes -->
+        <div class="tab-content" style="border: 1px  solid red; display: block !important;">
+            <div role="tabpanel" class="tab-pane active " id="Sorocaba">
+                <h5 class="heading-title text-center">Listagem de Filmes</h5>
+                <p class="heading-subtitle text-center">
+                    Carregamos para você algumas categorias de Cinema
+                </p>
+                <div class="col-xs-12 col-md-2 col-sm-6">
+                    <a href="#" class="thumbnail">
+                        <img src="img/images/cine/dead-pool.jpg" alt="image">
+                    </a>
+                </div>
 
-        <br>
-        <br>
+                <div class="col-xs-12 col-md-2 col-sm-6">
+                    <a href="#" class="thumbnail">
+                        <img src="img/images/cine/dead-pool.jpg" alt="image">
+                    </a>
+                </div>
 
-        <h5 class="heading-title text-center">Listagem de Filmes</h5>
-        <p class="heading-subtitle text-center">
-            Carregamos para você algumas categorias de Cinema
-        </p>
-        <div class="" ng-repeat="f in filmes">
+                <div class="col-xs-12 col-md-2 col-sm-6">
+                    <a href="#" class="thumbnail">
+                        <img src="img/images/cine/dead-pool.jpg" alt="image">
+                    </a>
+                </div>
+                <div class="col-xs-12 col-md-2 col-sm-6">
+                    <a href="#" class="thumbnail">
+                        <img src="img/images/cine/dead-pool.jpg" alt="image">
+                    </a>
+                </div>
+                <div class="col-xs-12 col-md-2 col-sm-6">
+                    <a href="#" class="thumbnail">
+                        <img src="img/images/cine/dead-pool.jpg" alt="image">
+                    </a>
+                </div>
 
-            <div class="col-xs-12 col-md-2 col-sm-6">
-                <a href="#" class="thumbnail">
-                    <img src="http://buscasorocaba.com.br/uploads/{{f.img}}" alt="image">
-                </a>
+                <div class="col-xs-12 col-md-2 col-sm-6">
+                    <a href="#" class="thumbnail">
+                        <img src="img/images/cine/dead-pool.jpg" alt="image">
+                    </a>
+                </div>
             </div>
-        </div>
+
+
+
+            <div role="tabpanel" class="tab-pane" id="Cidade">
+                <h5 class="heading-title text-center">Listagem de Filmes</h5>
+                <p class="heading-subtitle text-center">
+                    Carregamos para você algumas categorias de Cinema
+                </p>
+                <div class="col-xs-12 col-md-2 col-sm-6">
+                    <a href="#" class="thumbnail">
+                        <img src="img/images/cine/dead-pool.jpg" alt="image">
+                    </a>
+                </div>
+
+                <div class="col-xs-12 col-md-2 col-sm-6">
+                    <a href="#" class="thumbnail">
+                        <img src="img/images/cine/dead-pool.jpg" alt="image">
+                    </a>
+                </div>
+
+                <div class="col-xs-12 col-md-2 col-sm-6">
+                    <a href="#" class="thumbnail">
+                        <img src="img/images/cine/dead-pool.jpg" alt="image">
+                    </a>
+                </div>
+                <div class="col-xs-12 col-md-2 col-sm-6">
+                    <a href="#" class="thumbnail">
+                        <img src="img/images/cine/dead-pool.jpg" alt="image">
+                    </a>
+                </div>
+                <div class="col-xs-12 col-md-2 col-sm-6">
+                    <a href="#" class="thumbnail">
+                        <img src="img/images/cine/dead-pool.jpg" alt="image">
+                    </a>
+                </div>
+
+                <div class="col-xs-12 col-md-2 col-sm-6">
+                    <a href="#" class="thumbnail">
+                        <img src="img/images/cine/dead-pool.jpg" alt="image">
+                    </a>
+                </div>
+
+
+            </div>
+
+            </div>
+
+
 
     </div> <!-- fim div .row -->
 </div> <!-- fim div .content -->
@@ -129,12 +184,10 @@
 </div>
 
 
-
-
-
-
-
-
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="scripts/bootstrap.min.js"></script>
 
 
 </body></html>

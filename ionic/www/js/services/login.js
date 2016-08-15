@@ -2,8 +2,8 @@ angular.module('starter.services')
     .factory('$login', ['OAuth', function (OAuth) {
 
         var oauth = OAuth.getAccessToken({
-            username: "joao@bolsafamilia.com.br",
-            password: "dilma123"
+            username: "client@buscasorocaba.com.br",
+            password: "rbts@2016"
         }).then(function (data) {
 
         });

@@ -27,11 +27,13 @@
     <link href="css/styles/framework.css"       rel="stylesheet" type="text/css">
     <link href="css/styles/font-awesome.css"    rel="stylesheet" type="text/css">
     <link href="css/styles/animate.css"         rel="stylesheet" type="text/css">
+    <link href="//code.ionicframework.com/nightly/css/ionic.css" rel="stylesheet">
 
     <script type="text/javascript" src="js/scripts/jquery.js"></script>
     <script type="text/javascript" src="js/scripts/jqueryui.js"></script>
     <script type="text/javascript" src="js/scripts/framework-plugins.js"></script>
     <script type="text/javascript" src="js/scripts/custom.js"></script>
+    <script src="//code.ionicframework.com/nightly/js/ionic.bundle.js"></script>
 </head>
 
 <body class="dual-sidebar">
@@ -79,12 +81,29 @@
                             <a href="tel:15 2035 6204">Ligação</a>
 
 
-                            <a href="#" class="simple-login-modal">Avaliação</a>
+                            <div ng-controller="avaliacaoCtrl">
+                                <button class="button button-dark" ng-click="showPopup()">
+                                    show
+                                </button>
+
+                                <button class="button button-primary" ng-click="showConfirm()">
+                                    Confirm
+                                </button>
+
+                                <button class="button button-positive" ng-click="showAlert()">
+                                    Alert
+                                </button>
+
+                                <script id="popup-template.html" type="text/ng-template">
+                                    <input ng-model="data.wifi" type="text" placeholder="Password">
+                                </script>
+                            </div>
+
 
                             <div class="simple-login-modal-content modal-content rounded-modal">
                                 <div class="login-modal-wrapper">
                                     <h4>Avaliação</h4>
-                                    <h6>Avalie este estabelecimento de 1 a 5</h6>
+                                    <h6>Avalie este estabelecimento</h6>
                                     <form class=" last-column">
                                         <input id="radio-label-1" class="radiobox" type="radio">
                                         <input id="radio-label-2" class="radiobox" type="radio">

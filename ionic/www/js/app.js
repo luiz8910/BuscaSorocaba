@@ -6,11 +6,10 @@
 //angular.module("starter.controllers", []);
 angular.module("starter.controllers", []);
 angular.module("starter.services", []);
-angular.module('tabsDemoDynamicTabs', []);
 
 angular.module('starter',
     ['ionic', 'starter.controllers', 'starter.services','angular-oauth2',
-        'ngResource', 'tabsDemoDynamicTabs', 'ngMaterial', 'ngAria'
+        'ngResource', 'ngMaterial', 'ngAria'
     ]
 )
 
