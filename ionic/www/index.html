@@ -7,6 +7,8 @@
 
     <link href="lib/ionic/css/ionic.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    <link href="css/gambiarra.css" rel="stylesheet">
+    <!--<link href="//code.ionicframework.com/nightly/css/ionic.css" rel="stylesheet">-->
 
     <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
     <link href="css/ionic.app.css" rel="stylesheet">
@@ -39,6 +41,7 @@
     <script src="js/controllers/estabEmergencia.js"></script>
     <script src="js/controllers/listFilmes.js"></script>
     <script src="js/controllers/avaliacao.js"></script>
+    <script src="js/controllers/back.js"></script>
 
     <!-- Services -->
     <script src="js/services/subcategoria.js"></script>
@@ -55,9 +58,20 @@
   </head>
   <body ng-app="starter">
 
+    <div class="bar bar-header bar-dark" id="header-fixed" ng-controller="BackCtrl">
+      <a class="open-left-sidebar ng-hide" ng-show="xamps()" href="" ng-click="myGoBack()">
+        <i class="fa fa-arrow-circle-left"></i>
+      </a>
 
-    <ion-nav-view></ion-nav-view>
+      <a class="open-right-sidebar ng-hide" ng-show="xamps()" ng-click="goHome()" href=""><i class="fa fa-home"></i></a>
+
+      <a class="header-logo bugginho" href="">
+        <img src="img/logo-light.png" alt="img">
+      </a>
+    </div>
 
 
+    <ion-nav-view>
+    </ion-nav-view>
   </body>
 </html>

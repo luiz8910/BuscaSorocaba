@@ -7,7 +7,9 @@ angular.module('starter.controllers')
 
                     // An elaborate, custom popup
                     var myPopup = $ionicPopup.show({
-                        template: '<input type="password" ng-model="data.wifi">',
+                        template:
+                        '<label for="radio-label-1">Texto</label>' +
+                        '<input id="radio-label-1" class="radiobox" type="radio" ng-model="data.wifi">',
                         title: 'Enter Wi-Fi Password',
                         subTitle: 'Please use normal things',
                         scope: $scope,
@@ -33,8 +35,8 @@ angular.module('starter.controllers')
                     });
 
                     $timeout(function() {
-                        myPopup.close(); //close the popup after 3 seconds for some reason
-                    }, 3000);
+                        myPopup.close(); //close the popup after 5 seconds for some reason
+                    }, 5000);
                 };
 
                 // A confirm dialog

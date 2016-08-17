@@ -40,11 +40,7 @@
 
 <div class="gallery-fix"></div> <!-- Important for all pages that have galleries or portfolios -->
 
-<div id="header-fixed">
-    <a class="open-left-sidebar" href="#"><i class="fa fa-navicon"></i></a>
-    <a class="header-logo" href="#"><img src="img/images/logo-light.png" alt="img"></a>
-    <a class="open-right-sidebar" href="#"><i class="fa fa-envelope-o"></i></a>
-</div>
+
 
 <div class="all-elements">
     <div class="snap-drawers">
@@ -95,7 +91,11 @@
                                 </button>
 
                                 <script id="popup-template.html" type="text/ng-template">
-                                    <input ng-model="data.wifi" type="text" placeholder="Password">
+                                    <input id="radio-label-1" class="radiobox" type="radio" ng-model="data.wifi">
+                                    <input id="radio-label-2" class="radiobox" type="radio" ng-model="data.wifi">
+                                    <input id="radio-label-3" class="radiobox" type="radio" ng-model="data.wifi">
+                                    <input id="radio-label-4" class="radiobox" type="radio" ng-model="data.wifi">
+                                    <input id="radio-label-5" class="radiobox" type="radio" ng-model="data.wifi">
                                 </script>
                             </div>
 
@@ -105,11 +105,7 @@
                                     <h4>Avaliação</h4>
                                     <h6>Avalie este estabelecimento</h6>
                                     <form class=" last-column">
-                                        <input id="radio-label-1" class="radiobox" type="radio">
-                                        <input id="radio-label-2" class="radiobox" type="radio">
-                                        <input id="radio-label-3" class="radiobox" type="radio">
-                                        <input id="radio-label-4" class="radiobox" type="radio">
-                                        <input id="radio-label-5" class="radiobox" type="radio">
+                                        <input id="" class="radiobox" type="radio">
                                     </form>
 
                                     <div class="clear"></div>
@@ -124,16 +120,37 @@
                     </div>
 
                     <div class="page-profile-followers">
-                        <a >
+                        <style>
+                            .stars{
+                                width:150px;
+                                height:28px;
+                                position:relative;
+                                display:block;
+                                overflow:hidden;
+                                background:#666;
+                                margin:0px auto;
+                                border:1px solid #eee;
+                            }
+                            .stars span{
+                                height:30px;
+                                position:relative;
+                                display:block;
+                                margin-left:0px;
 
-                        </a>
-                        <a href="#">
-                            <i class="fa fa-star"></i>
-                            52 Avaliaçoes
-                        </a>
-                        <a>
-
-                        </a>
+                                background:#ffde00;
+                                z-index:0;
+                            }
+                            .stars img{
+                                margin-top:-30px;
+                                position:relative;
+                                display:block;
+                                z-index:1;
+                            }
+                        </style>
+                        <div class="stars">
+                            <span style="width:50%;"></span>
+                            <img src="img/mascara.png" />
+                        </div>
                     </div>
 
 

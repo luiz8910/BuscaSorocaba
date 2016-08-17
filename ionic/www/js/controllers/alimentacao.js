@@ -2,6 +2,9 @@ angular.module('starter.controllers')
     .controller('AlimentacaoCtrl', ['$scope', '$state', 'SubCategoria','$ionicLoading',
         function ($scope, $state, SubCategoria, $ionicLoading) {
             $scope.sub = [];
+            $scope.xamps = function () {
+                console.log($state.current);
+            };
 
             $ionicLoading.show({
                 template: "Carregando..."
