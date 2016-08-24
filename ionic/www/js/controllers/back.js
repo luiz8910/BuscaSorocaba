@@ -20,6 +20,7 @@ angular.module('starter.controllers')
             };
 
             $scope.goHome = function () {
+                window.location.reload(true);
                 return $state.go('dashboard');
             }
     }]);

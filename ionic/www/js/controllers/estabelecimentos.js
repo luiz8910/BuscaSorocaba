@@ -5,6 +5,7 @@ angular.module('starter.controllers')
             var id = window.localStorage['key'];
             var nome = window.localStorage['nome'];
 
+
             $scope.estabelecimentos = [];
             $scope.nome = nome;
 
@@ -21,5 +22,7 @@ angular.module('starter.controllers')
               window.localStorage['perfil_id'] = data.id;
               window.localStorage['perfil_nome'] = data.nome;
             };
+
+
 
     }]);

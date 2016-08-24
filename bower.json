@@ -1,0 +1,20 @@
+{
+  "name": "BuscaSorocaba",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Luiz Fernando Sanches <luiz.sanches8910@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/luiz8910/Excel",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "ion-autocomplete": "^0.3.2"
+  }
+}

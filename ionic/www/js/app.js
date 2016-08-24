@@ -3,13 +3,12 @@
 // angular.module is a global place for creating, registering and retrieving Angular modules
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
-//angular.module("starter.controllers", []);
 angular.module("starter.controllers", []);
 angular.module("starter.services", []);
 
 angular.module('starter',
     ['ionic', 'starter.controllers', 'starter.services','angular-oauth2',
-        'ngResource', 'ngMaterial', 'ngAria'
+        'ngResource', 'ngMaterial', 'ngAria', 'ion-autocomplete'
     ]
 )
 
@@ -87,6 +86,13 @@ angular.module('starter',
           url: '/estabelecimentos',
           templateUrl: 'templates/estabelecimentos/index.html',
           controller: 'EstabelecimentosCtrl'
+      })
+
+      .state('list_pesq',{
+          cache: false,
+          url: '/list_pesq',
+          templateUrl: 'templates/estabelecimentos/listar_pesq.html',
+          controller: 'list_pesq_Ctrl'
       })
 
       .state('perfil',{

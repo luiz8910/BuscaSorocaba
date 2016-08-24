@@ -205,6 +205,12 @@ Route::group(['middleware' => 'cors'], function(){
 
             //Avaliação dos Estabelecimentos
             Route::resource('avaliacao', 'Api\Estabelecimentos\Avaliacao@update');
+
+            //Auto complete Controller, instant search
+            Route::resource('auto', 'Api\AutoComplete\AutoCompleteController@search');
+
+            //Lista de Resultados do auto complete
+            Route::resource('list_pesq', 'Api\AutoComplete\AutoCompleteController@result');
         });
 
     });

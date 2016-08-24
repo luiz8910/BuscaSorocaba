@@ -51,10 +51,33 @@
                         <p class="heading-subtitle">
                         <h5>O que Deseja buscar hoje?</h5>
                         </p>
-                        <div class="blog-sidebar-search full-bottom">
+                        <div class="blog-sidebar-search full-bottom" ng-controller="AutoCompleteCtrl">
                             <div class="icon-field">
                                 <i class="fa fa-search"></i>
-                                <input class="text-field green-field" onfocus="if (this.value=='Pesquisar') this.value = ''" onblur="if (this.value=='') this.value = 'Pesquisar'" type="text" value="Pesquisar">
+
+
+                                <input class="text-field green-field"
+                                       type="text" placeholder="Pesquisar" ng-model="str" ng-change="pesquisa()">
+
+
+                                <ion-content class=" has-subheader" style="position: relative; z-index: 1000;top:-10px;">
+                                    <ion-list>
+                                        <ion-item class="ng-hide" ng-repeat="o in result" ng-show="ajusteTecnico(o)"
+                                                             ng-click="lista(o)">
+                                            {{ o }}
+
+                                        </ion-item>
+                                    </ion-list>
+                                </ion-content>
+
+                                <!--<form name="form" ng-controller="AutoCompleteCtrl">-->
+                                    <!--<input ion-autocomplete type="text" readonly="readonly"-->
+                                           <!--class="ion-autocomplete text-field green-field"-->
+                                           <!--autocomplete="off" max-selected-items="1" ng-model="model"-->
+                                           <!--items-method="callbackMethod(query)"/>-->
+                                <!--</form>-->
+
+
                             </div>
                         </div>
                     </div>
