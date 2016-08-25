@@ -5,10 +5,11 @@
 // the 2nd parameter is an array of 'requires'
 angular.module("starter.controllers", []);
 angular.module("starter.services", []);
+angular.module("ui-bootstrap", []);
 
 angular.module('starter',
     ['ionic', 'starter.controllers', 'starter.services','angular-oauth2',
-        'ngResource', 'ngMaterial', 'ngAria', 'ion-autocomplete'
+        'ngResource', 'ngMaterial', 'ngAria', 'ion-autocomplete', 'ui-bootstrap'
     ]
 )
 

@@ -879,6 +879,14 @@
     
 }
 
+.nav, .pagination, .carousel, .panel-title a {
+    cursor: pointer;
+}
+
+form.tab-form-demo .tab-pane {
+    margin: 20px 20px;
+}
+
 
 
 

@@ -1,6 +1,6 @@
 angular.module('starter.controllers')
-    .controller('BackCtrl', ['$scope','$ionicHistory', '$state',
-        function ($scope, $ionicHistory, $state) {
+    .controller('BackCtrl', ['$scope','$ionicHistory', '$state', '$window',
+        function ($scope, $ionicHistory, $state, $window) {
             $scope.myGoBack = function(){
                 $ionicHistory.goBack();
             };
@@ -20,7 +20,7 @@ angular.module('starter.controllers')
             };
 
             $scope.goHome = function () {
-                window.location.reload(true);
+                $window.location.reload(true);
                 return $state.go('dashboard');
             }
     }]);

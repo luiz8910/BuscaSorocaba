@@ -5,22 +5,516 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="56419470-a5d0-4284-a3d5-861dbaf47b87" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/AutoComplete/AutoCompleteController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ionic/www/js/controllers/autoComplete.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ionic/www/js/controllers/list_pesq.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ionic/www/js/services/autoComplete.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ionic/www/templates/estabelecimentos/listar_pesq.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ionic/www/js/controllers/tabCinema.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/routes.php" afterPath="$PROJECT_DIR$/app/Http/routes.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/bower.json" afterPath="$PROJECT_DIR$/ionic/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/css/styles/style.css" afterPath="$PROJECT_DIR$/ionic/www/css/styles/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/index.html" afterPath="$PROJECT_DIR$/ionic/www/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/js/app.js" afterPath="$PROJECT_DIR$/ionic/www/js/app.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/js/controllers/back.js" afterPath="$PROJECT_DIR$/ionic/www/js/controllers/back.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/js/controllers/estabelecimentos.js" afterPath="$PROJECT_DIR$/ionic/www/js/controllers/estabelecimentos.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/js/services/estabelecimento.js" afterPath="$PROJECT_DIR$/ionic/www/js/services/estabelecimento.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/js/controllers/listFilmes.js" afterPath="$PROJECT_DIR$/ionic/www/js/controllers/listFilmes.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-aria/.bower.json" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-aria/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/.bower.json" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/CHANGELOG.md" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/CHANGELOG.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/angular-material.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/angular-material.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/angular-material.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/angular-material.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/angular-material.min.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/angular-material.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/angular-material.min.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/angular-material.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/angular-material.scss" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/angular-material.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/bower.json" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/layouts/angular-material.layout-attributes.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/layouts/angular-material.layout-attributes.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/layouts/angular-material.layout-attributes.min.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/layouts/angular-material.layout-attributes.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/layouts/angular-material.layout-attributes.scss" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/layouts/angular-material.layout-attributes.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/layouts/angular-material.layouts.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/layouts/angular-material.layouts.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/layouts/angular-material.layouts.min.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/layouts/angular-material.layouts.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/layouts/angular-material.layouts.scss" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/layouts/angular-material.layouts.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/autocomplete/autocomplete-default-theme.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/autocomplete/autocomplete-default-theme.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/autocomplete/autocomplete-default-theme.min.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/autocomplete/autocomplete-default-theme.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/autocomplete/autocomplete.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/autocomplete/autocomplete.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/autocomplete/autocomplete.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/autocomplete/autocomplete.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/autocomplete/autocomplete.min.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/autocomplete/autocomplete.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/autocomplete/autocomplete.min.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/autocomplete/autocomplete.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/backdrop/backdrop-default-theme.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/backdrop/backdrop-default-theme.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/backdrop/backdrop-default-theme.min.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/backdrop/backdrop-default-theme.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/backdrop/backdrop.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/backdrop/backdrop.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/backdrop/backdrop.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/backdrop/backdrop.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/backdrop/backdrop.min.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/backdrop/backdrop.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/backdrop/backdrop.min.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/backdrop/backdrop.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/bottomSheet/bottomSheet-default-theme.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/bottomSheet/bottomSheet-default-theme.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/bottomSheet/bottomSheet-default-theme.min.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/bottomSheet/bottomSheet-default-theme.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/bottomSheet/bottomSheet.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/bottomSheet/bottomSheet.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/bottomSheet/bottomSheet.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/bottomSheet/bottomSheet.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/bottomSheet/bottomSheet.min.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/bottomSheet/bottomSheet.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/bottomSheet/bottomSheet.min.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/bottomSheet/bottomSheet.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/button/button-default-theme.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/button/button-default-theme.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/button/button-default-theme.min.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/button/button-default-theme.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/button/button.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/button/button.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/button/button.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/button/button.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/button/button.min.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/button/button.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/button/button.min.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/button/button.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/card/card-default-theme.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/card/card-default-theme.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/card/card-default-theme.min.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/card/card-default-theme.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/card/card.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/card/card.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/card/card.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/card/card.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/card/card.min.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/card/card.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/card/card.min.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/card/card.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/checkbox/checkbox-default-theme.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/checkbox/checkbox-default-theme.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/checkbox/checkbox-default-theme.min.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/checkbox/checkbox-default-theme.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/checkbox/checkbox.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/checkbox/checkbox.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/checkbox/checkbox.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/checkbox/checkbox.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/checkbox/checkbox.min.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/checkbox/checkbox.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/checkbox/checkbox.min.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/checkbox/checkbox.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/chips/chips-default-theme.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/chips/chips-default-theme.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/chips/chips-default-theme.min.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/chips/chips-default-theme.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/chips/chips.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/chips/chips.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/chips/chips.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/chips/chips.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/chips/chips.min.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/chips/chips.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/chips/chips.min.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/chips/chips.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/colors/colors.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/colors/colors.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/colors/colors.min.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/colors/colors.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/content/content-default-theme.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/content/content-default-theme.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/content/content-default-theme.min.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/content/content-default-theme.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/content/content.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/content/content.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/content/content.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/content/content.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/content/content.min.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/content/content.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/content/content.min.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/content/content.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/core/core.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/core/core.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/core/core.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/core/core.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/core/core.min.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/core/core.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/core/core.min.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/core/core.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/datepicker/datepicker-default-theme.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/datepicker/datepicker-default-theme.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/datepicker/datepicker-default-theme.min.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/datepicker/datepicker-default-theme.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/datepicker/datepicker.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/datepicker/datepicker.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/datepicker/datepicker.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/datepicker/datepicker.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/datepicker/datepicker.min.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/datepicker/datepicker.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/datepicker/datepicker.min.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/datepicker/datepicker.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/dialog/dialog-default-theme.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/dialog/dialog-default-theme.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/dialog/dialog-default-theme.min.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/dialog/dialog-default-theme.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/dialog/dialog.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/dialog/dialog.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/dialog/dialog.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/dialog/dialog.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/dialog/dialog.min.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/dialog/dialog.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/dialog/dialog.min.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/dialog/dialog.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/divider/divider-default-theme.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/divider/divider-default-theme.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/divider/divider-default-theme.min.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/divider/divider-default-theme.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/divider/divider.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/divider/divider.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/divider/divider.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/divider/divider.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/divider/divider.min.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/divider/divider.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/divider/divider.min.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/divider/divider.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/fabActions/fabActions.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/fabActions/fabActions.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/fabActions/fabActions.min.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/fabActions/fabActions.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/fabSpeedDial/fabSpeedDial.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/fabSpeedDial/fabSpeedDial.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/fabSpeedDial/fabSpeedDial.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/fabSpeedDial/fabSpeedDial.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/fabSpeedDial/fabSpeedDial.min.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/fabSpeedDial/fabSpeedDial.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/fabSpeedDial/fabSpeedDial.min.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/fabSpeedDial/fabSpeedDial.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/fabToolbar/fabToolbar.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/fabToolbar/fabToolbar.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/fabToolbar/fabToolbar.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/fabToolbar/fabToolbar.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/fabToolbar/fabToolbar.min.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/fabToolbar/fabToolbar.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/fabToolbar/fabToolbar.min.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/fabToolbar/fabToolbar.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/fabTrigger/fabTrigger.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/fabTrigger/fabTrigger.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/fabTrigger/fabTrigger.min.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/fabTrigger/fabTrigger.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/gridList/gridList.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/gridList/gridList.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/gridList/gridList.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/gridList/gridList.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/gridList/gridList.min.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/gridList/gridList.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/gridList/gridList.min.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/gridList/gridList.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/icon/icon-default-theme.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/icon/icon-default-theme.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/icon/icon-default-theme.min.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/icon/icon-default-theme.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/icon/icon.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/icon/icon.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/icon/icon.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/icon/icon.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/icon/icon.min.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/icon/icon.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/icon/icon.min.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/icon/icon.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/input/input-default-theme.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/input/input-default-theme.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/input/input-default-theme.min.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/input/input-default-theme.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/input/input.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/input/input.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/input/input.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/input/input.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/input/input.min.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/input/input.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/input/input.min.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/input/input.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/list/list-default-theme.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/list/list-default-theme.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/list/list-default-theme.min.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/list/list-default-theme.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/list/list.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/list/list.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/list/list.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/list/list.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/list/list.min.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/list/list.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/list/list.min.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/list/list.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/menu/menu-default-theme.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/menu/menu-default-theme.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/menu/menu-default-theme.min.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/menu/menu-default-theme.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/menu/menu.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/menu/menu.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/menu/menu.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/menu/menu.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/menu/menu.min.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/menu/menu.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/menu/menu.min.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/menu/menu.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/menuBar/menuBar-default-theme.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/menuBar/menuBar-default-theme.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/menuBar/menuBar-default-theme.min.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/menuBar/menuBar-default-theme.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/menuBar/menuBar.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/menuBar/menuBar.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/menuBar/menuBar.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/menuBar/menuBar.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/menuBar/menuBar.min.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/menuBar/menuBar.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/menuBar/menuBar.min.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/menuBar/menuBar.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/navBar/navBar-default-theme.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/navBar/navBar-default-theme.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/navBar/navBar-default-theme.min.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/navBar/navBar-default-theme.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/navBar/navBar.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/navBar/navBar.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/navBar/navBar.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/navBar/navBar.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/navBar/navBar.min.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/navBar/navBar.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/navBar/navBar.min.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/navBar/navBar.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/panel/panel-default-theme.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/panel/panel-default-theme.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/panel/panel-default-theme.min.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/panel/panel-default-theme.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/panel/panel.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/panel/panel.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/panel/panel.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/panel/panel.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/panel/panel.min.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/panel/panel.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/panel/panel.min.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/panel/panel.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/progressCircular/progressCircular-default-theme.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/progressCircular/progressCircular-default-theme.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/progressCircular/progressCircular-default-theme.min.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/progressCircular/progressCircular-default-theme.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/progressCircular/progressCircular.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/progressCircular/progressCircular.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/progressCircular/progressCircular.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/progressCircular/progressCircular.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/progressCircular/progressCircular.min.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/progressCircular/progressCircular.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/progressCircular/progressCircular.min.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/progressCircular/progressCircular.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/progressLinear/progressLinear-default-theme.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/progressLinear/progressLinear-default-theme.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/progressLinear/progressLinear-default-theme.min.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/progressLinear/progressLinear-default-theme.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/progressLinear/progressLinear.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/progressLinear/progressLinear.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/progressLinear/progressLinear.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/progressLinear/progressLinear.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/progressLinear/progressLinear.min.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/progressLinear/progressLinear.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/progressLinear/progressLinear.min.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/progressLinear/progressLinear.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/radioButton/radioButton-default-theme.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/radioButton/radioButton-default-theme.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/radioButton/radioButton-default-theme.min.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/radioButton/radioButton-default-theme.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/radioButton/radioButton.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/radioButton/radioButton.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/radioButton/radioButton.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/radioButton/radioButton.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/radioButton/radioButton.min.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/radioButton/radioButton.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/radioButton/radioButton.min.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/radioButton/radioButton.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/select/select-default-theme.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/select/select-default-theme.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/select/select-default-theme.min.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/select/select-default-theme.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/select/select.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/select/select.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/select/select.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/select/select.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/select/select.min.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/select/select.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/select/select.min.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/select/select.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/showHide/showHide.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/showHide/showHide.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/showHide/showHide.min.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/showHide/showHide.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/sidenav/sidenav-default-theme.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/sidenav/sidenav-default-theme.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/sidenav/sidenav-default-theme.min.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/sidenav/sidenav-default-theme.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/sidenav/sidenav.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/sidenav/sidenav.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/sidenav/sidenav.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/sidenav/sidenav.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/sidenav/sidenav.min.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/sidenav/sidenav.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/sidenav/sidenav.min.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/sidenav/sidenav.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/slider/slider-default-theme.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/slider/slider-default-theme.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/slider/slider-default-theme.min.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/slider/slider-default-theme.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/slider/slider.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/slider/slider.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/slider/slider.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/slider/slider.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/slider/slider.min.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/slider/slider.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/slider/slider.min.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/slider/slider.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/sticky/sticky.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/sticky/sticky.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/sticky/sticky.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/sticky/sticky.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/sticky/sticky.min.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/sticky/sticky.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/sticky/sticky.min.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/sticky/sticky.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/subheader/subheader-default-theme.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/subheader/subheader-default-theme.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/subheader/subheader-default-theme.min.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/subheader/subheader-default-theme.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/subheader/subheader.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/subheader/subheader.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/subheader/subheader.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/subheader/subheader.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/subheader/subheader.min.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/subheader/subheader.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/subheader/subheader.min.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/subheader/subheader.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/swipe/swipe.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/swipe/swipe.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/swipe/swipe.min.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/swipe/swipe.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/switch/switch-default-theme.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/switch/switch-default-theme.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/switch/switch-default-theme.min.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/switch/switch-default-theme.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/switch/switch.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/switch/switch.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/switch/switch.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/switch/switch.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/switch/switch.min.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/switch/switch.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/switch/switch.min.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/switch/switch.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/tabs/tabs-default-theme.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/tabs/tabs-default-theme.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/tabs/tabs-default-theme.min.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/tabs/tabs-default-theme.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/tabs/tabs.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/tabs/tabs.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/tabs/tabs.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/tabs/tabs.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/tabs/tabs.min.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/tabs/tabs.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/tabs/tabs.min.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/tabs/tabs.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/toast/toast-default-theme.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/toast/toast-default-theme.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/toast/toast-default-theme.min.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/toast/toast-default-theme.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/toast/toast.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/toast/toast.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/toast/toast.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/toast/toast.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/toast/toast.min.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/toast/toast.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/toast/toast.min.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/toast/toast.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/toolbar/toolbar-default-theme.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/toolbar/toolbar-default-theme.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/toolbar/toolbar-default-theme.min.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/toolbar/toolbar-default-theme.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/toolbar/toolbar.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/toolbar/toolbar.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/toolbar/toolbar.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/toolbar/toolbar.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/toolbar/toolbar.min.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/toolbar/toolbar.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/toolbar/toolbar.min.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/toolbar/toolbar.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/tooltip/tooltip-default-theme.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/tooltip/tooltip-default-theme.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/tooltip/tooltip-default-theme.min.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/tooltip/tooltip-default-theme.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/tooltip/tooltip.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/tooltip/tooltip.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/tooltip/tooltip.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/tooltip/tooltip.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/tooltip/tooltip.min.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/tooltip/tooltip.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/tooltip/tooltip.min.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/tooltip/tooltip.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/virtualRepeat/virtualRepeat.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/virtualRepeat/virtualRepeat.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/virtualRepeat/virtualRepeat.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/virtualRepeat/virtualRepeat.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/virtualRepeat/virtualRepeat.min.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/virtualRepeat/virtualRepeat.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/virtualRepeat/virtualRepeat.min.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/virtualRepeat/virtualRepeat.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/whiteframe/whiteframe.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/whiteframe/whiteframe.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/whiteframe/whiteframe.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/whiteframe/whiteframe.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/whiteframe/whiteframe.min.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/whiteframe/whiteframe.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/whiteframe/whiteframe.min.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/closure/whiteframe/whiteframe.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/autocomplete/autocomplete-default-theme.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/autocomplete/autocomplete-default-theme.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/autocomplete/autocomplete-default-theme.min.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/autocomplete/autocomplete-default-theme.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/autocomplete/autocomplete.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/autocomplete/autocomplete.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/autocomplete/autocomplete.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/autocomplete/autocomplete.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/autocomplete/autocomplete.min.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/autocomplete/autocomplete.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/autocomplete/autocomplete.min.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/autocomplete/autocomplete.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/autocomplete/bower.json" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/autocomplete/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/backdrop/backdrop-default-theme.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/backdrop/backdrop-default-theme.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/backdrop/backdrop-default-theme.min.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/backdrop/backdrop-default-theme.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/backdrop/backdrop.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/backdrop/backdrop.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/backdrop/backdrop.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/backdrop/backdrop.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/backdrop/backdrop.min.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/backdrop/backdrop.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/backdrop/backdrop.min.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/backdrop/backdrop.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/backdrop/bower.json" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/backdrop/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/bottomSheet/bottomSheet-default-theme.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/bottomSheet/bottomSheet-default-theme.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/bottomSheet/bottomSheet-default-theme.min.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/bottomSheet/bottomSheet-default-theme.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/bottomSheet/bottomSheet.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/bottomSheet/bottomSheet.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/bottomSheet/bottomSheet.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/bottomSheet/bottomSheet.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/bottomSheet/bottomSheet.min.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/bottomSheet/bottomSheet.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/bottomSheet/bottomSheet.min.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/bottomSheet/bottomSheet.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/bottomSheet/bower.json" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/bottomSheet/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/button/bower.json" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/button/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/button/button-default-theme.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/button/button-default-theme.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/button/button-default-theme.min.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/button/button-default-theme.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/button/button.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/button/button.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/button/button.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/button/button.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/button/button.min.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/button/button.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/button/button.min.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/button/button.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/card/bower.json" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/card/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/card/card-default-theme.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/card/card-default-theme.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/card/card-default-theme.min.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/card/card-default-theme.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/card/card.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/card/card.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/card/card.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/card/card.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/card/card.min.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/card/card.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/card/card.min.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/card/card.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/checkbox/bower.json" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/checkbox/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/checkbox/checkbox-default-theme.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/checkbox/checkbox-default-theme.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/checkbox/checkbox-default-theme.min.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/checkbox/checkbox-default-theme.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/checkbox/checkbox.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/checkbox/checkbox.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/checkbox/checkbox.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/checkbox/checkbox.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/checkbox/checkbox.min.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/checkbox/checkbox.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/checkbox/checkbox.min.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/checkbox/checkbox.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/chips/bower.json" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/chips/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/chips/chips-default-theme.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/chips/chips-default-theme.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/chips/chips-default-theme.min.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/chips/chips-default-theme.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/chips/chips.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/chips/chips.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/chips/chips.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/chips/chips.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/chips/chips.min.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/chips/chips.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/chips/chips.min.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/chips/chips.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/colors/bower.json" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/colors/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/colors/colors.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/colors/colors.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/colors/colors.min.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/colors/colors.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/content/bower.json" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/content/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/content/content-default-theme.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/content/content-default-theme.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/content/content-default-theme.min.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/content/content-default-theme.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/content/content.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/content/content.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/content/content.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/content/content.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/content/content.min.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/content/content.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/content/content.min.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/content/content.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/core/bower.json" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/core/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/core/core.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/core/core.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/core/core.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/core/core.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/core/core.min.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/core/core.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/core/core.min.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/core/core.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/datepicker/bower.json" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/datepicker/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/datepicker/datepicker-default-theme.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/datepicker/datepicker-default-theme.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/datepicker/datepicker-default-theme.min.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/datepicker/datepicker-default-theme.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/datepicker/datepicker.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/datepicker/datepicker.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/datepicker/datepicker.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/datepicker/datepicker.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/datepicker/datepicker.min.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/datepicker/datepicker.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/datepicker/datepicker.min.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/datepicker/datepicker.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/dialog/bower.json" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/dialog/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/dialog/dialog-default-theme.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/dialog/dialog-default-theme.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/dialog/dialog-default-theme.min.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/dialog/dialog-default-theme.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/dialog/dialog.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/dialog/dialog.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/dialog/dialog.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/dialog/dialog.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/dialog/dialog.min.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/dialog/dialog.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/dialog/dialog.min.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/dialog/dialog.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/divider/bower.json" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/divider/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/divider/divider-default-theme.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/divider/divider-default-theme.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/divider/divider-default-theme.min.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/divider/divider-default-theme.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/divider/divider.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/divider/divider.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/divider/divider.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/divider/divider.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/divider/divider.min.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/divider/divider.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/divider/divider.min.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/divider/divider.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/fabActions/bower.json" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/fabActions/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/fabActions/fabActions.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/fabActions/fabActions.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/fabActions/fabActions.min.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/fabActions/fabActions.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/fabSpeedDial/bower.json" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/fabSpeedDial/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/fabSpeedDial/fabSpeedDial.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/fabSpeedDial/fabSpeedDial.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/fabSpeedDial/fabSpeedDial.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/fabSpeedDial/fabSpeedDial.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/fabSpeedDial/fabSpeedDial.min.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/fabSpeedDial/fabSpeedDial.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/fabSpeedDial/fabSpeedDial.min.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/fabSpeedDial/fabSpeedDial.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/fabToolbar/bower.json" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/fabToolbar/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/fabToolbar/fabToolbar.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/fabToolbar/fabToolbar.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/fabToolbar/fabToolbar.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/fabToolbar/fabToolbar.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/fabToolbar/fabToolbar.min.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/fabToolbar/fabToolbar.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/fabToolbar/fabToolbar.min.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/fabToolbar/fabToolbar.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/fabTrigger/bower.json" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/fabTrigger/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/fabTrigger/fabTrigger.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/fabTrigger/fabTrigger.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/fabTrigger/fabTrigger.min.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/fabTrigger/fabTrigger.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/gridList/bower.json" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/gridList/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/gridList/gridList.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/gridList/gridList.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/gridList/gridList.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/gridList/gridList.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/gridList/gridList.min.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/gridList/gridList.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/gridList/gridList.min.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/gridList/gridList.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/icon/bower.json" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/icon/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/icon/icon-default-theme.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/icon/icon-default-theme.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/icon/icon-default-theme.min.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/icon/icon-default-theme.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/icon/icon.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/icon/icon.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/icon/icon.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/icon/icon.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/icon/icon.min.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/icon/icon.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/icon/icon.min.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/icon/icon.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/input/bower.json" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/input/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/input/input-default-theme.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/input/input-default-theme.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/input/input-default-theme.min.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/input/input-default-theme.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/input/input.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/input/input.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/input/input.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/input/input.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/input/input.min.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/input/input.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/input/input.min.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/input/input.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/list/bower.json" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/list/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/list/list-default-theme.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/list/list-default-theme.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/list/list-default-theme.min.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/list/list-default-theme.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/list/list.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/list/list.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/list/list.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/list/list.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/list/list.min.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/list/list.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/list/list.min.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/list/list.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/menu/bower.json" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/menu/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/menu/menu-default-theme.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/menu/menu-default-theme.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/menu/menu-default-theme.min.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/menu/menu-default-theme.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/menu/menu.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/menu/menu.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/menu/menu.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/menu/menu.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/menu/menu.min.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/menu/menu.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/menu/menu.min.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/menu/menu.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/menuBar/bower.json" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/menuBar/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/menuBar/menuBar-default-theme.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/menuBar/menuBar-default-theme.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/menuBar/menuBar-default-theme.min.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/menuBar/menuBar-default-theme.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/menuBar/menuBar.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/menuBar/menuBar.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/menuBar/menuBar.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/menuBar/menuBar.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/menuBar/menuBar.min.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/menuBar/menuBar.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/menuBar/menuBar.min.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/menuBar/menuBar.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/navBar/bower.json" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/navBar/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/navBar/navBar-default-theme.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/navBar/navBar-default-theme.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/navBar/navBar-default-theme.min.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/navBar/navBar-default-theme.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/navBar/navBar.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/navBar/navBar.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/navBar/navBar.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/navBar/navBar.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/navBar/navBar.min.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/navBar/navBar.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/navBar/navBar.min.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/navBar/navBar.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/panel/bower.json" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/panel/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/panel/panel-default-theme.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/panel/panel-default-theme.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/panel/panel-default-theme.min.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/panel/panel-default-theme.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/panel/panel.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/panel/panel.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/panel/panel.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/panel/panel.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/panel/panel.min.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/panel/panel.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/panel/panel.min.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/panel/panel.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/progressCircular/bower.json" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/progressCircular/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/progressCircular/progressCircular-default-theme.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/progressCircular/progressCircular-default-theme.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/progressCircular/progressCircular-default-theme.min.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/progressCircular/progressCircular-default-theme.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/progressCircular/progressCircular.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/progressCircular/progressCircular.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/progressCircular/progressCircular.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/progressCircular/progressCircular.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/progressCircular/progressCircular.min.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/progressCircular/progressCircular.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/progressCircular/progressCircular.min.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/progressCircular/progressCircular.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/progressLinear/bower.json" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/progressLinear/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/progressLinear/progressLinear-default-theme.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/progressLinear/progressLinear-default-theme.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/progressLinear/progressLinear-default-theme.min.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/progressLinear/progressLinear-default-theme.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/progressLinear/progressLinear.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/progressLinear/progressLinear.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/progressLinear/progressLinear.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/progressLinear/progressLinear.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/progressLinear/progressLinear.min.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/progressLinear/progressLinear.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/progressLinear/progressLinear.min.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/progressLinear/progressLinear.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/radioButton/bower.json" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/radioButton/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/radioButton/radioButton-default-theme.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/radioButton/radioButton-default-theme.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/radioButton/radioButton-default-theme.min.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/radioButton/radioButton-default-theme.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/radioButton/radioButton.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/radioButton/radioButton.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/radioButton/radioButton.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/radioButton/radioButton.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/radioButton/radioButton.min.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/radioButton/radioButton.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/radioButton/radioButton.min.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/radioButton/radioButton.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/select/bower.json" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/select/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/select/select-default-theme.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/select/select-default-theme.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/select/select-default-theme.min.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/select/select-default-theme.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/select/select.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/select/select.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/select/select.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/select/select.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/select/select.min.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/select/select.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/select/select.min.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/select/select.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/showHide/bower.json" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/showHide/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/showHide/showHide.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/showHide/showHide.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/showHide/showHide.min.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/showHide/showHide.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/sidenav/bower.json" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/sidenav/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/sidenav/sidenav-default-theme.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/sidenav/sidenav-default-theme.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/sidenav/sidenav-default-theme.min.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/sidenav/sidenav-default-theme.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/sidenav/sidenav.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/sidenav/sidenav.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/sidenav/sidenav.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/sidenav/sidenav.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/sidenav/sidenav.min.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/sidenav/sidenav.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/sidenav/sidenav.min.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/sidenav/sidenav.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/slider/bower.json" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/slider/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/slider/slider-default-theme.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/slider/slider-default-theme.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/slider/slider-default-theme.min.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/slider/slider-default-theme.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/slider/slider.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/slider/slider.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/slider/slider.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/slider/slider.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/slider/slider.min.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/slider/slider.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/slider/slider.min.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/slider/slider.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/sticky/bower.json" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/sticky/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/sticky/sticky.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/sticky/sticky.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/sticky/sticky.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/sticky/sticky.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/sticky/sticky.min.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/sticky/sticky.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/sticky/sticky.min.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/sticky/sticky.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/subheader/bower.json" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/subheader/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/subheader/subheader-default-theme.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/subheader/subheader-default-theme.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/subheader/subheader-default-theme.min.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/subheader/subheader-default-theme.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/subheader/subheader.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/subheader/subheader.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/subheader/subheader.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/subheader/subheader.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/subheader/subheader.min.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/subheader/subheader.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/subheader/subheader.min.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/subheader/subheader.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/swipe/bower.json" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/swipe/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/swipe/swipe.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/swipe/swipe.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/swipe/swipe.min.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/swipe/swipe.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/switch/bower.json" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/switch/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/switch/switch-default-theme.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/switch/switch-default-theme.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/switch/switch-default-theme.min.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/switch/switch-default-theme.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/switch/switch.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/switch/switch.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/switch/switch.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/switch/switch.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/switch/switch.min.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/switch/switch.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/switch/switch.min.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/switch/switch.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/tabs/bower.json" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/tabs/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/tabs/tabs-default-theme.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/tabs/tabs-default-theme.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/tabs/tabs-default-theme.min.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/tabs/tabs-default-theme.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/tabs/tabs.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/tabs/tabs.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/tabs/tabs.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/tabs/tabs.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/tabs/tabs.min.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/tabs/tabs.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/tabs/tabs.min.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/tabs/tabs.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/toast/bower.json" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/toast/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/toast/toast-default-theme.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/toast/toast-default-theme.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/toast/toast-default-theme.min.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/toast/toast-default-theme.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/toast/toast.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/toast/toast.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/toast/toast.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/toast/toast.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/toast/toast.min.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/toast/toast.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/toast/toast.min.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/toast/toast.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/toolbar/bower.json" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/toolbar/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/toolbar/toolbar-default-theme.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/toolbar/toolbar-default-theme.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/toolbar/toolbar-default-theme.min.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/toolbar/toolbar-default-theme.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/toolbar/toolbar.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/toolbar/toolbar.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/toolbar/toolbar.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/toolbar/toolbar.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/toolbar/toolbar.min.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/toolbar/toolbar.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/toolbar/toolbar.min.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/toolbar/toolbar.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/tooltip/bower.json" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/tooltip/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/tooltip/tooltip-default-theme.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/tooltip/tooltip-default-theme.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/tooltip/tooltip-default-theme.min.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/tooltip/tooltip-default-theme.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/tooltip/tooltip.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/tooltip/tooltip.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/tooltip/tooltip.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/tooltip/tooltip.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/tooltip/tooltip.min.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/tooltip/tooltip.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/tooltip/tooltip.min.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/tooltip/tooltip.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/virtualRepeat/bower.json" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/virtualRepeat/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/virtualRepeat/virtualRepeat.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/virtualRepeat/virtualRepeat.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/virtualRepeat/virtualRepeat.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/virtualRepeat/virtualRepeat.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/virtualRepeat/virtualRepeat.min.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/virtualRepeat/virtualRepeat.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/virtualRepeat/virtualRepeat.min.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/virtualRepeat/virtualRepeat.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/whiteframe/bower.json" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/whiteframe/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/whiteframe/whiteframe.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/whiteframe/whiteframe.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/whiteframe/whiteframe.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/whiteframe/whiteframe.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/whiteframe/whiteframe.min.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/whiteframe/whiteframe.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/whiteframe/whiteframe.min.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/js/whiteframe/whiteframe.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/layouts/angular-material.layout-attributes.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/layouts/angular-material.layout-attributes.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/layouts/angular-material.layout-attributes.min.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/layouts/angular-material.layout-attributes.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/layouts/angular-material.layouts.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/layouts/angular-material.layouts.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/layouts/angular-material.layouts.min.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/layouts/angular-material.layouts.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/scss/angular-material.layout-attributes.scss" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/scss/angular-material.layout-attributes.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/scss/angular-material.layouts.scss" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/scss/angular-material.layouts.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/scss/angular-material.scss" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/modules/scss/angular-material.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular-material/package.json" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-material/package.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/templates/cinema/listFilmes.html" afterPath="$PROJECT_DIR$/ionic/www/templates/cinema/listFilmes.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/templates/dashboard/index.html" afterPath="$PROJECT_DIR$/ionic/www/templates/dashboard/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/templates/home.html" afterPath="$PROJECT_DIR$/ionic/www/templates/home.html" />
     </list>
     <ignored path="excel.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -2393,104 +2887,68 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ionic/www/templates/dashboard/index.html">
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ionic/www/js/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-15.625">
-              <caret line="66" column="48" selection-start-line="66" selection-start-column="48" selection-end-line="66" selection-end-column="48" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="7" column="35" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="listFilmes.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ionic/www/templates/cinema/listFilmes.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-19.166666">
+              <caret line="41" column="20" selection-start-line="41" selection-start-column="20" selection-end-line="41" selection-end-column="20" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ionic/www/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-14.375">
+              <caret line="38" column="60" selection-start-line="38" selection-start-column="60" selection-end-line="38" selection-end-column="60" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="karma.conf.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ionic/www/lib/angular-ui-bootstrap/karma.conf.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding>
-                <element signature="n#style#0;n#ion-content#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#!!top" expanded="true" />
+                <element signature="n#!!doc" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="back.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ionic/www/js/controllers/back.js">
+      <file leaf-file-name="listFilmes.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ionic/www/js/controllers/listFilmes.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.65656567">
-              <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-              <folding />
+            <state vertical-scroll-proportion="0.3517588">
+              <caret line="14" column="29" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="autoComplete.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ionic/www/js/controllers/autoComplete.js">
+      <file leaf-file-name="tabCinema.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ionic/www/js/controllers/tabCinema.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AutoCompleteController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/AutoComplete/AutoCompleteController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-13.75">
-              <caret line="49" column="22" selection-start-line="49" selection-start-column="22" selection-end-line="49" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="list_pesq.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ionic/www/js/controllers/list_pesq.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="6" column="57" selection-start-line="6" selection-start-column="57" selection-end-line="6" selection-end-column="57" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="perfil.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ionic/www/js/controllers/perfil.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="routes.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-17.666666">
-              <caret line="212" column="91" selection-start-line="212" selection-start-column="91" selection-end-line="212" selection-end-column="91" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ionic/www/js/app.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="17" column="10" selection-start-line="17" selection-start-column="10" selection-end-line="17" selection-end-column="10" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="perfil.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ionic/www/templates/estabelecimentos/perfil.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="6.875">
-              <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="listar_pesq.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ionic/www/templates/estabelecimentos/listar_pesq.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.25">
-              <caret line="64" column="72" selection-start-line="64" selection-start-column="72" selection-end-line="64" selection-end-column="72" />
-              <folding />
+              <caret line="16" column="5" selection-start-line="0" selection-start-column="2" selection-end-line="16" selection-end-column="5" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -2512,9 +2970,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/ionic/www/js/controllers/emergencia.js" />
-        <option value="$PROJECT_DIR$/ionic/www/templates/24h/estabelecimentos.html" />
-        <option value="$PROJECT_DIR$/ionic/www/templates/emergencia/estabelecimentos.html" />
         <option value="$PROJECT_DIR$/ionic/config.xml" />
         <option value="$PROJECT_DIR$/ionic/www/js/services/localStorage.js" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/0333e9c9-f64b-4553-b89e-61b889922f43/console.sql" />
@@ -2533,7 +2988,6 @@
         <option value="$PROJECT_DIR$/ionic/www/templates/estabelecimentos/index.html" />
         <option value="$PROJECT_DIR$/ionic/www/js/services/listFilmes.js" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Api/Filmes/FilmeController.php" />
-        <option value="$PROJECT_DIR$/ionic/www/js/controllers/listFilmes.js" />
         <option value="$PROJECT_DIR$/ionic/www/css/styles/listFilmes.css" />
         <option value="$PROJECT_DIR$/app/Models/Avaliacao.php" />
         <option value="$PROJECT_DIR$/database/migrations/2016_08_15_123419_create_avaliacaos_table.php" />
@@ -2548,7 +3002,6 @@
         <option value="$PROJECT_DIR$/ionic/www/templates/alimentacao/index.html" />
         <option value="$PROJECT_DIR$/ionic/www/css/gambiarra.css" />
         <option value="$PROJECT_DIR$/ionic/www/js/controllers/login.js" />
-        <option value="$PROJECT_DIR$/ionic/www/templates/cinema/listFilmes.html" />
         <option value="$PROJECT_DIR$/ionic/www/js/services/autoComplete.js" />
         <option value="$PROJECT_DIR$/ionic/www/js/controllers/alimentacao.js" />
         <option value="$PROJECT_DIR$/ionic/www/templates/estabelecimentos/listar_pesq.html" />
@@ -2556,13 +3009,18 @@
         <option value="$PROJECT_DIR$/app/Http/routes.php" />
         <option value="$PROJECT_DIR$/ionic/www/js/services/estabelecimento.js" />
         <option value="$PROJECT_DIR$/ionic/www/js/controllers/estabelecimentos.js" />
-        <option value="$PROJECT_DIR$/ionic/www/index.html" />
-        <option value="$PROJECT_DIR$/ionic/www/js/app.js" />
         <option value="$PROJECT_DIR$/ionic/www/templates/dashboard/index.html" />
         <option value="$PROJECT_DIR$/ionic/www/js/controllers/list_pesq.js" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Api/AutoComplete/AutoCompleteController.php" />
         <option value="$PROJECT_DIR$/ionic/www/js/controllers/autoComplete.js" />
         <option value="$PROJECT_DIR$/ionic/www/js/controllers/back.js" />
+        <option value="$PROJECT_DIR$/ionic/www/css/styles/style.css" />
+        <option value="$PROJECT_DIR$/ionic/www/templates/cinema/listFilmes.html" />
+        <option value="$PROJECT_DIR$/ionic/bower.json" />
+        <option value="$PROJECT_DIR$/ionic/www/js/controllers/tabCinema.js" />
+        <option value="$PROJECT_DIR$/ionic/www/index.html" />
+        <option value="$PROJECT_DIR$/ionic/www/js/app.js" />
+        <option value="$PROJECT_DIR$/ionic/www/js/controllers/listFilmes.js" />
       </list>
     </option>
   </component>
@@ -2583,7 +3041,7 @@
   <component name="ProjectFrameBounds">
     <option name="y" value="23" />
     <option name="width" value="1280" />
-    <option name="height" value="714" />
+    <option name="height" value="717" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -2596,7 +3054,7 @@
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
+    <navigator proportions="" version="1">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -2609,140 +3067,7 @@
       <manualOrder />
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes>
-      <pane id="Scratches" />
-      <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BuscaSorocaba" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BuscaSorocaba" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BuscaSorocaba" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BuscaSorocaba" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BuscaSorocaba" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BuscaSorocaba" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BuscaSorocaba" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Http" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BuscaSorocaba" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BuscaSorocaba" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Http" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Controllers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BuscaSorocaba" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BuscaSorocaba" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Http" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Controllers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Api" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BuscaSorocaba" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BuscaSorocaba" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Http" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Controllers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Api" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AutoComplete" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="Scope" />
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
@@ -2822,7 +3147,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1280" height="714" extended-state="6" />
+    <frame x="0" y="23" width="1280" height="717" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
@@ -2832,8 +3157,8 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23667206" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329582" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28617364" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21647818" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28525642" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24071082" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -2887,69 +3212,15 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/Filmes/FilmeController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.875">
-          <caret line="34" column="26" selection-start-line="34" selection-start-column="26" selection-end-line="34" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ionic/www/js/services/listFilmes.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.05050505">
-          <caret line="2" column="78" selection-start-line="2" selection-start-column="78" selection-end-line="2" selection-end-column="78" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ionic/www/js/controllers/listFilmes.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2027027">
-          <caret line="8" column="49" selection-start-line="8" selection-start-column="49" selection-end-line="8" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ionic/www/css/styles/listFilmes.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ionic/www/css/styles/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/73a170b5/84674fdb-ad42-4b4e-9ed2-f08c8dc880a1/buscaSorocaba.filmes">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2016_08_15_123419_create_avaliacaos_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.375">
-          <caret line="24" column="33" selection-start-line="24" selection-start-column="33" selection-end-line="24" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="dbDummy://dbtable:/73a170b5/84674fdb-ad42-4b4e-9ed2-f08c8dc880a1/buscaSorocaba.oauth_clients">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
@@ -3017,26 +3288,26 @@
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/73a170b5/84674fdb-ad42-4b4e-9ed2-f08c8dc880a1/buscaSorocaba.estabelecimentos">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/73a170b5/84674fdb-ad42-4b4e-9ed2-f08c8dc880a1/buscaSorocaba.avaliacaos">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
@@ -3048,14 +3319,14 @@
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/73a170b5/84674fdb-ad42-4b4e-9ed2-f08c8dc880a1/buscaSorocaba.users">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
@@ -3115,13 +3386,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ionic/www/templates/cinema/listFilmes.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.625">
-          <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/Estabelecimentos/EstabelecimentosController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.15734266">
@@ -3168,23 +3432,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-1.25">
           <caret line="2" column="33" selection-start-line="2" selection-start-column="33" selection-end-line="2" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ionic/www/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.45964912">
-          <caret line="47" column="55" selection-start-line="47" selection-start-column="55" selection-end-line="47" selection-end-column="55" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-17.666666">
-          <caret line="212" column="91" selection-start-line="212" selection-start-column="91" selection-end-line="212" selection-end-column="91" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3192,7 +3439,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.22727273">
           <caret line="9" column="26" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3200,23 +3446,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.07575758">
           <caret line="3" column="36" selection-start-line="3" selection-start-column="36" selection-end-line="3" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ionic/www/templates/estabelecimentos/perfil.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="6.875">
-          <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ionic/www/templates/estabelecimentos/listar_pesq.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.25">
-          <caret line="64" column="72" selection-start-line="64" selection-start-column="72" selection-end-line="64" selection-end-column="72" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3224,6 +3453,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.479798">
           <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/AutoComplete/AutoCompleteController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="49" column="22" selection-start-line="49" selection-start-column="22" selection-end-line="49" selection-end-column="22" />
           <folding />
         </state>
       </provider>
@@ -3236,10 +3472,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ionic/www/js/app.js">
+    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="17" column="10" selection-start-line="17" selection-start-column="10" selection-end-line="17" selection-end-column="10" />
+          <caret line="212" column="91" selection-start-line="212" selection-start-column="91" selection-end-line="212" selection-end-column="91" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ionic/www/templates/estabelecimentos/perfil.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ionic/www/templates/estabelecimentos/listar_pesq.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="64" column="72" selection-start-line="64" selection-start-column="72" selection-end-line="64" selection-end-column="72" />
           <folding />
         </state>
       </provider>
@@ -3252,25 +3504,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/AutoComplete/AutoCompleteController.php">
+    <entry file="file://$PROJECT_DIR$/ionic/www/js/controllers/autoComplete.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.75">
-          <caret line="49" column="22" selection-start-line="49" selection-start-column="22" selection-end-line="49" selection-end-column="22" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="16" column="39" selection-start-line="16" selection-start-column="39" selection-end-line="16" selection-end-column="39" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ionic/www/js/controllers/autoComplete.js">
+    <entry file="file://$PROJECT_DIR$/ionic/www/js/controllers/back.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+          <caret line="22" column="46" selection-start-line="22" selection-start-column="46" selection-end-line="22" selection-end-column="46" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ionic/www/templates/dashboard/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.625">
+        <state vertical-scroll-proportion="-0.625">
           <caret line="66" column="48" selection-start-line="66" selection-start-column="48" selection-end-line="66" selection-end-column="48" />
           <folding>
             <element signature="n#style#0;n#ion-content#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#!!top" expanded="true" />
@@ -3278,11 +3530,89 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ionic/www/js/controllers/back.js">
+    <entry file="file://$PROJECT_DIR$/ionic/www/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.65656567">
-          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ionic/www/css/styles/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.76724136">
+          <caret line="887" column="1" selection-start-line="887" selection-start-column="1" selection-end-line="887" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ionic/bower.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.31034482">
+          <caret line="12" column="34" selection-start-line="12" selection-start-column="34" selection-end-line="12" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ionic/www/templates/cinema/listFilmes.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-19.166666">
+          <caret line="41" column="20" selection-start-line="41" selection-start-column="20" selection-end-line="41" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ionic/www/js/controllers/tabCinema.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="16" column="5" selection-start-line="0" selection-start-column="2" selection-end-line="16" selection-end-column="5" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ionic/www/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-14.375">
+          <caret line="38" column="60" selection-start-line="38" selection-start-column="60" selection-end-line="38" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ionic/www/lib/angular-ui-bootstrap/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ionic/www/lib/angular-ui-bootstrap/karma.conf.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ionic/www/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="35" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ionic/www/js/controllers/listFilmes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3517588">
+          <caret line="14" column="29" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

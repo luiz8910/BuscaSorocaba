@@ -32,14 +32,14 @@
     <link href="css/styles/animate.css"         rel="stylesheet" type="text/css">
 
 
-    <!--<script type="text/javascript" src="js/scripts/jquery.js"></script>-->
-    <!--<script type="text/javascript" src="js/scripts/jqueryui.js"></script>-->
-    <!--<script type="text/javascript" src="js/scripts/framework-plugins.js"></script>-->
-    <!--<script type="text/javascript" src="js/scripts/custom.js"></script>-->
-    <!--&lt;!&ndash; jQuery (necessary for Bootstrap's JavaScript plugins) &ndash;&gt;-->
-    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>-->
-    <!--&lt;!&ndash; Include all compiled plugins (below), or include individual files as needed &ndash;&gt;-->
-    <!--<script src="scripts/bootstrap.min.js"></script>-->
+    <script type="text/javascript" src="js/scripts/jquery.js"></script>
+    <script type="text/javascript" src="js/scripts/jqueryui.js"></script>
+    <script type="text/javascript" src="js/scripts/framework-plugins.js"></script>
+    <script type="text/javascript" src="js/scripts/custom.js"></script>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/scripts/bootstrap.min.js"></script>
 </head>
 
 
@@ -72,6 +72,27 @@
 <div class="container" style="border: 1px  solid red;">
     <div class="row" style="border: 1px  solid red;">
         <div class="decoration"></div>
+
+        <uib-tabset type="pills">
+            <uib-tab heading="Default Size">Tab 1 content</uib-tab>
+            <uib-tab heading="Small Button" classes="btn-sm">Tab 2 content</uib-tab>
+        </uib-tabset>
+
+        <div type="pills" class="ng-isolate-scope">
+            <ul class="nav nav-pills" ng-class="{'nav-stacked': vertical, 'nav-justified': justified}" ng-transclude="">
+                <li ng-class="[{active: active, disabled: disabled}, classes]" class="uib-tab nav-item ng-scope ng-isolate-scope active" heading="Default Size">
+                    <a href="" ng-click="select($event)" class="nav-link ng-binding" uib-tab-heading-transclude="">Default Size</a>
+                </li>
+                <li ng-class="[{active: active, disabled: disabled}, classes]" class="uib-tab nav-item ng-scope ng-isolate-scope btn-sm" heading="Small Button" classes="btn-sm">
+                    <a href="" ng-click="select($event)" class="nav-link ng-binding" uib-tab-heading-transclude="">Small Button</a>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <!-- ngRepeat: tab in tabset.tabs --><div class="tab-pane ng-scope active" ng-repeat="tab in tabset.tabs" ng-class="{active: tabset.active === tab.index}" uib-tab-content-transclude="tab">
+                <span class="ng-scope">Tab 1 content</span></div><!-- end ngRepeat: tab in tabset.tabs --><div class="tab-pane ng-scope" ng-repeat="tab in tabset.tabs" ng-class="{active: tabset.active === tab.index}" uib-tab-content-transclude="tab">
+                <span class="ng-scope">Tab 2 content</span></div><!-- end ngRepeat: tab in tabset.tabs -->
+            </div>
+        </div>
 
         <!-- Tab panes -->
         <div class="tab-content" style="border: 1px  solid red; display: block !important;">
