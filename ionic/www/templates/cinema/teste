@@ -1,0 +1,87 @@
+<!-- Tab panes -->
+        <div class="tab-content" style="border: 1px  solid red; display: block !important;">
+            <div role="tabpanel" class="tab-pane active " id="Sorocaba">
+                <h5 class="heading-title text-center">Listagem de Filmes</h5>
+                <p class="heading-subtitle text-center">
+                    Carregamos para você algumas categorias de Cinema
+                </p>
+                <div class="col-xs-12 col-md-2 col-sm-6">
+                    <a href="#" class="thumbnail">
+                        <img src="img/images/cine/dead-pool.jpg" alt="image">
+                    </a>
+                </div>
+
+                <div class="col-xs-12 col-md-2 col-sm-6">
+                    <a href="#" class="thumbnail">
+                        <img src="img/images/cine/dead-pool.jpg" alt="image">
+                    </a>
+                </div>
+
+                <div class="col-xs-12 col-md-2 col-sm-6">
+                    <a href="#" class="thumbnail">
+                        <img src="img/images/cine/dead-pool.jpg" alt="image">
+                    </a>
+                </div>
+                <div class="col-xs-12 col-md-2 col-sm-6">
+                    <a href="#" class="thumbnail">
+                        <img src="img/images/cine/dead-pool.jpg" alt="image">
+                    </a>
+                </div>
+                <div class="col-xs-12 col-md-2 col-sm-6">
+                    <a href="#" class="thumbnail">
+                        <img src="img/images/cine/dead-pool.jpg" alt="image">
+                    </a>
+                </div>
+
+                <div class="col-xs-12 col-md-2 col-sm-6">
+                    <a href="#" class="thumbnail">
+                        <img src="img/images/cine/dead-pool.jpg" alt="image">
+                    </a>
+                </div>
+            </div>
+
+
+
+            <div role="tabpanel" class="tab-pane" id="Cidade">
+                <h5 class="heading-title text-center">Listagem de Filmes</h5>
+                <p class="heading-subtitle text-center">
+                    Carregamos para você algumas categorias de Cinema
+                </p>
+                <div class="col-xs-12 col-md-2 col-sm-6">
+                    <a href="#" class="thumbnail">
+                        <img src="img/images/cine/dead-pool.jpg" alt="image">
+                    </a>
+                </div>
+
+                <div class="col-xs-12 col-md-2 col-sm-6">
+                    <a href="#" class="thumbnail">
+                        <img src="img/images/cine/dead-pool.jpg" alt="image">
+                    </a>
+                </div>
+
+                <div class="col-xs-12 col-md-2 col-sm-6">
+                    <a href="#" class="thumbnail">
+                        <img src="img/images/cine/dead-pool.jpg" alt="image">
+                    </a>
+                </div>
+                <div class="col-xs-12 col-md-2 col-sm-6">
+                    <a href="#" class="thumbnail">
+                        <img src="img/images/cine/dead-pool.jpg" alt="image">
+                    </a>
+                </div>
+                <div class="col-xs-12 col-md-2 col-sm-6">
+                    <a href="#" class="thumbnail">
+                        <img src="img/images/cine/dead-pool.jpg" alt="image">
+                    </a>
+                </div>
+
+                <div class="col-xs-12 col-md-2 col-sm-6">
+                    <a href="#" class="thumbnail">
+                        <img src="img/images/cine/dead-pool.jpg" alt="image">
+                    </a>
+                </div>
+
+
+            </div>
+
+            </div>

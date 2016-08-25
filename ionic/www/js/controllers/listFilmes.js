@@ -1,31 +1,37 @@
-//angular.module('starter.controllers')
-//    .controller('FilmeCtrl', ['$scope', '$state', '$ionicLoading', '$listFilmes',
-//        function ($scope, $state, $ionicLoading, $listFilmes)
-//        {
-//            $ionicLoading.show({
-//                template: 'Carregando'
-//            });
-//
+
 //            $listFilmes.query({}, function(data){
 //                $scope.filmes = data;
 //                $ionicLoading.hide();
 //            });
 //        }]);
 
-angular.module('ui-bootstrap')
-    .controller('FilmeCtrl', function ($scope, $window) {
-        $scope.tabs = [
-            { title:'Dynamic Title 1', content:'Dynamic content 1' },
-            { title:'Dynamic Title 2', content:'Dynamic content 2', disabled: true }
-        ];
+angular.module('starter.controllers')
+    .controller('FilmeCtrl', function ($scope) {
 
-        $scope.alertMe = function() {
-            setTimeout(function() {
-                $window.alert('You\'ve selected the alert tab!');
-            });
+        $scope.Tab1 = function (item) {
+            if(item == 1)
+            {
+                return true;
+            }
+
+            return false;
         };
 
-        $scope.model = {
-            name: 'Tabs'
+        $scope.Tab2 = function (item) {
+            if(item == 2)
+            {
+                return true;
+            }
+
+            return false;
+        };
+
+        $scope.Tab3 = function (item) {
+            if(item == 3)
+            {
+                return true;
+            }
+
+            return false;
         };
     });

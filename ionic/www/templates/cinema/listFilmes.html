@@ -40,6 +40,12 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/scripts/bootstrap.min.js"></script>
+
+    <style type="text/css">
+        form.tab-form-demo .tab-pane {
+            margin: 20px 20px;
+        }
+    </style>
 </head>
 
 
@@ -69,118 +75,43 @@
 
 
 
-<div class="container" style="border: 1px  solid red;">
+<div class="container" style="border: 1px  solid red;" ng-init="tab=1">
     <div class="row" style="border: 1px  solid red;">
         <div class="decoration"></div>
 
-        <uib-tabset type="pills">
-            <uib-tab heading="Default Size">Tab 1 content</uib-tab>
-            <uib-tab heading="Small Button" classes="btn-sm">Tab 2 content</uib-tab>
-        </uib-tabset>
+     </div> <!-- fim div .row -->
 
-        <div type="pills" class="ng-isolate-scope">
-            <ul class="nav nav-pills" ng-class="{'nav-stacked': vertical, 'nav-justified': justified}" ng-transclude="">
-                <li ng-class="[{active: active, disabled: disabled}, classes]" class="uib-tab nav-item ng-scope ng-isolate-scope active" heading="Default Size">
-                    <a href="" ng-click="select($event)" class="nav-link ng-binding" uib-tab-heading-transclude="">Default Size</a>
-                </li>
-                <li ng-class="[{active: active, disabled: disabled}, classes]" class="uib-tab nav-item ng-scope ng-isolate-scope btn-sm" heading="Small Button" classes="btn-sm">
-                    <a href="" ng-click="select($event)" class="nav-link ng-binding" uib-tab-heading-transclude="">Small Button</a>
-                </li>
+        <div>
+            <ul class="tabs-nav">
+                <li><a ng-click="tab=1" ng-class="{'active' : tab==1}">Aba 1</a></li>
+                <li><a ng-click="tab=2" ng-class="{'active' : tab==2}">Aba 2</a></li>
+                <li><a ng-click="tab=3" ng-class="{'active' : tab==3}">Aba 3</a></li>
             </ul>
-            <div class="tab-content">
-                <!-- ngRepeat: tab in tabset.tabs --><div class="tab-pane ng-scope active" ng-repeat="tab in tabset.tabs" ng-class="{active: tabset.active === tab.index}" uib-tab-content-transclude="tab">
-                <span class="ng-scope">Tab 1 content</span></div><!-- end ngRepeat: tab in tabset.tabs --><div class="tab-pane ng-scope" ng-repeat="tab in tabset.tabs" ng-class="{active: tabset.active === tab.index}" uib-tab-content-transclude="tab">
-                <span class="ng-scope">Tab 2 content</span></div><!-- end ngRepeat: tab in tabset.tabs -->
-            </div>
+
+
+                <div class=" ng-hide" ng-show="Tab1(tab)">
+                    <h3>Primeira aba</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        Vero dolores laborum doloribus iusto quaerat dicta nemo aperiam. Voluptas repudiandae, enim, illum perspiciatis harum officia inventore iusto fugit, repellat asperiores maiores.
+                    </p>
+                </div>
+
+                <div class=" ng-hide" ng-show="Tab2(tab)">
+                    <h3>Segunda aba</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet impedit dolorem quae, quo nobis omnis? Officia quibusdam quaerat assumenda ipsam, et quos laborum quae ex iste numquam laboriosam obcaecati iure.</p>
+                </div>
+
+                <div class=" ng-hide" ng-show="Tab3(tab)">
+                    <h3>Terceira aba</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis totam quibusdam maxime quidem id ducimus, esse aliquid in facilis quisquam ut possimus enim voluptatum quas accusamus, necessitatibus provident. Doloremque, nulla.</p>
+                </div>
+
+
+
         </div>
 
-        <!-- Tab panes -->
-        <div class="tab-content" style="border: 1px  solid red; display: block !important;">
-            <div role="tabpanel" class="tab-pane active " id="Sorocaba">
-                <h5 class="heading-title text-center">Listagem de Filmes</h5>
-                <p class="heading-subtitle text-center">
-                    Carregamos para você algumas categorias de Cinema
-                </p>
-                <div class="col-xs-12 col-md-2 col-sm-6">
-                    <a href="#" class="thumbnail">
-                        <img src="img/images/cine/dead-pool.jpg" alt="image">
-                    </a>
-                </div>
-
-                <div class="col-xs-12 col-md-2 col-sm-6">
-                    <a href="#" class="thumbnail">
-                        <img src="img/images/cine/dead-pool.jpg" alt="image">
-                    </a>
-                </div>
-
-                <div class="col-xs-12 col-md-2 col-sm-6">
-                    <a href="#" class="thumbnail">
-                        <img src="img/images/cine/dead-pool.jpg" alt="image">
-                    </a>
-                </div>
-                <div class="col-xs-12 col-md-2 col-sm-6">
-                    <a href="#" class="thumbnail">
-                        <img src="img/images/cine/dead-pool.jpg" alt="image">
-                    </a>
-                </div>
-                <div class="col-xs-12 col-md-2 col-sm-6">
-                    <a href="#" class="thumbnail">
-                        <img src="img/images/cine/dead-pool.jpg" alt="image">
-                    </a>
-                </div>
-
-                <div class="col-xs-12 col-md-2 col-sm-6">
-                    <a href="#" class="thumbnail">
-                        <img src="img/images/cine/dead-pool.jpg" alt="image">
-                    </a>
-                </div>
-            </div>
 
 
-
-            <div role="tabpanel" class="tab-pane" id="Cidade">
-                <h5 class="heading-title text-center">Listagem de Filmes</h5>
-                <p class="heading-subtitle text-center">
-                    Carregamos para você algumas categorias de Cinema
-                </p>
-                <div class="col-xs-12 col-md-2 col-sm-6">
-                    <a href="#" class="thumbnail">
-                        <img src="img/images/cine/dead-pool.jpg" alt="image">
-                    </a>
-                </div>
-
-                <div class="col-xs-12 col-md-2 col-sm-6">
-                    <a href="#" class="thumbnail">
-                        <img src="img/images/cine/dead-pool.jpg" alt="image">
-                    </a>
-                </div>
-
-                <div class="col-xs-12 col-md-2 col-sm-6">
-                    <a href="#" class="thumbnail">
-                        <img src="img/images/cine/dead-pool.jpg" alt="image">
-                    </a>
-                </div>
-                <div class="col-xs-12 col-md-2 col-sm-6">
-                    <a href="#" class="thumbnail">
-                        <img src="img/images/cine/dead-pool.jpg" alt="image">
-                    </a>
-                </div>
-                <div class="col-xs-12 col-md-2 col-sm-6">
-                    <a href="#" class="thumbnail">
-                        <img src="img/images/cine/dead-pool.jpg" alt="image">
-                    </a>
-                </div>
-
-                <div class="col-xs-12 col-md-2 col-sm-6">
-                    <a href="#" class="thumbnail">
-                        <img src="img/images/cine/dead-pool.jpg" alt="image">
-                    </a>
-                </div>
-
-
-            </div>
-
-            </div>
 
 
 
