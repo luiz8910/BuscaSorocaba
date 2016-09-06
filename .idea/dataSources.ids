@@ -1406,1029 +1406,1032 @@ owner_id</columns>
         <data-type>varchar(255)</data-type>
         <default-expression>&apos;0&apos;</default-expression>
       </column>
-      <column id="68" parent="5" name="deleted_at">
+      <column id="68" parent="5" name="img">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="69" parent="5" name="deleted_at">
         <data-type>timestamp</data-type>
       </column>
-      <column id="69" parent="5" name="created_at">
+      <column id="70" parent="5" name="created_at">
         <mandatory>1</mandatory>
         <data-type>timestamp</data-type>
         <default-expression>&apos;0000-00-00 00:00:00&apos;</default-expression>
       </column>
-      <column id="70" parent="5" name="updated_at">
+      <column id="71" parent="5" name="updated_at">
         <mandatory>1</mandatory>
         <data-type>timestamp</data-type>
         <default-expression>&apos;0000-00-00 00:00:00&apos;</default-expression>
       </column>
-      <key id="71" parent="5" name="PRIMARY">
+      <key id="72" parent="5" name="PRIMARY">
         <columns>id</columns>
         <primary>1</primary>
       </key>
-      <column id="72" parent="6" name="estabelecimentos_id">
+      <column id="73" parent="6" name="estabelecimentos_id">
         <mandatory>1</mandatory>
         <data-type>int(10) unsigned</data-type>
       </column>
-      <column id="73" parent="6" name="sub_categoria_id">
+      <column id="74" parent="6" name="sub_categoria_id">
         <mandatory>1</mandatory>
         <data-type>int(10) unsigned</data-type>
       </column>
-      <index id="74" parent="6" name="estabelecimentos_sub_categoria_estabelecimentos_id_index">
+      <index id="75" parent="6" name="estabelecimentos_sub_categoria_estabelecimentos_id_index">
         <columns>estabelecimentos_id</columns>
         <desc-columns></desc-columns>
       </index>
-      <index id="75" parent="6" name="estabelecimentos_sub_categoria_sub_categoria_id_index">
+      <index id="76" parent="6" name="estabelecimentos_sub_categoria_sub_categoria_id_index">
         <columns>sub_categoria_id</columns>
         <desc-columns></desc-columns>
       </index>
-      <foreign-key id="76" parent="6" name="estabelecimentos_sub_categoria_estabelecimentos_id_foreign">
+      <foreign-key id="77" parent="6" name="estabelecimentos_sub_categoria_estabelecimentos_id_foreign">
         <columns>estabelecimentos_id</columns>
         <ref-key>~.estabelecimentos.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <foreign-key id="77" parent="6" name="estabelecimentos_sub_categoria_sub_categoria_id_foreign">
+      <foreign-key id="78" parent="6" name="estabelecimentos_sub_categoria_sub_categoria_id_foreign">
         <columns>sub_categoria_id</columns>
         <ref-key>~.subcategorias.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <column id="78" parent="7" name="id">
+      <column id="79" parent="7" name="id">
         <mandatory>1</mandatory>
         <data-type>int(10) unsigned</data-type>
       </column>
-      <column id="79" parent="7" name="filme_id">
+      <column id="80" parent="7" name="filme_id">
         <mandatory>1</mandatory>
         <data-type>int(10) unsigned</data-type>
       </column>
-      <column id="80" parent="7" name="salas_id">
+      <column id="81" parent="7" name="salas_id">
         <mandatory>1</mandatory>
         <data-type>int(10) unsigned</data-type>
       </column>
-      <column id="81" parent="7" name="shopping_id">
+      <column id="82" parent="7" name="shopping_id">
         <mandatory>1</mandatory>
         <data-type>int(10) unsigned</data-type>
       </column>
-      <column id="82" parent="7" name="horario">
+      <column id="83" parent="7" name="horario">
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="83" parent="7" name="audio">
+      <column id="84" parent="7" name="audio">
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="84" parent="7" name="qualidade">
+      <column id="85" parent="7" name="qualidade">
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="85" parent="7" name="preco">
+      <column id="86" parent="7" name="preco">
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="86" parent="7" name="deleted_at">
+      <column id="87" parent="7" name="deleted_at">
         <data-type>timestamp</data-type>
       </column>
-      <column id="87" parent="7" name="created_at">
-        <mandatory>1</mandatory>
-        <data-type>timestamp</data-type>
-        <default-expression>&apos;0000-00-00 00:00:00&apos;</default-expression>
-      </column>
-      <column id="88" parent="7" name="updated_at">
+      <column id="88" parent="7" name="created_at">
         <mandatory>1</mandatory>
         <data-type>timestamp</data-type>
         <default-expression>&apos;0000-00-00 00:00:00&apos;</default-expression>
       </column>
-      <index id="89" parent="7" name="filme_sala_filme_id_foreign">
+      <column id="89" parent="7" name="updated_at">
+        <mandatory>1</mandatory>
+        <data-type>timestamp</data-type>
+        <default-expression>&apos;0000-00-00 00:00:00&apos;</default-expression>
+      </column>
+      <index id="90" parent="7" name="filme_sala_filme_id_foreign">
         <columns>filme_id</columns>
         <desc-columns></desc-columns>
       </index>
-      <index id="90" parent="7" name="filme_sala_salas_id_foreign">
+      <index id="91" parent="7" name="filme_sala_salas_id_foreign">
         <columns>salas_id</columns>
         <desc-columns></desc-columns>
       </index>
-      <index id="91" parent="7" name="filme_sala_shopping_id_foreign">
+      <index id="92" parent="7" name="filme_sala_shopping_id_foreign">
         <columns>shopping_id</columns>
         <desc-columns></desc-columns>
       </index>
-      <key id="92" parent="7" name="PRIMARY">
+      <key id="93" parent="7" name="PRIMARY">
         <columns>id</columns>
         <primary>1</primary>
       </key>
-      <foreign-key id="93" parent="7" name="filme_sala_filme_id_foreign">
+      <foreign-key id="94" parent="7" name="filme_sala_filme_id_foreign">
         <columns>filme_id</columns>
         <ref-key>~.filmes.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <foreign-key id="94" parent="7" name="filme_sala_salas_id_foreign">
+      <foreign-key id="95" parent="7" name="filme_sala_salas_id_foreign">
         <columns>salas_id</columns>
         <ref-key>~.salas.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <foreign-key id="95" parent="7" name="filme_sala_shopping_id_foreign">
+      <foreign-key id="96" parent="7" name="filme_sala_shopping_id_foreign">
         <columns>shopping_id</columns>
         <ref-key>~.shoppings.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <column id="96" parent="8" name="id">
+      <column id="97" parent="8" name="id">
         <mandatory>1</mandatory>
         <data-type>int(10) unsigned</data-type>
       </column>
-      <column id="97" parent="8" name="nome">
+      <column id="98" parent="8" name="nome">
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="98" parent="8" name="duracao">
+      <column id="99" parent="8" name="duracao">
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="99" parent="8" name="classificacao">
+      <column id="100" parent="8" name="classificacao">
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="100" parent="8" name="img">
+      <column id="101" parent="8" name="img">
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="101" parent="8" name="deleted_at">
+      <column id="102" parent="8" name="deleted_at">
         <data-type>timestamp</data-type>
       </column>
-      <column id="102" parent="8" name="created_at">
-        <mandatory>1</mandatory>
-        <data-type>timestamp</data-type>
-        <default-expression>&apos;0000-00-00 00:00:00&apos;</default-expression>
-      </column>
-      <column id="103" parent="8" name="updated_at">
+      <column id="103" parent="8" name="created_at">
         <mandatory>1</mandatory>
         <data-type>timestamp</data-type>
         <default-expression>&apos;0000-00-00 00:00:00&apos;</default-expression>
       </column>
-      <key id="104" parent="8" name="PRIMARY">
+      <column id="104" parent="8" name="updated_at">
+        <mandatory>1</mandatory>
+        <data-type>timestamp</data-type>
+        <default-expression>&apos;0000-00-00 00:00:00&apos;</default-expression>
+      </column>
+      <key id="105" parent="8" name="PRIMARY">
         <columns>id</columns>
         <primary>1</primary>
       </key>
-      <column id="105" parent="9" name="migration">
+      <column id="106" parent="9" name="migration">
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="106" parent="9" name="batch">
+      <column id="107" parent="9" name="batch">
         <mandatory>1</mandatory>
         <data-type>int(11)</data-type>
       </column>
-      <column id="107" parent="10" name="id">
+      <column id="108" parent="10" name="id">
         <mandatory>1</mandatory>
         <data-type>int(10) unsigned</data-type>
       </column>
-      <column id="108" parent="10" name="access_token_id">
+      <column id="109" parent="10" name="access_token_id">
         <mandatory>1</mandatory>
         <data-type>varchar(40)</data-type>
       </column>
-      <column id="109" parent="10" name="scope_id">
+      <column id="110" parent="10" name="scope_id">
         <mandatory>1</mandatory>
         <data-type>varchar(40)</data-type>
       </column>
-      <column id="110" parent="10" name="created_at">
+      <column id="111" parent="10" name="created_at">
         <mandatory>1</mandatory>
         <data-type>timestamp</data-type>
         <default-expression>&apos;0000-00-00 00:00:00&apos;</default-expression>
       </column>
-      <column id="111" parent="10" name="updated_at">
+      <column id="112" parent="10" name="updated_at">
         <mandatory>1</mandatory>
         <data-type>timestamp</data-type>
         <default-expression>&apos;0000-00-00 00:00:00&apos;</default-expression>
       </column>
-      <index id="112" parent="10" name="oauth_access_token_scopes_access_token_id_index">
+      <index id="113" parent="10" name="oauth_access_token_scopes_access_token_id_index">
         <columns>access_token_id</columns>
         <desc-columns></desc-columns>
       </index>
-      <index id="113" parent="10" name="oauth_access_token_scopes_scope_id_index">
+      <index id="114" parent="10" name="oauth_access_token_scopes_scope_id_index">
         <columns>scope_id</columns>
         <desc-columns></desc-columns>
       </index>
-      <key id="114" parent="10" name="PRIMARY">
+      <key id="115" parent="10" name="PRIMARY">
         <columns>id</columns>
         <primary>1</primary>
       </key>
-      <foreign-key id="115" parent="10" name="oauth_access_token_scopes_access_token_id_foreign">
+      <foreign-key id="116" parent="10" name="oauth_access_token_scopes_access_token_id_foreign">
         <columns>access_token_id</columns>
         <ref-key>~.oauth_access_tokens.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <foreign-key id="116" parent="10" name="oauth_access_token_scopes_scope_id_foreign">
+      <foreign-key id="117" parent="10" name="oauth_access_token_scopes_scope_id_foreign">
         <columns>scope_id</columns>
         <ref-key>~.oauth_scopes.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <column id="117" parent="11" name="id">
+      <column id="118" parent="11" name="id">
         <mandatory>1</mandatory>
         <data-type>varchar(40)</data-type>
       </column>
-      <column id="118" parent="11" name="session_id">
+      <column id="119" parent="11" name="session_id">
         <mandatory>1</mandatory>
         <data-type>int(10) unsigned</data-type>
       </column>
-      <column id="119" parent="11" name="expire_time">
+      <column id="120" parent="11" name="expire_time">
         <mandatory>1</mandatory>
         <data-type>int(11)</data-type>
       </column>
-      <column id="120" parent="11" name="created_at">
+      <column id="121" parent="11" name="created_at">
         <mandatory>1</mandatory>
         <data-type>timestamp</data-type>
         <default-expression>&apos;0000-00-00 00:00:00&apos;</default-expression>
       </column>
-      <column id="121" parent="11" name="updated_at">
+      <column id="122" parent="11" name="updated_at">
         <mandatory>1</mandatory>
         <data-type>timestamp</data-type>
         <default-expression>&apos;0000-00-00 00:00:00&apos;</default-expression>
       </column>
-      <index id="122" parent="11" name="oauth_access_tokens_id_session_id_unique">
+      <index id="123" parent="11" name="oauth_access_tokens_id_session_id_unique">
         <columns>id
 session_id</columns>
         <desc-columns></desc-columns>
         <unique>1</unique>
       </index>
-      <index id="123" parent="11" name="oauth_access_tokens_session_id_index">
+      <index id="124" parent="11" name="oauth_access_tokens_session_id_index">
         <columns>session_id</columns>
         <desc-columns></desc-columns>
       </index>
-      <key id="124" parent="11" name="oauth_access_tokens_id_session_id_unique">
+      <key id="125" parent="11" name="oauth_access_tokens_id_session_id_unique">
         <columns>id
 session_id</columns>
         <underlying-index>oauth_access_tokens_id_session_id_unique</underlying-index>
       </key>
-      <key id="125" parent="11" name="PRIMARY">
+      <key id="126" parent="11" name="PRIMARY">
         <columns>id</columns>
         <primary>1</primary>
       </key>
-      <foreign-key id="126" parent="11" name="oauth_access_tokens_session_id_foreign">
+      <foreign-key id="127" parent="11" name="oauth_access_tokens_session_id_foreign">
         <columns>session_id</columns>
         <ref-key>~.oauth_sessions.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <column id="127" parent="12" name="id">
+      <column id="128" parent="12" name="id">
         <mandatory>1</mandatory>
         <data-type>int(10) unsigned</data-type>
       </column>
-      <column id="128" parent="12" name="auth_code_id">
+      <column id="129" parent="12" name="auth_code_id">
         <mandatory>1</mandatory>
         <data-type>varchar(40)</data-type>
       </column>
-      <column id="129" parent="12" name="scope_id">
+      <column id="130" parent="12" name="scope_id">
         <mandatory>1</mandatory>
         <data-type>varchar(40)</data-type>
       </column>
-      <column id="130" parent="12" name="created_at">
+      <column id="131" parent="12" name="created_at">
         <mandatory>1</mandatory>
         <data-type>timestamp</data-type>
         <default-expression>&apos;0000-00-00 00:00:00&apos;</default-expression>
       </column>
-      <column id="131" parent="12" name="updated_at">
+      <column id="132" parent="12" name="updated_at">
         <mandatory>1</mandatory>
         <data-type>timestamp</data-type>
         <default-expression>&apos;0000-00-00 00:00:00&apos;</default-expression>
       </column>
-      <index id="132" parent="12" name="oauth_auth_code_scopes_auth_code_id_index">
+      <index id="133" parent="12" name="oauth_auth_code_scopes_auth_code_id_index">
         <columns>auth_code_id</columns>
         <desc-columns></desc-columns>
       </index>
-      <index id="133" parent="12" name="oauth_auth_code_scopes_scope_id_index">
+      <index id="134" parent="12" name="oauth_auth_code_scopes_scope_id_index">
         <columns>scope_id</columns>
         <desc-columns></desc-columns>
       </index>
-      <key id="134" parent="12" name="PRIMARY">
+      <key id="135" parent="12" name="PRIMARY">
         <columns>id</columns>
         <primary>1</primary>
       </key>
-      <foreign-key id="135" parent="12" name="oauth_auth_code_scopes_auth_code_id_foreign">
+      <foreign-key id="136" parent="12" name="oauth_auth_code_scopes_auth_code_id_foreign">
         <columns>auth_code_id</columns>
         <ref-key>~.oauth_auth_codes.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <foreign-key id="136" parent="12" name="oauth_auth_code_scopes_scope_id_foreign">
+      <foreign-key id="137" parent="12" name="oauth_auth_code_scopes_scope_id_foreign">
         <columns>scope_id</columns>
         <ref-key>~.oauth_scopes.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <column id="137" parent="13" name="id">
+      <column id="138" parent="13" name="id">
         <mandatory>1</mandatory>
         <data-type>varchar(40)</data-type>
       </column>
-      <column id="138" parent="13" name="session_id">
+      <column id="139" parent="13" name="session_id">
         <mandatory>1</mandatory>
         <data-type>int(10) unsigned</data-type>
       </column>
-      <column id="139" parent="13" name="redirect_uri">
+      <column id="140" parent="13" name="redirect_uri">
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="140" parent="13" name="expire_time">
+      <column id="141" parent="13" name="expire_time">
         <mandatory>1</mandatory>
         <data-type>int(11)</data-type>
       </column>
-      <column id="141" parent="13" name="created_at">
+      <column id="142" parent="13" name="created_at">
         <mandatory>1</mandatory>
         <data-type>timestamp</data-type>
         <default-expression>&apos;0000-00-00 00:00:00&apos;</default-expression>
       </column>
-      <column id="142" parent="13" name="updated_at">
+      <column id="143" parent="13" name="updated_at">
         <mandatory>1</mandatory>
         <data-type>timestamp</data-type>
         <default-expression>&apos;0000-00-00 00:00:00&apos;</default-expression>
       </column>
-      <index id="143" parent="13" name="oauth_auth_codes_session_id_index">
+      <index id="144" parent="13" name="oauth_auth_codes_session_id_index">
         <columns>session_id</columns>
         <desc-columns></desc-columns>
       </index>
-      <key id="144" parent="13" name="PRIMARY">
+      <key id="145" parent="13" name="PRIMARY">
         <columns>id</columns>
         <primary>1</primary>
       </key>
-      <foreign-key id="145" parent="13" name="oauth_auth_codes_session_id_foreign">
+      <foreign-key id="146" parent="13" name="oauth_auth_codes_session_id_foreign">
         <columns>session_id</columns>
         <ref-key>~.oauth_sessions.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <column id="146" parent="14" name="id">
+      <column id="147" parent="14" name="id">
         <mandatory>1</mandatory>
         <data-type>int(10) unsigned</data-type>
       </column>
-      <column id="147" parent="14" name="client_id">
+      <column id="148" parent="14" name="client_id">
         <mandatory>1</mandatory>
         <data-type>varchar(40)</data-type>
       </column>
-      <column id="148" parent="14" name="redirect_uri">
+      <column id="149" parent="14" name="redirect_uri">
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="149" parent="14" name="created_at">
+      <column id="150" parent="14" name="created_at">
         <mandatory>1</mandatory>
         <data-type>timestamp</data-type>
         <default-expression>&apos;0000-00-00 00:00:00&apos;</default-expression>
       </column>
-      <column id="150" parent="14" name="updated_at">
+      <column id="151" parent="14" name="updated_at">
         <mandatory>1</mandatory>
         <data-type>timestamp</data-type>
         <default-expression>&apos;0000-00-00 00:00:00&apos;</default-expression>
       </column>
-      <index id="151" parent="14" name="oauth_client_endpoints_client_id_redirect_uri_unique">
+      <index id="152" parent="14" name="oauth_client_endpoints_client_id_redirect_uri_unique">
         <columns>client_id
 redirect_uri</columns>
         <desc-columns></desc-columns>
         <unique>1</unique>
       </index>
-      <key id="152" parent="14" name="oauth_client_endpoints_client_id_redirect_uri_unique">
+      <key id="153" parent="14" name="oauth_client_endpoints_client_id_redirect_uri_unique">
         <columns>client_id
 redirect_uri</columns>
         <underlying-index>oauth_client_endpoints_client_id_redirect_uri_unique</underlying-index>
       </key>
-      <key id="153" parent="14" name="PRIMARY">
+      <key id="154" parent="14" name="PRIMARY">
         <columns>id</columns>
         <primary>1</primary>
       </key>
-      <foreign-key id="154" parent="14" name="oauth_client_endpoints_client_id_foreign">
+      <foreign-key id="155" parent="14" name="oauth_client_endpoints_client_id_foreign">
         <columns>client_id</columns>
         <ref-key>~.oauth_clients.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <column id="155" parent="15" name="id">
+      <column id="156" parent="15" name="id">
         <mandatory>1</mandatory>
         <data-type>int(10) unsigned</data-type>
       </column>
-      <column id="156" parent="15" name="client_id">
+      <column id="157" parent="15" name="client_id">
         <mandatory>1</mandatory>
         <data-type>varchar(40)</data-type>
       </column>
-      <column id="157" parent="15" name="grant_id">
+      <column id="158" parent="15" name="grant_id">
         <mandatory>1</mandatory>
         <data-type>varchar(40)</data-type>
       </column>
-      <column id="158" parent="15" name="created_at">
+      <column id="159" parent="15" name="created_at">
         <mandatory>1</mandatory>
         <data-type>timestamp</data-type>
         <default-expression>&apos;0000-00-00 00:00:00&apos;</default-expression>
       </column>
-      <column id="159" parent="15" name="updated_at">
+      <column id="160" parent="15" name="updated_at">
         <mandatory>1</mandatory>
         <data-type>timestamp</data-type>
         <default-expression>&apos;0000-00-00 00:00:00&apos;</default-expression>
       </column>
-      <index id="160" parent="15" name="oauth_client_grants_client_id_index">
+      <index id="161" parent="15" name="oauth_client_grants_client_id_index">
         <columns>client_id</columns>
         <desc-columns></desc-columns>
       </index>
-      <index id="161" parent="15" name="oauth_client_grants_grant_id_index">
+      <index id="162" parent="15" name="oauth_client_grants_grant_id_index">
         <columns>grant_id</columns>
         <desc-columns></desc-columns>
       </index>
-      <key id="162" parent="15" name="PRIMARY">
+      <key id="163" parent="15" name="PRIMARY">
         <columns>id</columns>
         <primary>1</primary>
       </key>
-      <foreign-key id="163" parent="15" name="oauth_client_grants_client_id_foreign">
+      <foreign-key id="164" parent="15" name="oauth_client_grants_client_id_foreign">
         <columns>client_id</columns>
         <ref-key>~.oauth_clients.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <foreign-key id="164" parent="15" name="oauth_client_grants_grant_id_foreign">
+      <foreign-key id="165" parent="15" name="oauth_client_grants_grant_id_foreign">
         <columns>grant_id</columns>
         <ref-key>~.oauth_grants.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <column id="165" parent="16" name="id">
+      <column id="166" parent="16" name="id">
         <mandatory>1</mandatory>
         <data-type>int(10) unsigned</data-type>
       </column>
-      <column id="166" parent="16" name="client_id">
+      <column id="167" parent="16" name="client_id">
         <mandatory>1</mandatory>
         <data-type>varchar(40)</data-type>
       </column>
-      <column id="167" parent="16" name="scope_id">
+      <column id="168" parent="16" name="scope_id">
         <mandatory>1</mandatory>
         <data-type>varchar(40)</data-type>
       </column>
-      <column id="168" parent="16" name="created_at">
+      <column id="169" parent="16" name="created_at">
         <mandatory>1</mandatory>
         <data-type>timestamp</data-type>
         <default-expression>&apos;0000-00-00 00:00:00&apos;</default-expression>
       </column>
-      <column id="169" parent="16" name="updated_at">
+      <column id="170" parent="16" name="updated_at">
         <mandatory>1</mandatory>
         <data-type>timestamp</data-type>
         <default-expression>&apos;0000-00-00 00:00:00&apos;</default-expression>
       </column>
-      <index id="170" parent="16" name="oauth_client_scopes_client_id_index">
+      <index id="171" parent="16" name="oauth_client_scopes_client_id_index">
         <columns>client_id</columns>
         <desc-columns></desc-columns>
       </index>
-      <index id="171" parent="16" name="oauth_client_scopes_scope_id_index">
+      <index id="172" parent="16" name="oauth_client_scopes_scope_id_index">
         <columns>scope_id</columns>
         <desc-columns></desc-columns>
       </index>
-      <key id="172" parent="16" name="PRIMARY">
+      <key id="173" parent="16" name="PRIMARY">
         <columns>id</columns>
         <primary>1</primary>
       </key>
-      <foreign-key id="173" parent="16" name="oauth_client_scopes_client_id_foreign">
+      <foreign-key id="174" parent="16" name="oauth_client_scopes_client_id_foreign">
         <columns>client_id</columns>
         <ref-key>~.oauth_clients.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <foreign-key id="174" parent="16" name="oauth_client_scopes_scope_id_foreign">
+      <foreign-key id="175" parent="16" name="oauth_client_scopes_scope_id_foreign">
         <columns>scope_id</columns>
         <ref-key>~.oauth_scopes.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <column id="175" parent="17" name="id">
+      <column id="176" parent="17" name="id">
         <mandatory>1</mandatory>
         <data-type>varchar(40)</data-type>
       </column>
-      <column id="176" parent="17" name="secret">
+      <column id="177" parent="17" name="secret">
         <mandatory>1</mandatory>
         <data-type>varchar(40)</data-type>
       </column>
-      <column id="177" parent="17" name="name">
+      <column id="178" parent="17" name="name">
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="178" parent="17" name="created_at">
+      <column id="179" parent="17" name="created_at">
         <mandatory>1</mandatory>
         <data-type>timestamp</data-type>
         <default-expression>&apos;0000-00-00 00:00:00&apos;</default-expression>
       </column>
-      <column id="179" parent="17" name="updated_at">
+      <column id="180" parent="17" name="updated_at">
         <mandatory>1</mandatory>
         <data-type>timestamp</data-type>
         <default-expression>&apos;0000-00-00 00:00:00&apos;</default-expression>
       </column>
-      <index id="180" parent="17" name="oauth_clients_id_secret_unique">
+      <index id="181" parent="17" name="oauth_clients_id_secret_unique">
         <columns>id
 secret</columns>
         <desc-columns></desc-columns>
         <unique>1</unique>
       </index>
-      <key id="181" parent="17" name="oauth_clients_id_secret_unique">
+      <key id="182" parent="17" name="oauth_clients_id_secret_unique">
         <columns>id
 secret</columns>
         <underlying-index>oauth_clients_id_secret_unique</underlying-index>
       </key>
-      <key id="182" parent="17" name="PRIMARY">
+      <key id="183" parent="17" name="PRIMARY">
         <columns>id</columns>
         <primary>1</primary>
       </key>
-      <column id="183" parent="18" name="id">
+      <column id="184" parent="18" name="id">
         <mandatory>1</mandatory>
         <data-type>int(10) unsigned</data-type>
       </column>
-      <column id="184" parent="18" name="grant_id">
+      <column id="185" parent="18" name="grant_id">
         <mandatory>1</mandatory>
         <data-type>varchar(40)</data-type>
       </column>
-      <column id="185" parent="18" name="scope_id">
+      <column id="186" parent="18" name="scope_id">
         <mandatory>1</mandatory>
         <data-type>varchar(40)</data-type>
       </column>
-      <column id="186" parent="18" name="created_at">
+      <column id="187" parent="18" name="created_at">
         <mandatory>1</mandatory>
         <data-type>timestamp</data-type>
         <default-expression>&apos;0000-00-00 00:00:00&apos;</default-expression>
       </column>
-      <column id="187" parent="18" name="updated_at">
+      <column id="188" parent="18" name="updated_at">
         <mandatory>1</mandatory>
         <data-type>timestamp</data-type>
         <default-expression>&apos;0000-00-00 00:00:00&apos;</default-expression>
       </column>
-      <index id="188" parent="18" name="oauth_grant_scopes_grant_id_index">
+      <index id="189" parent="18" name="oauth_grant_scopes_grant_id_index">
         <columns>grant_id</columns>
         <desc-columns></desc-columns>
       </index>
-      <index id="189" parent="18" name="oauth_grant_scopes_scope_id_index">
+      <index id="190" parent="18" name="oauth_grant_scopes_scope_id_index">
         <columns>scope_id</columns>
         <desc-columns></desc-columns>
       </index>
-      <key id="190" parent="18" name="PRIMARY">
+      <key id="191" parent="18" name="PRIMARY">
         <columns>id</columns>
         <primary>1</primary>
       </key>
-      <foreign-key id="191" parent="18" name="oauth_grant_scopes_grant_id_foreign">
+      <foreign-key id="192" parent="18" name="oauth_grant_scopes_grant_id_foreign">
         <columns>grant_id</columns>
         <ref-key>~.oauth_grants.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <foreign-key id="192" parent="18" name="oauth_grant_scopes_scope_id_foreign">
+      <foreign-key id="193" parent="18" name="oauth_grant_scopes_scope_id_foreign">
         <columns>scope_id</columns>
         <ref-key>~.oauth_scopes.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <column id="193" parent="19" name="id">
+      <column id="194" parent="19" name="id">
         <mandatory>1</mandatory>
         <data-type>varchar(40)</data-type>
       </column>
-      <column id="194" parent="19" name="created_at">
+      <column id="195" parent="19" name="created_at">
         <mandatory>1</mandatory>
         <data-type>timestamp</data-type>
         <default-expression>&apos;0000-00-00 00:00:00&apos;</default-expression>
       </column>
-      <column id="195" parent="19" name="updated_at">
+      <column id="196" parent="19" name="updated_at">
         <mandatory>1</mandatory>
         <data-type>timestamp</data-type>
         <default-expression>&apos;0000-00-00 00:00:00&apos;</default-expression>
       </column>
-      <key id="196" parent="19" name="PRIMARY">
+      <key id="197" parent="19" name="PRIMARY">
         <columns>id</columns>
         <primary>1</primary>
       </key>
-      <column id="197" parent="20" name="id">
+      <column id="198" parent="20" name="id">
         <mandatory>1</mandatory>
         <data-type>varchar(40)</data-type>
       </column>
-      <column id="198" parent="20" name="access_token_id">
+      <column id="199" parent="20" name="access_token_id">
         <mandatory>1</mandatory>
         <data-type>varchar(40)</data-type>
       </column>
-      <column id="199" parent="20" name="expire_time">
+      <column id="200" parent="20" name="expire_time">
         <mandatory>1</mandatory>
         <data-type>int(11)</data-type>
       </column>
-      <column id="200" parent="20" name="created_at">
+      <column id="201" parent="20" name="created_at">
         <mandatory>1</mandatory>
         <data-type>timestamp</data-type>
         <default-expression>&apos;0000-00-00 00:00:00&apos;</default-expression>
       </column>
-      <column id="201" parent="20" name="updated_at">
+      <column id="202" parent="20" name="updated_at">
         <mandatory>1</mandatory>
         <data-type>timestamp</data-type>
         <default-expression>&apos;0000-00-00 00:00:00&apos;</default-expression>
       </column>
-      <index id="202" parent="20" name="oauth_refresh_tokens_id_unique">
+      <index id="203" parent="20" name="oauth_refresh_tokens_id_unique">
         <columns>id</columns>
         <desc-columns></desc-columns>
         <unique>1</unique>
       </index>
-      <key id="203" parent="20" name="oauth_refresh_tokens_id_unique">
+      <key id="204" parent="20" name="oauth_refresh_tokens_id_unique">
         <columns>id</columns>
         <underlying-index>oauth_refresh_tokens_id_unique</underlying-index>
       </key>
-      <key id="204" parent="20" name="PRIMARY">
+      <key id="205" parent="20" name="PRIMARY">
         <columns>access_token_id</columns>
         <primary>1</primary>
       </key>
-      <foreign-key id="205" parent="20" name="oauth_refresh_tokens_access_token_id_foreign">
+      <foreign-key id="206" parent="20" name="oauth_refresh_tokens_access_token_id_foreign">
         <columns>access_token_id</columns>
         <ref-key>~.oauth_access_tokens.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <column id="206" parent="21" name="id">
+      <column id="207" parent="21" name="id">
         <mandatory>1</mandatory>
         <data-type>varchar(40)</data-type>
       </column>
-      <column id="207" parent="21" name="description">
+      <column id="208" parent="21" name="description">
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="208" parent="21" name="created_at">
+      <column id="209" parent="21" name="created_at">
         <mandatory>1</mandatory>
         <data-type>timestamp</data-type>
         <default-expression>&apos;0000-00-00 00:00:00&apos;</default-expression>
       </column>
-      <column id="209" parent="21" name="updated_at">
+      <column id="210" parent="21" name="updated_at">
         <mandatory>1</mandatory>
         <data-type>timestamp</data-type>
         <default-expression>&apos;0000-00-00 00:00:00&apos;</default-expression>
       </column>
-      <key id="210" parent="21" name="PRIMARY">
+      <key id="211" parent="21" name="PRIMARY">
         <columns>id</columns>
         <primary>1</primary>
       </key>
-      <column id="211" parent="22" name="id">
+      <column id="212" parent="22" name="id">
         <mandatory>1</mandatory>
         <data-type>int(10) unsigned</data-type>
       </column>
-      <column id="212" parent="22" name="session_id">
+      <column id="213" parent="22" name="session_id">
         <mandatory>1</mandatory>
         <data-type>int(10) unsigned</data-type>
       </column>
-      <column id="213" parent="22" name="scope_id">
+      <column id="214" parent="22" name="scope_id">
         <mandatory>1</mandatory>
         <data-type>varchar(40)</data-type>
       </column>
-      <column id="214" parent="22" name="created_at">
+      <column id="215" parent="22" name="created_at">
         <mandatory>1</mandatory>
         <data-type>timestamp</data-type>
         <default-expression>&apos;0000-00-00 00:00:00&apos;</default-expression>
       </column>
-      <column id="215" parent="22" name="updated_at">
+      <column id="216" parent="22" name="updated_at">
         <mandatory>1</mandatory>
         <data-type>timestamp</data-type>
         <default-expression>&apos;0000-00-00 00:00:00&apos;</default-expression>
       </column>
-      <index id="216" parent="22" name="oauth_session_scopes_scope_id_index">
+      <index id="217" parent="22" name="oauth_session_scopes_scope_id_index">
         <columns>scope_id</columns>
         <desc-columns></desc-columns>
       </index>
-      <index id="217" parent="22" name="oauth_session_scopes_session_id_index">
+      <index id="218" parent="22" name="oauth_session_scopes_session_id_index">
         <columns>session_id</columns>
         <desc-columns></desc-columns>
       </index>
-      <key id="218" parent="22" name="PRIMARY">
+      <key id="219" parent="22" name="PRIMARY">
         <columns>id</columns>
         <primary>1</primary>
       </key>
-      <foreign-key id="219" parent="22" name="oauth_session_scopes_scope_id_foreign">
+      <foreign-key id="220" parent="22" name="oauth_session_scopes_scope_id_foreign">
         <columns>scope_id</columns>
         <ref-key>~.oauth_scopes.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <foreign-key id="220" parent="22" name="oauth_session_scopes_session_id_foreign">
+      <foreign-key id="221" parent="22" name="oauth_session_scopes_session_id_foreign">
         <columns>session_id</columns>
         <ref-key>~.oauth_sessions.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <column id="221" parent="23" name="id">
+      <column id="222" parent="23" name="id">
         <mandatory>1</mandatory>
         <data-type>int(10) unsigned</data-type>
       </column>
-      <column id="222" parent="23" name="client_id">
+      <column id="223" parent="23" name="client_id">
         <mandatory>1</mandatory>
         <data-type>varchar(40)</data-type>
       </column>
-      <column id="223" parent="23" name="owner_type">
+      <column id="224" parent="23" name="owner_type">
         <mandatory>1</mandatory>
         <data-type>enum(&apos;client&apos;, &apos;user&apos;)</data-type>
         <default-expression>&apos;user&apos;</default-expression>
       </column>
-      <column id="224" parent="23" name="owner_id">
+      <column id="225" parent="23" name="owner_id">
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="225" parent="23" name="client_redirect_uri">
+      <column id="226" parent="23" name="client_redirect_uri">
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="226" parent="23" name="created_at">
+      <column id="227" parent="23" name="created_at">
         <mandatory>1</mandatory>
         <data-type>timestamp</data-type>
         <default-expression>&apos;0000-00-00 00:00:00&apos;</default-expression>
       </column>
-      <column id="227" parent="23" name="updated_at">
+      <column id="228" parent="23" name="updated_at">
         <mandatory>1</mandatory>
         <data-type>timestamp</data-type>
         <default-expression>&apos;0000-00-00 00:00:00&apos;</default-expression>
       </column>
-      <index id="228" parent="23" name="oauth_sessions_client_id_owner_type_owner_id_index">
+      <index id="229" parent="23" name="oauth_sessions_client_id_owner_type_owner_id_index">
         <columns>client_id
 owner_type
 owner_id</columns>
         <desc-columns></desc-columns>
       </index>
-      <key id="229" parent="23" name="PRIMARY">
+      <key id="230" parent="23" name="PRIMARY">
         <columns>id</columns>
         <primary>1</primary>
       </key>
-      <foreign-key id="230" parent="23" name="oauth_sessions_client_id_foreign">
+      <foreign-key id="231" parent="23" name="oauth_sessions_client_id_foreign">
         <columns>client_id</columns>
         <ref-key>~.oauth_clients.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <column id="231" parent="24" name="email">
+      <column id="232" parent="24" name="email">
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="232" parent="24" name="token">
+      <column id="233" parent="24" name="token">
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="233" parent="24" name="created_at">
+      <column id="234" parent="24" name="created_at">
         <mandatory>1</mandatory>
         <data-type>timestamp</data-type>
         <default-expression>&apos;0000-00-00 00:00:00&apos;</default-expression>
       </column>
-      <index id="234" parent="24" name="password_resets_email_index">
+      <index id="235" parent="24" name="password_resets_email_index">
         <columns>email</columns>
         <desc-columns></desc-columns>
       </index>
-      <index id="235" parent="24" name="password_resets_token_index">
+      <index id="236" parent="24" name="password_resets_token_index">
         <columns>token</columns>
         <desc-columns></desc-columns>
       </index>
-      <column id="236" parent="25" name="id">
+      <column id="237" parent="25" name="id">
         <mandatory>1</mandatory>
         <data-type>int(10) unsigned</data-type>
       </column>
-      <column id="237" parent="25" name="estabelecimentos_id">
+      <column id="238" parent="25" name="estabelecimentos_id">
         <mandatory>1</mandatory>
         <data-type>int(10) unsigned</data-type>
       </column>
-      <column id="238" parent="25" name="nome">
+      <column id="239" parent="25" name="nome">
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="239" parent="25" name="telefone">
+      <column id="240" parent="25" name="telefone">
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="240" parent="25" name="email">
+      <column id="241" parent="25" name="email">
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="241" parent="25" name="cep">
+      <column id="242" parent="25" name="cep">
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="242" parent="25" name="logradouro">
+      <column id="243" parent="25" name="logradouro">
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="243" parent="25" name="numero">
+      <column id="244" parent="25" name="numero">
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="244" parent="25" name="bairro">
+      <column id="245" parent="25" name="bairro">
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="245" parent="25" name="cidade">
+      <column id="246" parent="25" name="cidade">
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
         <default-expression>&apos;Sorocaba&apos;</default-expression>
       </column>
-      <column id="246" parent="25" name="cpf">
+      <column id="247" parent="25" name="cpf">
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="247" parent="25" name="rg">
+      <column id="248" parent="25" name="rg">
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="248" parent="25" name="cargo">
+      <column id="249" parent="25" name="cargo">
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="249" parent="25" name="deleted_at">
+      <column id="250" parent="25" name="deleted_at">
         <data-type>timestamp</data-type>
       </column>
-      <column id="250" parent="25" name="created_at">
-        <mandatory>1</mandatory>
-        <data-type>timestamp</data-type>
-        <default-expression>&apos;0000-00-00 00:00:00&apos;</default-expression>
-      </column>
-      <column id="251" parent="25" name="updated_at">
+      <column id="251" parent="25" name="created_at">
         <mandatory>1</mandatory>
         <data-type>timestamp</data-type>
         <default-expression>&apos;0000-00-00 00:00:00&apos;</default-expression>
       </column>
-      <index id="252" parent="25" name="responsaveis_estabelecimentos_id_foreign">
+      <column id="252" parent="25" name="updated_at">
+        <mandatory>1</mandatory>
+        <data-type>timestamp</data-type>
+        <default-expression>&apos;0000-00-00 00:00:00&apos;</default-expression>
+      </column>
+      <index id="253" parent="25" name="responsaveis_estabelecimentos_id_foreign">
         <columns>estabelecimentos_id</columns>
         <desc-columns></desc-columns>
       </index>
-      <key id="253" parent="25" name="PRIMARY">
+      <key id="254" parent="25" name="PRIMARY">
         <columns>id</columns>
         <primary>1</primary>
       </key>
-      <foreign-key id="254" parent="25" name="responsaveis_estabelecimentos_id_foreign">
+      <foreign-key id="255" parent="25" name="responsaveis_estabelecimentos_id_foreign">
         <columns>estabelecimentos_id</columns>
         <ref-key>~.estabelecimentos.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <column id="255" parent="26" name="id">
+      <column id="256" parent="26" name="id">
         <mandatory>1</mandatory>
         <data-type>int(10) unsigned</data-type>
       </column>
-      <column id="256" parent="26" name="shopping_id">
+      <column id="257" parent="26" name="shopping_id">
         <mandatory>1</mandatory>
         <data-type>int(10) unsigned</data-type>
       </column>
-      <column id="257" parent="26" name="numero">
+      <column id="258" parent="26" name="numero">
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="258" parent="26" name="tipo">
+      <column id="259" parent="26" name="tipo">
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="259" parent="26" name="deleted_at">
+      <column id="260" parent="26" name="deleted_at">
         <data-type>timestamp</data-type>
       </column>
-      <column id="260" parent="26" name="created_at">
+      <column id="261" parent="26" name="created_at">
         <mandatory>1</mandatory>
         <data-type>timestamp</data-type>
         <default-expression>&apos;0000-00-00 00:00:00&apos;</default-expression>
       </column>
-      <column id="261" parent="26" name="updated_at">
+      <column id="262" parent="26" name="updated_at">
         <mandatory>1</mandatory>
         <data-type>timestamp</data-type>
         <default-expression>&apos;0000-00-00 00:00:00&apos;</default-expression>
       </column>
-      <index id="262" parent="26" name="salas_shopping_id_foreign">
+      <index id="263" parent="26" name="salas_shopping_id_foreign">
         <columns>shopping_id</columns>
         <desc-columns></desc-columns>
       </index>
-      <key id="263" parent="26" name="PRIMARY">
+      <key id="264" parent="26" name="PRIMARY">
         <columns>id</columns>
         <primary>1</primary>
       </key>
-      <foreign-key id="264" parent="26" name="salas_shopping_id_foreign">
+      <foreign-key id="265" parent="26" name="salas_shopping_id_foreign">
         <columns>shopping_id</columns>
         <ref-key>~.shoppings.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <column id="265" parent="27" name="id">
+      <column id="266" parent="27" name="id">
         <mandatory>1</mandatory>
         <data-type>int(10) unsigned</data-type>
       </column>
-      <column id="266" parent="27" name="nome">
+      <column id="267" parent="27" name="nome">
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="267" parent="27" name="info">
+      <column id="268" parent="27" name="info">
         <mandatory>1</mandatory>
         <data-type>longtext</data-type>
       </column>
-      <column id="268" parent="27" name="cinema">
+      <column id="269" parent="27" name="cinema">
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="269" parent="27" name="cep">
+      <column id="270" parent="27" name="cep">
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="270" parent="27" name="logradouro">
+      <column id="271" parent="27" name="logradouro">
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="271" parent="27" name="numero">
+      <column id="272" parent="27" name="numero">
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="272" parent="27" name="bairro">
+      <column id="273" parent="27" name="bairro">
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="273" parent="27" name="cidade">
+      <column id="274" parent="27" name="cidade">
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
         <default-expression>&apos;Sorocaba&apos;</default-expression>
       </column>
-      <column id="274" parent="27" name="created_at">
+      <column id="275" parent="27" name="created_at">
         <mandatory>1</mandatory>
         <data-type>timestamp</data-type>
         <default-expression>&apos;0000-00-00 00:00:00&apos;</default-expression>
       </column>
-      <column id="275" parent="27" name="updated_at">
+      <column id="276" parent="27" name="updated_at">
         <mandatory>1</mandatory>
         <data-type>timestamp</data-type>
         <default-expression>&apos;0000-00-00 00:00:00&apos;</default-expression>
       </column>
-      <key id="276" parent="27" name="PRIMARY">
+      <key id="277" parent="27" name="PRIMARY">
         <columns>id</columns>
         <primary>1</primary>
       </key>
-      <column id="277" parent="28" name="id">
+      <column id="278" parent="28" name="id">
         <mandatory>1</mandatory>
         <data-type>int(10) unsigned</data-type>
       </column>
-      <column id="278" parent="28" name="categoria_id">
+      <column id="279" parent="28" name="categoria_id">
         <mandatory>1</mandatory>
         <data-type>int(10) unsigned</data-type>
       </column>
-      <column id="279" parent="28" name="nome">
+      <column id="280" parent="28" name="nome">
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="280" parent="28" name="_24h">
+      <column id="281" parent="28" name="_24h">
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
         <default-expression>&apos;0&apos;</default-expression>
       </column>
-      <column id="281" parent="28" name="emergencia">
+      <column id="282" parent="28" name="emergencia">
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
         <default-expression>&apos;0&apos;</default-expression>
       </column>
-      <column id="282" parent="28" name="created_at">
+      <column id="283" parent="28" name="created_at">
         <mandatory>1</mandatory>
         <data-type>timestamp</data-type>
         <default-expression>&apos;0000-00-00 00:00:00&apos;</default-expression>
       </column>
-      <column id="283" parent="28" name="updated_at">
+      <column id="284" parent="28" name="updated_at">
         <mandatory>1</mandatory>
         <data-type>timestamp</data-type>
         <default-expression>&apos;0000-00-00 00:00:00&apos;</default-expression>
       </column>
-      <index id="284" parent="28" name="subcategorias_categoria_id_foreign">
+      <index id="285" parent="28" name="subcategorias_categoria_id_foreign">
         <columns>categoria_id</columns>
         <desc-columns></desc-columns>
       </index>
-      <key id="285" parent="28" name="PRIMARY">
+      <key id="286" parent="28" name="PRIMARY">
         <columns>id</columns>
         <primary>1</primary>
       </key>
-      <foreign-key id="286" parent="28" name="subcategorias_categoria_id_foreign">
+      <foreign-key id="287" parent="28" name="subcategorias_categoria_id_foreign">
         <columns>categoria_id</columns>
         <ref-key>~.categorias.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <column id="287" parent="29" name="id">
+      <column id="288" parent="29" name="id">
         <mandatory>1</mandatory>
         <data-type>int(10) unsigned</data-type>
       </column>
-      <column id="288" parent="29" name="name">
+      <column id="289" parent="29" name="name">
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="289" parent="29" name="email">
+      <column id="290" parent="29" name="email">
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="290" parent="29" name="password">
+      <column id="291" parent="29" name="password">
         <mandatory>1</mandatory>
         <data-type>varchar(60)</data-type>
       </column>
-      <column id="291" parent="29" name="role">
+      <column id="292" parent="29" name="role">
         <mandatory>1</mandatory>
         <data-type>varchar(60)</data-type>
       </column>
-      <column id="292" parent="29" name="remember_token">
+      <column id="293" parent="29" name="remember_token">
         <data-type>varchar(100)</data-type>
       </column>
-      <column id="293" parent="29" name="created_at">
+      <column id="294" parent="29" name="created_at">
         <mandatory>1</mandatory>
         <data-type>timestamp</data-type>
         <default-expression>&apos;0000-00-00 00:00:00&apos;</default-expression>
       </column>
-      <column id="294" parent="29" name="updated_at">
+      <column id="295" parent="29" name="updated_at">
         <mandatory>1</mandatory>
         <data-type>timestamp</data-type>
         <default-expression>&apos;0000-00-00 00:00:00&apos;</default-expression>
       </column>
-      <index id="295" parent="29" name="users_email_unique">
+      <index id="296" parent="29" name="users_email_unique">
         <columns>email</columns>
         <desc-columns></desc-columns>
         <unique>1</unique>
       </index>
-      <key id="296" parent="29" name="PRIMARY">
+      <key id="297" parent="29" name="PRIMARY">
         <columns>id</columns>
         <primary>1</primary>
       </key>
-      <key id="297" parent="29" name="users_email_unique">
+      <key id="298" parent="29" name="users_email_unique">
         <columns>email</columns>
         <underlying-index>users_email_unique</underlying-index>
       </key>

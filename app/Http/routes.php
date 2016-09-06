@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return redirect('categoria');
+    return view('index');
 });
 
 
@@ -66,6 +66,9 @@ Route::group(['middleware' => 'auth.checkrole:admin'], function(){
 
     Route::get('/estabelecimentos/email', ['as' => 'admin.estabelecimentos.email', 'uses' => 'EstabelecimentosController@email']);
 
+    Route::get('/estabelecimentos/imgNovo/{id}', ['as' => 'admin.estabelecimentos.createImage', 'uses' => 'EstabelecimentosController@createImage']);
+
+    Route::post('/estabelecimentos/imgSalvar/{id}', ['as' => 'admin.estabelecimentos.uploadImage', 'uses' => 'EstabelecimentosController@uploadImage']);
 //Ajax
 
     Route::get('/ajax', function(){
@@ -202,6 +205,9 @@ Route::group(['middleware' => 'cors'], function(){
 
             //Consulta lista de Filmes
             Route::resource('listFilmes', 'Api\Filmes\FilmeController@index');
+
+            //Consulta lista de shoppings
+            Route::resource('listShoppings', 'Api\Filmes\FilmeController@shoppings');
 
             //Avaliação dos Estabelecimentos
             Route::resource('avaliacao', 'Api\Estabelecimentos\Avaliacao@update');

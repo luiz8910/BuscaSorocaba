@@ -37,7 +37,7 @@ class FilmeController extends Controller
             $filme = null;
         }
 
-        return view('admin.filme.index', compact('filme'));
+        return view('admin.Filme.index', compact('filme'));
     }
 
     /**
@@ -47,7 +47,7 @@ class FilmeController extends Controller
      */
     public function create()
     {
-        return view('admin.filme.create');
+        return view('admin.Filme.create');
     }
 
     /**
@@ -94,7 +94,7 @@ class FilmeController extends Controller
         $todos = $this->repository->all();
         $filme = $this->repository->find($id);
 
-        return view('admin.filme.edit', compact('filme', 'todos'));
+        return view('admin.Filme.edit', compact('filme', 'todos'));
     }
 
     /**
@@ -190,20 +190,19 @@ class FilmeController extends Controller
     public function uploadImage(Request $request, $id)
     {
         $file = $request->file('img');
-        $nome = $file->getClientOriginalName();
+        $nome = $this->repository->find($id)->nome;
+        $ext = $file->getClientOriginalExtension();
+
+        $fullName = $id.'-'.$nome.'.'.$ext;
 
         DB::table('filmes')
             ->where('id', $id)
-            ->update(['img' => $nome]);
+            ->update(['img' => $fullName]);
 
 
-        Storage::disk("public_local")->put($nome, File::get($file));
+        $request->file('img')->move('uploads', $fullName);
 
         return redirect()->route('admin.filme.index');
     }
 
 }
-
-//$request->file('image')->move(
-//    base_path() . '/public/images/catalog/', $imageName
-//);

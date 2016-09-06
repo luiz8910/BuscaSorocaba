@@ -4822,7 +4822,7 @@ ul.tabs li.active-tab{
 .page-profile-header{
     padding-top:40px;
     padding-bottom:30px;
-    background-image:url(../images/pictures/3.jpg);
+    background-image:url('/img/images/pictures/3.jpg');
     background-size:cover;
 }
 

@@ -21,8 +21,8 @@ angular.module('starter.controllers')
             $scope.exibirPerfil = function (data) {
               window.localStorage['perfil_id'] = data.id;
               window.localStorage['perfil_nome'] = data.nome;
+              window.localStorage['perfil_telefone'] = data.telefone;
+              window.localStorage['perfil_img'] = data.img;
             };
-
-
 
     }]);

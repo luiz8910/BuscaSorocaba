@@ -17,6 +17,7 @@
                             <th>Sub-Categorias</th>
                             <th>Categoria</th>
                             <th>Responsável</th>
+                            <th>Imagem</th>
                             <th>Ação</th>
                         </thead>
                     </tr>
@@ -46,6 +47,12 @@
                                 {{ $e->responsavel->first()->nome or 'Não há Responsáveis'}}
                             </td>
                             <td>
+                                @if($e->img == null)
+                                    <?php $e->img = 'img.jpeg';?>
+                                @endif
+                                <img src="{{url( 'uploads/'.$e->img) }}" alt="{{ $e->img }}" style="width: 80px">
+                            </td>
+                            <td>
                                 <a href="{{ route('admin.estabelecimentos.edit', [$e->id]) }}">
                                     <span title="Editar Estabelecimento" class="glyphicon glyphicon-edit"></span>
                                 </a>
@@ -54,7 +61,7 @@
                                     <span title="Excluir Estabelecimento" class="glyphicon glyphicon-trash"></span>
                                 </a>
                                 |
-                                <a href="{{ route('admin.estabelecimentos.destroy', [$e->id]) }}" class="excluir" id="{{ $e->id }}">
+                                <a href="{{ route('admin.estabelecimentos.createImage', [$e->id]) }}" id="{{ $e->id }}">
                                     <span title="Upload de Logotipo" class="glyphicon glyphicon-open-file"></span>
                                 </a>
                             </td>

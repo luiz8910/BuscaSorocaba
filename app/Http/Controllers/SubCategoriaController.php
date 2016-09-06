@@ -34,7 +34,7 @@ class SubCategoriaController extends Controller
      */
     public function index()
     {
-        $sub = $this->repository->paginate();
+        $sub = $this->repository->orderBy('categoria_id')->paginate();
 
         if(!$sub->items())
             $sub = false;

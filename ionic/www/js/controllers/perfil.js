@@ -4,15 +4,17 @@ angular.module('starter.controllers')
 
             var id = window.localStorage['perfil_id'];
             var nome = window.localStorage['perfil_nome'];
+            var img = window.localStorage['perfil_img'];
 
             $scope.nome = nome;
+            $scope.img = img;
+
 
             $ionicLoading.show({
                 template: "Buscando por " + nome
             });
 
                 $perfil.get({id: id}, function (data) {
-                    console.log(data);
                     $scope.nome = nome;
                     $scope.subcategoria = window.localStorage['nome'];
                     $scope.email = data.email;

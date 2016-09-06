@@ -34,7 +34,7 @@
                             <td>{{ $f->classificacao }}</td>
                             <td>
                                 @if($f->img == null)
-                                    <?php $f->img = 'img.jpg';?>
+                                    <?php $f->img = 'img.jpeg';?>
                                 @endif
                                 <img src="{{ url('uploads/'.$f->img) }}" style="width: 80px;">
                             </td>

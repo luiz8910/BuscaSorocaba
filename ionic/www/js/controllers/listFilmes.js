@@ -1,12 +1,8 @@
 
-//            $listFilmes.query({}, function(data){
-//                $scope.filmes = data;
-//                $ionicLoading.hide();
-//            });
-//        }]);
+
 
 angular.module('starter.controllers')
-    .controller('FilmeCtrl', function ($scope) {
+    .controller('FilmeCtrl', function ($scope, $listFilmes, $listShoppings) {
 
         $scope.Tab1 = function (item) {
             if(item == 1)
@@ -34,4 +30,14 @@ angular.module('starter.controllers')
 
             return false;
         };
+
+        $listFilmes.query({}, function(data){
+            $scope.filmes = data;
+            //$ionicLoading.hide();
+        });
+
+        $listShoppings.query({}, function (data) {
+            $scope.shoppings = data;
+        })
+
     });

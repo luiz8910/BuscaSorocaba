@@ -70,34 +70,35 @@
 
                 <div class="page-profile">
                     <div class="page-profile-header container-fullscreen">
-                        <img src="img/images/pictures/5s.jpg" alt="img">
-                        <h3>{{ nome }}</h3>
+                        <img src="http://buscasorocaba.com.br/uploads/{{ img }}" alt="img" style="margin-bottom:10px;">
+                        <h3 style="margin-bottom:-15px !important;" >{{ nome }}</h3>
                         <div class="overlay bg-black"></div>
                         <div class="follow-buttons">
-                            <a href="tel:15 2035 6204">Ligação</a>
+                            <a ng-href="tel:15{{ telefone }}">Ligação</a>
+                            <a href="">Promoção</a>
 
 
-                            <div ng-controller="avaliacaoCtrl">
-                                <button class="button button-dark" ng-click="showPopup()">
-                                    show
-                                </button>
+                            <!--<div ng-controller="avaliacaoCtrl">-->
+                                <!--<button class="button button-dark" ng-click="showPopup()">-->
+                                    <!--show-->
+                                <!--</button>-->
 
-                                <button class="button button-primary" ng-click="showConfirm()">
-                                    Confirm
-                                </button>
+                                <!--<button class="button button-primary" ng-click="showConfirm()">-->
+                                    <!--Confirm-->
+                                <!--</button>-->
 
-                                <button class="button button-positive" ng-click="showAlert()">
-                                    Alert
-                                </button>
+                                <!--<button class="button button-positive" ng-click="showAlert()">-->
+                                    <!--Alert-->
+                                <!--</button>-->
 
-                                <script id="popup-template.html" type="text/ng-template">
-                                    <input id="radio-label-1" class="radiobox" type="radio" ng-model="data.wifi">
-                                    <input id="radio-label-2" class="radiobox" type="radio" ng-model="data.wifi">
-                                    <input id="radio-label-3" class="radiobox" type="radio" ng-model="data.wifi">
-                                    <input id="radio-label-4" class="radiobox" type="radio" ng-model="data.wifi">
-                                    <input id="radio-label-5" class="radiobox" type="radio" ng-model="data.wifi">
-                                </script>
-                            </div>
+                                <!--<script id="popup-template.html" type="text/ng-template">-->
+                                    <!--<input id="radio-label-1" class="radiobox" type="radio" ng-model="data.wifi">-->
+                                    <!--<input id="radio-label-2" class="radiobox" type="radio" ng-model="data.wifi">-->
+                                    <!--<input id="radio-label-3" class="radiobox" type="radio" ng-model="data.wifi">-->
+                                    <!--<input id="radio-label-4" class="radiobox" type="radio" ng-model="data.wifi">-->
+                                    <!--<input id="radio-label-5" class="radiobox" type="radio" ng-model="data.wifi">-->
+                                <!--</script>-->
+                            <!--</div>-->
 
 
                             <div class="simple-login-modal-content modal-content rounded-modal">
@@ -119,47 +120,47 @@
                         </div>
                     </div>
 
-                    <div class="page-profile-followers">
-                        <style>
-                            .stars{
-                                width:150px;
-                                height:28px;
-                                position:relative;
-                                display:block;
-                                overflow:hidden;
-                                background:#666;
-                                margin:0px auto;
-                                border:1px solid #eee;
-                            }
-                            .stars span{
-                                height:30px;
-                                position:relative;
-                                display:block;
-                                margin-left:0px;
+                    <!--<div class="page-profile-followers">-->
+                        <!--<style>-->
+                            <!--.stars{-->
+                                <!--width:150px;-->
+                                <!--height:28px;-->
+                                <!--position:relative;-->
+                                <!--display:block;-->
+                                <!--overflow:hidden;-->
+                                <!--background:#666;-->
+                                <!--margin:0px auto;-->
+                                <!--border:1px solid #eee;-->
+                            <!--}-->
+                            <!--.stars span{-->
+                                <!--height:30px;-->
+                                <!--position:relative;-->
+                                <!--display:block;-->
+                                <!--margin-left:0px;-->
 
-                                background:#ffde00;
-                                z-index:0;
-                            }
-                            .stars img{
-                                margin-top:-30px;
-                                position:relative;
-                                display:block;
-                                z-index:1;
-                            }
-                        </style>
-                        <div class="stars">
-                            <span style="width:50%;"></span>
-                            <img src="img/mascara.png" />
-                        </div>
-                    </div>
+                                <!--background:#ffde00;-->
+                                <!--z-index:0;-->
+                            <!--}-->
+                            <!--.stars img{-->
+                                <!--margin-top:-30px;-->
+                                <!--position:relative;-->
+                                <!--display:block;-->
+                                <!--z-index:1;-->
+                            <!--}-->
+                        <!--</style>-->
+                        <!--<div class="stars">-->
+                            <!--<span style="width:50%;"></span>-->
+                            <!--<img src="img/mascara.png" />-->
+                        <!--</div>-->
+                    <!--</div>-->
 
 
-                    <div class="decoration"></div>
+                    <!--<div class="decoration"></div>-->
 
                     <div class="container no-bottom">
                         <div class="sidebar-left-small">
                             <h4 class="no-bottom padding">{{ nome }}</h4>
-                            <p class="padding">{{ subcategoria }}</p>
+                            <!--<p class="padding">{{ subcategoria }}</p>-->
                             <div class="decoration"></div>
                             <ul class="font-icon-list">
                                 <li>
@@ -167,16 +168,16 @@
                                         <i class="fa fa-phone padding"></i>(15) {{ telefone }}
                                     </a>
                                 </li>
-                                <li>
-                                    <a href="mailto:2@2.com">
-                                        <i class="fa fa-envelope padding"></i>{{ email }}
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <i class="fa fa-clock-o padding"></i>seg - sab | 8:00 - 18:00
-                                    </a>
-                                </li>
+                                <!--<li>-->
+                                    <!--<a href="mailto:2@2.com">-->
+                                        <!--<i class="fa fa-envelope padding"></i>{{ email }}-->
+                                    <!--</a>-->
+                                <!--</li>-->
+                                <!--<li>-->
+                                    <!--<a href="#">-->
+                                        <!--<i class="fa fa-clock-o padding"></i>seg - sab | 8:00 - 18:00-->
+                                    <!--</a>-->
+                                <!--</li>-->
                                 <li>
                                     <a href="#">
                                         <i class="fa fa-location-arrow padding"></i>{{ logradouro }}, {{ numero }} - {{ bairro }}
@@ -205,6 +206,8 @@
 
                     </div>
                     <div class="decoration"></div>
+
+
                     <div class="footer">
                         <p class="center-text">Copyright 2015. Todos os direitos reservados.</p>
                         <div class="footer-icons center-text">

@@ -59,9 +59,6 @@
         <div class="header-clear-large"></div>
         <!--Page content goes here, fixed elements go above the all elements class-->
         <div class="container heading-style-5">
-
-
-
             <h4 class="heading-title">Listagem de Filmes</h4>
             <i class="fa fa-ticket heading-icon"></i>
             <div class="line bg-black"></div>
@@ -75,46 +72,73 @@
 
 
 
-<div class="container" style="border: 1px  solid red;" ng-init="tab=1">
-    <div class="row" style="border: 1px  solid red;">
+<div class="container" style="border: 1px  solid red; height: 300px;" ng-init="tab=1">
+    <div class="row" style="border: 1px  solid red; height: 300px;">
         <div class="decoration"></div>
 
-     </div> <!-- fim div .row -->
+        <ion-view>
+            <ion-content>
 
-        <div>
-            <ul class="tabs-nav">
-                <li><a ng-click="tab=1" ng-class="{'active' : tab==1}">Aba 1</a></li>
-                <li><a ng-click="tab=2" ng-class="{'active' : tab==2}">Aba 2</a></li>
-                <li><a ng-click="tab=3" ng-class="{'active' : tab==3}">Aba 3</a></li>
-            </ul>
-
-
-                <div class=" ng-hide" ng-show="Tab1(tab)">
-                    <h3>Primeira aba</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                        Vero dolores laborum doloribus iusto quaerat dicta nemo aperiam. Voluptas repudiandae, enim, illum perspiciatis harum officia inventore iusto fugit, repellat asperiores maiores.
-                    </p>
-                </div>
-
-                <div class=" ng-hide" ng-show="Tab2(tab)">
-                    <h3>Segunda aba</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet impedit dolorem quae, quo nobis omnis? Officia quibusdam quaerat assumenda ipsam, et quos laborum quae ex iste numquam laboriosam obcaecati iure.</p>
-                </div>
-
-                <div class=" ng-hide" ng-show="Tab3(tab)">
-                    <h3>Terceira aba</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis totam quibusdam maxime quidem id ducimus, esse aliquid in facilis quisquam ut possimus enim voluptatum quas accusamus, necessitatibus provident. Doloremque, nulla.</p>
-                </div>
+            <div>
+                <ul class="tabs-nav" ng-repeat="s in shoppings">
+                    <li><a ng-click="tab={{s.id}}" ng-class="{'active' : tab=={{s.id}} }">{{s.nome}}</a></li>
+                </ul>
 
 
+                    <div class=" ng-hide" ng-show="Tab1(tab)">
 
-        </div>
+                            <div class="row">
+                                <div class="col-md-12 col-sm-12 col-xs-12">
+                                    <div class="col-xs-6 col-md-3">
+                                        <a href="#" class="thumbnail">
+                                            <img src="http://buscasorocaba.com.br/uploads/1-Deadpool.jpg" alt="img">
+                                        </a>
+                                    </div><!-- FIM div .col-md-12 .col-sm-12 .col-xs-12 .col-sm-6 -->
+
+                                    <div class="col-xs-6 col-md-3">
+                                        <a href="#" class="thumbnail">
+                                            <img src="http://buscasorocaba.com.br/uploads/1-Deadpool.jpg" alt="img">
+                                        </a>
+                                    </div><!-- FIM div .col-md-12 .col-sm-12 .col-xs-12 .col-sm-6 -->
+
+                                    <div class="col-xs-6 col-md-3">
+                                        <a href="#" class="thumbnail">
+                                            <img src="http://buscasorocaba.com.br/uploads/1-Deadpool.jpg" alt="img">
+                                        </a>
+                                    </div><!-- FIM div .col-md-12 .col-sm-12 .col-xs-12 .col-sm-6 -->
+
+                                    <div class="col-xs-6 col-md-3 col-sm-6">
+                                        <a href="#" class="thumbnail">
+                                            <img src="http://buscasorocaba.com.br/uploads/1-Deadpool.jpg" alt="img">
+                                        </a>
+                                    </div><!-- FIM div .col-md-12 .col-sm-12 .col-xs-12 .col-sm-6 -->
 
 
 
+                                </div> <!-- fim div .col-md-12.col-sm-12.col-xs-12 -->
+                            </div> <!-- fim div .row -->
+
+                    </div>
+
+                    <div class=" ng-hide" ng-show="Tab2(tab)">
+                        <h3>Segunda aba</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet impedit dolorem quae, quo nobis omnis? Officia quibusdam quaerat assumenda ipsam, et quos laborum quae ex iste numquam laboriosam obcaecati iure.</p>
+                    </div>
+
+                    <div class=" ng-hide" ng-show="Tab3(tab)">
+                        <h3>Terceira aba</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis totam quibusdam maxime quidem id ducimus, esse aliquid in facilis quisquam ut possimus enim voluptatum quas accusamus, necessitatibus provident. Doloremque, nulla.</p>
+                    </div>
 
 
 
+            </div>
+
+
+                <ion-nav-view></ion-nav-view>
+
+            </ion-content>
+        </ion-view>
     </div> <!-- fim div .row -->
 </div> <!-- fim div .content -->
 

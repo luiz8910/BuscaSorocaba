@@ -306,6 +306,31 @@ class EstabelecimentosController extends Controller
         return false;
     }
 
+    public function createImage($id)
+    {
+        $estabelecimento = $this->repository->find($id);
+
+        return view('admin.Estabelecimentos.createImages', compact('estabelecimento'));
+    }
+
+    public function uploadImage(Request $request, $id)
+    {
+        $file = $request->file('img');
+        $nome = $this->repository->find($id)->nome;
+        $ext = $file->getClientOriginalExtension();
+
+        $fullName = $id.'-'.$nome.'.'.$ext;
+
+        DB::table('estabelecimentos')
+            ->where('id', $id)
+            ->update(['img' => $fullName]);
+
+
+        $request->file('img')->move('uploads', $fullName);
+
+        return redirect()->route('admin.estabelecimentos.index');
+    }
+
     public function ajax(Request $request)
     {
 

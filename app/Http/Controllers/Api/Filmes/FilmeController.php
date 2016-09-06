@@ -5,6 +5,7 @@ namespace BuscaSorocaba\Http\Controllers\Api\Filmes;
 use BuscaSorocaba\Models\Estabelecimentos;
 use BuscaSorocaba\Repositories\EstabelecimentosRepository;
 use BuscaSorocaba\Repositories\FilmeRepository;
+use BuscaSorocaba\Repositories\ShoppingRepository;
 use BuscaSorocaba\Repositories\SubCategoriaRepository;
 use Illuminate\Http\Request;
 
@@ -21,10 +22,15 @@ class FilmeController extends Controller
      * @var FilmeRepository
      */
     private $repository;
+    /**
+     * @var ShoppingRepository
+     */
+    private $shoppingRepository;
 
-    public function __construct(FilmeRepository $repository)
+    public function __construct(FilmeRepository $repository, ShoppingRepository $shoppingRepository)
     {
         $this->repository = $repository;
+        $this->shoppingRepository = $shoppingRepository;
     }
 
     /**
@@ -48,5 +54,10 @@ class FilmeController extends Controller
         $estab = $this->repository->find($id);
 
         return $estab;
+    }
+
+    public function shoppings()
+    {
+        return $this->shoppingRepository->all();
     }
 }
