@@ -145,7 +145,7 @@ angular.module('starter',
 
       .state('listFilmes', {
           url:'/listFilmes',
-          templateUrl: 'templates/cinema/listFilmes.html',
+          templateUrl: 'templates/cinema/cine.html',
           controller: 'FilmeCtrl'
       })
   ;
