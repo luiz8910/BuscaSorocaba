@@ -148,6 +148,12 @@ angular.module('starter',
           templateUrl: 'templates/cinema/cine.html',
           controller: 'FilmeCtrl'
       })
+
+      .state('perfil-filme',{
+          url: '/perfil-filme',
+          templateUrl: 'templates/cinema/perfil-filme.html',
+          controller:'FilmeCtrl'
+      })
   ;
     $provide.decorator('OAuthToken', ['$localStorage', '$delegate', function ($localStorage, $delegate) {
             Object.defineProperties($delegate,{
