@@ -34,8 +34,8 @@ class SessaoRepositoryEloquent extends BaseRepository implements SessaoRepositor
         $this->pushCriteria(app(RequestCriteria::class));
     }
 
-    public function presenter()
-    {
-        return \Prettus\Repository\Presenter\ModelFractalPresenter::class;
-    }
+//    public function presenter()
+//    {
+//        return \Prettus\Repository\Presenter\ModelFractalPresenter::class;
+//    }
 }

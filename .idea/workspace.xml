@@ -5,13 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="56419470-a5d0-4284-a3d5-861dbaf47b87" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ionic/www/css/tabs.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/index.html" afterPath="$PROJECT_DIR$/ionic/www/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/Sessao/SessaoController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/Sessao/SessaoController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/SessaoController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/SessaoController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/routes.php" afterPath="$PROJECT_DIR$/app/Http/routes.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Models/Sessao.php" afterPath="$PROJECT_DIR$/app/Models/Sessao.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Repositories/SessaoRepositoryEloquent.php" afterPath="$PROJECT_DIR$/app/Repositories/SessaoRepositoryEloquent.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/js/app.js" afterPath="$PROJECT_DIR$/ionic/www/js/app.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/js/controllers/listFilmes.js" afterPath="$PROJECT_DIR$/ionic/www/js/controllers/listFilmes.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/js/services/listFilmes.js" afterPath="$PROJECT_DIR$/ionic/www/js/services/listFilmes.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/templates/cinema/cine.html" afterPath="$PROJECT_DIR$/ionic/www/templates/cinema/cine.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/templates/estabelecimentos/perfil.html" afterPath="$PROJECT_DIR$/ionic/www/templates/estabelecimentos/perfil.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/templates/cinema/listFilmes.html" afterPath="$PROJECT_DIR$/ionic/www/templates/cinema/listFilmes.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/templates/cinema/perfil-filme.html" afterPath="$PROJECT_DIR$/ionic/www/templates/cinema/perfil-filme.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/Sessao/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/Sessao/index.blade.php" />
     </list>
     <ignored path="excel.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -2359,23 +2365,19 @@
       <file leaf-file-name="cine.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ionic/www/templates/cinema/cine.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-14.375">
-              <caret line="32" column="91" selection-start-line="32" selection-start-column="91" selection-end-line="32" selection-end-column="91" />
+            <state vertical-scroll-proportion="-15.333333">
+              <caret line="45" column="119" selection-start-line="45" selection-start-column="44" selection-end-line="45" selection-end-column="119" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="perfil-filme.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="perfil-filme.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ionic/www/templates/cinema/perfil-filme.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.47205883">
-              <caret line="183" column="77" selection-start-line="183" selection-start-column="77" selection-end-line="183" selection-end-column="77" />
-              <folding>
-                <element signature="n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#2;n#body#0;n#!!top" expanded="false" />
-                <element signature="n#div#0;n#div#1;n#div#2;n#div#0;n#div#0;n#div#0;n#div#2;n#body#0;n#!!top" expanded="false" />
-                <element signature="n#div#0;n#div#2;n#div#2;n#div#0;n#div#0;n#div#0;n#div#2;n#body#0;n#!!top" expanded="false" />
-              </folding>
+            <state vertical-scroll-proportion="-13.75">
+              <caret line="57" column="63" selection-start-line="57" selection-start-column="63" selection-end-line="57" selection-end-column="63" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -2384,18 +2386,70 @@
         <entry file="file://$PROJECT_DIR$/ionic/www/js/controllers/listFilmes.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="39" column="36" selection-start-line="39" selection-start-column="36" selection-end-line="39" selection-end-column="36" />
+              <caret line="22" column="32" selection-start-line="22" selection-start-column="32" selection-end-line="22" selection-end-column="32" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ionic/www/js/app.js">
+      <file leaf-file-name="routes.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-24.5">
+              <caret line="221" column="51" selection-start-line="221" selection-start-column="51" selection-end-line="221" selection-end-column="51" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SessaoController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/Sessao/SessaoController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-17.5">
+              <caret line="102" column="5" selection-start-line="102" selection-start-column="5" selection-end-line="102" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="listFilmes.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ionic/www/js/services/listFilmes.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.32051283">
+              <caret line="15" column="84" selection-start-line="15" selection-start-column="84" selection-end-line="15" selection-end-column="84" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="estabelecimentos.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ionic/www/js/controllers/estabelecimentos.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="152" column="31" selection-start-line="152" selection-start-column="31" selection-end-line="152" selection-end-column="31" />
+              <caret line="25" column="14" selection-start-line="25" selection-start-column="14" selection-end-line="25" selection-end-column="14" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="perfil.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ionic/www/js/controllers/perfil.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="perfil.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ionic/www/templates/estabelecimentos/perfil.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="43.125">
+              <caret line="72" column="54" selection-start-line="72" selection-start-column="54" selection-end-line="72" selection-end-column="54" />
+              <folding>
+                <element signature="n#style#0;n#img#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -2417,11 +2471,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/config/app.php" />
-        <option value="$PROJECT_DIR$/ionic/www/css/styles/listFilmes.css" />
-        <option value="$PROJECT_DIR$/app/Models/Avaliacao.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2016_08_15_123419_create_avaliacaos_table.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Auth/AuthController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Api/Estabelecimentos/Avaliacao.php" />
         <option value="$PROJECT_DIR$/ionic/www/js/services/login.js" />
         <option value="$PROJECT_DIR$/ionic/www/js/controllers/avaliacao.js" />
@@ -2446,13 +2495,10 @@
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/0333e9c9-f64b-4553-b89e-61b889922f43/console.sql" />
         <option value="$PROJECT_DIR$/resources/views/admin/Filme/index.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/FilmeController.php" />
-        <option value="$PROJECT_DIR$/ionic/www/js/services/listFilmes.js" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Api/Filmes/FilmeController.php" />
         <option value="$PROJECT_DIR$/ionic/www/css/styles/framework.css" />
         <option value="$PROJECT_DIR$/ionic/www/templates/estabelecimentos/listar_pesq.html" />
         <option value="$PROJECT_DIR$/ionic/www/templates/estabelecimentos/index.html" />
-        <option value="$PROJECT_DIR$/app/Http/routes.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/EstabelecimentosController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/SubCategoriaController.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/Estabelecimentos/createImages.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/Estabelecimentos/index.blade.php" />
@@ -2460,14 +2506,22 @@
         <option value="$PROJECT_DIR$/ionic/www/js/controllers/estabelecimentos.js" />
         <option value="$PROJECT_DIR$/ionic/www/templates/cinema/teste" />
         <option value="$PROJECT_DIR$/ionic/www/templates/dashboard/index.html" />
-        <option value="$PROJECT_DIR$/ionic/www/templates/cinema/listFilmes.html" />
         <option value="$PROJECT_DIR$/ionic/www/templates/estabelecimentos/perfil.html" />
-        <option value="$PROJECT_DIR$/ionic/www/templates/cinema/cine.html" />
-        <option value="$PROJECT_DIR$/ionic/www/js/app.js" />
         <option value="$PROJECT_DIR$/ionic/www/css/tabs.css" />
         <option value="$PROJECT_DIR$/ionic/www/index.html" />
-        <option value="$PROJECT_DIR$/ionic/www/js/controllers/listFilmes.js" />
+        <option value="$PROJECT_DIR$/ionic/www/js/app.js" />
+        <option value="$PROJECT_DIR$/app/Models/Sessao.php" />
+        <option value="$PROJECT_DIR$/app/Repositories/SessaoRepositoryEloquent.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/Sessao/index.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/EstabelecimentosController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/SessaoController.php" />
+        <option value="$PROJECT_DIR$/ionic/www/templates/cinema/listFilmes.html" />
+        <option value="$PROJECT_DIR$/ionic/www/templates/cinema/cine.html" />
         <option value="$PROJECT_DIR$/ionic/www/templates/cinema/perfil-filme.html" />
+        <option value="$PROJECT_DIR$/app/Http/routes.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Api/Sessao/SessaoController.php" />
+        <option value="$PROJECT_DIR$/ionic/www/js/controllers/listFilmes.js" />
+        <option value="$PROJECT_DIR$/ionic/www/js/services/listFilmes.js" />
       </list>
     </option>
   </component>
@@ -2500,7 +2554,7 @@
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectView">
-    <navigator proportions="" version="1">
+    <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -2513,14 +2567,257 @@
       <manualOrder />
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes />
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BuscaSorocaba" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BuscaSorocaba" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BuscaSorocaba" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BuscaSorocaba" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BuscaSorocaba" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BuscaSorocaba" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BuscaSorocaba" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BuscaSorocaba" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BuscaSorocaba" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Sessao" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BuscaSorocaba" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BuscaSorocaba" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BuscaSorocaba" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BuscaSorocaba" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BuscaSorocaba" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BuscaSorocaba" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Http" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BuscaSorocaba" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BuscaSorocaba" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Http" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BuscaSorocaba" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BuscaSorocaba" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Http" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Api" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BuscaSorocaba" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BuscaSorocaba" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Http" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Api" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Sessao" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BuscaSorocaba" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BuscaSorocaba" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Http" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Api" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Filmes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scratches" />
+    </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
-    <property name="SearchEverywhereHistoryKey" value="index&#9;FILE&#9;file:///Users/luizfernandosanches/BuscaSorocaba/ionic/www/templates/dashboard/index.html&#10;kernel.php&#9;FILE&#9;file:///Users/luizfernandosanches/BuscaSorocaba/app/Http/Kernel.php&#10;routes.php&#9;FILE&#9;file:///Users/luizfernandosanches/BuscaSorocaba/app/Http/routes.php&#10;routes&#9;FILE&#9;file:///Users/luizfernandosanches/BuscaSorocaba/app/Http/routes.php&#10;Auto&#9;FILE&#9;file:///Users/luizfernandosanches/BuscaSorocaba/app/Http/Controllers/Api/AutoComplete/AutoCompleteController.php&#10;register&#9;FILE&#9;file:///Users/luizfernandosanches/BuscaSorocaba/vendor/bestmomo/scafold/views/auth/register.blade.php&#10;app.bl&#9;FILE&#9;file:///Users/luizfernandosanches/BuscaSorocaba/resources/views/app.blade.php&#10;app&#9;FILE&#9;file:///Users/luizfernandosanches/BuscaSorocaba/ionic/www/js/app.js&#10;ProviderR&#9;null&#9;null&#10;file&#9;FILE&#9;file:///Users/luizfernandosanches/BuscaSorocaba/config/filesystems.php&#10;route&#9;FILE&#9;file:///Users/luizfernandosanches/BuscaSorocaba/app/Http/routes.php&#10;angular-o&#9;FILE&#9;file:///Users/luizfernandosanches/BuscaSorocaba/ionic/www/lib/angular-oauth2/dist/angular-oauth2.js&#10;cors&#9;FILE&#9;file:///Users/luizfernandosanches/BuscaSorocaba/config/cors.php&#10;rou&#9;FILE&#9;file:///Users/luizfernandosanches/BuscaSorocaba/app/Http/routes.php&#10;Sala&#9;null&#9;null&#10;Ver&#9;FILE&#9;file:///Users/luizfernandosanches/BuscaSorocaba/app/Http/Middleware/VerifyCsrfToken.php&#10;EloquentUser&#9;FILE&#9;file:///Users/luizfernandosanches/BuscaSorocaba/vendor/laravel/framework/src/Illuminate/Auth/EloquentUserProvider.php&#10;a&#9;FILE&#9;file:///Users/luizfernandosanches/BuscaSorocaba/resources/views/app.blade.php&#10;Shopping&#9;FILE&#9;file:///Users/luizfernandosanches/BuscaSorocaba/app/Models/Shopping.php&#10;r&#9;FILE&#9;file:///Users/luizfernandosanches/BuscaSorocaba/app/Http/routes.php&#10;po&#9;FILE&#9;file:///Users/luizfernandosanches/BuscaSorocaba/resources/views/admin/Ajax/post.php&#10;ser&#9;FILE&#9;file:///Users/luizfernandosanches/BuscaSorocaba/config/services.php&#10;mail&#9;FILE&#9;file:///Users/luizfernandosanches/BuscaSorocaba/config/mail.php&#10;config/servi&#9;FILE&#9;file:///Users/luizfernandosanches/BuscaSorocaba/config/services.php&#10;.env&#9;FILE&#9;file:///Users/luizfernandosanches/BuscaSorocaba/.env&#10;SubCategoriaC&#9;FILE&#9;file:///Users/luizfernandosanches/BuscaSorocaba/app/Http/Controllers/SubCategoriaController.php&#10;SubCategoria&#9;FILE&#9;file:///Users/luizfernandosanches/BuscaSorocaba/app/Models/SubCategoria.php&#10;Cate&#9;FILE&#9;file:///Users/luizfernandosanches/BuscaSorocaba/app/Models/Categoria.php" />
+    <property name="SearchEverywhereHistoryKey" value="app&#9;FILE&#9;file:///Users/luizfernandosanches/BuscaSorocaba/ionic/www/js/app.js&#10;routes&#9;FILE&#9;file:///Users/luizfernandosanches/BuscaSorocaba/app/Http/routes.php&#10;app.js&#9;FILE&#9;file:///Users/luizfernandosanches/BuscaSorocaba/ionic/www/js/app.js&#10;index&#9;FILE&#9;file:///Users/luizfernandosanches/BuscaSorocaba/ionic/www/templates/dashboard/index.html&#10;kernel.php&#9;FILE&#9;file:///Users/luizfernandosanches/BuscaSorocaba/app/Http/Kernel.php&#10;routes.php&#9;FILE&#9;file:///Users/luizfernandosanches/BuscaSorocaba/app/Http/routes.php&#10;Auto&#9;FILE&#9;file:///Users/luizfernandosanches/BuscaSorocaba/app/Http/Controllers/Api/AutoComplete/AutoCompleteController.php&#10;register&#9;FILE&#9;file:///Users/luizfernandosanches/BuscaSorocaba/vendor/bestmomo/scafold/views/auth/register.blade.php&#10;app.bl&#9;FILE&#9;file:///Users/luizfernandosanches/BuscaSorocaba/resources/views/app.blade.php&#10;ProviderR&#9;null&#9;null&#10;file&#9;FILE&#9;file:///Users/luizfernandosanches/BuscaSorocaba/config/filesystems.php&#10;route&#9;FILE&#9;file:///Users/luizfernandosanches/BuscaSorocaba/app/Http/routes.php&#10;angular-o&#9;FILE&#9;file:///Users/luizfernandosanches/BuscaSorocaba/ionic/www/lib/angular-oauth2/dist/angular-oauth2.js&#10;cors&#9;FILE&#9;file:///Users/luizfernandosanches/BuscaSorocaba/config/cors.php&#10;rou&#9;FILE&#9;file:///Users/luizfernandosanches/BuscaSorocaba/app/Http/routes.php&#10;Sala&#9;null&#9;null&#10;Ver&#9;FILE&#9;file:///Users/luizfernandosanches/BuscaSorocaba/app/Http/Middleware/VerifyCsrfToken.php&#10;EloquentUser&#9;FILE&#9;file:///Users/luizfernandosanches/BuscaSorocaba/vendor/laravel/framework/src/Illuminate/Auth/EloquentUserProvider.php&#10;a&#9;FILE&#9;file:///Users/luizfernandosanches/BuscaSorocaba/resources/views/app.blade.php&#10;Shopping&#9;FILE&#9;file:///Users/luizfernandosanches/BuscaSorocaba/app/Models/Shopping.php&#10;r&#9;FILE&#9;file:///Users/luizfernandosanches/BuscaSorocaba/app/Http/routes.php&#10;po&#9;FILE&#9;file:///Users/luizfernandosanches/BuscaSorocaba/resources/views/admin/Ajax/post.php&#10;ser&#9;FILE&#9;file:///Users/luizfernandosanches/BuscaSorocaba/config/services.php&#10;mail&#9;FILE&#9;file:///Users/luizfernandosanches/BuscaSorocaba/config/mail.php&#10;config/servi&#9;FILE&#9;file:///Users/luizfernandosanches/BuscaSorocaba/config/services.php&#10;.env&#9;FILE&#9;file:///Users/luizfernandosanches/BuscaSorocaba/.env&#10;SubCategoriaC&#9;FILE&#9;file:///Users/luizfernandosanches/BuscaSorocaba/app/Http/Controllers/SubCategoriaController.php&#10;SubCategoria&#9;FILE&#9;file:///Users/luizfernandosanches/BuscaSorocaba/app/Models/SubCategoria.php&#10;Cate&#9;FILE&#9;file:///Users/luizfernandosanches/BuscaSorocaba/app/Models/Categoria.php" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
@@ -2609,25 +2906,25 @@
     <editor active="true" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23021002" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28029078" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32852563" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32852563" sideWeight="0.503231" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23667206" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.76121795" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28142077" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22294022" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3989071" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22617124" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" x="100" y="100" width="1080" height="600" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.7019231" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.49452055" sideWeight="0.49676898" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3989071" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -2670,128 +2967,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/0333e9c9-f64b-4553-b89e-61b889922f43/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="2" selection-start-line="0" selection-start-column="0" selection-end-line="2735" selection-end-column="112" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ionic/www/templates/home.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.0">
-          <caret line="16" column="37" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/uploads/1-Deadpool.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/73a170b5/0333e9c9-f64b-4553-b89e-61b889922f43/buscasor_busca.filmes">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ionic/www/js/services/listFilmes.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.10683761">
-          <caret line="5" column="7" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/Filmes/FilmeController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.0619469">
-          <caret line="60" column="48" selection-start-line="60" selection-start-column="48" selection-end-line="60" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2016_06_27_120456_estabelecimentos_subcategorias.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ionic/www/css/styles/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7419355">
-          <caret line="887" column="1" selection-start-line="887" selection-start-column="1" selection-end-line="887" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ionic/www/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ionic/www/css/gambiarra.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.022123894">
-          <caret line="1" column="12" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ionic/www/css/styles/style2.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.764977">
-          <caret line="561" column="0" selection-start-line="561" selection-start-column="0" selection-end-line="561" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ionic/www/css/styles/animate.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.041474655">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ionic/www/css/styles/bootstrap.min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.043269232">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ionic/www/css/styles/font-awesome.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.043269232">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ionic/www/css/styles/framework.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.1889401">
-          <caret line="4824" column="55" selection-start-line="4824" selection-start-column="55" selection-end-line="4824" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Kernel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Middleware/CheckRole.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Middleware/VerifyCsrfToken.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -2813,24 +2988,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ionic/www/js/services/perfil.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/AutoComplete/AutoCompleteController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.75663716">
           <caret line="70" column="60" selection-start-line="70" selection-start-column="60" selection-end-line="70" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ionic/www/templates/estabelecimentos/listar_pesq.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6386431">
-          <caret line="66" column="79" selection-start-line="66" selection-start-column="79" selection-end-line="66" selection-end-column="79" />
         </state>
       </provider>
     </entry>
@@ -2897,13 +3058,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-16.25">
-          <caret line="74" column="40" selection-start-line="74" selection-start-column="40" selection-end-line="74" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/admin/Estabelecimentos/createImages.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.17699115">
@@ -2918,55 +3072,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/Estabelecimentos/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.61946905">
-          <caret line="52" column="111" selection-start-line="52" selection-start-column="111" selection-end-line="52" selection-end-column="111" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ionic/www/templates/estabelecimentos/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.4558823">
-          <caret line="66" column="79" selection-start-line="66" selection-start-column="79" selection-end-line="66" selection-end-column="79" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ionic/www/js/controllers/perfil.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="dbDummy://dbtable:/73a170b5/0333e9c9-f64b-4553-b89e-61b889922f43/buscasor_busca.estabelecimentos">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ionic/www/js/controllers/estabelecimentos.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="24" column="59" selection-start-line="24" selection-start-column="59" selection-end-line="24" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/EstabelecimentosController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7352941">
-          <caret line="362" column="5" selection-start-line="362" selection-start-column="5" selection-end-line="362" selection-end-column="5" />
-          <folding>
-            <element signature="e#8289#9068#0#PHP" expanded="false" />
-            <element signature="e#9074#9238#0#PHP" expanded="false" />
-            <element signature="e#9244#9515#0#PHP" expanded="false" />
-          </folding>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
@@ -2974,33 +3088,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.87215906">
           <caret line="68" column="32" selection-start-line="68" selection-start-column="32" selection-end-line="68" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ionic/www/templates/cinema/listFilmes.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.022058824">
-          <caret line="84" column="21" selection-start-line="81" selection-start-column="12" selection-end-line="84" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ionic/www/templates/estabelecimentos/perfil.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7470588">
-          <caret line="72" column="54" selection-start-line="72" selection-start-column="54" selection-end-line="72" selection-end-column="54" />
-          <folding>
-            <element signature="n#style#0;n#img#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ionic/www/templates/dashboard/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.13235295">
-          <caret line="81" column="26" selection-start-line="45" selection-start-column="20" selection-end-line="81" selection-end-column="26" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3008,15 +3095,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-27.083334">
           <caret line="48" column="1" selection-start-line="48" selection-start-column="1" selection-end-line="48" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ionic/www/js/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="152" column="31" selection-start-line="152" selection-start-column="31" selection-end-line="152" selection-end-column="31" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3024,14 +3102,268 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-6.25">
           <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/73a170b5/84674fdb-ad42-4b4e-9ed2-f08c8dc880a1/buscaSorocaba.filmes">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/73a170b5/84674fdb-ad42-4b4e-9ed2-f08c8dc880a1/buscaSorocaba.users">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2016_07_12_163222_filme_sala.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/Estabelecimentos.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/app.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/repository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.1838236">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Repositories/SessaoRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Repositories/EstabelecimentosRepositoryEloquent.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Repositories/SessaoRepositoryEloquent.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8185841">
+          <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/Sessao.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8613569">
+          <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/EstabelecimentosController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7079646">
+          <caret line="40" column="48" selection-start-line="40" selection-start-column="48" selection-end-line="40" selection-end-column="48" />
+          <folding>
+            <element signature="e#50#92#0#PHP" expanded="true" />
+            <element signature="e#8289#9068#0#PHP" expanded="false" />
+            <element signature="e#9074#9238#0#PHP" expanded="false" />
+            <element signature="e#9244#9515#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/Estabelecimentos/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.022123894">
+          <caret line="52" column="111" selection-start-line="52" selection-start-column="111" selection-end-line="52" selection-end-column="111" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/73a170b5/84674fdb-ad42-4b4e-9ed2-f08c8dc880a1/buscaSorocaba.filme_sala">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/Sessao/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.37463126">
+          <caret line="31" column="47" selection-start-line="31" selection-start-column="47" selection-end-line="31" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/SessaoController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6415929">
+          <caret line="55" column="28" selection-start-line="55" selection-start-column="28" selection-end-line="55" selection-end-column="28" />
+          <folding>
+            <element signature="e#50#81#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/Filmes/FilmeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.17699115">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ionic/www/templates/estabelecimentos/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.47158217">
+          <caret line="65" column="89" selection-start-line="65" selection-start-column="89" selection-end-line="65" selection-end-column="89" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ionic/www/templates/estabelecimentos/listar_pesq.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6622419">
+          <caret line="66" column="79" selection-start-line="66" selection-start-column="79" selection-end-line="66" selection-end-column="79" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ionic/www/templates/dashboard/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.7256637">
+          <caret line="38" column="30" selection-start-line="38" selection-start-column="30" selection-end-line="38" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ionic/www/templates/cinema/listFilmes.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-20.125">
+          <caret line="79" column="20" selection-start-line="79" selection-start-column="20" selection-end-line="79" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ionic/www/templates/estabelecimentos/perfil.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="43.125">
+          <caret line="72" column="54" selection-start-line="72" selection-start-column="54" selection-end-line="72" selection-end-column="54" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ionic/www/js/controllers/perfil.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ionic/www/js/controllers/estabelecimentos.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="25" column="14" selection-start-line="25" selection-start-column="14" selection-end-line="25" selection-end-column="14" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ionic/www/templates/cinema/cine.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.375">
-          <caret line="32" column="91" selection-start-line="32" selection-start-column="91" selection-end-line="32" selection-end-column="91" />
+        <state vertical-scroll-proportion="-15.333333">
+          <caret line="45" column="119" selection-start-line="45" selection-start-column="44" selection-end-line="45" selection-end-column="119" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ionic/www/js/services/subcategoria.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ionic/www/js/services/perfil.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ionic/www/templates/cinema/perfil-filme.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.75">
+          <caret line="57" column="63" selection-start-line="57" selection-start-column="63" selection-end-line="57" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ionic/www/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.34188035">
+          <caret line="16" column="8" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/Sessao/SessaoController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-17.5">
+          <caret line="102" column="5" selection-start-line="102" selection-start-column="5" selection-end-line="102" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-24.5">
+          <caret line="221" column="51" selection-start-line="221" selection-start-column="51" selection-end-line="221" selection-end-column="51" />
           <folding />
         </state>
       </provider>
@@ -3039,20 +3371,16 @@
     <entry file="file://$PROJECT_DIR$/ionic/www/js/controllers/listFilmes.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="39" column="36" selection-start-line="39" selection-start-column="36" selection-end-line="39" selection-end-column="36" />
+          <caret line="22" column="32" selection-start-line="22" selection-start-column="32" selection-end-line="22" selection-end-column="32" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ionic/www/templates/cinema/perfil-filme.html">
+    <entry file="file://$PROJECT_DIR$/ionic/www/js/services/listFilmes.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.47205883">
-          <caret line="183" column="77" selection-start-line="183" selection-start-column="77" selection-end-line="183" selection-end-column="77" />
-          <folding>
-            <element signature="n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#2;n#body#0;n#!!top" expanded="false" />
-            <element signature="n#div#0;n#div#1;n#div#2;n#div#0;n#div#0;n#div#0;n#div#2;n#body#0;n#!!top" expanded="false" />
-            <element signature="n#div#0;n#div#2;n#div#2;n#div#0;n#div#0;n#div#0;n#div#2;n#body#0;n#!!top" expanded="false" />
-          </folding>
+        <state vertical-scroll-proportion="0.32051283">
+          <caret line="15" column="84" selection-start-line="15" selection-start-column="84" selection-end-line="15" selection-end-column="84" />
+          <folding />
         </state>
       </provider>
     </entry>

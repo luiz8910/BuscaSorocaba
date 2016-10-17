@@ -29,24 +29,24 @@
                     </tr>
 
                     <tbody>
-                    @foreach($sessao as $s)
-                        <tr>
-                            <td>{{ $s->id }}</td>
-                            <td>{{ $s->filme->nome }}</td>
-                            <td>{{ $s->salas->numero }}</td>
-                            <td>{{ $s->horario }}</td>
-                            <td>{{ $s->salas->tipo }}</td>
-                            <td>{{ $s->qualidade }}</td>
-                            <td>{{ $s->salas->shopping->nome }}</td>
-                            <td>{{ $s->audio }}</td>
-                            <td>R$ {{ $s->preco }}</td>
-                            <td>
-                                <a href="{{ route('admin.sessao.edit', [$s->id]) }}"><span class="glyphicon glyphicon-edit"></span> </a>
-                                |
-                                <a href="{{ route('admin.sessao.destroy', [$s->id]) }}"><span class="glyphicon glyphicon-trash"></span> </a>
-                            </td>
-                        </tr>
-                    @endforeach
+                        @foreach($sessao as $s)
+                            <tr>
+                                <td>{{ $s->id }}</td>
+                                <td>{{ $s->filme->nome }}</td>
+                                <td>{{ $s->salas->numero }}</td>
+                                <td>{{ $s->horario }}</td>
+                                <td>{{ $s->salas->tipo }}</td>
+                                <td>{{ $s->qualidade }}</td>
+                                <td>{{ $s->salas->shopping->nome }}</td>
+                                <td>{{ $s->audio }}</td>
+                                <td>R$ {{ $s->preco }}</td>
+                                <td>
+                                    <a href="{{ route('admin.sessao.edit', [$s->id]) }}"><span class="glyphicon glyphicon-edit"></span> </a>
+                                    |
+                                    <a href="{{ route('admin.sessao.destroy', [$s->id]) }}"><span class="glyphicon glyphicon-trash"></span> </a>
+                                </td>
+                            </tr>
+                        @endforeach
                     </tbody>
 
                 </table>

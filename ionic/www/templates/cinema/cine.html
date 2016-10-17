@@ -39,51 +39,11 @@
 
                                 <div class="col-md-12 col-sm-12 col-xs-12">
 
-                                    <div class="col-xs-6 col-md-3">
+                                    <div class="col-xs-6 col-md-3" ng-repeat="f in filmes">
 
-                                        <a href="#/perfil-filme" class="thumbnail">
+                                        <a href="#/perfil-filme" ng-click="detalhesFilme(f)" class="thumbnail">
 
-                                            <img src="http://buscasorocaba.com.br/uploads/1-Deadpool.jpg" alt="img">
-
-                                        </a>
-
-                                    </div><!-- FIM div .col-md-12 .col-sm-12 .col-xs-12 .col-sm-6 -->
-
-                                    <div class="col-xs-6 col-md-3">
-
-                                        <a href="#" class="thumbnail">
-
-                                            <img src="http://buscasorocaba.com.br/uploads/1-Deadpool.jpg" alt="img">
-
-                                        </a>
-
-                                    </div><!-- FIM div .col-md-12 .col-sm-12 .col-xs-12 .col-sm-6 -->
-
-                                    <div class="col-xs-6 col-md-3">
-
-                                        <a href="#" class="thumbnail">
-
-                                            <img src="http://buscasorocaba.com.br/uploads/1-Deadpool.jpg" alt="img">
-
-                                        </a>
-
-                                    </div><!-- FIM div .col-md-12 .col-sm-12 .col-xs-12 .col-sm-6 -->
-
-                                    <div class="col-xs-6 col-md-3">
-
-                                        <a href="#" class="thumbnail">
-
-                                            <img src="http://buscasorocaba.com.br/uploads/1-Deadpool.jpg" alt="img">
-
-                                        </a>
-
-                                    </div><!-- FIM div .col-md-12 .col-sm-12 .col-xs-12 .col-sm-6 -->
-
-                                    <div class="col-xs-6 col-md-3">
-
-                                        <a href="#" class="thumbnail">
-
-                                            <img src="http://buscasorocaba.com.br/uploads/1-Deadpool.jpg" alt="img">
+                                            <img src="http://buscasorocaba.com.br/uploads/{{ f.id }}-{{ f.nome }}.jpg">
 
                                         </a>
 

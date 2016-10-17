@@ -15,7 +15,7 @@ angular.module('starter',
 
     .constant("appConfig", {
         baseUrl: 'http://buscasorocaba.com.br'
-        //baseUrl: 'http://192.168.0.16:8000'
+        //baseUrl: 'http://192.168.0.4:8000'
         //baseUrl: 'http://localhost:8000'
     })
 

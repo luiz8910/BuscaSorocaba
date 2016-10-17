@@ -33,7 +33,8 @@ class SessaoController extends Controller
      */
     private $filmeRepository;
 
-    public function __construct(SessaoRepository $repository, ShoppingRepository $shoppingRepository, SalaRepository $salaRepository, FilmeRepository $filmeRepository)
+    public function __construct(SessaoRepository $repository, ShoppingRepository $shoppingRepository,
+                                SalaRepository $salaRepository, FilmeRepository $filmeRepository)
     {
         $this->repository = $repository;
         $this->shoppingRepository = $shoppingRepository;
@@ -51,7 +52,10 @@ class SessaoController extends Controller
         $sessao = $this->repository->paginate();
 
         if(!$sessao->items())
-            $sessao = null;
+        {
+            $sessao = false;
+        }
+
 
         return view('admin.Sessao.index', compact('sessao'));
     }

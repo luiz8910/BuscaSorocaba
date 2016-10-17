@@ -1,47 +1,35 @@
 
-
-
 angular.module('starter.controllers')
-    .controller('FilmeCtrl', function ($scope, $listFilmes, $listShoppings) {
+    .controller('FilmeCtrl', function ($scope, $listFilmes, $listShoppings, $list_sessao) {
 
-        $scope.Tab1 = function (item) {
-            if(item == 1)
-            {
-                return true;
-            }
+        $scope.detalhesFilme = function(data){
+            window.localStorage['idFilme'] = data.id;
+            window.localStorage['nomeFilme'] = data.nome;
+            console.log(data);
 
-            return false;
-        };
 
-        $scope.Tab2 = function (item) {
-            if(item == 2)
-            {
-                return true;
-            }
-
-            return false;
-        };
-
-        $scope.Tab3 = function (item) {
-            if(item == 3)
-            {
-                return true;
-            }
-
-            return false;
         };
 
         $listFilmes.query({}, function(data){
             $scope.filmes = data;
+            $scope.nomeFilme = window.localStorage['nomeFilme'];
+            $scope.id = window.localStorage['idFilme'];
             //$ionicLoading.hide();
         });
 
         $listShoppings.query({}, function (data) {
             $scope.shoppings = data;
+
+            $list_sessao.query({}, function (data) {
+                console.log(data);
+                $scope.qualidade = data.qualidade;
+            });
         });
 
 
-        $scope.openCity = function(evt, cityName) {
+
+
+        $scope.openShop = function(evt, shopName) {
             // Declare all variables
             var i, tabcontent, tablinks;
 
@@ -58,7 +46,7 @@ angular.module('starter.controllers')
             }
 
             // Show the current tab, and add an "active" class to the link that opened the tab
-            document.getElementById(cityName).style.display = "block";
+            document.getElementById(shopName).style.display = "block";
             evt.currentTarget.className += " active";
         }
     });

@@ -217,6 +217,9 @@ Route::group(['middleware' => 'cors'], function(){
 
             //Lista de Resultados do auto complete
             Route::resource('list_pesq', 'Api\AutoComplete\AutoCompleteController@result');
+
+            //Info para sessões
+            Route::resource('list_sessao/{idFilme}/{idShopping}', 'Api\Sessao\SessaoController@show');
         });
 
     });
