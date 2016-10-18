@@ -99,14 +99,27 @@ class SessaoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($idFilme, $idShopping)
+    public function show($shop, $idShopping = 1)
     {
+        $shop = explode(',', $shop);
+
+        //dd($shop);
+
         $sessao = DB::table('filme_sala')->
-            where('filme_id', $idFilme)->
-            where('shopping_id', $idShopping)->
+            where('filme_id', $shop[0])->
+            where('shopping_id', $shop[1])->
             get();
 
         return $sessao;
+    }
+
+    public function sala($id)
+    {
+        $sala =  DB::table('salas')->
+            where('shopping_id', $id)->
+            get();
+
+       return $sala;
     }
 
     /**

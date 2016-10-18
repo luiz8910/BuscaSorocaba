@@ -1,16 +1,13 @@
-
 angular.module('starter.controllers')
-    .controller('FilmeCtrl', function ($scope, $listFilmes, $listShoppings, $list_sessao) {
+    .controller('FilmeCtrl', function ($scope, $listFilmes, $listShoppings, $list_sessao, $list_sala) {
 
-        $scope.detalhesFilme = function(data){
+        $scope.detalhesFilme = function (data) {
             window.localStorage['idFilme'] = data.id;
             window.localStorage['nomeFilme'] = data.nome;
-            console.log(data);
-
-
+            //console.log(data);
         };
 
-        $listFilmes.query({}, function(data){
+        $listFilmes.query({}, function (data) {
             $scope.filmes = data;
             $scope.nomeFilme = window.localStorage['nomeFilme'];
             $scope.id = window.localStorage['idFilme'];
@@ -19,17 +16,25 @@ angular.module('starter.controllers')
 
         $listShoppings.query({}, function (data) {
             $scope.shoppings = data;
-
-            $list_sessao.query({}, function (data) {
-                console.log(data);
-                $scope.qualidade = data.qualidade;
-            });
         });
 
 
+        $scope.openShop = function (evt, shopName, id) {
+            var shop = [window.localStorage['idFilme'], id];
+
+            $list_sessao.query({shop: shop}, function (data) {
+                    $scope.sessoes = data;
+
+                    console.log(data);
+
+                    $list_sala.query({id: id}, function (data) {
+                        console.log(data);
+                        $scope.sala = data; //arrumar sala
+                    });
 
 
-        $scope.openShop = function(evt, shopName) {
+                });
+
             // Declare all variables
             var i, tabcontent, tablinks;
 
@@ -47,6 +52,6 @@ angular.module('starter.controllers')
 
             // Show the current tab, and add an "active" class to the link that opened the tab
             document.getElementById(shopName).style.display = "block";
-            evt.currentTarget.className += " active";
+            //evt.currentTarget.className += " active";
         }
     });

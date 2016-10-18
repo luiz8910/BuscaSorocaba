@@ -218,8 +218,11 @@ Route::group(['middleware' => 'cors'], function(){
             //Lista de Resultados do auto complete
             Route::resource('list_pesq', 'Api\AutoComplete\AutoCompleteController@result');
 
-            //Info para sessões
-            Route::resource('list_sessao/{idFilme}/{idShopping}', 'Api\Sessao\SessaoController@show');
+            //Info para sessões do cinema
+            Route::resource('list_sessao', 'Api\Sessao\SessaoController@show');
+
+            //Info para salas do cinema
+            Route::resource('list_sala', 'Api\Sessao\SessaoController@sala');
         });
 
     });

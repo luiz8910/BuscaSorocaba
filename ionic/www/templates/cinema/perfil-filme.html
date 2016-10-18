@@ -35,14 +35,14 @@
                 <div class="container" >
                     <ul class="tab" ng-repeat="s in shoppings">
                         <li>
-                            <a href="" class="tablinks" ng-click="openShop(event, '{{ s.nome }}')">{{ s.nome }}</a>
+                            <a href="" class="tablinks" ng-click="openShop(event, '{{ s.nome }}', '{{ s.id }}')">{{ s.nome }}</a>
                         </li>
                     </ul>
 
                     <div ng-repeat="s in shoppings">
                         <div id="{{ s.nome }}" class="tabcontent">
                             <div id="tab-1" class="tab-content active-tab-content">
-                                <div class="container no-bottom">
+                                <div class="container no-bottom" >
                                     <h5>Data: 24/05 - 30/05</h5>
                                     <div class="decoration"></div>
 
@@ -53,11 +53,11 @@
                                             <th class="table-title">Audio</th>
                                             <th class="table-title">Horario</th>
                                         </tr>
-                                        <tr>
-                                            <td class="table-sub-title"> 1</td>
-                                            <td>{{ qualidade }}</td>
-                                            <td>DUB</td>
-                                            <td>19:20</td>
+                                        <tr ng-repeat="ss in sessoes">
+                                            <td class="table-sub-title">{{ sala[0].numero }}</td>
+                                            <td>{{ ss.qualidade }}</td>
+                                            <td>{{ ss.audio }}</td>
+                                            <td>{{ ss.horario }}</td>
                                         </tr>
                                     </table>
                                 </div>
