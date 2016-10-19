@@ -22,18 +22,36 @@ angular.module('starter.controllers')
         $scope.openShop = function (evt, shopName, id) {
             var shop = [window.localStorage['idFilme'], id];
 
-            $list_sessao.query({shop: shop}, function (data) {
-                    $scope.sessoes = data;
+            $list_sessao.query({shop: shop}, function (items) {
 
-                    console.log(data);
 
-                    $list_sala.query({id: id}, function (data) {
-                        console.log(data);
-                        $scope.sala = data; //arrumar sala
+                for (i = 0; i < items.length; i++) {
+
+                    $list_sala.get({id: items[i].salas_id}, function (data) {
+
+                        window.localStorage['salas_id'] = data.numero;
+
                     });
 
+                    gambiarraParaAcertarAMalditaSala(items, i);
 
-                });
+                }
+
+
+                // Já sabe neh,
+                // se mexer nessa funcão vc fica broxa
+                // com certeza...
+                function gambiarraParaAcertarAMalditaSala(items, i)
+                {
+                    setTimeout(function () {
+                        items[i].salas_id = window.localStorage['salas_id'];
+                    }, 2000);
+
+                }
+
+                $scope.sessoes = items;
+
+            });
 
             // Declare all variables
             var i, tabcontent, tablinks;

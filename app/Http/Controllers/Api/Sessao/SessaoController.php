@@ -115,11 +115,9 @@ class SessaoController extends Controller
 
     public function sala($id)
     {
-        $sala =  DB::table('salas')->
-            where('shopping_id', $id)->
-            get();
-
-       return $sala;
+        return $this->salaRepository->
+            visible(['id'])->
+            find($id);
     }
 
     /**
