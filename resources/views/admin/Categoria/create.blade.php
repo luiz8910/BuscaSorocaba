@@ -1,36 +1,50 @@
-@extends('app')
+<html>
+    <head>
+        @include('admin.include.head')
+    </head>
 
-@section('content')
+    <body>
 
-    <div class="container">
-        <div class="row">
-            <h3>Nova Categoria</h3>
+        <header>
+            @include('admin.include.header')
+        </header>
 
-            {!! Form::open(['id' => 'cadastrarCat', 'method' => 'get']) !!}
+        <div id="wrapper">
 
-            <div class="form-group">
-                {!! Form::label("Nome", "Nome:") !!}
-                {!! Form::text("nome", null, ["class" => "form-control", 'required' => 'required', 'id' => 'nome']) !!}
-            </div>
+            @include('admin.include.menu-lateral')
 
-            <div class="form-group">
-                <button type="submit" class="btn btn-primary" href="#">Salvar</button>
-                <a class="btn btn-default" href="{{ route('admin.categoria.index') }}">Voltar</a>
-            </div>
+            <div class="container espacamento">
+                <div class="row">
+                    <h3>Nova Categoria</h3>
 
-            {!! Form::close() !!}
+                    {!! Form::open(['id' => 'cadastrarCat', 'method' => 'get']) !!}
 
-            <div hidden id="dialog-message" title="Erro">
-                <p>
-                    <span class="ui-icon ui-icon-circle-check" style="float:left; margin:0 7px 50px 0;"></span>
-                    Esta Categoria já está Cadastrada, Tente Novamente.
-                </p>
+                    <div class="form-group">
+                        {!! Form::label("Nome", "Nome:") !!}
+                        {!! Form::text("nome", null, ["class" => "form-control", 'required' => 'required', 'id' => 'nome']) !!}
+                    </div>
+
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary" href="#">Salvar</button>
+                        <a class="btn btn-default" href="{{ route('admin.categoria.index') }}">Voltar</a>
+                    </div>
+
+                    {!! Form::close() !!}
+
+                    <div hidden id="dialog-message" title="Erro">
+                        <p>
+                            <span class="ui-icon ui-icon-circle-check" style="float:left; margin:0 7px 50px 0;"></span>
+                            Esta Categoria já está Cadastrada, Tente Novamente.
+                        </p>
+                    </div>
+                </div>
+
             </div>
         </div>
 
-    </div>
-@endsection
 
+    </body>
+</html>
 @section('script')
     <script>
 

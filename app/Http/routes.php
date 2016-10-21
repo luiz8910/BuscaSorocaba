@@ -15,6 +15,15 @@ Route::get('/', function () {
     return view('index');
 });
 
+Route::group(['middleware' => 'auth.checkrole:Editor'], function(){
+    Route::get('/', ["as" => "admin.dashboard.index", "uses" => "DashboardController@index"]);
+
+    Route::get('edit-usuarios', ['as' => 'admin.usuarios.edit', 'uses' => 'UserController@edit']);
+
+    Route::post('alterar-usuarios/{id}', ['as' => 'admin.usuarios.update', 'uses' => 'UserController@update']);
+
+    Route::post('alterar-usuarios-img', ['as' => 'admin.usuarios.update-img', 'uses' => 'UserController@updateImgLog']);
+});
 
 Route::group(['middleware' => 'auth.checkrole:admin'], function(){
 
@@ -169,6 +178,18 @@ Route::group(['middleware' => 'auth.checkrole:admin'], function(){
     Route::get('/ajaxSalas/{id}', 'SessaoController@exibirSalasShoppings');
 
 // Fim Sessões
+
+    //-----------------------------------------  Usuários ------------------------------------------------------------
+
+    Route::get('usuarios', ['as' => 'admin.usuarios.index', 'uses' => 'UserController@index']);
+
+    Route::get('add-usuarios', ['as' => 'admin.usuarios.create', 'uses' => 'UserController@create']);
+
+    Route::post('salvar-usuarios', ['as' => 'admin.usuarios.store', 'uses' => 'UserController@store']);
+
+    Route::post('excluir-usuarios/{id}', ['as' => 'admin.usuarios.destroy', 'uses' => 'UserController@destroy']);
+
+    /* Fim Usuários */
 });
 
 Route::group(['middleware' => 'cors'], function(){

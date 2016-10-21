@@ -28,7 +28,7 @@ return [
         'array'   => 'The :attribute must have between :min and :max items.',
     ],
     'boolean'              => 'The :attribute field must be true or false.',
-    'confirmed'            => 'The :attribute confirmation does not match.',
+    'confirmed'            => 'Revise o campo :attribute',
     'date'                 => 'The :attribute is not a valid date.',
     'date_format'          => 'The :attribute does not match the format :format.',
     'different'            => 'The :attribute and :other must be different.',
@@ -37,7 +37,7 @@ return [
     'email'                => 'The :attribute must be a valid email address.',
     'filled'               => 'The :attribute field is required.',
     'exists'               => 'The selected :attribute is invalid.',
-    'image'                => 'The :attribute must be an image.',
+    'image'                => 'O campo :attribute precisa ser uma imagem.',
     'in'                   => 'The selected :attribute is invalid.',
     'integer'              => 'The :attribute must be an integer.',
     'ip'                   => 'The :attribute must be a valid IP address.',
@@ -57,7 +57,7 @@ return [
     'not_in'               => 'The selected :attribute is invalid.',
     'numeric'              => 'The :attribute must be a number.',
     'regex'                => 'The :attribute format is invalid.',
-    'required'             => 'The :attribute field is required.',
+    'required'             => 'O campo :attribute é de preenchimento obrigatório.',
     'required_if'          => 'The :attribute field is required when :other is :value.',
     'required_with'        => 'The :attribute field is required when :values is present.',
     'required_with_all'    => 'The :attribute field is required when :values is present.',
@@ -71,8 +71,8 @@ return [
         'array'   => 'The :attribute must contain :size items.',
     ],
     'timezone'             => 'The :attribute must be a valid zone.',
-    'unique'               => 'O campo :attribute já está cadastrado. Tente Novamente.',
-    'url'                  => 'The :attribute format is invalid.',
+    'unique'               => 'Este :attribute já foi escolhido.',
+    'url'                  => 'Este :attribute já foi escolhido.',
 
     /*
     |--------------------------------------------------------------------------
@@ -86,8 +86,8 @@ return [
     */
 
     'custom' => [
-        'attribute-name' => [
-            'rule-name' => 'custom-message',
+        'imagem' => [
+            'required' => 'O arquivo selecionado não é uma imagem',
         ],
     ],
 

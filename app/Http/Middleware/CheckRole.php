@@ -18,12 +18,12 @@ class CheckRole
     {
         if(!Auth::check())
         {
-            return redirect('/home');
+            return redirect('/auth/login');
         }
 
-        if(Auth::user()->role <> $role)
+        if(Auth::user()->role <> $role && Auth::user()->role <> 'admin')
         {
-            return redirect('home');
+            return redirect('/auth/login');
         }
 
         return $next($request);

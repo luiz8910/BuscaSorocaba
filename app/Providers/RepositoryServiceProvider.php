@@ -52,6 +52,9 @@ class RepositoryServiceProvider extends ServiceProvider
 
         $this->app->bind('BuscaSorocaba\Repositories\SessaoRepository',
             'BuscaSorocaba\Repositories\SessaoRepositoryEloquent');
+
+        $this->app->bind('BuscaSorocaba\Repositories\CargoRepository',
+            'BuscaSorocaba\Repositories\CargoRepositoryEloquent');
     }
 }
 

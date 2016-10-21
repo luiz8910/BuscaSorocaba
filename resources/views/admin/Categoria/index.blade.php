@@ -1,33 +1,52 @@
-@extends('app')
+<!DOCTYPE html>
+<html>
+    <head>
+        @include('admin.include.head')
+    </head>
 
-@section('content')
 
-    <h3>Categorias</h3>
-    <a href="{{ route('admin.categoria.create') }}" class="btn btn-default">Nova Categoria</a>
+    <body>
+        <header>
+            @include('admin.include.header')
+        </header>
 
-    <div class="container">
-        <div class="row">
-            <table class="table table-bordered table-responsive">
-                <tr>
-                    <thead>
-                    <th>ID</th>
-                    <th>Categoria</th>
-                    </thead>
-                </tr>
+        <div id="wrapper">
 
-                <tbody>
-                @foreach($categoria as $c)
-                    <tr>
-                        <td>{{ $c->id }}</td>
-                        <td>{{ $c->nome }}</td>
-                    </tr>
-                @endforeach
-                </tbody>
+            @include('admin.include.menu-lateral')
 
-            </table>
+            <div class="container espacamento">
+                <div class="row">
+                    <h3>Categorias</h3>
+                    <a href="{{ route('admin.categoria.create') }}" class="btn btn-default">Nova Categoria</a>
+                </div>
+            </div>
 
-            {!! $categoria->render() !!}
+
+            <div class="container espacamento">
+                <div class="row">
+                    <table class="table table-bordered table-responsive">
+                        <tr>
+                            <thead>
+                            <th>ID</th>
+                            <th>Categoria</th>
+                            </thead>
+                        </tr>
+
+                        <tbody>
+                        @foreach($categoria as $c)
+                            <tr>
+                                <td>{{ $c->id }}</td>
+                                <td>{{ $c->nome }}</td>
+                            </tr>
+                        @endforeach
+                        </tbody>
+
+                    </table>
+
+                    {!! $categoria->render() !!}
+                </div>
+            </div>
         </div>
-    </div>
 
-@endsection
+        </body>
+    </html>
