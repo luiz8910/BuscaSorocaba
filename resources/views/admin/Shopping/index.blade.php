@@ -1,63 +1,76 @@
-@extends('app')
+<html>
+<head>
+    @include('admin.include.head')
+</head>
 
-@section('content')
+<body>
 
-    <div class="container">
-        <div class="row">
-            <h3>Shoppings</h3>
-            <a href="{{ route('admin.shoppings.create') }}" class="btn btn-default">Novo Shopping</a>
+    <header>
+        @include('admin.include.header')
+    </header>
 
-            @if(!$shopping)
-                {{ 'Não há dados a serem exibidos' }}
+    <div id="wrapper">
 
-            @else
+        @include('admin.include.menu-lateral')
+
+        <div class="container espacamento">
+            <div class="row">
+                <h3>Shoppings</h3>
+                <a href="{{ route('admin.shoppings.create') }}" class="btn btn-default">Novo Shopping</a>
+
+                @if(!$shopping)
+                    {{ 'Não há dados a serem exibidos' }}
+
+                @else
 
 
-                <table class="table table-bordered table-responsive">
-                    <tr>
-                        <thead>
+                    <table class="table table-bordered table-responsive">
+                        <tr>
+                            <thead>
                             <th>ID</th>
                             <th>Nome</th>
                             <th>Endereço</th>
                             <th>Cinema</th>
                             <th>Ação</th>
-                        </thead>
-                    </tr>
-
-                    <tbody>
-                    @foreach($shopping as $s)
-                        <tr>
-                            <td>{{ $s->id }}</td>
-                            <td>{{ $s->nome }}</td>
-                            <td>{{ $s->logradouro }}, {{ $s->numero }}</td>
-                            <td>{{ $s->cinema }}</td>
-                            <td>
-                                <a href="{{ route('admin.shoppings.edit', [$s->id]) }}" title="Excluir Shopping">
-                                    <span class="glyphicon glyphicon-edit"></span>
-                                </a>
-                                |
-                                <a class="excluir" id="{{ $s->id }}" title="Excluir Shopping" href="{{ route('admin.shoppings.destroy', [$s->id]) }}">
-                                    <span class="glyphicon glyphicon-trash"></span>
-                                </a>
-                            </td>
+                            </thead>
                         </tr>
-                    @endforeach
-                    </tbody>
 
-                </table>
+                        <tbody>
+                        @foreach($shopping as $s)
+                            <tr>
+                                <td>{{ $s->id }}</td>
+                                <td>{{ $s->nome }}</td>
+                                <td>{{ $s->logradouro }}, {{ $s->numero }}</td>
+                                <td>{{ $s->cinema }}</td>
+                                <td>
+                                    <a href="{{ route('admin.shoppings.edit', [$s->id]) }}" title="Excluir Shopping">
+                                        <span class="glyphicon glyphicon-edit"></span>
+                                    </a>
+                                    |
+                                    <a class="excluir" id="{{ $s->id }}" title="Excluir Shopping"
+                                       href="{{ route('admin.shoppings.destroy', [$s->id]) }}">
+                                        <span class="glyphicon glyphicon-trash"></span>
+                                    </a>
+                                </td>
+                            </tr>
+                        @endforeach
+                        </tbody>
 
-                {!! $shopping->render() !!}
+                    </table>
 
-                <div hidden id="dialog-confirm" title="Você está certo disto?">
-                    <p><span class="ui-icon ui-icon-alert" style="float:left; margin:12px 12px 20px 0;"></span>
-                        Deseja Excluir este Shopping?
-                    </p>
-                </div>
-            @endif
+                    {!! $shopping->render() !!}
+
+                    <div hidden id="dialog-confirm" title="Você está certo disto?">
+                        <p><span class="ui-icon ui-icon-alert" style="float:left; margin:12px 12px 20px 0;"></span>
+                            Deseja Excluir este Shopping?
+                        </p>
+                    </div>
+                @endif
+            </div>
         </div>
     </div>
+</body>
 
-@endsection
 
 @section('script')
     <script>
@@ -65,18 +78,18 @@
             $('.excluir').click(function () {
                 var id = $(this).attr('id');
 
-                $( "#dialog-confirm" ).dialog({
+                $("#dialog-confirm").dialog({
                     resizable: false,
                     height: "auto",
                     width: 400,
                     modal: true,
                     buttons: {
-                        "Excluir": function() {
+                        "Excluir": function () {
                             excluir(id);
-                            $( this ).dialog( "close" );
+                            $(this).dialog("close");
                         },
-                        Cancelar: function() {
-                            $( this ).dialog( "close" );
+                        Cancelar: function () {
+                            $(this).dialog("close");
                         }
                     }
                 });
@@ -84,11 +97,10 @@
                 return false;
             });
 
-            function excluir(id)
-            {
+            function excluir(id) {
                 var request = $.ajax({
                     method: 'GET',
-                    url: '/shoppings/excluir/'+id,
+                    url: '/shoppings/excluir/' + id,
                     data: id,
                     dataType: 'json'
                 });
@@ -111,3 +123,4 @@
         });
     </script>
 @endsection
+</html>

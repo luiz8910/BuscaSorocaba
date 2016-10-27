@@ -1,8 +1,19 @@
-@extends('app')
+<html>
+<head>
+    @include('admin.include.head')
+</head>
 
-@section('content')
+<body>
 
-    <div class="container">
+<header>
+    @include('admin.include.header')
+</header>
+
+<div id="wrapper">
+
+    @include('admin.include.menu-lateral')
+
+    <div class="container espacamento">
         <div class="row">
             <h3>Nova Categoria</h3>
 
@@ -50,7 +61,7 @@
 
             <div class="form-group" hidden id="subcategorias_id_5_div">
                 {!! Form::label('Categoria', 'Categoria 5:') !!}
-                <select name="subcategorias_id_5" id="subcategorias_id_5"class="form-control">
+                <select name="subcategorias_id_5" id="subcategorias_id_5" class="form-control">
                     <option value="">Selecione</option>
                     @foreach($sub as $s)
                         <option value="{{ $s->id or '' }}">{{ $s->nome or '' }}</option>
@@ -153,7 +164,8 @@
         </div> <!-- Fim div Row -->
 
     </div> <!-- Fim div Container -->
-@endsection
+</div>
+</body>
 
 @section('script')
 
@@ -189,8 +201,7 @@
 
                 var input = $('#site').val();
 
-                if(!urlPattern.test(input))
-                {
+                if (!urlPattern.test(input)) {
                     $("#siteDialog").dialog({
                         modal: true,
                         buttons: {
@@ -220,15 +231,14 @@
                     console.log('done');
                     console.log(e);
 
-                    if(e.status == false)
-                    {
+                    if (e.status == false) {
                         console.log(e.status);
-                        $( "#dialog-message" ).dialog({
+                        $("#dialog-message").dialog({
                             modal: true,
                             buttons: {
-                                Ok: function() {
+                                Ok: function () {
                                     $('#btnSalvar').html('Salvar');
-                                    $( this ).dialog( "close" );
+                                    $(this).dialog("close");
                                 }
                             }
                         });
@@ -250,3 +260,4 @@
     </script>
 
 @endsection
+</html>

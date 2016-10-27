@@ -1218,7 +1218,7 @@ owner_id</columns>
     </database-model>
   </data-source>
   <data-source name="Busca Sorocaba - Online" uuid="0333e9c9-f64b-4553-b89e-61b889922f43">
-    <database-info product="MySQL" version="5.5.48-37.8" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+    <database-info product="MySQL" version="5.5.51-38.2" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
       <extra-name-characters>#@</extra-name-characters>
       <identifier-quote-string>`</identifier-quote-string>
     </database-info>
@@ -2409,29 +2409,32 @@ owner_id</columns>
         <mandatory>1</mandatory>
         <data-type>varchar(60)</data-type>
       </column>
-      <column id="293" parent="29" name="remember_token">
+      <column id="293" parent="29" name="img">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="294" parent="29" name="remember_token">
         <data-type>varchar(100)</data-type>
       </column>
-      <column id="294" parent="29" name="created_at">
+      <column id="295" parent="29" name="created_at">
         <mandatory>1</mandatory>
         <data-type>timestamp</data-type>
         <default-expression>&apos;0000-00-00 00:00:00&apos;</default-expression>
       </column>
-      <column id="295" parent="29" name="updated_at">
+      <column id="296" parent="29" name="updated_at">
         <mandatory>1</mandatory>
         <data-type>timestamp</data-type>
         <default-expression>&apos;0000-00-00 00:00:00&apos;</default-expression>
       </column>
-      <index id="296" parent="29" name="users_email_unique">
+      <index id="297" parent="29" name="users_email_unique">
         <columns>email</columns>
         <desc-columns></desc-columns>
         <unique>1</unique>
       </index>
-      <key id="297" parent="29" name="PRIMARY">
+      <key id="298" parent="29" name="PRIMARY">
         <columns>id</columns>
         <primary>1</primary>
       </key>
-      <key id="298" parent="29" name="users_email_unique">
+      <key id="299" parent="29" name="users_email_unique">
         <columns>email</columns>
         <underlying-index>users_email_unique</underlying-index>
       </key>

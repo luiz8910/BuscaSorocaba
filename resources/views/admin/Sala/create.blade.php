@@ -1,52 +1,67 @@
-@extends('app')
+<html>
+<head>
+    @include('admin.include.head')
+</head>
 
-@section('content')
+<body>
 
-    <div class="container">
-        <h3>Nova Sala</h3>
+<header>
+    @include('admin.include.header')
+</header>
 
-        {!! Form::open(['id' => 'cadastrarSala', 'class' => 'form', 'method' => 'get']) !!}
+<div id="wrapper">
 
-        <div class="form-group">
-            {!! Form::label("Nome", "Shopping:") !!}
-            <select required class="form-control" name="shopping_id" id="shoppingSala">
-                <option value="">Selecione</option>
-                @foreach($shopping as $s)
-                    <option value="{{ $s->id }}">{{ $s->nome }}</option>
-                @endforeach
-            </select>
-        </div>
+    @include('admin.include.menu-lateral')
 
-        <div class="form-group">
-            {!! Form::label("Nome", "Nome:") !!}
-            {!! Form::text("numero", null, ["class" => "form-control numero", 'required' => 'required', 'placeholder' => 'Ex: 15, 12', 'disabled' => 'true', 'id' => 'numSala']) !!}
-        </div>
+    <div class="container espacamento">
+        <div class="row">
+            <h3>Nova Sala</h3>
 
-        <div class="form-group">
-            {!! Form::label("Nome", "Tipo:") !!}
-            <select required name="tipo" class="form-control">
-                <option value="">Selecione</option>
-                <option value="VIP">VIP</option>
-                <option value="Macro XE">Macro XE</option>
-                <option value="Convencional">Convencional</option>
-            </select>
-        </div>
+            {!! Form::open(['id' => 'cadastrarSala', 'class' => 'form', 'method' => 'get']) !!}
 
-        <div class="form-group">
-            <button type="submit" id="btnSalvar" class="btn btn-primary" href="#">Salvar</button>
-            <a class="btn btn-default" href="{{ route('admin.sala.index') }}">Voltar</a>
-        </div>
+            <div class="form-group">
+                {!! Form::label("Nome", "Shopping:") !!}
+                <select required class="form-control" name="shopping_id" id="shoppingSala">
+                    <option value="">Selecione</option>
+                    @foreach($shopping as $s)
+                        <option value="{{ $s->id }}">{{ $s->nome }}</option>
+                    @endforeach
+                </select>
+            </div>
 
-        {!! Form::close() !!}
+            <div class="form-group">
+                {!! Form::label("Nome", "Nome:") !!}
+                {!! Form::text("numero", null, ["class" => "form-control numero", 'required' => 'required', 'placeholder' => 'Ex: 15, 12', 'disabled' => 'true', 'id' => 'numSala']) !!}
+            </div>
 
-        <div hidden id="dialog-message" title="Erro">
-            <p>
-                <span class="ui-icon ui-icon-circle-check" style="float:left; margin:0 7px 50px 0;"></span>
-                Esta Sala já está Cadastrada, Tente Novamente.
-            </p>
+            <div class="form-group">
+                {!! Form::label("Nome", "Tipo:") !!}
+                <select required name="tipo" class="form-control">
+                    <option value="">Selecione</option>
+                    <option value="VIP">VIP</option>
+                    <option value="Macro XE">Macro XE</option>
+                    <option value="Convencional">Convencional</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <button type="submit" id="btnSalvar" class="btn btn-primary" href="#">Salvar</button>
+                <a class="btn btn-default" href="{{ route('admin.sala.index') }}">Voltar</a>
+            </div>
+
+            {!! Form::close() !!}
+
+            <div hidden id="dialog-message" title="Erro">
+                <p>
+                    <span class="ui-icon ui-icon-circle-check" style="float:left; margin:0 7px 50px 0;"></span>
+                    Esta Sala já está Cadastrada, Tente Novamente.
+                </p>
+            </div>
         </div>
     </div>
-@endsection
+</div>
+</body>
+</html>
 
 @section('script')
     <script>
@@ -74,15 +89,14 @@
                 console.log('done');
                 console.log(e);
 
-                if(e.status == false)
-                {
+                if (e.status == false) {
                     console.log(e.status);
-                    $( "#dialog-message" ).dialog({
+                    $("#dialog-message").dialog({
                         modal: true,
                         buttons: {
-                            Ok: function() {
+                            Ok: function () {
                                 $('#btnSalvar').html('Salvar');
-                                $( this ).dialog( "close" );
+                                $(this).dialog("close");
                             }
                         }
                     });

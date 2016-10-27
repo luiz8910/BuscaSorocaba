@@ -1,60 +1,78 @@
-@extends('app')
+<html>
+<head>
+    @include('admin.include.head')
+</head>
 
-@section('content')
+<body>
 
-    <div class="container">
+<header>
+    @include('admin.include.header')
+</header>
 
-        <div class="row">
-            <h3>Nome: {{ $filme->nome }}</h3>
+    <div id="wrapper">
 
-            {!! Form::model($filme, ['id' => 'alterarFilme', 'class' => 'form', 'method' => 'get', 'files' => 'true']) !!}
+        @include('admin.include.menu-lateral')
 
-            <input type="text" hidden id="id" value="{{ $filme->id }}">
+        <div class="container espacamento">
+            <div class="row">
+                <h3>Nome: {{ $filme->nome }}</h3>
 
-            <div class="form-group">
-                {!! Form::label("Nome", "Nome:") !!}
-                {!! Form::text("nome", null, ["class" => "form-control", 'required' => 'required', 'placeholder' => 'Ex: Deadpool, O Rei Leão']) !!}
+                {!! Form::model($filme, ['id' => 'alterarFilme', 'class' => 'form', 'method' => 'get', 'files' => 'true']) !!}
+
+                <input type="text" hidden id="id" value="{{ $filme->id }}">
+
+                <div class="form-group">
+                    {!! Form::label("Nome", "Nome:") !!}
+                    {!! Form::text("nome", null, ["class" => "form-control", 'required' => 'required', 'placeholder' => 'Ex: Deadpool, O Rei Leão']) !!}
+                </div>
+
+                <div class="form-group">
+                    {!! Form::label("Nome", "Duração:") !!}
+                    {!! Form::text("duracao", null,
+                    ["class" => "form-control", 'required' => 'required', 'placeholder' => 'Ex: 02:35', 'id' => 'duracao'])
+                    !!}
+                </div>
+
+                <div class="form-group">
+                    {!! Form::label("Nome", "Imagem do Filme:") !!}
+                    {!! Form::file("img", null,
+                    ["class" => "form-control", 'required' => 'required', 'placeholder' => 'Ex: Deadpool, O Rei Leão']) !!}
+                </div>
+
+                <div class="form-group">
+                    {!! Form::label("Nome", "Classificação:") !!}
+                    <select required class="form-control" name="classificacao">
+                        @if($filme->classificacao == '18+')
+                            <option value="18+" selected>18+</option>@else
+                            <option value="18+">18+</option>@endif
+                        @if($filme->classificacao == 'Livre')
+                            <option value="Livre" selected>Livre</option>@else
+                            <option value="Livre">Livre</option>@endif
+                        @if($filme->classificacao == '10 Anos')
+                            <option value="10 Anos" selected>10 Anos</option>@else
+                            <option value="10 Anos">10 Anos</option>@endif
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <button type="submit" id="btnAlterar" class="btn btn-primary" href="#">Alterar</button>
+                    <a class="btn btn-default" href="{{ route('admin.filme.index') }}">Voltar</a>
+                </div>
+
+                {!! Form::close() !!}
+
+                <div hidden id="dialog-message" title="Erro">
+                    <p>
+                        <span class="ui-icon ui-icon-circle-check" style="float:left; margin:0 7px 50px 0;"></span>
+                        Este Filme já está Cadastrado, Tente Novamente.
+                    </p>
+                </div>
             </div>
 
-            <div class="form-group">
-                {!! Form::label("Nome", "Duração:") !!}
-                {!! Form::text("duracao", null,
-                ["class" => "form-control", 'required' => 'required', 'placeholder' => 'Ex: 02:35', 'id' => 'duracao'])
-                !!}
-            </div>
-
-            <div class="form-group">
-                {!! Form::label("Nome", "Imagem do Filme:") !!}
-                {!! Form::file("img", null,
-                ["class" => "form-control", 'required' => 'required', 'placeholder' => 'Ex: Deadpool, O Rei Leão']) !!}
-            </div>
-
-            <div class="form-group">
-                {!! Form::label("Nome", "Classificação:") !!}
-                <select required class="form-control" name="classificacao">
-                    @if($filme->classificacao == '18+')<option value="18+" selected>18+</option>@else<option value="18+">18+</option>@endif
-                    @if($filme->classificacao == 'Livre')<option value="Livre" selected>Livre</option>@else<option value="Livre">Livre</option>@endif
-                    @if($filme->classificacao == '10 Anos')<option value="10 Anos" selected>10 Anos</option>@else<option value="10 Anos">10 Anos</option>@endif
-                </select>
-            </div>
-
-            <div class="form-group">
-                <button type="submit" id="btnAlterar" class="btn btn-primary" href="#">Alterar</button>
-                <a class="btn btn-default" href="{{ route('admin.filme.index') }}">Voltar</a>
-            </div>
-
-            {!! Form::close() !!}
-
-            <div hidden id="dialog-message" title="Erro">
-                <p>
-                    <span class="ui-icon ui-icon-circle-check" style="float:left; margin:0 7px 50px 0;"></span>
-                    Este Filme já está Cadastrado, Tente Novamente.
-                </p>
-            </div>
         </div>
-
     </div>
-@endsection
+</body>
+</html>
 
 @section('script')
     <script>

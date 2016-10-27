@@ -10,6 +10,8 @@ use Admin\Repositories\CargoRepository;
 use Admin\Http\Requests\UserRequest;
 use BuscaSorocaba\Http\Requests;
 use BuscaSorocaba\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class UserController extends Controller
 {

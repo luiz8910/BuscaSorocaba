@@ -1,8 +1,19 @@
-@extends('app')
+<html>
+<head>
+    @include('admin.include.head')
+</head>
 
-@section('content')
+<body>
 
-    <div class="container">
+<header>
+    @include('admin.include.header')
+</header>
+
+<div id="wrapper">
+
+    @include('admin.include.menu-lateral')
+
+    <div class="container espacamento">
         <div class="row">
             <h3>Sala numero: {{ $sala->numero }}</h3>
 
@@ -51,7 +62,9 @@
         </div>
 
     </div>
-@endsection
+</div>
+</body>
+</html>
 
 @section('script')
     <script>

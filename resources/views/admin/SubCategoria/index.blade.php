@@ -1,55 +1,77 @@
-@extends('app')
+<!DOCTYPE html>
+<html>
 
-@section('content')
+<head>
+    @include('admin.include.head')
+</head>
 
-    <div class="container">
-        <div class="row">
-            <h3>Sub Categorias</h3>
 
-            <a href="{{ route('admin.subcategoria.create') }}" class="btn btn-default">Nova Categoria</a>
+<body>
+    <header>
+        @include('admin.include.header')
+    </header>
 
-            @if(!$sub) {{ 'Não há dados para exibir' }}
+    <div id="wrapper">
 
-            @else
-                <table class="table table-bordered table-responsive">
-                    <tr>
-                        <thead>
+        @include('admin.include.menu-lateral')
+
+        <div class="container espacamento">
+            <div class="row">
+                <h3>Categorias</h3>
+                <a href="{{ route('admin.subcategoria.create') }}" class="btn btn-default">Nova Categoria</a>
+            </div>
+        </div>
+
+
+        @if(!$sub) {{ 'Não há dados para exibir' }}
+
+        @else
+            <div class="container espacamento">
+                <div class="row">
+                    <table class="table table-bordered table-responsive">
+                        <tr>
+                            <thead>
                             <th>ID</th>
                             <th>Segmento</th>
                             <th>Categoria</th>
                             <th>Ação</th>
-                        </thead>
-                    </tr>
-
-                    <tbody>
-                    @foreach($sub as $s)
-                        <tr>
-                            <td>{{ $s->id }}</td>
-                            <td>{{ $s->nome }}</td>
-                            <td>{{ $s->categoria->nome }}</td>
-                            <td>
-                                <a href="{{ route('admin.subcategoria.edit', [$s->id]) }}"><span class="glyphicon glyphicon-edit"></span> </a>
-                                |
-                                <a class="excluir" href="{{ route('admin.subcategoria.destroy', [$s->id]) }}" id="{{ $s->id }}"><span class="glyphicon glyphicon-trash"></span> </a>
-                            </td>
+                            </thead>
                         </tr>
-                    @endforeach
-                    </tbody>
 
-                </table>
+                        <tbody>
+                        @foreach($sub as $s)
+                            <tr>
+                                <td>{{ $s->id }}</td>
+                                <td>{{ $s->nome }}</td>
+                                <td>{{ $s->categoria->nome }}</td>
+                                <td>
+                                    <a href="{{ route('admin.subcategoria.edit', [$s->id]) }}"><span
+                                                class="glyphicon glyphicon-edit"></span> </a>
+                                    |
+                                    <a class="excluir" href="{{ route('admin.subcategoria.destroy', [$s->id]) }}"
+                                       id="{{ $s->id }}"><span class="glyphicon glyphicon-trash"></span> </a>
+                                </td>
+                            </tr>
+                        @endforeach
+                        </tbody>
 
-                {!! $sub->render() !!}
-
-                <div hidden id="dialog-confirm" title="Você está certo disto?">
-                    <p><span class="ui-icon ui-icon-alert" style="float:left; margin:12px 12px 20px 0;"></span>
-                        Deseja Excluir esta Subcategoria?
-                    </p>
+                    </table>
                 </div>
-        </div>
+            </div>
+
+
+            {!! $sub->render() !!}
+
+            <div hidden id="dialog-confirm" title="Você está certo disto?">
+                <p><span class="ui-icon ui-icon-alert" style="float:left; margin:12px 12px 20px 0;"></span>
+                    Deseja Excluir esta Subcategoria?
+                </p>
+            </div>
     </div>
 
     @endif
-@endsection
+</body>
+
 
 @section('script')
     <script>
@@ -57,18 +79,18 @@
             $('.excluir').click(function () {
                 var id = $(this).attr('id');
 
-                $( "#dialog-confirm" ).dialog({
+                $("#dialog-confirm").dialog({
                     resizable: false,
                     height: "auto",
                     width: 400,
                     modal: true,
                     buttons: {
-                        "Excluir": function() {
+                        "Excluir": function () {
                             excluir(id);
-                            $( this ).dialog( "close" );
+                            $(this).dialog("close");
                         },
-                        Cancelar: function() {
-                            $( this ).dialog( "close" );
+                        Cancelar: function () {
+                            $(this).dialog("close");
                         }
                     }
                 });
@@ -85,11 +107,10 @@
 //                }
 //            });
 
-            function excluir(id)
-            {
+            function excluir(id) {
                 var request = $.ajax({
                     method: 'GET',
-                    url: '/subCategoria/excluir/'+id,
+                    url: '/subCategoria/excluir/' + id,
                     data: id,
                     dataType: 'json'
                 });
@@ -112,3 +133,5 @@
         });
     </script>
 @endsection
+
+</html>

@@ -31,7 +31,7 @@ Route::group(['middleware' => 'auth.checkrole:admin'], function(){
 
     Route::get('/categoria', ['as' => 'admin.categoria.index', 'uses' => 'CategoriaController@index']);
 
-    Route::get('/categoria/novo', ['as' => 'admin.categoria.create', 'uses' => 'CategoriaController@create']);
+    Route::get('/categoria-novo', ['as' => 'admin.categoria.create', 'uses' => 'CategoriaController@create']);
 
     Route::get('/categoria/editar/{id}', ['as' => 'admin.categoria.edit', 'uses' => 'CategoriaController@edit']);
 
@@ -47,9 +47,9 @@ Route::group(['middleware' => 'auth.checkrole:admin'], function(){
 
     Route::get('/subCategoria', ['as' => 'admin.subcategoria.index', 'uses' => 'SubCategoriaController@index']);
 
-    Route::get('/subCategoria/novo', ['as' => 'admin.subcategoria.create', 'uses' => 'SubCategoriaController@create']);
+    Route::get('/subCategoria-novo', ['as' => 'admin.subcategoria.create', 'uses' => 'SubCategoriaController@create']);
 
-    Route::get('/subCategoria/editar/{id}', ['as' => 'admin.subcategoria.edit', 'uses' => 'SubCategoriaController@edit']);
+    Route::get('/subCategoria-editar-{id}', ['as' => 'admin.subcategoria.edit', 'uses' => 'SubCategoriaController@edit']);
 
     Route::get('/subCategoria/alterar/{id}', ['as' => 'admin.subcategoria.update', 'uses' => 'SubCategoriaController@update']);
 
@@ -63,9 +63,9 @@ Route::group(['middleware' => 'auth.checkrole:admin'], function(){
 
     Route::get('/estabelecimentos', ['as' => 'admin.estabelecimentos.index', 'uses' => 'EstabelecimentosController@index']);
 
-    Route::get('/estabelecimentos/novo', ['as' => 'admin.estabelecimentos.create', 'uses' => 'EstabelecimentosController@create']);
+    Route::get('/estabelecimentos-novo', ['as' => 'admin.estabelecimentos.create', 'uses' => 'EstabelecimentosController@create']);
 
-    Route::get('/estabelecimentos/editar/{id}', ['as' => 'admin.estabelecimentos.edit', 'uses' => 'EstabelecimentosController@edit']);
+    Route::get('/estabelecimentos-editar-{id}', ['as' => 'admin.estabelecimentos.edit', 'uses' => 'EstabelecimentosController@edit']);
 
     Route::get('/estabelecimentos/alterar/{id}', ['as' => 'admin.estabelecimentos.update', 'uses' => 'EstabelecimentosController@update']);
 
@@ -75,7 +75,7 @@ Route::group(['middleware' => 'auth.checkrole:admin'], function(){
 
     Route::get('/estabelecimentos/email', ['as' => 'admin.estabelecimentos.email', 'uses' => 'EstabelecimentosController@email']);
 
-    Route::get('/estabelecimentos/imgNovo/{id}', ['as' => 'admin.estabelecimentos.createImage', 'uses' => 'EstabelecimentosController@createImage']);
+    Route::get('/estabelecimentos-imgNovo-{id}', ['as' => 'admin.estabelecimentos.createImage', 'uses' => 'EstabelecimentosController@createImage']);
 
     Route::post('/estabelecimentos/imgSalvar/{id}', ['as' => 'admin.estabelecimentos.uploadImage', 'uses' => 'EstabelecimentosController@uploadImage']);
 //Ajax
@@ -94,9 +94,9 @@ Route::group(['middleware' => 'auth.checkrole:admin'], function(){
 
     Route::get('/responsaveis', ['as' => 'admin.responsavel.index', 'uses' => 'ResponsavelController@index']);
 
-    Route::get('/responsaveis/novo', ['as' => 'admin.responsavel.create', 'uses' => 'ResponsavelController@create']);
+    Route::get('/responsaveis-novo', ['as' => 'admin.responsavel.create', 'uses' => 'ResponsavelController@create']);
 
-    Route::get('/responsaveis/editar/{id}', ['as' => 'admin.responsavel.edit', 'uses' => 'ResponsavelController@edit']);
+    Route::get('/responsaveis-editar-{id}', ['as' => 'admin.responsavel.edit', 'uses' => 'ResponsavelController@edit']);
 
     Route::post('/responsaveis/alterar/{id}', ['as' => 'admin.responsavel.update', 'uses' => 'ResponsavelController@update']);
 
@@ -111,9 +111,9 @@ Route::group(['middleware' => 'auth.checkrole:admin'], function(){
 
     Route::get('/shoppings', ['as' => 'admin.shoppings.index', 'uses' => 'ShoppingController@index']);
 
-    Route::get('/shoppings/novo', ['as' => 'admin.shoppings.create', 'uses' => 'ShoppingController@create']);
+    Route::get('/shoppings-novo', ['as' => 'admin.shoppings.create', 'uses' => 'ShoppingController@create']);
 
-    Route::get('/shoppings/editar/{id}', ['as' => 'admin.shoppings.edit', 'uses' => 'ShoppingController@edit']);
+    Route::get('/shoppings-editar-{id}', ['as' => 'admin.shoppings.edit', 'uses' => 'ShoppingController@edit']);
 
     Route::get('/shoppings/alterar/{id}', ['as' => 'admin.shoppings.update', 'uses' => 'ShoppingController@update']);
 
@@ -127,9 +127,9 @@ Route::group(['middleware' => 'auth.checkrole:admin'], function(){
 
     Route::get('/filme', ['as' => 'admin.filme.index', 'uses' => 'FilmeController@index']);
 
-    Route::get('/filme/novo', ['as' => 'admin.filme.create', 'uses' => 'FilmeController@create']);
+    Route::get('/filme-novo', ['as' => 'admin.filme.create', 'uses' => 'FilmeController@create']);
 
-    Route::get('/filme/editar/{id}', ['as' => 'admin.filme.edit', 'uses' => 'FilmeController@edit']);
+    Route::get('/filme-editar-{id}', ['as' => 'admin.filme.edit', 'uses' => 'FilmeController@edit']);
 
     Route::get('/filme/alterar/{id}', ['as' => 'admin.filme.update', 'uses' => 'FilmeController@update']);
 
@@ -137,7 +137,7 @@ Route::group(['middleware' => 'auth.checkrole:admin'], function(){
 
     Route::get('/filme/excluir/{id}', ['as' => 'admin.filme.destroy', 'uses' => 'FilmeController@destroy']);
 
-    Route::get('/filme/imgNovo/{id}', ['as' => 'admin.filme.createImage', 'uses' => 'FilmeController@createImage']);
+    Route::get('/filme-imgNovo-{id}', ['as' => 'admin.filme.createImage', 'uses' => 'FilmeController@createImage']);
 
     Route::post('/filme/imgSalvar/{id}', ['as' => 'admin.filme.uploadImage', 'uses' => 'FilmeController@uploadImage']);
 
@@ -147,9 +147,9 @@ Route::group(['middleware' => 'auth.checkrole:admin'], function(){
 
     Route::get('/sala', ['as' => 'admin.sala.index', 'uses' => 'SalaController@index']);
 
-    Route::get('/sala/novo', ['as' => 'admin.sala.create', 'uses' => 'SalaController@create']);
+    Route::get('/sala-novo', ['as' => 'admin.sala.create', 'uses' => 'SalaController@create']);
 
-    Route::get('/sala/editar/{id}', ['as' => 'admin.sala.edit', 'uses' => 'SalaController@edit']);
+    Route::get('/sala-editar-{id}', ['as' => 'admin.sala.edit', 'uses' => 'SalaController@edit']);
 
     Route::get('/sala/alterar/{id}', ['as' => 'admin.sala.update', 'uses' => 'SalaController@update']);
 
@@ -165,9 +165,9 @@ Route::group(['middleware' => 'auth.checkrole:admin'], function(){
 
     Route::get('/sessao', ['as' => 'admin.sessao.index', 'uses' => 'SessaoController@index']);
 
-    Route::get('/sessao/novo', ['as' => 'admin.sessao.create', 'uses' => 'SessaoController@create']);
+    Route::get('/sessao-novo', ['as' => 'admin.sessao.create', 'uses' => 'SessaoController@create']);
 
-    Route::get('/sessao/editar/{id}', ['as' => 'admin.sessao.edit', 'uses' => 'SessaoController@edit']);
+    Route::get('/sessao-editar-{id}', ['as' => 'admin.sessao.edit', 'uses' => 'SessaoController@edit']);
 
     Route::post('/sessao/alterar/{id}', ['as' => 'admin.sessao.update', 'uses' => 'SessaoController@update']);
 

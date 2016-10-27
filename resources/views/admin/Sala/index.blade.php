@@ -1,16 +1,31 @@
-@extends('app')
+<html>
+<head>
+    @include('admin.include.head')
+</head>
 
-@section('content')
+<body>
 
-    <h3>Sala</h3>
-    <a href="{{ route('admin.sala.create') }}" class="btn btn-default">Nova Sala</a><br><br>
+<header>
+    @include('admin.include.header')
+</header>
+
+<div id="wrapper">
+
+    @include('admin.include.menu-lateral')
+
+    <div class="container espacamento">
+        <div class="row">
+            <h3>Sala</h3>
+            <a href="{{ route('admin.sala.create') }}" class="btn btn-default">Nova Sala</a><br><br>
+        </div>
+    </div>
 
     @if(!$sala)
         {{ 'Não há dados a serem exibidos' }}
 
     @else
 
-        <div class="container">
+        <div class="container espacamento">
             <div class="row">
                 <table class="table table-bordered table-responsive">
                     <tr>
@@ -35,7 +50,8 @@
                                     <span class="glyphicon glyphicon-edit"></span>
                                 </a>
                                 |
-                                <a title="Excluir Sala" id="{{ $s->id }}" class="excluir" href="{{ route('admin.sala.destroy', [$s->id]) }}">
+                                <a title="Excluir Sala" id="{{ $s->id }}" class="excluir"
+                                   href="{{ route('admin.sala.destroy', [$s->id]) }}">
                                     <span class="glyphicon glyphicon-trash"></span>
                                 </a>
                             </td>
@@ -57,25 +73,27 @@
         </div>
 
     @endif
-@endsection
+</div>
+</body>
+</html>
 @section('script')
     <script>
         $(function () {
             $('.excluir').click(function () {
                 var id = $(this).attr('id');
 
-                $( "#dialog-confirm" ).dialog({
+                $("#dialog-confirm").dialog({
                     resizable: false,
                     height: "auto",
                     width: 400,
                     modal: true,
                     buttons: {
-                        "Excluir": function() {
+                        "Excluir": function () {
                             excluir(id);
-                            $( this ).dialog( "close" );
+                            $(this).dialog("close");
                         },
-                        Cancelar: function() {
-                            $( this ).dialog( "close" );
+                        Cancelar: function () {
+                            $(this).dialog("close");
                         }
                     }
                 });
@@ -83,11 +101,10 @@
                 return false;
             });
 
-            function excluir(id)
-            {
+            function excluir(id) {
                 var request = $.ajax({
                     method: 'GET',
-                    url: '/sala/excluir/'+id,
+                    url: '/sala/excluir/' + id,
                     data: id,
                     dataType: 'json'
                 });

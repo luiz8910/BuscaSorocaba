@@ -1,52 +1,68 @@
-@extends('app')
+<html>
+<head>
+    @include('admin.include.head')
+</head>
 
-@section('content')
+<body>
 
-    <div class="container">
-        <h3>Nova Categoria</h3>
+    <header>
+        @include('admin.include.header')
+    </header>
 
-        {!! Form::open(['id' => 'cadastrarCat', 'class' => 'form']) !!}
+    <div id="wrapper">
 
-        <div class="form-group">
-            {!! Form::label('Categoria', 'Categoria:') !!}
-            {!! Form::Select('categoria_id', $categoria, null, ['class' => 'form-control', 'required' => 'required']) !!}
-        </div>
+        @include('admin.include.menu-lateral')
 
-        <div class="form-group">
-            {!! Form::label("Nome", "Nome:") !!}
-            {!! Form::text("nome", null, ["class" => "form-control", 'required' => 'required']) !!}
-        </div>
+        <div class="container espacamento">
+            <div class="row">
+                <h3>Nova Categoria</h3>
 
-        <div class="form-group">
-            {!! Form::label("_24h", "24h") !!}
-            <input type="checkbox" name="_24h">
-        </div>
+                {!! Form::open(['id' => 'cadastrarCat', 'class' => 'form']) !!}
 
-        <div class="form-group">
-            {!! Form::label("Emergencia", "Emergencia:") !!}
-            <input type="checkbox" name="emergencia">
-        </div>
+                <div class="form-group">
+                    {!! Form::label('Categoria', 'Categoria:') !!}
+                    {!! Form::Select('categoria_id', $categoria, null, ['class' => 'form-control', 'required' => 'required']) !!}
+                </div>
 
-        <div class="form-group">
-            <button type="submit" class="btn btn-primary" href="#" data-loading-text = 'Enviando ......'>Salvar</button>
-            <a class="btn btn-default" href="{{ route('admin.subcategoria.index') }}">Voltar</a>
-        </div>
+                <div class="form-group">
+                    {!! Form::label("Nome", "Nome:") !!}
+                    {!! Form::text("nome", null, ["class" => "form-control", 'required' => 'required']) !!}
+                </div>
 
-        {!! Form::close() !!}
+                <div class="form-group">
+                    {!! Form::label("_24h", "24h") !!}
+                    <input type="checkbox" name="_24h">
+                </div>
 
-        <div hidden id="dialog-message" title="Erro">
-            <p>
-                <span class="ui-icon ui-icon-circle-check" style="float:left; margin:0 7px 50px 0;"></span>
-                Esta Subcategoria já está Cadastrada, Tente Novamente.
-            </p>
+                <div class="form-group">
+                    {!! Form::label("Emergencia", "Emergencia:") !!}
+                    <input type="checkbox" name="emergencia">
+                </div>
+
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary" href="#" data-loading-text='Enviando ......'>Salvar
+                    </button>
+                    <a class="btn btn-default" href="{{ route('admin.subcategoria.index') }}">Voltar</a>
+                </div>
+
+                {!! Form::close() !!}
+
+                <div hidden id="dialog-message" title="Erro">
+                    <p>
+                        <span class="ui-icon ui-icon-circle-check" style="float:left; margin:0 7px 50px 0;"></span>
+                        Esta Subcategoria já está Cadastrada, Tente Novamente.
+                    </p>
+                </div>
+            </div>
         </div>
     </div>
-@endsection
+</body>
+
 
 @section('script')
     <script>
 
-        $( function() {
+        $(function () {
             $('#cadastrarCat').submit(function () {
                 var data = $(this).serialize();
 
@@ -61,14 +77,13 @@
                     console.log('done');
                     console.log(e);
 
-                    if(e.status == false)
-                    {
+                    if (e.status == false) {
                         console.log(e.status);
-                        $( "#dialog-message" ).dialog({
+                        $("#dialog-message").dialog({
                             modal: true,
                             buttons: {
-                                Ok: function() {
-                                    $( this ).dialog( "close" );
+                                Ok: function () {
+                                    $(this).dialog("close");
                                 }
                             }
                         });

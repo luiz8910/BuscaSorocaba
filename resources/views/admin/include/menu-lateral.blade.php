@@ -81,7 +81,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a class="border-a-menu" href="{{ route('admin.responsavel.create') }}">
+                                <a class="border-a-menu" href="{{ route('admin.responsavel.index') }}">
                                     <i class="fa fa-list" aria-hidden="true"></i>
                                     <span class="margin-font">Responsáveis</span>
                                 </a>
@@ -114,15 +114,15 @@
 
                                 <ul class="list-group collapse ul-dropdown-color" id="drop5" style="margin-bottom: 0px !important;">
                                     <li>
-                                        <a class="border-a-menu" href="{{ route('admin.estabelecimentos.index') }}">
+                                        <a class="border-a-menu" href="{{ route('admin.shoppings.index') }}">
                                             <i class="fa fa-list" aria-hidden="true"></i>
-                                            <span class="margin-font">Listar Estabelecimentos</span>
+                                            <span class="margin-font">Shoppings</span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a class="border-a-menu" href="{{ route('admin.estabelecimentos.create') }}">
+                                        <a class="border-a-menu" href="{{ route('admin.shoppings.create') }}">
                                             <i class="fa fa-plus" aria-hidden="true"></i>
-                                            <span class="margin-font">Novo Estabelecimento</span>
+                                            <span class="margin-font">Novo Shopping</span>
                                         </a>
                                     </li>
                                 </ul>

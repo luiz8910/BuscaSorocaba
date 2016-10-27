@@ -1,12 +1,25 @@
-@extends('app')
+<html>
 
-@section('content')
+<head>
+    @include('admin.include.head')
+</head>
 
-    <div class="container">
-        <div class="row">
-            <h3>Nova Imagem - {{ $estabelecimento->nome }}</h3>
+<body>
 
-            {!! Form::open(['route'=>['admin.estabelecimentos.uploadImage', $estabelecimento->id], 'method' => 'post', 'enctype' => 'multipart/form-data']) !!}
+    <header>
+        @include('admin.include.header')
+    </header>
+
+    <div id="wrapper">
+
+        @include('admin.include.menu-lateral')
+
+
+        <div class="container espacamento">
+            <div class="row">
+                <h3>Nova Imagem - {{ $estabelecimento->nome }}</h3>
+
+                {!! Form::open(['route'=>['admin.estabelecimentos.uploadImage', $estabelecimento->id], 'method' => 'post', 'enctype' => 'multipart/form-data']) !!}
                 <div class="form-group">
                     {!! Form::label("Nome", "Imagem do Estabelecimento:") !!}
                     {!! Form::file("img", null,
@@ -16,8 +29,10 @@
                 <div class="form-group">
                     {!! Form::submit('Upload', null, ['class' => 'btn btn-primary']) !!}
                 </div>
-            {!! Form::close() !!}
+                {!! Form::close() !!}
+            </div>
         </div>
-    </div>
 
-@endsection
+    </div>
+</body>
+</html>

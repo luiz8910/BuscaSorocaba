@@ -1,56 +1,67 @@
-@extends('app')
+<html>
+<head>
+    @include('admin.include.head')
+</head>
 
-@section('content')
+<body>
 
-    <div class="container">
+<header>
+    @include('admin.include.header')
+</header>
 
-        <div class="row">
-            <h3>Categoria Nome: {{ $categoria->nome }}</h3>
+    <div id="wrapper">
 
-            {{--{!! Form::model($categoria, ['route' => ['admin.categoria.update', $categoria->id]]) !!}--}}
-            {!! Form::model($categoria, ['id' => 'alterarCat', 'method' => 'get']) !!}
+        @include('admin.include.menu-lateral')
 
-            <input type="text" hidden id="id" value="{{ $categoria->id }}">
+        <div class="container espacamento">
+            <div class="row">
+                <h3>Categoria Nome: {{ $categoria->nome }}</h3>
 
-            <div class="form-group">
-                {!! Form::label("Nome", "Nome:") !!}
-                {!! Form::text("nome", null, ["class" => "form-control", 'id' => 'nome', 'required' => 'required']) !!}
+                {{--{!! Form::model($categoria, ['route' => ['admin.categoria.update', $categoria->id]]) !!}--}}
+                {!! Form::model($categoria, ['id' => 'alterarCat', 'method' => 'get']) !!}
+
+                <input type="text" hidden id="id" value="{{ $categoria->id }}">
+
+                <div class="form-group">
+                    {!! Form::label("Nome", "Nome:") !!}
+                    {!! Form::text("nome", null, ["class" => "form-control", 'id' => 'nome', 'required' => 'required']) !!}
+                </div>
+
+                <div class="form-group">
+                    {{--{!! Form::submit("Alterar", ['class' => 'btn btn-primary']) !!}--}}
+                    <button type="submit" class="btn btn-primary" href="#">Alterar</button>
+                    <a class="btn btn-default" href="{{ route('admin.categoria.index') }}">Voltar</a>
+                </div>
+
+                {!! Form::close() !!}
             </div>
 
-            <div class="form-group">
-                {{--{!! Form::submit("Alterar", ['class' => 'btn btn-primary']) !!}--}}
-                <button type="submit" class="btn btn-primary" href="#">Alterar</button>
-                <a class="btn btn-default" href="{{ route('admin.categoria.index') }}">Voltar</a>
+            <div hidden id="dialog-message" title="Erro">
+                <p>
+                    <span class="ui-icon ui-icon-circle-check" style="float:left; margin:0 7px 50px 0;"></span>
+                    Esta Categoria já está Cadastrada, Tente Novamente.
+                </p>
             </div>
 
-            {!! Form::close() !!}
+
         </div>
-
-        <div hidden id="dialog-message" title="Erro">
-            <p>
-                <span class="ui-icon ui-icon-circle-check" style="float:left; margin:0 7px 50px 0;"></span>
-                Esta Categoria já está Cadastrada, Tente Novamente.
-            </p>
-        </div>
-
-
-
     </div>
+</body>
 
 
-@endsection
+
 
 @section('script')
-<script>
+    <script>
 
-        $( function() {
+        $(function () {
             $('#alterarCat').submit(function () {
                 var id = $('#id').val();
                 var data = $(this).serialize();
 
                 var request = $.ajax({
                     method: 'GET',
-                    url: '/categoria/alterar/'+id,
+                    url: '/categoria/alterar/' + id,
                     data: data,
                     dataType: 'json'
                 });
@@ -59,21 +70,20 @@
                     console.log('done');
                     console.log(e);
 
-                   if(e.status == false)
-                   {
-                       console.log(e.status);
-                       $( "#dialog-message" ).dialog({
-                           modal: true,
-                           buttons: {
-                               Ok: function() {
-                                   $( this ).dialog( "close" );
-                               }
-                           }
-                       });
-                   }
+                    if (e.status == false) {
+                        console.log(e.status);
+                        $("#dialog-message").dialog({
+                            modal: true,
+                            buttons: {
+                                Ok: function () {
+                                    $(this).dialog("close");
+                                }
+                            }
+                        });
+                    }
                     else {
-                       window.location = '/categoria';
-                   }
+                        window.location = '/categoria';
+                    }
                 });
 
                 request.fail(function (e) {
@@ -95,5 +105,6 @@
         });
 
 
-</script>
+    </script>
 @endsection
+</html>

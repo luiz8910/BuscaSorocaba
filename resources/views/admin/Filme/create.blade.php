@@ -1,56 +1,69 @@
-@extends('app')
+<html>
+<head>
+    @include('admin.include.head')
+</head>
 
-@section('content')
+<body>
 
-    <div class="container">
-        <div class="row">
-            <h3>Novo Filme</h3>
+    <header>
+        @include('admin.include.header')
+    </header>
 
-            {!! Form::open(['id' => 'cadastrarFilme', 'class' => 'form', 'method' => 'get']) !!}
+    <div id="wrapper">
 
-            <div class="form-group">
-                {!! Form::label("Nome", "Nome:") !!}
-                {!! Form::text("nome", null, ["class" => "form-control", 'required' => 'required', 'placeholder' => 'Ex: Deadpool, O Rei Leão']) !!}
+        @include('admin.include.menu-lateral')
+
+        <div class="container espacamento">
+            <div class="row">
+                <h3>Novo Filme</h3>
+
+                {!! Form::open(['id' => 'cadastrarFilme', 'class' => 'form', 'method' => 'get']) !!}
+
+                <div class="form-group">
+                    {!! Form::label("Nome", "Nome:") !!}
+                    {!! Form::text("nome", null, ["class" => "form-control", 'required' => 'required', 'placeholder' => 'Ex: Deadpool, O Rei Leão']) !!}
+                </div>
+
+                <div class="form-group">
+                    {!! Form::label("Nome", "Duração:") !!}
+                    {!! Form::text("duracao", null,
+                        ["class" => "form-control", 'required' => 'required', 'placeholder' => 'Ex: 02:35', 'id' => 'duracao'])
+                    !!}
+                </div>
+
+                <div class="form-group">
+                    {!! Form::label("Nome", "Classificação:") !!}
+                    <select required class="form-control" name="classificacao">
+                        <option value="">Selecione</option>
+                        <option value="18+">18+</option>
+                        <option value="Livre">Livre</option>
+                        <option value="10 Anos">10 Anos</option>
+                        <option value="12 Anos">12 Anos</option>
+                        <option value="12 Anos">12 Anos</option>
+                        <option value="14 Anos">14 Anos</option>
+                        <option value="16 Anos">16 Anos</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <button type="submit" id="btnSalvar" class="btn btn-primary" href="#">Salvar</button>
+                    <a class="btn btn-default" href="{{ route('admin.filme.index') }}">Voltar</a>
+                </div>
+
+                {!! Form::close() !!}
+
+                <div hidden id="dialog-message" title="Erro">
+                    <p>
+                        <span class="ui-icon ui-icon-circle-check" style="float:left; margin:0 7px 50px 0;"></span>
+                        Este Filme já está Cadastrado, Tente Novamente.
+                    </p>
+                </div>
             </div>
 
-            <div class="form-group">
-                {!! Form::label("Nome", "Duração:") !!}
-                {!! Form::text("duracao", null,
-                    ["class" => "form-control", 'required' => 'required', 'placeholder' => 'Ex: 02:35', 'id' => 'duracao'])
-                !!}
-            </div>
-
-            <div class="form-group">
-                {!! Form::label("Nome", "Classificação:") !!}
-                <select required class="form-control" name="classificacao">
-                    <option value="">Selecione</option>
-                    <option value="18+">18+</option>
-                    <option value="Livre">Livre</option>
-                    <option value="10 Anos">10 Anos</option>
-                    <option value="12 Anos">12 Anos</option>
-                    <option value="12 Anos">12 Anos</option>
-                    <option value="14 Anos">14 Anos</option>
-                    <option value="16 Anos">16 Anos</option>
-                </select>
-            </div>
-
-            <div class="form-group">
-                <button type="submit" id="btnSalvar" class="btn btn-primary" href="#">Salvar</button>
-                <a class="btn btn-default" href="{{ route('admin.filme.index') }}">Voltar</a>
-            </div>
-
-            {!! Form::close() !!}
-
-            <div hidden id="dialog-message" title="Erro">
-                <p>
-                    <span class="ui-icon ui-icon-circle-check" style="float:left; margin:0 7px 50px 0;"></span>
-                    Este Filme já está Cadastrado, Tente Novamente.
-                </p>
-            </div>
         </div>
-
     </div>
-@endsection
+</body>
+</html>
 
 @section('script')
     <script>
@@ -87,15 +100,14 @@
                 console.log('done');
                 console.log(e);
 
-                if(e.status == false)
-                {
+                if (e.status == false) {
                     console.log(e.status);
-                    $( "#dialog-message" ).dialog({
+                    $("#dialog-message").dialog({
                         modal: true,
                         buttons: {
-                            Ok: function() {
+                            Ok: function () {
                                 $('#btnSalvar').html('Salvar');
-                                $( this ).dialog( "close" );
+                                $(this).dialog("close");
                             }
                         }
                     });

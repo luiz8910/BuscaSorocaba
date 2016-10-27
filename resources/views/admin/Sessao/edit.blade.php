@@ -1,19 +1,31 @@
-@extends('app')
+<html>
+<head>
+    @include('admin.include.head')
+</head>
 
-@section('content')
+<body>
 
-    <div class="container">
+<header>
+    @include('admin.include.header')
+</header>
 
-        @if(session('nome') != null)
-            <div class="alert alert-danger">
-                <h5>Esta Subcategoria já existe</h5>
-            </div>
-            {{ session()->forget('nome') }}
-        @endif
+<div id="wrapper">
 
-        <h3>Sessão: {{ $sessao->id }}</h3>
+    @include('admin.include.menu-lateral')
 
-        {!! Form::model($sessao, ['route' => ['admin.sessao.update', $sessao->id], 'class' => 'form']) !!}
+    <div class="container espacamento">
+        <div class="row">
+
+            @if(session('nome') != null)
+                <div class="alert alert-danger">
+                    <h5>Esta Subcategoria já existe</h5>
+                </div>
+                {{ session()->forget('nome') }}
+            @endif
+
+            <h3>Sessão: {{ $sessao->id }}</h3>
+
+            {!! Form::model($sessao, ['route' => ['admin.sessao.update', $sessao->id], 'class' => 'form']) !!}
 
             <div class="form-group">
                 {!! Form::label("Nome", "Nome do Filme:") !!}
@@ -105,13 +117,16 @@
                 'required' => 'required', 'id' => 'preco']) !!}
             </div>
 
-        <div class="form-group">
-            {!! Form::submit("Alterar", ['class' => 'btn btn-primary']) !!}
-        </div>
+            <div class="form-group">
+                {!! Form::submit("Alterar", ['class' => 'btn btn-primary']) !!}
+            </div>
 
-        {!! Form::close() !!}
+            {!! Form::close() !!}
+        </div>
     </div>
-@endsection
+</div>
+</body>
+</html>
 
 @section('script')
     <script>
