@@ -9,7 +9,7 @@ angular.module("ui-bootstrap", []);
 
 angular.module('starter',
     ['ionic', 'starter.controllers', 'starter.services','angular-oauth2',
-        'ngResource', 'ngMaterial', 'ngAria', 'ion-autocomplete', 'ui-bootstrap'
+        'ngResource', 'ngMaterial', 'ngAria', 'ion-autocomplete', 'ui-bootstrap', 'jett.ionic.filter.bar'
     ]
 )
 
@@ -54,8 +54,8 @@ angular.module('starter',
 
   $stateProvider
       .state('home', {
-      url: '/home/:nome',
-      templateUrl: 'templates/home.html',
+          url: '/home/:nome',
+          templateUrl: 'templates/home.html',
           controller: 'HomeCtrl'
       })
 
@@ -74,6 +74,12 @@ angular.module('starter',
           url: '/dashboard',
           templateUrl: 'templates/dashboard/index.html',
           controller: 'LoginCtrl'
+      })
+
+      .state('dash_pesquisa',{
+          url: '/dash_pesquisa',
+          templateUrl: 'templates/dashboard/pesquisa.html',
+          controller: 'AutoCompleteCtrl'
       })
 
       .state('alimentacao',{

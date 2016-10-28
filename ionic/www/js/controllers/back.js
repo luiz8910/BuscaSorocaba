@@ -5,6 +5,7 @@ angular.module('starter.controllers')
                 $ionicHistory.goBack();
             };
 
+
             //Não mexe nessa função, pelo amor de Deus, é sério
             $scope.xamps = function () {
                 var bugginho = $state.current.name;
@@ -22,5 +23,16 @@ angular.module('starter.controllers')
             $scope.goHome = function () {
                 $window.location.reload(true);
                 return $state.go('dashboard');
-            }
+            };
+
+            $scope.pesquisar = function () {
+                var bugginho = $state.current.name;console.log(bugginho);
+
+                if(bugginho != 'dash_pesquisa')
+                {
+                    return true;
+                }
+
+                return false;
+            };
     }]);

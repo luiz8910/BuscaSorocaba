@@ -1,0 +1,42 @@
+<body class="dual-sidebar">
+
+<div class="all-elements">
+    <div class="snap-drawers">
+        <div id="content" class="snap-content">
+                <!--Page content goes here, fixed elements go above the all elements class-->
+
+                <div class="container heading-style-5">
+
+                    <div class="blog-sidebar-search full-bottom">
+                        <div class="icon-field">
+                            <i class="fa fa-search"></i>
+
+                            <input class="text-field green-field"
+                                   type="search" placeholder="Pesquisar" ng-model="str" ng-change="pesquisa()">
+
+
+                            <ion-content class=" has-subheader" style="position: relative; z-index: 1000;top:-10px;">
+                                <ion-list>
+                                    <ion-item class="ng-hide" ng-repeat="o in result" ng-show="ajusteTecnico(o)"
+                                              ng-click="lista(o)">
+                                        {{ o }}
+
+                                    </ion-item>
+                                </ion-list>
+                            </ion-content>
+
+
+                            <!--<form name="form" ng-controller="AutoCompleteCtrl">-->
+                            <!--<input ion-autocomplete type="text" readonly="readonly"-->
+                            <!--class="ion-autocomplete text-field green-field"-->
+                            <!--autocomplete="off" max-selected-items="1" ng-model="model"-->
+                            <!--items-method="callbackMethod(query)"/>-->
+                            <!--</form>-->
+
+
+                        </div>
+                    </div>
+        </div>
+    </div>
+</div>
+</body>

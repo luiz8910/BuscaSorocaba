@@ -13,6 +13,7 @@
     "angular-bootstrap": "^2.1.2",
     "bootstrap": "*",
     "angular-touch": "^1.5.8",
-    "angular-ui-bootstrap": "^2.1.2"
+    "angular-ui-bootstrap": "^2.1.2",
+    "ionic-filter-bar": "^1.1.1"
   }
 }

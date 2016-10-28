@@ -36,90 +36,97 @@
 
     <body class="dual-sidebar">
 
-    <div class="all-elements">
-        <div class="snap-drawers">
-            <div id="content" class="snap-content">
-                <center class="content">
-                    <div class="header-clear-large"></div>
-                    <!--Page content goes here, fixed elements go above the all elements class-->
+        <div class="all-elements">
+            <div class="snap-drawers">
+                <div id="content" class="snap-content">
+                    <center class="content">
+                        <div class="header-clear-large"></div>
+                        <!--Page content goes here, fixed elements go above the all elements class-->
 
-                    <div class="container heading-style-5">
-                        <h4 class="heading-title">Bem Vindo Ao busca Sorocaba</h4>
-                        <i class="fa fa-home heading-icon"></i>
-                        <div class="line bg-black"></div>
-                        <p class="heading-subtitle">
-                        <h5>O que Deseja buscar hoje?</h5>
-                        </p>
-                        <div class="blog-sidebar-search full-bottom" ng-controller="AutoCompleteCtrl">
-                            <div class="icon-field">
-                                <i class="fa fa-search"></i>
+                        <div class="container heading-style-5">
+                            <h4 class="heading-title">Bem Vindo Ao busca Sorocaba</h4>
+                            <i class="fa fa-home heading-icon"></i>
+                            <div class="line bg-black"></div>
+                            <p class="heading-subtitle"></p>
+                            <h5>O que Deseja buscar hoje?</h5>
 
+                            <div class="blog-sidebar-search full-bottom" ng-controller="AutoCompleteCtrl">
+                                <div class="icon-field">
+                                    <i class="fa fa-search"></i>
 
-                                <input class="text-field green-field"
-                                       type="text" placeholder="Pesquisar" ng-model="str" ng-change="pesquisa()">
+                                    <input class="text-field green-field"
+                                           type="text" placeholder="Pesquisar" ng-model="str" ng-focus="pesq_header()">
 
-
-                                <ion-content class=" has-subheader" style="position: relative; z-index: 1000;top:-10px;">
-                                    <ion-list>
-                                        <ion-item class="ng-hide" ng-repeat="o in result" ng-show="ajusteTecnico(o)"
-                                                             ng-click="lista(o)">
-                                            {{ o }}
-
-                                        </ion-item>
-                                    </ion-list>
-                                </ion-content>
-
-                                <!--<form name="form" ng-controller="AutoCompleteCtrl">-->
-                                    <!--<input ion-autocomplete type="text" readonly="readonly"-->
-                                           <!--class="ion-autocomplete text-field green-field"-->
-                                           <!--autocomplete="off" max-selected-items="1" ng-model="model"-->
-                                           <!--items-method="callbackMethod(query)"/>-->
-                                <!--</form>-->
+                                    <!--<input class="text-field green-field"-->
+                                           <!--type="text" placeholder="Pesquisar" ng-model="str" ng-change="pesquisa()">-->
 
 
+
+
+                                    <!--<ion-content class=" has-subheader" style="position: relative; z-index: 1000;top:-10px;">-->
+                                        <!--<ion-list>-->
+                                            <!--<ion-item class="ng-hide" ng-repeat="o in result" ng-show="ajusteTecnico(o)"-->
+                                                                 <!--ng-click="lista(o)">-->
+                                                <!--{{ o }}-->
+
+                                            <!--</ion-item>-->
+                                        <!--</ion-list>-->
+                                    <!--</ion-content>-->
+
+
+
+
+                                    <!--<form name="form" ng-controller="AutoCompleteCtrl">-->
+                                        <!--<input ion-autocomplete type="text" readonly="readonly"-->
+                                               <!--class="ion-autocomplete text-field green-field"-->
+                                               <!--autocomplete="off" max-selected-items="1" ng-model="model"-->
+                                               <!--items-method="callbackMethod(query)"/>-->
+                                    <!--</form>-->
+
+
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="decoration"></div>
+                        <div class="decoration"></div>
 
-                    <center class="thumbnail-menu">
-                        <a href="#/listFilmes">
-                            <i class="bg-blue-dark fa fa-ticket"></i>
-                            <em>Cinema</em>
-                        </a>
-                        <a ng-href="#/alimentacao">
-                            <i class="bg-red-dark fa fa-cutlery"></i>
-                            <em>Comida</em>
-                        </a>
-                        
-                        <a ng-href="#/24h">
-                            <i class="bg-green-dark bg-hover-green-dark fa fa-clock-o"></i>
-                            <em>24H</em>
-                        </a>
+                        <center class="thumbnail-menu">
+                            <a href="#/listFilmes">
+                                <i class="bg-blue-dark fa fa-ticket"></i>
+                                <em>Cinema</em>
+                            </a>
+                            <a ng-href="#/alimentacao">
+                                <i class="bg-red-dark fa fa-cutlery"></i>
+                                <em>Comida</em>
+                            </a>
 
-                       <a href="#/emergencia" class="center-text">
-                            <i class="bg-magenta-dark fa fa-medkit"></i>
-                            <em>Emergencia</em>
-                        </a>
+                            <a ng-href="#/24h">
+                                <i class="bg-green-dark bg-hover-green-dark fa fa-clock-o"></i>
+                                <em>24H</em>
+                            </a>
+
+                           <a href="#/emergencia" class="center-text">
+                                <i class="bg-magenta-dark fa fa-medkit"></i>
+                                <em>Emergencia</em>
+                            </a>
 
 
-                    </center>
+                        </center>
 
-                    <div class="decoration"></div>
+                        <div class="decoration"></div>
 
-                    <div class="footer">
-                        <p class="center-text">Copyright 2015. Todos os direitos reservados.</p>
-                        <div class="footer-icons center-text">
-                            <a href="#" class="scale-hover facebook-color social-ball"><i class="fa fa-facebook"></i></a>
-                            <a href="#" class="scale-hover twitter-color social-ball"><i class="fa fa-twitter"></i></a>
-                            <a href="#" class="scale-hover google-color social-ball"><i class="fa fa-google-plus"></i></a>
+                        <div class="footer">
+                            <p class="center-text">Copyright 2015. Todos os direitos reservados.</p>
+                            <div class="footer-icons center-text">
+                                <a href="#" class="scale-hover facebook-color social-ball"><i class="fa fa-facebook"></i></a>
+                                <a href="#" class="scale-hover twitter-color social-ball"><i class="fa fa-twitter"></i></a>
+                                <a href="#" class="scale-hover google-color social-ball"><i class="fa fa-google-plus"></i></a>
+                            </div>
                         </div>
+                     </center>   <!-- End of entire page content-->
                     </div>
-                 </center>   <!-- End of entire page content-->
                 </div>
             </div>
-        </div>
     </div>
     </body>
 

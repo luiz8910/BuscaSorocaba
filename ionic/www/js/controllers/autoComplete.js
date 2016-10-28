@@ -22,7 +22,7 @@ angular.module('starter.controllers')
 
                 if ($scope.str) {
                     $autoComplete.query({str: $scope.str}, function (data) {
-                        $scope.result = data;console.log(data);
+                        $scope.result = data;
                     });
                 }
                 else{
@@ -32,10 +32,12 @@ angular.module('starter.controllers')
             };
 
 
-            //$ionicLoading.show({
-            //    template: "Carregando..."
-            //});
+            $scope.pesq_header = function () {
+                $state.go('dash_pesquisa');
+            };
 
-            //$ionicLoading.hide();
+            $scope.focus = function (){
+
+            };
 
         }]);
